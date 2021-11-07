@@ -1,0 +1,15 @@
+<Solution>
+  <PropertyGroup Name="CocosProject" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="fonts">
+          <TTF Name="bold.ttf" />
+          <TTF Name="classic.ttf" />
+          <TTF Name="normal.ttf" />
+        </Folder>
+        <Folder Name="z_gui" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

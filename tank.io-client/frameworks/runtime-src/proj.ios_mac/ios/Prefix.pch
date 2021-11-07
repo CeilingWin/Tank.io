@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'tank.io-client' target in the 'tank.io-client' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
