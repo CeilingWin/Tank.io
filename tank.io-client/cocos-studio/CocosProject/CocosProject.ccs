@@ -8,7 +8,9 @@
           <TTF Name="classic.ttf" />
           <TTF Name="normal.ttf" />
         </Folder>
-        <Folder Name="z_gui" />
+        <Folder Name="gui">
+          <Project Name="SceneLobby.csd" Type="Scene" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

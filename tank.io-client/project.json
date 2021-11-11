@@ -1,22 +1,29 @@
 {
     "project_type": "javascript",
-
-    "debugMode" : 1,
-    "showFPS" : true,
-    "frameRate" : 60,
-    "noCache" : false,
-    "id" : "gameCanvas",
-    "renderMode" : 0,
-    "engineDir":"frameworks/cocos2d-html5",
-
-    "modules" : ["cocos2d"],
-
+    "debugMode": 1,
+    "showFPS": true,
+    "frameRate": 60,
+    "noCache": false,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "frameworks/cocos2d-html5",
+    "modules": [
+        "cocos2d",
+        "cocostudio"
+    ],
     "jsListOrder": [
+        "src/core/EventCenter.js",
+        "src/core/gui/InjectCCS.js",
+        "src/core/gui/BaseGui.js",
+        "src/core/**/*.js",
         "src/*.js"
     ],
-
-    "jsList" : [
-        "src/resource.js",
-        "src/app.js"
+    "jsList": [
+        "src/core/EventCenter.js",
+        "src/core/gui/InjectCCS.js",
+        "src/core/gui/BaseGui.js",
+        "src/app.js",
+        "src/Lobby.js",
+        "src/resource.js"
     ]
 }
