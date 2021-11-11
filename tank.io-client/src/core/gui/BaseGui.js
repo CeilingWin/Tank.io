@@ -5,12 +5,15 @@ var BaseGui = cc.Layer.extend(_injectCCS).extend({
         this._haveFog = false;
         this.FOG_OPACITY = 200;
         this._isDestroyWhenTouchOutside = false;
-        this._listEvent = [];
         // init cocos gui
         this.rootNoe = this.initJson(jsonFile);
         this.addListenerClickOutside();
         this.addFogLayer();
         this.initGui();
+    },
+
+    getClassName: function(){
+        return this.className;
     },
 
     onEnter: function () {
@@ -35,15 +38,6 @@ var BaseGui = cc.Layer.extend(_injectCCS).extend({
         this._clickOutsideListener = null;
         this.fogLayer = null;
         this.removeFromParent();
-    },
-
-    removeAllEvents: function () {
-        this._listEvent.forEach(e=>EventCenter.remove(e));
-        this._listEvent = [];
-    },
-
-    subEvent: function (eventId, listener){
-        this._listEvent.push(EventCenter.sub(eventId,listener));
     },
 
     setHaveFog: function (bool) {

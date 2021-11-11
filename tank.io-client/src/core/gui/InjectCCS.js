@@ -69,4 +69,15 @@ const _injectCCS = {
     setRootNode: function (r) { this._rootNode = r; },
     getRootNode: function () { return this._rootNode; },
     getDelegate: function () { return this; },
+
+    subEvent: function (eventId, listener){
+        if (!this._listEvent) this._listEvent = [];
+        this._listEvent.push(EventCenter.sub(eventId,listener));
+    },
+
+    removeAllEvents: function () {
+        this._listeners && this._listEvent.forEach(e=>EventCenter.remove(e));
+        this._listEvent = [];
+    },
+
 };
