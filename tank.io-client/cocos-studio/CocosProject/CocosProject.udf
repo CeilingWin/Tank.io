@@ -7,10 +7,5 @@
         <LastRunType Value="Windows" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <ActiveDocument />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

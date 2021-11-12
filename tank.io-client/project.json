@@ -16,15 +16,17 @@
         "src/core/gui/InjectCCS.js",
         "src/core/gui/BaseGui.js",
         "src/core/**/*.js",
-        "src/*.js"
+        "src/*.js",
+        "src/**/*.js",
+        "src/**/**/*.js"
     ],
     "jsList": [
         "src/core/EventCenter.js",
         "src/core/gui/InjectCCS.js",
         "src/core/gui/BaseGui.js",
         "src/core/gui/BaseScene.js",
-        "src/app.js",
-        "src/Lobby.js",
-        "src/resource.js"
+        "src/core/gui/SceneMgr.js",
+        "src/resource.js",
+        "src/modules/lobby/SceneLobby.js"
     ]
 }

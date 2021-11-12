@@ -43,9 +43,23 @@ var BaseScene = cc.Scene.extend(_injectCCS).extend({
         return this._listLayer[layerId];
     },
 
+    getTopLayer: function () {
+        return this.getLayer(Layer.TOP);
+    },
+
     onRemove: function(){
         this.removeAllEvents();
         this._listGui.forEach(gui => gui.destroy());
-    }
+    },
+
+    setTouchEnabled: function(enable){
+        if (!this.preventTouchLayout){
+            this.preventTouchLayout = new ccui.Layout();
+            this.preventTouchLayout.setContentSize(cc.winSize);
+            this.preventTouchLayout.setTouchEnabled(true);
+            this.getTopLayer().addChild(this.preventTouchLayout);
+        }
+        this.preventTouchLayout.setVisible(!enable);
+    },
 });
 

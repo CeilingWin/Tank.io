@@ -1,4 +1,4 @@
-var Lobby = BaseScene.extend({
+var SceneLobby = BaseScene.extend({
     ctor: function(){
         this.btnPlayNow = null;
         this.btnJoin = null;
@@ -7,11 +7,18 @@ var Lobby = BaseScene.extend({
     },
 
     onTouchUIEnded: function(sender){
-        this.btnPlayNow.setPressedActionEnabled(true);
         switch (sender){
             case this.btnPlayNow:
                 cc.log("play now");
                 break;
+            case this.btnJoin:
+                cc.log("join game");
+                break;
+            case this.btnNewGame:
+                cc.log("new game");
+                break;
         }
     }
-})
+});
+
+SceneLobby.prototype.className = "SceneLobby";
