@@ -94,7 +94,7 @@ def copy_sound(folder_path, file_name):
 def write_resource_to_code():
     path_data = "\n\t"
     for data in g_list_data:
-        path_data += data.id.upper()
+        path_data += data.id.upper().replace('-','_')
         path_data += ': "'
         path_data += data.path
         path_data += '",'
