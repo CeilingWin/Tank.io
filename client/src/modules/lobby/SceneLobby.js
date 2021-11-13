@@ -1,9 +1,20 @@
+
 var SceneLobby = BaseScene.extend({
     ctor: function(){
         this.btnPlayNow = null;
         this.btnJoin = null;
         this.btnNewGame = null;
         this._super("res/gui/SceneLobby.json");
+        this.initGui();
+    },
+
+    initGui: function () {
+        // test
+        cc.log("test colyseus");
+        let client = new Colyseus.Client('ws://localhost:2567');
+        client.joinOrCreate("my_room").then(room => {
+            console.log(room.sessionId, "joined", room.name);
+        });
     },
 
     onTouchUIEnded: function(sender){

@@ -8,11 +8,11 @@
           <TTF Name="classic.ttf" />
           <TTF Name="normal.ttf" />
         </Folder>
-        <Folder Name="gui">
-          <Project Name="SceneLobby.csd" Type="Scene" />
+        <Folder Name="z_gui">
           <Folder Name="game">
             <Project Name="MapLayer.csd" Type="Scene" />
           </Folder>
+          <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
         <Folder Name="map">
           <Folder Name="textures">

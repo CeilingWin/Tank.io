@@ -12,6 +12,8 @@
         "cocostudio"
     ],
     "jsListOrder": [
+        "lib/*.js",
+        "lib/colyseus/*.js",
         "src/core/EventCenter.js",
         "src/core/gui/InjectCCS.js",
         "src/core/gui/BaseGui.js",
@@ -21,12 +23,13 @@
         "src/**/**/*.js"
     ],
     "jsList": [
+        "lib/TileMapParser.js",
+        "lib/colyseus/colyseus.js",
         "src/core/EventCenter.js",
         "src/core/gui/InjectCCS.js",
         "src/core/gui/BaseGui.js",
         "src/core/gui/BaseScene.js",
         "src/core/gui/SceneMgr.js",
-        "src/core/tilemap/TileMapParser.js",
         "src/resource.js",
         "src/modules/game/MapLayer.js",
         "src/modules/game/SceneGame.js",
