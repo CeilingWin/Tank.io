@@ -1,10 +1,10 @@
 import Arena from "@colyseus/arena";
 import { monitor } from "@colyseus/monitor";
-
 /**
  * Import your Room files
  */
 import { MyRoom } from "./rooms/MyRoom.js";
+import { Lobby } from "./lobby/LobbyRoom.js";
 
 export default Arena.default({
     getId: () => "Your Colyseus App",
@@ -13,6 +13,7 @@ export default Arena.default({
         /**
          * Define your room handlers:
          */
+        gameServer.define('lobby',Lobby);
         gameServer.define('my_room', MyRoom);
     },
 
@@ -20,8 +21,9 @@ export default Arena.default({
         /**
          * Bind your custom express routes here:
          */
+
         app.get("/", (req, res) => {
-            res.send("It's time to kick ass and chew bubblegum!");
+            res.sendFile(join(__dirname, '../client', 'index.html'));
         });
 
         /**

@@ -16,6 +16,7 @@ export class MyRoom extends Room {
 
   onJoin (client, options) {
     console.log(client.sessionId, "joined!");
+    console.log(options);
   }
 
   onLeave (client, consented) {

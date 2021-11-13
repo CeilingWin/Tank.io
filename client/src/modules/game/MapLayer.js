@@ -1,7 +1,7 @@
 var MapLayer = BaseGui.extend({
     ctor: function(){
         this.tmMap = null;
-        this._super("res/gui/game/MapLayer.json");
+        this._super("res/z_gui/game/MapLayer.json");
     },
 
     initGui: function(){

@@ -7,10 +7,6 @@ var res = {
 	FONTS_BOLD_TTF: "res/fonts/bold.ttf",
 	FONTS_CLASSIC_TTF: "res/fonts/classic.ttf",
 	FONTS_NORMAL_TTF: "res/fonts/normal.ttf",
-	GUI_GAME_MAPLAYER_JSON: "res/gui/game/MapLayer.json",
-	GUI_SCENELOBBY_JSON: "res/gui/SceneLobby.json",
-	HELLOWORLD_PNG: "res/HelloWorld.png",
-	MAP_BG_TILESET_TSX: "res/map/bg_tileset.tsx",
 	MAP_MAP1_TMX: "res/map/map1.tmx",
 	MAP_MAPOBJECT_TMX: "res/map/MapObject.tmx",
 	MAP_MAPOBJECT_TSX: "res/map/MapObject.tsx",
@@ -90,6 +86,9 @@ var res = {
 	MAP_TEXTURES_483_100_PNG: "res/map/textures/483-100.png",
 	MAP_TEXTURES_80_100_PNG: "res/map/textures/80-100.png",
 	MAP_TILESET2_TSX: "res/map/tileset2.tsx",
+	Z_GUI_GAME_MAPLAYER_JSON: "res/z_gui/game/MapLayer.json",
+	Z_GUI_GAME_SCENEWATINGGAME_JSON: "res/z_gui/game/SceneWatingGame.json",
+	Z_GUI_SCENELOBBY_JSON: "res/z_gui/SceneLobby.json",
 
 };
 

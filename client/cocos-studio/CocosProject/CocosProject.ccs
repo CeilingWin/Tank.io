@@ -11,6 +11,7 @@
         <Folder Name="z_gui">
           <Folder Name="game">
             <Project Name="MapLayer.csd" Type="Scene" />
+            <Project Name="SceneWatingGame.csd" Type="Scene" />
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>

@@ -33,6 +33,7 @@
         "src/resource.js",
         "src/modules/game/MapLayer.js",
         "src/modules/game/SceneGame.js",
+        "src/modules/game/SceneWaitingGame.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }
