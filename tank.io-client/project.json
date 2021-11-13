@@ -26,7 +26,10 @@
         "src/core/gui/BaseGui.js",
         "src/core/gui/BaseScene.js",
         "src/core/gui/SceneMgr.js",
+        "src/core/tilemap/TileMapParser.js",
         "src/resource.js",
+        "src/modules/game/MapLayer.js",
+        "src/modules/game/SceneGame.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }

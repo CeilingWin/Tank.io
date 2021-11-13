@@ -9,7 +9,7 @@ var SceneLobby = BaseScene.extend({
     onTouchUIEnded: function(sender){
         switch (sender){
             case this.btnPlayNow:
-                cc.log("play now");
+                SceneMgr.getIns().runScene(new SceneGame());
                 break;
             case this.btnJoin:
                 cc.log("join game");
