@@ -16834,6 +16834,12 @@ exports.inflateUndermine = inflateUndermine;
                     delete layer.verticalFlips;
                     delete layer.type;
                 });
+                map.convertTilePosToXYPos = function(x,y){
+                    return {
+                        x: x*this.tileWidth,
+                        y: (this.height - y)*this.tileHeight
+                    }
+                }
                 return map;
             },
 
@@ -16875,6 +16881,7 @@ exports.inflateUndermine = inflateUndermine;
 
         }
         console.log("Exported custom tmx reader!");
+
         module.exports = TMParser;
     },{"tmx-parser":68}],66:[function(require,module,exports){
         module.exports = Pend;
