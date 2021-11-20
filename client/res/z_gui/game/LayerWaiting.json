@@ -16,8 +16,8 @@
         "Children": [
           {
             "FileData": {
-              "Type": "Normal",
-              "Path": "map/textures/80-100.png",
+              "Type": "Default",
+              "Path": "Default/Sprite.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -241,9 +241,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../Default/Sprite.png",
         "../../fonts/bold.ttf",
-        "../../fonts/classic.ttf",
-        "../../map/textures/80-100.png"
+        "../../fonts/classic.ttf"
       ],
       "ctype": "GameFileData"
     }

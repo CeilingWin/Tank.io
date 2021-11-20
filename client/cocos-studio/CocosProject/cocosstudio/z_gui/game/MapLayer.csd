@@ -6,16 +6,6 @@
       <ObjectData Name="Scene" Tag="14" ctype="GameNodeObjectData">
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
-          <AbstractNodeData Name="tmMap" ActionTag="788770094" Tag="15" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" RightMargin="-1080.0000" TopMargin="-1920.0000" ctype="GameMapObjectData">
-            <Size X="3000.0000" Y="3000.0000" />
-            <AnchorPoint />
-            <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
-            <PreSize X="1.5625" Y="2.7778" />
-            <FileData Type="Normal" Path="map/map1.tmx" Plist="" />
-          </AbstractNodeData>
           <AbstractNodeData Name="Button_1" ActionTag="-446716615" Tag="17" IconVisible="False" LeftMargin="54.8918" RightMargin="1765.1082" TopMargin="830.7630" BottomMargin="49.2370" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="200.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -75,6 +65,17 @@
             <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_2" ActionTag="66022674" Tag="12" IconVisible="False" RightMargin="1720.0000" TopMargin="973.0000" FlipY="True" ctype="SpriteObjectData">
+            <Size X="200.0000" Y="107.0000" />
+            <AnchorPoint />
+            <Position />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="0.1042" Y="0.0991" />
+            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

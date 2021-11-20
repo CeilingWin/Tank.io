@@ -15,44 +15,6 @@
         "Tag": 14,
         "Children": [
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "map/map1.tmx",
-              "Plist": ""
-            },
-            "AnchorPoint": {},
-            "Position": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "PreSize": {
-              "X": 1.5625,
-              "Y": 2.7778
-            },
-            "HorizontalEdge": "LeftEdge",
-            "VerticalEdge": "BottomEdge",
-            "RightMargin": -1080.0,
-            "TopMargin": -1920.0,
-            "Tag": 15,
-            "ActionTag": 788770094,
-            "Size": {
-              "X": 3000.0,
-              "Y": 3000.0
-            },
-            "Name": "tmMap",
-            "ctype": "GameMapObjectData"
-          },
-          {
             "FontSize": 14,
             "ButtonText": "Button",
             "TextColor": {
@@ -351,6 +313,47 @@
             },
             "Name": "Button_1_2",
             "ctype": "ButtonObjectData"
+          },
+          {
+            "FlipY": true,
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/Sprite.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.1042,
+              "Y": 0.0991
+            },
+            "RightMargin": 1720.0,
+            "TopMargin": 973.0,
+            "Tag": 12,
+            "ActionTag": 66022674,
+            "Size": {
+              "X": 200.0,
+              "Y": 107.0
+            },
+            "Name": "Sprite_2",
+            "ctype": "SpriteObjectData"
           }
         ],
         "Size": {
@@ -364,9 +367,7 @@
         "../../Default/Button_Disable.png",
         "../../Default/Button_Normal.png",
         "../../Default/Button_Press.png",
-        "../../map/map1.tmx",
-        "../../map/textures/293-100.png",
-        "../../map/tileset2.tsx"
+        "../../Default/Sprite.png"
       ],
       "ctype": "GameFileData"
     }
