@@ -92,6 +92,9 @@
               <Image Name="80-100.png" />
             </Folder>
           </Folder>
+          <TmxFile Name="map_0.tmx" />
+          <File Name="tile_set_deco.tsx" />
+          <File Name="tile_set_object.tsx" />
         </Folder>
         <Folder Name="z_gui">
           <Folder Name="game">

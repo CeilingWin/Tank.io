@@ -1,19 +1,18 @@
 var MapLayer = BaseGui.extend({
     ctor: function(){
-        this.tmMap = null;
         this._super("res/z_gui/game/MapLayer.json");
     },
 
     initGui: function(){
-        cc.log(this.tmMap);
         let fileReader = (filePath)=>{
             return cc.loader.getRes(filePath);
         };
-        TMParser.parseFile("res/map/MapObject.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
+        TMParser.parseFile("res/map/map_0.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) cc.log(err);
             else cc.log(map);
-            this.loadMap(map,"bg");
-            this.loadMap(map,"ObjectMap");
+            this.loadMap(map,"background");
+            this.loadMap(map,"deco")
+            this.loadMap(map,"object");
         });
     },
 
