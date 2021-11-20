@@ -16,17 +16,16 @@ var SceneLobby = BaseScene.extend({
             name: this.tfUserName.getString()
         }).then(room => {
             console.log(room.sessionId, "joined", room.name);
-            let sw = new SceneWaitingGame();
+            let sw = new LayerWaiting();
             sw.setRoom(room);
             SceneMgr.getIns().addGui(sw);
         });
     },
 
-
     onTouchUIEnded: function(sender){
         switch (sender){
             case this.btnPlayNow:
-                SceneMgr.getIns().runScene(new SceneGame());
+                MatchMaker.getIns().playNow(this.tfUserName.getString());
                 break;
             case this.btnJoin:
                 this.initGui();

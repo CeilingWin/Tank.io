@@ -8,13 +8,6 @@
           <TTF Name="classic.ttf" />
           <TTF Name="normal.ttf" />
         </Folder>
-        <Folder Name="z_gui">
-          <Folder Name="game">
-            <Project Name="MapLayer.csd" Type="Scene" />
-            <Project Name="SceneWatingGame.csd" Type="Scene" />
-          </Folder>
-          <Project Name="SceneLobby.csd" Type="Scene" />
-        </Folder>
         <Folder Name="map">
           <Folder Name="textures">
             <Image Name="223-100.png" />
@@ -95,6 +88,14 @@
           </Folder>
           <TmxFile Name="map1.tmx" />
           <TmxFile Name="MapObject.tmx" />
+        </Folder>
+        <Folder Name="z_gui">
+          <Folder Name="game">
+            <Project Name="GameScene.csd" Type="Scene" />
+            <Project Name="LayerWaiting.csd" Type="Scene" />
+            <Project Name="MapLayer.csd" Type="Scene" />
+          </Folder>
+          <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>

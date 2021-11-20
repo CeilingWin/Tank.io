@@ -12,14 +12,15 @@ var MapLayer = BaseGui.extend({
         TMParser.parseFile("res/map/MapObject.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) cc.log(err);
             else cc.log(map);
-            this.loadMap(map);
+            this.loadMap(map,"bg");
+            this.loadMap(map,"ObjectMap");
         });
     },
 
-    loadMap: function(tileMap){
+    loadMap: function(tileMap,layerName){
         let tileSize = cc.size(tileMap.tileWidth, tileMap.tileHeight);
         let mapSize = cc.size(tileMap.width, tileMap.height);
-        let objectLayer = tileMap.layers.find(layer => layer.name === "ObjectMap");
+        let objectLayer = tileMap.layers.find(layer => layer.name === layerName);
         cc.log(objectLayer);
         cc.log(objectLayer.tiles.length);
         for (let xIndex=0;xIndex<mapSize.width;xIndex++){
@@ -29,11 +30,21 @@ var MapLayer = BaseGui.extend({
                 let resImg = tile.image.source;
                 let x = xIndex*tileSize.width;
                 let y = (mapSize.height - yIndex)*tileSize.height;
+                let diagonalFlips = objectLayer.diagonalFlips[yIndex*mapSize.width+xIndex];
+                let horizontalFlips = objectLayer.horizontalFlips[yIndex*mapSize.width+xIndex];
+                let verticalFlips = objectLayer.verticalFlips[yIndex*mapSize.width+xIndex];
+                if (tile.id === 53){
+                    cc.log(xIndex,yIndex,"d h v",diagonalFlips,horizontalFlips,verticalFlips);
+                }
                 let object = this.loadObject(resImg,x,y);
                 let body = tile.objectGroups.find(o=>o.name === "body");
                 body && this.drawBody(object,body,tile);
             }
         }
+    },
+
+    _loadMap: function () {
+
     },
 
     loadObject: function (imgSource,x,y){
@@ -42,6 +53,7 @@ var MapLayer = BaseGui.extend({
         spr.anchorY = 0;
         spr.x = x;
         spr.y = y;
+        cc.log("rotation ",)
         spr.setContentSize(cc.size())
         this.addChild(spr);
         return spr;

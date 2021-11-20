@@ -16,7 +16,7 @@
             <PreSize X="1.5625" Y="2.7778" />
             <FileData Type="Normal" Path="map/map1.tmx" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_1" ActionTag="-446716615" Tag="17" IconVisible="False" LeftMargin="54.8918" RightMargin="1765.1082" TopMargin="830.7629" BottomMargin="49.2370" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_1" ActionTag="-446716615" Tag="17" IconVisible="False" LeftMargin="54.8918" RightMargin="1765.1082" TopMargin="830.7630" BottomMargin="49.2370" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="200.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="104.8918" Y="149.2370" />
@@ -46,7 +46,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_1_1" ActionTag="237423937" Tag="19" IconVisible="False" LeftMargin="1771.1218" RightMargin="48.8782" TopMargin="14.6263" BottomMargin="865.3737" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_1_1" ActionTag="237423937" Tag="19" IconVisible="False" LeftMargin="1771.1218" RightMargin="48.8782" TopMargin="14.6262" BottomMargin="865.3737" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="200.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1821.1218" Y="965.3737" />

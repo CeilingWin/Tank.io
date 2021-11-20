@@ -31,9 +31,11 @@
         "src/core/gui/BaseScene.js",
         "src/core/gui/SceneMgr.js",
         "src/resource.js",
-        "src/modules/game/MapLayer.js",
-        "src/modules/game/SceneGame.js",
-        "src/modules/game/SceneWaitingGame.js",
+        "src/modules/game/Game.js",
+        "src/modules/game/gui/LayerWaiting.js",
+        "src/modules/game/gui/MapLayer.js",
+        "src/modules/game/gui/SceneGame.js",
+        "src/modules/lobby/MatchMaker.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }
