@@ -3,8 +3,7 @@ import { monitor } from "@colyseus/monitor";
 /**
  * Import your Room files
  */
-import { MyRoom } from "./rooms/MyRoom.js";
-import { Lobby } from "./lobby/LobbyRoom.js";
+import {GameRoom} from "./game/GameRoom.js";
 
 export default Arena.default({
     getId: () => "Your Colyseus App",
@@ -13,8 +12,10 @@ export default Arena.default({
         /**
          * Define your room handlers:
          */
-        gameServer.define('lobby',Lobby);
-        gameServer.define('my_room', MyRoom);
+        gameServer.define('game_room',GameRoom);
+        if (process.env.NODE_ENV !== "production") {
+            gameServer.simulateLatency(2000);
+        }
     },
 
     initializeExpress: (app) => {
