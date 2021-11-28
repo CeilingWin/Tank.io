@@ -34,7 +34,7 @@ export class GameState extends Schema {
     addPlayer(id,username){
         let player = new Player(id,username);
         this.players.set(id,player);
-        if (this.players.size === this.maxPlayer) this.startWaiting();
+        if (this.state === GC.ROOM_STATE.LOBBY && this.players.size === this.maxPlayer) this.startWaiting();
         this.room.broadcastPatch();
     }
 
@@ -47,7 +47,7 @@ export class GameState extends Schema {
             case GC.ROOM_STATE.LOBBY:
                 this.handleLobby();
                 break;
-            case GC.ROOM_STATE.WAITING:
+            case GC.ROOM_STATE.WAITING_TO_START:
                 this.handleWaiting();
                 break;
             case GC.ROOM_STATE.IN_GAME:
@@ -60,15 +60,14 @@ export class GameState extends Schema {
     }
 
     startWaiting(){
-        this.timeCountDown = GC.TIME_TO_READY;
-        this.gameStartAt = Date.now() + this.timeCountDown;
-        this.state = GC.ROOM_STATE.WAITING;
+        this.gameStartAt = Date.now() + GC.TIME_TO_READY;
+        this.state = GC.ROOM_STATE.WAITING_TO_START;
         this.room.broadcastPatch();
     }
 
     handleWaiting(){
-        this.timeCountDown -= GC.DELTA_T;
-        if (this.timeCountDown <= 0) this.startGame();
+        let currentTime = Date.now();
+        if (currentTime >=this.gameStartAt) this.startGame();
     }
 
     startGame(){

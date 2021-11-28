@@ -1,0 +1,252 @@
+{
+  "ID": "31d416e1-983a-4e5d-b6bf-c1436d5623c2",
+  "Version": "2.3.4",
+  "Name": "GuiWaiting",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 20,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/Sprite.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 540.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.1042,
+              "Y": 0.0991
+            },
+            "LeftMargin": 860.0,
+            "RightMargin": 860.0,
+            "TopMargin": 486.5,
+            "BottomMargin": 486.5,
+            "Tag": 12,
+            "ActionTag": -1617562261,
+            "Size": {
+              "X": 200.0,
+              "Y": 107.0
+            },
+            "Name": "sprLoading",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 70,
+            "LabelText": "Waiting...",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/classic.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 421.092
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.3899
+            },
+            "PreSize": {
+              "X": 0.5208,
+              "Y": 0.0926
+            },
+            "LeftMargin": 460.0,
+            "RightMargin": 460.0,
+            "TopMargin": 608.908,
+            "BottomMargin": 371.092,
+            "Tag": 13,
+            "ActionTag": -1226104278,
+            "Size": {
+              "X": 1000.0,
+              "Y": 100.0
+            },
+            "Name": "Text_1",
+            "ctype": "TextObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 40,
+            "LabelText": "Room ID: ",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/bold.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 520.0,
+              "Y": 1013.2009
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2708,
+              "Y": 0.9381
+            },
+            "PreSize": {
+              "X": 0.5208,
+              "Y": 0.0481
+            },
+            "HorizontalEdge": "LeftEdge",
+            "LeftMargin": 20.0,
+            "RightMargin": 900.0,
+            "TopMargin": 40.7991,
+            "BottomMargin": 987.2009,
+            "Tag": 27,
+            "ActionTag": -1326157977,
+            "Size": {
+              "X": 1000.0,
+              "Y": 52.0
+            },
+            "Name": "lbRoomId",
+            "ctype": "TextObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 40,
+            "LabelText": "Players: 0",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/bold.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 520.0,
+              "Y": 941.2
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2708,
+              "Y": 0.8715
+            },
+            "PreSize": {
+              "X": 0.5208,
+              "Y": 0.0481
+            },
+            "HorizontalEdge": "LeftEdge",
+            "LeftMargin": 20.0,
+            "RightMargin": 900.0,
+            "TopMargin": 112.8,
+            "BottomMargin": 915.2,
+            "Tag": 11,
+            "ActionTag": 776845619,
+            "Size": {
+              "X": 1000.0,
+              "Y": 52.0
+            },
+            "Name": "lbNumPlayer",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../Default/Sprite.png",
+        "../../fonts/bold.ttf",
+        "../../fonts/classic.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

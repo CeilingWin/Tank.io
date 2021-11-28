@@ -36,7 +36,12 @@ var BaseScene = cc.Scene.extend(_injectCCS).extend({
     },
 
     removeGui: function(guiName) {
-        return this._listGuis = this._listGuis.filter(gui => gui.getClassName() !== guiName);
+        return this._listGui = this._listGui.filter(gui => gui.getClassName() !== guiName);
+    },
+
+    destroyAllGuis: function(){
+        this._listGui.forEach(gui => gui.destroy());
+        this._listGui = [];
     },
 
     getLayer: function(layerId){

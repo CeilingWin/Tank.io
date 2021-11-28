@@ -1,7 +1,7 @@
 var GC = {
     ROOM_STATE : {
         LOBBY : 0,
-        WAITING : 1,
+        WAITING_TO_START : 1,
         IN_GAME : 2
     },
     TIME_TO_READY : 3000,

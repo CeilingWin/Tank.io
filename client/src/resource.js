@@ -89,6 +89,8 @@ var res = {
 	MAP_TILE_SET_DECO_TSX: "res/map/tile_set_deco.tsx",
 	MAP_TILE_SET_OBJECT_TSX: "res/map/tile_set_object.tsx",
 	Z_GUI_GAME_GAMESCENE_JSON: "res/z_gui/game/GameScene.json",
+	Z_GUI_GAME_GUIWAITING_JSON: "res/z_gui/game/GuiWaiting.json",
+	Z_GUI_GAME_GUIWAITINGTOSTART_JSON: "res/z_gui/game/GuiWaitingToStart.json",
 	Z_GUI_GAME_LAYERWAITING_JSON: "res/z_gui/game/LayerWaiting.json",
 	Z_GUI_GAME_MAPLAYER_JSON: "res/z_gui/game/MapLayer.json",
 	Z_GUI_SCENELOBBY_JSON: "res/z_gui/SceneLobby.json",

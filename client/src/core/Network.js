@@ -1,7 +1,7 @@
 var Network = cc.Class.extend({
     ctor: function (){
         this.connection = new Colyseus.Client('ws://localhost:2567');
-        this.pingInterval = 1000;
+        this.pingInterval = 2000;
     },
 
     connectServer: function(){
@@ -10,6 +10,7 @@ var Network = cc.Class.extend({
             cc.director.runScene(new SceneLobby());
             this.listenServerResponse();
             this.pingToServer();
+            setInterval(this.pingToServer.bind(this),this.pingInterval);
         });
     },
 
@@ -29,7 +30,10 @@ var Network = cc.Class.extend({
     onPingSuccess: function(){
         let currentTime = Date.now();
         this.ping = Math.round((currentTime - this.timeSentPing)/2);
-        cc.log("ping is ",this.ping,"ms");
+    },
+
+    getPing: function(){
+        return this.ping;
     }
 });
 

@@ -36,6 +36,7 @@
         "src/modules/Constant.js",
         "src/modules/game/Game.js",
         "src/modules/game/GameRoom.js",
+        "src/modules/game/gui/GuiWaitingToStart.js",
         "src/modules/game/gui/LayerWaiting.js",
         "src/modules/game/gui/MapLayer.js",
         "src/modules/game/gui/SceneGame.js",

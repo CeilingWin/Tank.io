@@ -8,7 +8,7 @@ var GameRoom = cc.Class.extend({
     joinNewRoom: function(room){
         this.room = room;
         this.roomState = this.room.state;
-        SceneMgr.getIns().runScene(new SceneGame());
+        this.gameScene = SceneMgr.getIns().runScene(new SceneGame());
         this.listenMessage();
         this.initGame();
     },
@@ -22,18 +22,21 @@ var GameRoom = cc.Class.extend({
             cc.log("game tick",this.roomState.game.tick);
         }
 
-        this.roomState.onChange = (changes) =>{
-            cc.log(changes);
-            cc.log("room state:",this.roomState.state);
-        }
+        // this.roomState.onChange = (changes) =>{
+        //     cc.log(changes);
+        //     cc.log("room state:",this.roomState.state);
+        // }
+
+        this.roomState.listen("state",this.handleGameStateChange.bind(this));
+        // this.roomState.state.onChange = this.handleGameStateChange.bind(this);
     },
 
-    initGame: function(){
+    handleGameStateChange: function(){
         switch (this.roomState.state) {
             case GC.ROOM_STATE.LOBBY:
                 this.showLobby();
                 break;
-            case GC.ROOM_STATE.WAITING:
+            case GC.ROOM_STATE.WAITING_TO_START:
                 this.startWaiting();
                 break;
             case GC.ROOM_STATE.IN_GAME:
@@ -44,6 +47,10 @@ var GameRoom = cc.Class.extend({
         }
     },
 
+    initGame: function(){
+        this.game = new Game();
+    },
+
     showLobby: function(){
         cc.log("show lobby");
     },
@@ -52,8 +59,13 @@ var GameRoom = cc.Class.extend({
         // todo:
     },
 
-    startWaiting: function(message){
-        cc.log("start waiting", message);
+    startWaiting: function(){
+        cc.log("start waiting");
+        cc.log("game start at",this.roomState.gameStartAt);
+        let gameStartAt = this.roomState.gameStartAt;
+        this.gameScene.destroyAllGuis();
+        this.initGame();
+        this.gameScene.showWaiting(gameStartAt);
     },
 
     startGame: function(){
