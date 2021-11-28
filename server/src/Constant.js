@@ -3,7 +3,19 @@ var GC = {
         LOBBY : 0,
         WAITING : 1,
         IN_GAME : 2
-    }
+    },
+    TIME_TO_READY : 3000,
+
+    DELTA_T : 50 //ms
 }
 
-export {GC};
+var TYPE_MESSAGE = {
+    // LOBBY
+    PLAYER_JOIN : 0,
+    PLAYER_LEAVE : 1,
+    // CONTROLL GAME
+    START_WAITING : 10,
+    START_GAME : 11
+}
+
+export {GC, TYPE_MESSAGE};

@@ -1,11 +1,12 @@
 import * as schema from "@colyseus/schema";
 import {GC} from "../Constant.js";
-export class Game extends schema.Schema{
-    state;
 
+export class Game extends schema.Schema{
     constructor(){
         super();
-        this.state = GC.GAME_STATE.LOBBY;
     }
-
 }
+
+schema.defineTypes(Game,{
+    mode: "int8"
+})

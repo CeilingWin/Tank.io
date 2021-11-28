@@ -1,0 +1,8 @@
+{
+    "game_config":{
+        "min_player" : 2,
+        "max_player" : 12,
+        "default_num_player" : 2,
+        "default_map" : 0
+    }
+}
