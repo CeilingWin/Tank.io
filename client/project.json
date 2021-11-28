@@ -30,12 +30,16 @@
         "src/core/gui/BaseGui.js",
         "src/core/gui/BaseScene.js",
         "src/core/gui/SceneMgr.js",
+        "src/core/Network.js",
+        "src/GlobalVar.js",
         "src/resource.js",
+        "src/modules/Constant.js",
         "src/modules/game/Game.js",
+        "src/modules/game/GameRoom.js",
         "src/modules/game/gui/LayerWaiting.js",
         "src/modules/game/gui/MapLayer.js",
         "src/modules/game/gui/SceneGame.js",
-        "src/modules/lobby/MatchMaker.js",
+        "src/modules/game/MatchMaker.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }

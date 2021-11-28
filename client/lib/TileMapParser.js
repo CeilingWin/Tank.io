@@ -16807,7 +16807,8 @@ exports.inflateUndermine = inflateUndermine;
                         tile.width = tile.image.width;
                         tile.height = tile.image.height;
                         // load collision
-                        TMParser._loadBody(tile);
+                        tile.bodys = [];
+                        tile.objectGroups.forEach(body=>TMParser._loadBody(tile,body));
                         // remove unused attributes tile
                         delete tile.image;
                         delete tile.terrain;
@@ -16843,10 +16844,8 @@ exports.inflateUndermine = inflateUndermine;
                 return map;
             },
 
-            _loadBody: (tile)=>{
-                let body = tile.objectGroups.find(o=>o.name === "body");
+            _loadBody: (tile,body)=>{
                 if (!body) return;
-                tile.body = true;
                 let customBody = {};
                 let _convertPosY = (y) =>{
                     return tile.height - y;
@@ -16876,7 +16875,7 @@ exports.inflateUndermine = inflateUndermine;
                     customBody.width = body.width;
                     customBody.height = body.height;
                 }
-                tile.body = customBody;
+                tile.bodys.push(customBody);
             }
 
         }

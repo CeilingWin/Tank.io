@@ -9,17 +9,7 @@ var SceneLobby = BaseScene.extend({
     },
 
     initGui: function () {
-        // test
-        cc.log("test colyseus");
-        let client = new Colyseus.Client('ws://localhost:2567');
-        client.joinOrCreate("lobby",{
-            name: this.tfUserName.getString()
-        }).then(room => {
-            console.log(room.sessionId, "joined", room.name);
-            let sw = new LayerWaiting();
-            sw.setRoom(room);
-            SceneMgr.getIns().addGui(sw);
-        });
+
     },
 
     onTouchUIEnded: function(sender){

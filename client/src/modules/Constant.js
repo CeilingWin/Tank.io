@@ -4,7 +4,7 @@ var GC = {
         WAITING : 1,
         IN_GAME : 2
     },
-    TIME_TO_READY : 5000,
+    TIME_TO_READY : 3000,
 
     DELTA_T : 50 //ms
 }
@@ -19,5 +19,3 @@ var TYPE_MESSAGE = {
     START_WAITING : 10,
     START_GAME : 11
 }
-
-export {GC, TYPE_MESSAGE};

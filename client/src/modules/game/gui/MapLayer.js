@@ -45,13 +45,13 @@ var MapLayer = BaseGui.extend({
             }
         })
         cc.eventManager.addListener(touchEvent,this);
+
     },
 
     loadMap: function(tileMap,layerName){
         let tileSize = cc.size(tileMap.tileWidth, tileMap.tileHeight);
         let mapSize = cc.size(tileMap.width, tileMap.height);
         let objectLayer = tileMap.layers.find(layer => layer.name === layerName);
-        cc.log("load",objectLayer);
         for (let xIndex=0;xIndex<mapSize.width;xIndex++){
             for (let yIndex=0;yIndex<mapSize.height;yIndex++){
                 let tile = objectLayer.tileAt(xIndex, yIndex);
@@ -59,8 +59,8 @@ var MapLayer = BaseGui.extend({
                 let resImg = tile.imgRes;
                 let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
                 let object = this.loadObject(resImg,pos.x,pos.y);
-                let body = tile.body;
-                body && this.drawBody(object,body);
+                let bodys = tile.bodys;
+                bodys.forEach(body=>this.drawBody(object,body,tile));
             }
         }
     },
@@ -84,21 +84,18 @@ var MapLayer = BaseGui.extend({
         let pos;
         switch (type){
             case "rectangle":
-                cc.log("rectangle");
                 pos = cc.p(body.x,body.y);
                 let size = cc.p(body.width,body.height);
                 size = cc.pAdd(pos,size);
                 ndBody.drawRect(pos, size, cc.color(200,200,200,100), 2, cc.color(255, 0, 255, 255));
                 break;
             case "circle":
-                cc.log("circle");
                 pos = cc.p(body.x,body.y);
                 let r = body.radius;
-                ndBody.drawCircle(pos,r,0,100,false,3,cc.color(255,0,0));
+                ndBody.drawCircle(pos,r,0,50,false,3,cc.color(255,0,0));
                 break;
             case "polygon":
                 ndBody.drawPoly(body.points,cc.color(0,255,0,100),3,cc.color(0,255,0));
-                cc.log("polygon");
                 break;
         }
     }

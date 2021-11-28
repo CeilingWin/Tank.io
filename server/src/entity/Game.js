@@ -4,9 +4,13 @@ import {GC} from "../Constant.js";
 export class Game extends schema.Schema{
     constructor(){
         super();
+        this.tick = 0;
+    }
+
+    update(){
     }
 }
 
 schema.defineTypes(Game,{
-    mode: "int8"
+    tick: "number"
 })

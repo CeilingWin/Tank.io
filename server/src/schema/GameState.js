@@ -12,14 +12,12 @@ export class GameState extends Schema {
         this.room = room;
         // attr
         this.players = new MapSchema();
-        this.game = new Game();
         this.resetState();
         this.initDefault();
     }
 
     resetState(){
-        this.tick = 0;
-        this.state = GC.GAME_STATE.LOBBY;
+        this.state = GC.ROOM_STATE.LOBBY;
     }
 
     init(maxPlayer, mapId){
@@ -37,6 +35,7 @@ export class GameState extends Schema {
         let player = new Player(id,username);
         this.players.set(id,player);
         if (this.players.size === this.maxPlayer) this.startWaiting();
+        this.room.broadcastPatch();
     }
 
     getNumPlayers(){
@@ -45,17 +44,16 @@ export class GameState extends Schema {
 
     update(){
         switch(this.state){
-            case GC.GAME_STATE.LOBBY:
+            case GC.ROOM_STATE.LOBBY:
                 this.handleLobby();
                 break;
-            case GC.GAME_STATE.WAITING:
+            case GC.ROOM_STATE.WAITING:
                 this.handleWaiting();
                 break;
-            case GC.GAME_STATE.IN_GAME:
+            case GC.ROOM_STATE.IN_GAME:
                 this.handleGameUpdate();
                 break;
         }
-        this.tick += 1;
     }
 
     handleLobby(){
@@ -63,10 +61,9 @@ export class GameState extends Schema {
 
     startWaiting(){
         this.timeCountDown = GC.TIME_TO_READY;
-        this.state = GC.GAME_STATE.WAITING;
-        this.room.broadcast(TYPE_MESSAGE.START_WAITING,{
-            timeWaiting: this.timeCountDown
-        });
+        this.gameStartAt = Date.now() + this.timeCountDown;
+        this.state = GC.ROOM_STATE.WAITING;
+        this.room.broadcastPatch();
     }
 
     handleWaiting(){
@@ -75,13 +72,15 @@ export class GameState extends Schema {
     }
 
     startGame(){
-        this.state = GC.GAME_STATE.IN_GAME;
-        this.room.broadcast(TYPE_MESSAGE.START_GAME);
+        this.state = GC.ROOM_STATE.IN_GAME;
+        this.game = new Game();
+        this.room.broadcastPatch();
     }
 
     handleGameUpdate(){
         console.log("game update");
         this.game.update();
+        this.room.broadcastPatch();
     }
 }
 
@@ -91,5 +90,5 @@ schema.defineTypes(GameState, {
     state: "number",
     maxPlayer: "number",
     mapId: "number",
-    tick: "number"
+    gameStartAt: "number",
 });

@@ -5,6 +5,7 @@ import config from "config";
  * Import your Room files
  */
 import {GameRoom} from "./game/GameRoom.js";
+import { ServerRoom } from "./ServerRoom.js";
 // config
 const gameConfig = config.get("game_config");
 
@@ -15,6 +16,7 @@ export default Arena.default({
         /**
          * Define your room handlers:
          */
+        gameServer.define('server',ServerRoom);
         gameServer.define('game_room',GameRoom,{
             maxPlayer : gameConfig["default_num_player"],
             mapId: 0

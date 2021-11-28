@@ -54,11 +54,21 @@
                   "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "map/textures/deco/242-100.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "map/textures/deco/242-100.png",
+                  "Plist": ""
+                },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 5,
-                "Scale9Width": 11,
-                "Scale9Height": 6,
+                "Scale9Width": 226,
+                "Scale9Height": 118,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -93,10 +103,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": -206.0299,
-                "RightMargin": -193.9701,
-                "TopMargin": -170.7948,
-                "BottomMargin": 70.7948,
+                "LeftMargin": -134.0299,
+                "RightMargin": -121.9701,
+                "TopMargin": -184.7948,
+                "BottomMargin": 56.7948,
                 "Tag": 2,
                 "Children": [
                   {
@@ -115,6 +125,8 @@
                     "ColorVector": {
                       "ScaleY": 1.0
                     },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
                     "AnchorPoint": {},
                     "Position": {
                       "X": 0.0,
@@ -141,9 +153,10 @@
                     "Tag": 4,
                     "ActionTag": 694765201,
                     "Size": {
-                      "X": 400.0,
-                      "Y": 100.0
+                      "X": 256.0,
+                      "Y": 128.0
                     },
+                    "VisibleForFrame": false,
                     "Name": "Panel_1",
                     "ctype": "PanelObjectData"
                   },
@@ -166,8 +179,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 200.0,
-                      "Y": 50.0
+                      "X": 128.0,
+                      "Y": 64.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -186,13 +199,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5625,
-                      "Y": 0.57
+                      "X": 0.8789,
+                      "Y": 0.4453
                     },
-                    "LeftMargin": 87.5,
-                    "RightMargin": 87.5,
-                    "TopMargin": 21.5,
-                    "BottomMargin": 21.5,
+                    "LeftMargin": 15.5,
+                    "RightMargin": 15.5,
+                    "TopMargin": 35.5,
+                    "BottomMargin": 35.5,
                     "Tag": 5,
                     "ActionTag": 1134857097,
                     "Size": {
@@ -205,8 +218,8 @@
                 ],
                 "ActionTag": -210303996,
                 "Size": {
-                  "X": 400.0,
-                  "Y": 100.0
+                  "X": 256.0,
+                  "Y": 128.0
                 },
                 "Name": "btnPlayNow",
                 "ctype": "ButtonObjectData"
@@ -224,11 +237,21 @@
                   "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "map/textures/deco/273-100.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "map/textures/deco/273-100.png",
+                  "Plist": ""
+                },
                 "Scale9Enable": true,
-                "Scale9OriginX": -15,
-                "Scale9OriginY": -5,
-                "Scale9Width": 30,
-                "Scale9Height": 10,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 5,
+                "Scale9Width": 226,
+                "Scale9Height": 118,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -263,10 +286,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": -206.0298,
-                "RightMargin": -193.9702,
-                "TopMargin": 31.4236,
-                "BottomMargin": -131.4236,
+                "LeftMargin": -134.0298,
+                "RightMargin": -121.9702,
+                "TopMargin": 17.4236,
+                "BottomMargin": -145.4236,
                 "Tag": 6,
                 "Children": [
                   {
@@ -313,9 +336,10 @@
                     "Tag": 7,
                     "ActionTag": -1032283913,
                     "Size": {
-                      "X": 400.0,
-                      "Y": 100.0
+                      "X": 256.0,
+                      "Y": 128.0
                     },
+                    "VisibleForFrame": false,
                     "Name": "Panel_1",
                     "ctype": "PanelObjectData"
                   },
@@ -338,8 +362,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 200.0,
-                      "Y": 50.0
+                      "X": 128.0,
+                      "Y": 64.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -358,13 +382,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.605,
-                      "Y": 0.57
+                      "X": 0.9453,
+                      "Y": 0.4453
                     },
-                    "LeftMargin": 79.0,
-                    "RightMargin": 79.0,
-                    "TopMargin": 21.5,
-                    "BottomMargin": 21.5,
+                    "LeftMargin": 7.0,
+                    "RightMargin": 7.0,
+                    "TopMargin": 35.5,
+                    "BottomMargin": 35.5,
                     "Tag": 8,
                     "ActionTag": -2021403392,
                     "Size": {
@@ -377,8 +401,8 @@
                 ],
                 "ActionTag": -1497771351,
                 "Size": {
-                  "X": 400.0,
-                  "Y": 100.0
+                  "X": 256.0,
+                  "Y": 128.0
                 },
                 "Name": "btnJoin",
                 "ctype": "ButtonObjectData"
@@ -567,6 +591,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5
@@ -666,7 +692,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../Default/Button_Disable.png"
+        "../Default/Button_Disable.png",
+        "../map/textures/deco/242-100.png",
+        "../map/textures/deco/273-100.png"
       ],
       "ctype": "GameFileData"
     }
