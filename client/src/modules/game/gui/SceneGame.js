@@ -11,6 +11,10 @@ var SceneGame = BaseScene.extend({
     showWaiting: function(gameStartAt){
         this.guiWaiting = gv.sceneMgr.addGui(new GuiWaitingToStart(),Layer.TOP);
         this.guiWaiting.setTimeToStart(gameStartAt);
+    },
+
+    stopWaiting: function (){
+        this.guiWaiting && this.guiWaiting.destroy();
     }
 
 })

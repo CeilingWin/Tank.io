@@ -10,7 +10,6 @@ var GameRoom = cc.Class.extend({
         this.roomState = this.room.state;
         this.gameScene = SceneMgr.getIns().runScene(new SceneGame());
         this.listenMessage();
-        this.initGame();
     },
 
     listenMessage: function(){
@@ -61,7 +60,6 @@ var GameRoom = cc.Class.extend({
 
     startWaiting: function(){
         cc.log("start waiting");
-        cc.log("game start at",this.roomState.gameStartAt);
         let gameStartAt = this.roomState.gameStartAt;
         this.gameScene.destroyAllGuis();
         this.initGame();
@@ -70,6 +68,8 @@ var GameRoom = cc.Class.extend({
 
     startGame: function(){
         cc.log("start game");
+        this.gameScene.stopWaiting();
+        if (!this.game) this.initGame();
     }
 });
 

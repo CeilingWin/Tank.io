@@ -1,5 +1,10 @@
 var Game = cc.Class.extend({
-    ctor: function(data){
+    ctor: function(){
         cc.log("new game");
+        gv.sceneMgr.addGui(new MapLayer());
+    },
+
+    start: function(){
+        // todo: ...
     }
 })
