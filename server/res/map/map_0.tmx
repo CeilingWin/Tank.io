@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="30" tileheight="30" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="tile_set_deco.tsx"/>
+ <tileset firstgid="23" source="tile_set_object.tsx"/>
+ <layer id="1" name="background" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt2UENADAQw7D7jT/jwWil2gBCIHcAAAAAAAAAJDy9qh4AAAAAAAAAGe0/ea0HAAAAAAAAQEb7T17rAQAAAAAAADva/6WeXrIHAAAAAAAAQEb7T17rfZngANM=
+  </data>
+ </layer>
+ <layer id="2" name="deco" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt3LEOwiAQBmAGdTFxMfr+j+rYTaKBO+h930oTLpBQ/kLaGlDJO7sAAACgDPkDAACIIn8AAABR5A8AACCK/HE+1+wCAAAAoJh7cHvveYAdRK+do9sB4BePhD5fCX0CAADrc2d0nEt2AQCJbtkFALAF+YMzkwkPz+wCAACa/MEYve+es9sB4B/ujK/FfNQgfwDM9e0czhndPswVHGb9H1j+qEH+YAXe63P0xtW4A9XN2u/uur/6ALrsAj4=
+  </data>
+ </layer>
+ <layer id="3" name="object" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt3LuKwkAUBmDfwka02MJWW2EvsIIX8P1fZ1sLF8Kuk/84831lQiY/ZzIXQshiAQD0YJ0OQHP6mB55roF7+3SAO+Yn+J+vom0BwKt7n+k+h/D5KuaqNwAAj9mPZag7wJhO6QDMbpcOAHRtmQ4A0Ji9FMDvqn2DfUsHeCEf6QAAA5p7naq2TgPPd0wHAAAAAKAL13QAAAAAGNwqHQAKeTQejJG69E2GujPFZzoAAFDOJR2AoX2nAwDAIM7pAEGbicdop0W9/TOD3piX6tAX9GT7xLaMDarwPnGa0ffL5ixob+R3TfTv7Y/X/QDztAjv
+  </data>
+ </layer>
+</map>

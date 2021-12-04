@@ -4,7 +4,7 @@ var GC = {
         WAITING_TO_START : 1,
         IN_GAME : 2
     },
-    TIME_TO_READY : 5000,
+    TIME_TO_READY : 2000,
 
     DELTA_T : 50 //ms
 }
