@@ -1,3 +1,4 @@
+
 var GameRoom = cc.Class.extend({
     game: null,
     roomState: null,
@@ -48,6 +49,11 @@ var GameRoom = cc.Class.extend({
 
     initGame: function(){
         this.game = new Game();
+        this.game.initMap(this.roomState.mapId);
+        // init tank
+        this.roomState.game.tanks.forEach((tank,playerId)=>{
+            this.game.addTank(playerId,tank);
+        })
     },
 
     showLobby: function(){
@@ -61,6 +67,7 @@ var GameRoom = cc.Class.extend({
     startWaiting: function(){
         cc.log("start waiting");
         let gameStartAt = this.roomState.gameStartAt;
+        cc.log(this.roomState);
         this.gameScene.destroyAllGuis();
         this.initGame();
         this.gameScene.showWaiting(gameStartAt);

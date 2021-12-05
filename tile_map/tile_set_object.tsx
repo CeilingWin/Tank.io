@@ -236,7 +236,6 @@
    <object id="4" x="24" y="248" width="101" height="109"/>
    <object id="5" x="522" y="248" width="102" height="109"/>
    <object id="6" x="265" y="528" width="108" height="98"/>
-   <object id="7" x="206" y="676" height="1"/>
   </objectgroup>
  </tile>
  <tile id="41">

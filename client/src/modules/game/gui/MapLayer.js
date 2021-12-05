@@ -9,7 +9,6 @@ var MapLayer = BaseGui.extend({
         };
         TMParser.parseFile("res/map/map_0.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) return cc.log("Cannot load map");
-            else cc.log(map);
             this.loadMap(map,"background");
             this.loadMap(map,"deco")
             this.loadMap(map,"object");
@@ -65,6 +64,9 @@ var MapLayer = BaseGui.extend({
         }
     },
 
+    addTankToMap: function(tank){
+        this.addChild(tank,10000);
+    },
 
     loadObject: function (imgSource,x,y){
         let spr = new cc.Sprite("res/map/"+imgSource);
