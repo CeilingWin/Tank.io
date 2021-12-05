@@ -313,47 +313,6 @@
             },
             "Name": "Button_1_2",
             "ctype": "ButtonObjectData"
-          },
-          {
-            "FlipY": true,
-            "FileData": {
-              "Type": "Default",
-              "Path": "Default/Sprite.png",
-              "Plist": ""
-            },
-            "BlendFunc": {
-              "Src": 1,
-              "Dst": 771
-            },
-            "AnchorPoint": {},
-            "Position": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "PreSize": {
-              "X": 0.1042,
-              "Y": 0.0991
-            },
-            "RightMargin": 1720.0,
-            "TopMargin": 973.0,
-            "Tag": 12,
-            "ActionTag": 66022674,
-            "Size": {
-              "X": 200.0,
-              "Y": 107.0
-            },
-            "Name": "Sprite_2",
-            "ctype": "SpriteObjectData"
           }
         ],
         "Size": {
@@ -366,8 +325,7 @@
       "UsedResources": [
         "../../Default/Button_Disable.png",
         "../../Default/Button_Normal.png",
-        "../../Default/Button_Press.png",
-        "../../Default/Sprite.png"
+        "../../Default/Button_Press.png"
       ],
       "ctype": "GameFileData"
     }

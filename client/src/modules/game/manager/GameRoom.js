@@ -22,13 +22,7 @@ var GameRoom = cc.Class.extend({
             cc.log("game tick",this.roomState.game.tick);
         }
 
-        // this.roomState.onChange = (changes) =>{
-        //     cc.log(changes);
-        //     cc.log("room state:",this.roomState.state);
-        // }
-
         this.roomState.listen("state",this.handleGameStateChange.bind(this));
-        // this.roomState.state.onChange = this.handleGameStateChange.bind(this);
     },
 
     handleGameStateChange: function(){
@@ -52,7 +46,7 @@ var GameRoom = cc.Class.extend({
         this.game.initMap(this.roomState.mapId);
         // init tank
         this.roomState.game.tanks.forEach((tank,playerId)=>{
-            this.game.addTank(playerId,tank);
+            this.game.addTank(playerId,tank, playerId === this.room.sessionId);
         })
     },
 
@@ -74,9 +68,9 @@ var GameRoom = cc.Class.extend({
     },
 
     startGame: function(){
-        cc.log("start game");
         this.gameScene.stopWaiting();
         if (!this.game) this.initGame();
+        this.game.start();
     }
 });
 

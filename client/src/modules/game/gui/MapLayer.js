@@ -1,31 +1,46 @@
 var MapLayer = BaseGui.extend({
     ctor: function(){
-        this._super("res/z_gui/game/MapLayer.json");
+        this._super();
     },
 
     initGui: function(){
-        let fileReader = (filePath)=>{
-            return cc.loader.getRes(filePath);
-        };
         TMParser.parseFile("res/map/map_0.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) return cc.log("Cannot load map");
             this.loadMap(map,"background");
             this.loadMap(map,"deco")
             this.loadMap(map,"object");
-            // init demo tank
-            this._initDemoTank();
-            let mapWidth = map.tileWidth*map.width;
-            let mapHeight = map.tileHeight*map.height;
-            this.runAction(cc.Follow.create(this.tank,cc.rect(0,0,mapWidth,mapHeight)));
+            this.mapWidth = map.tileWidth*map.width;
+            this.mapHeight = map.tileHeight*map.height;
+            this.isLoadedMap = true;
+            this._loadDone();
         });
     },
 
-    _initDemoTank: function () {
-        let tank = new cc.Sprite("res/map/textures/object/80-100.png");
-        tank.x = 100;
-        tank.y = 100;
-        this.addChild(tank);
+    _loadDone: function () {
+        if (this.callFunc) {
+            this.callFunc();
+            this.callFunc = null;
+        }
+    },
+
+    follow: function(tank){
         this.tank = tank;
+        this.test();
+        let func = ()=>{
+            if (this.actionFollow){
+                this.stopAction(this.actionFollow);
+            }
+            this.actionFollow = this.runAction(cc.follow(tank,cc.rect(0,0,this.mapWidth,this.mapHeight)));
+        }
+        if (!this.isLoadedMap){
+            this.callFunc = func;
+        } else {
+            func();
+        }
+    },
+
+    test: function () {
+        let tank = this.tank;
         let touchEvent = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: (event)=>{
@@ -38,7 +53,7 @@ var MapLayer = BaseGui.extend({
             onTouchEnded: (event) =>{
                 let p = event.getLocation();
                 p = this.convertToNodeSpace(p);
-                tank.stopAllActions();
+                this.tank.stopAllActions();
                 let speed = 500;
                 tank.runAction(cc.moveTo(1,p.x,p.y));
             }

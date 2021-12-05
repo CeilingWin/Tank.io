@@ -66,17 +66,6 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_2" ActionTag="66022674" Tag="12" IconVisible="False" RightMargin="1720.0000" TopMargin="973.0000" FlipY="True" ctype="SpriteObjectData">
-            <Size X="200.0000" Y="107.0000" />
-            <AnchorPoint />
-            <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
-            <PreSize X="0.1042" Y="0.0991" />
-            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>
