@@ -18,7 +18,6 @@ var GameRoom = cc.Class.extend({
         this.room.onMessage(TYPE_MESSAGE.START_GAME,this.startGame.bind(this));
 
         this.room.state.game.onChange = c => {
-            cc.log("game state changed",c);
             cc.log("game tick",this.roomState.game.tick);
         }
 
@@ -43,7 +42,7 @@ var GameRoom = cc.Class.extend({
 
     initGame: function(){
         this.game = new Game();
-        this.game.initMap(this.roomState.mapId);
+        this.game.init(this.roomState.mapId);
         // init tank
         this.roomState.game.tanks.forEach((tank,playerId)=>{
             this.game.addTank(playerId,tank, playerId === this.room.sessionId);

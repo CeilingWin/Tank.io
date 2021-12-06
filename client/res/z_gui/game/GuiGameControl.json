@@ -1,0 +1,209 @@
+{
+  "ID": "1c618004-be3b-46b5-8cf9-2f34a1d0e220",
+  "Version": "2.3.4",
+  "Name": "GuiGameControl",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 15,
+        "Children": [
+          {
+            "ProgressInfo": 61,
+            "ImageFileData": {
+              "Type": "Default",
+              "Path": "Default/LoadingBarFile.png",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 326.8596,
+              "Y": 1040.2561
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1702,
+              "Y": 0.9632
+            },
+            "PreSize": {
+              "X": 0.2083,
+              "Y": 0.013
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 126.8596,
+            "RightMargin": 1393.1404,
+            "TopMargin": 32.7439,
+            "BottomMargin": 1033.2561,
+            "Tag": 16,
+            "ActionTag": 1932422603,
+            "Size": {
+              "X": 400.0,
+              "Y": 14.0
+            },
+            "Name": "lbHp",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "FontSize": 30,
+            "LabelText": "HP:",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/bold.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 58.9929,
+              "Y": 1040.7644
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0307,
+              "Y": 0.9637
+            },
+            "PreSize": {
+              "X": 0.0427,
+              "Y": 0.0361
+            },
+            "LeftMargin": 17.9929,
+            "RightMargin": 1820.0071,
+            "TopMargin": 19.7356,
+            "BottomMargin": 1021.2644,
+            "Tag": 17,
+            "ActionTag": 77415118,
+            "Size": {
+              "X": 82.0,
+              "Y": 39.0
+            },
+            "Name": "Text_1",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "Button",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Normal.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 14,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 157.7467,
+              "Y": 637.1948
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0822,
+              "Y": 0.59
+            },
+            "PreSize": {
+              "X": 0.1042,
+              "Y": 0.3704
+            },
+            "LeftMargin": 57.7467,
+            "RightMargin": 1662.2533,
+            "TopMargin": 242.8052,
+            "BottomMargin": 437.1948,
+            "Tag": 18,
+            "ActionTag": 1007926410,
+            "Size": {
+              "X": 200.0,
+              "Y": 400.0
+            },
+            "Name": "btnTest",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../Default/Button_Disable.png",
+        "../../Default/Button_Normal.png",
+        "../../Default/Button_Press.png",
+        "../../Default/LoadingBarFile.png",
+        "../../fonts/bold.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

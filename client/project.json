@@ -35,12 +35,14 @@
         "src/resource.js",
         "src/modules/Constant.js",
         "src/modules/game/gui/entity/Tank.js",
+        "src/modules/game/gui/GuiGameControll.js",
         "src/modules/game/gui/GuiWaitingToStart.js",
         "src/modules/game/gui/LayerWaiting.js",
         "src/modules/game/gui/MapLayer.js",
         "src/modules/game/gui/SceneGame.js",
         "src/modules/game/manager/Game.js",
         "src/modules/game/manager/GameRoom.js",
+        "src/modules/game/manager/Input.js",
         "src/modules/game/MatchMaker.js",
         "src/modules/lobby/SceneLobby.js"
     ]

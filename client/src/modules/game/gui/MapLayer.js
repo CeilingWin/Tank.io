@@ -46,7 +46,6 @@ var MapLayer = BaseGui.extend({
             onTouchBegan: (event)=>{
                 let p = event.getLocation();
                 p = this.convertToNodeSpace(p);
-                cc.log(p);
                 return true;
             },
 

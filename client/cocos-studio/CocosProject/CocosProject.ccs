@@ -100,8 +100,8 @@
           <Folder Name="game">
             <Project Name="GameScene.csd" Type="Scene" />
             <Project Name="GuiWaiting.csd" Type="Scene" />
-            <Project Name="MapLayer.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
+            <Project Name="GuiGameControl.csd" Type="Scene" />
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
