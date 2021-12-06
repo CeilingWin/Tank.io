@@ -3,7 +3,7 @@ var GameRoom = cc.Class.extend({
     game: null,
     roomState: null,
     ctor: function (){
-
+        gv.gameRoom = this;
     },
 
     joinNewRoom: function(room){
@@ -42,6 +42,7 @@ var GameRoom = cc.Class.extend({
 
     initGame: function(){
         this.game = new Game();
+        gv.game = this.game;
         this.game.init(this.roomState.mapId);
         // init tank
         this.roomState.game.tanks.forEach((tank,playerId)=>{

@@ -1,12 +1,33 @@
 var Input = cc.Class.extend({
-    tankDir: cc.p(0,0),
-    cannonDir: cc.p(1,0),
     mousePos: cc.p(0,0),
     touched: false,
-    keyListener: null,
-    mouseListener: null,
+    _isClicked: false,
     ctor: function (){
+        this.keyDir = {
+            up: false,
+            down: false,
+            right: false,
+            left: false
+        }
+    },
 
+    getDirection: function (){
+        let direction = cc.p(0,0);
+        if (this.keyDir.up) direction = cc.pAdd(direction,cc.p(0,1));
+        if (this.keyDir.down) direction = cc.pAdd(direction,cc.p(0,-1));
+        if (this.keyDir.right) direction = cc.pAdd(direction,cc.p(1,0));
+        if (this.keyDir.left) direction = cc.pAdd(direction,cc.p(-1,0));
+        return cc.pNormalize(direction);
+    },
+
+    getMousePos: function () {
+        return this.mousePos;
+    },
+
+    isClicked: function(){
+        let isClicked = this._isClicked;
+        if (!this.touched) this._isClicked = false;
+        return isClicked;
     },
 
     start: function(){
@@ -19,28 +40,26 @@ var Input = cc.Class.extend({
     initKeyListener: function(){
         this.keyListener = cc.EventListener.create({
             event: cc.EventListener.KEYBOARD,
-            onKeyPressed: function (event) {
-                cc.log("on pressed",event);
+            onKeyPressed:(keyCode)=>{
+                this._onKeyPressed(keyCode);
             },
-            onKeyReleased: function (event) {
-                cc.log("on released",event);
+            onKeyReleased:(keyCode)=>{
+                this._onKeyReleased(keyCode);
             }
         })
         cc.eventManager.addListener(this.keyListener,this.target);
-        this.stop();
-        this.stop();
     },
     
     initTouchListener: function(){
         this.touchListener = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            onTouchBegan: function (event) {
+            onTouchBegan:()=>{
                 this.touched = true;
-                cc.log("touch began");
+                this._isClicked = true;
+                return true;
             },
-            onTouchEnded: function (event) {
+            onTouchEnded:()=>{
                 this.touched = false;
-                cc.log("touch end");
             }
         });
         cc.eventManager.addListener(this.touchListener,this.target);
@@ -64,5 +83,47 @@ var Input = cc.Class.extend({
 
     _removeListener: function (listener){
         listener && cc.eventManager.removeListener(listener);
+    },
+
+    _onKeyPressed: function(keyCode){
+        switch (keyCode){
+            case cc.KEY.w:
+            case cc.KEY.up:
+                this.keyDir.up = true;
+                break;
+            case cc.KEY.d:
+            case cc.KEY.right:
+                this.keyDir.right = true;
+                break;
+            case cc.KEY.s:
+            case cc.KEY.down:
+                this.keyDir.down = true;
+                break;
+            case cc.KEY.a:
+            case cc.KEY.left:
+                this.keyDir.left = true;
+                break;
+        }
+    },
+
+    _onKeyReleased: function (keyCode) {
+        switch (keyCode){
+            case cc.KEY.w:
+            case cc.KEY.up:
+                this.keyDir.up = false;
+                break;
+            case cc.KEY.d:
+            case cc.KEY.right:
+                this.keyDir.right = false;
+                break;
+            case cc.KEY.s:
+            case cc.KEY.down:
+                this.keyDir.down = false;
+                break;
+            case cc.KEY.a:
+            case cc.KEY.left:
+                this.keyDir.left = false;
+                break;
+        }
     }
 })

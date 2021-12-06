@@ -1,12 +1,12 @@
 var Game = cc.Class.extend({
-    ctor: function(mapId){
-        cc.log("new game");
+    ctor: function(){
         this.tanks = [];
     },
 
     init: function(mapId){
         this.mapLayer = gv.sceneMgr.addGui(new MapLayer(mapId));
         this.guiControl = gv.sceneMgr.addGui(new GuiGameControl());
+        this.input = new Input();
     },
 
     addTank: function (playerId, tankData, isMe) {
@@ -20,13 +20,13 @@ var Game = cc.Class.extend({
 
     start: function(){
         cc.log("start game");
-        this.input = new Input();
         this.input.start();
         // todo: start sample input
         // schedule update
-        cc.director.getScheduler().schedule(this.update.bind(this),this.mapLayer,1/60,cc.REPEAT_FOREVER,0,false,"update_game");
+        cc.director.getScheduler().schedule(this.update.bind(this),this.mapLayer,1/10,cc.REPEAT_FOREVER,0,false,"update_game");
     },
 
     update: function () {
+        cc.log(this.input.isClicked());
     }
 })
