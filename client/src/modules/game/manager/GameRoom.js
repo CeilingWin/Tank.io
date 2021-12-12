@@ -24,6 +24,10 @@ var GameRoom = cc.Class.extend({
         this.roomState.listen("state",this.handleGameStateChange.bind(this));
     },
 
+    sendToServer: function(typeMessage,data){
+        this.room.send(typeMessage,data);
+    },
+
     handleGameStateChange: function(){
         switch (this.roomState.state) {
             case GC.ROOM_STATE.LOBBY:

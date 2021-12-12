@@ -1,6 +1,8 @@
+const UPDATE_INTERVAL_KEY = "update_game";
 var Game = cc.Class.extend({
     ctor: function(){
         this.tanks = [];
+        this.sendToServer = GameRoom.getIns().sendToServer.bind(GameRoom.getIns());
     },
 
     init: function(mapId){
@@ -20,10 +22,10 @@ var Game = cc.Class.extend({
 
     start: function(){
         cc.log("start game");
-        this.input.start();
         // todo: start sample input
+        this.input.start();
         // schedule update
-        cc.director.getScheduler().schedule(this.update.bind(this),this.mapLayer,1/10,cc.REPEAT_FOREVER,0,false,"update_game");
+        cc.director.getScheduler().schedule(this.update.bind(this),this.mapLayer,1/10,cc.REPEAT_FOREVER,0,false,UPDATE_INTERVAL_KEY);
     },
 
     update: function () {
