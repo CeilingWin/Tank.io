@@ -14,5 +14,9 @@ var Tank = cc.Node.extend({
         cannon.anchorX = 0.4;
         this.addChild(cannon);
         this.cannon = cannon;
+    },
+
+    getWoldPos: function () {
+        return this.getParent().convertToWorldSpace(this.getPosition());
     }
 })
