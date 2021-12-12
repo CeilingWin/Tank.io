@@ -15,6 +15,9 @@ export class GameState extends Schema {
         this.players = new MapSchema();
         this.resetState();
         this.initDefault();
+
+        // sub message
+        this.room.onMessage(TYPE_MESSAGE.UPDATE_TANK,this.onUpdateUserTank.bind(this));
     }
 
     resetState() {
@@ -36,7 +39,6 @@ export class GameState extends Schema {
         let player = new Player(id, username);
         this.players.set(id, player);
         if (this.state === GC.ROOM_STATE.LOBBY && this.players.size === this.maxPlayer) await this.startWaiting();
-        this.room.broadcastPatch();
     }
 
     getNumPlayers() {
@@ -63,7 +65,6 @@ export class GameState extends Schema {
         this.gameStartAt = Date.now() + GC.TIME_TO_READY;
         this.state = GC.ROOM_STATE.WAITING_TO_START;
         await this.initGame();
-        this.room.broadcastPatch();
     }
 
     async initGame() {
@@ -77,12 +78,19 @@ export class GameState extends Schema {
 
     startGame() {
         this.state = GC.ROOM_STATE.IN_GAME;
-        this.room.broadcastPatch();
     }
 
     handleGameUpdate() {
         this.game.update();
-        this.room.broadcastPatch();
+    }
+
+    onUpdateUserTank(client,message){
+        if (this.state !== GC.ROOM_STATE.IN_GAME) return;
+        let tankDir = message[0];
+        let cannonDir = message[1];
+        let isClicked = message[2];
+        this.game.setTankDir(client.sessionId,tankDir);
+
     }
 }
 
@@ -92,5 +100,5 @@ schema.defineTypes(GameState, {
     state: "number",
     maxPlayer: "number",
     mapId: "number",
-    gameStartAt: "number",
+    gameStartAt: "number"
 });

@@ -12,7 +12,7 @@ export class Game extends schema.Schema{
     }
 
     async init(mapId,players){
-        this.tick = 0;
+        this.ts = Date.now();
         await this.initMap(mapId);
         this.initTankForAllPlayers(players);
     }
@@ -36,10 +36,21 @@ export class Game extends schema.Schema{
     }
 
     update(){
+        this.ts = Date.now();
+        this.updateTank();
+    }
+
+    updateTank(){
+        this.tanks.forEach(tank=>tank.update());
+    }
+
+    setTankDir(playerId,dir){
+        let tank = this.tanks.get(playerId);
+        if (tank) tank.setTankDir(dir);
     }
 }
 
 schema.defineTypes(Game,{
-    tick: "number",
+    ts: "number",
     tanks: {map:Tank}
 })

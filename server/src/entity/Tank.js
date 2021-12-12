@@ -5,11 +5,21 @@ export class Tank extends schema.Schema{
     constructor(){
         super();
         this.rotation = 0;
+        this.dir = {x:0,y:0};
     }
 
     setPosition(pos){
         this.x = pos.x;
         this.y = pos.y;
+    }
+
+    setTankDir(pos){
+        this.dir = pos;
+    }
+
+    update(){
+        this.x += this.dir.x*GC.DT*GC.TANK_SPEED/1000;
+        this.y += this.dir.y*GC.DT*GC.TANK_SPEED/1000;
     }
 }
 
