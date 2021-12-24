@@ -2,7 +2,7 @@ import * as schema from "@colyseus/schema";
 import { TMParser } from "../lib/TMParser.js";
 import { GC } from "../Constant.js";
 import { Box, Circle, System, Polygon} from "detect-collisions";
-import { Vector, VecUtils } from "../utils/VectorUtils.js";
+import { Vector } from "../utils/VectorUtils.js";
 
 export class MapGame extends schema.Schema {
     constructor() {
@@ -61,11 +61,28 @@ export class MapGame extends schema.Schema {
                 geometry = new Circle(relativePos.add(pos),body.radius);
                 break;
             case "polygon":
-                geometry = new Polygon(relativePos.add(pos),body.points);
+                console.log("before",body.points);
+                body.points.forEach(point=>{
+                    point.y = -point.y;
+                });
+                console.log("after",body.points.reverse());
+                geometry = new Polygon(relativePos.add(pos),body.points.reverse());
                 break;
         }
         this.system.insert(geometry);
         this.system.update();
+    }
+
+    getPotentialObstacle(body){
+        return this.system.getPotentials(body);
+    }
+
+    checkCollision(body, collider){
+        return this.system.checkCollision(body,collider);
+    }
+
+    getCollisionResponse(){
+        return this.system.response;
     }
 }
 

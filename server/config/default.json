@@ -4,5 +4,9 @@
         "max_player" : 12,
         "default_num_player" : 1,
         "default_map" : 0
+    },
+    "tank_config":{
+        "width": 70,
+        "height": 78
     }
 }

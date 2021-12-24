@@ -89,7 +89,7 @@ export class GameState extends Schema {
         let tankDir = message[0];
         let cannonDir = message[1];
         let isClicked = message[2];
-        this.game.setTankDir(client.sessionId,tankDir);
+        this.game.setMovementVector(client.sessionId,tankDir);
 
     }
 }

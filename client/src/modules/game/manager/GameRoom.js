@@ -78,6 +78,8 @@ var GameRoom = cc.Class.extend({
     processGameUpdate: function(){
         this.roomState.game.tanks.forEach(tank=>{
             this.game.tanks[0].setPosition(tank.x,tank.y);
+            this.game.tanks[0].setRotation(tank.direction/Math.PI*180);
+            cc.log(tank.direction/Math.PI*180);
         })
     }
 

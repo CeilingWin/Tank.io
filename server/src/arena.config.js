@@ -22,7 +22,7 @@ export default Arena.default({
             mapId: 0
         });
         if (process.env.NODE_ENV !== "production") {
-            gameServer.simulateLatency(500);
+            gameServer.simulateLatency(100);
         }
     },
 

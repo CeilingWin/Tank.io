@@ -41,12 +41,29 @@ export class Game extends schema.Schema{
     }
 
     updateTank(){
-        this.tanks.forEach(tank=>tank.update());
+        this.tanks.forEach(tank=>{
+            tank.update();
+            // check collision
+            let tankBody = tank.getBody();
+            let potentials = this.map.getPotentialObstacle(tankBody);
+            potentials.forEach((collider) => {
+                if (this.map.checkCollision(tankBody, collider)) {
+                  this.handleCollisionsTankWithObstacle(tank,this.map.getCollisionResponse());
+                }
+              });
+        });
     }
 
-    setTankDir(playerId,dir){
+    handleCollisionsTankWithObstacle(tank,collisionResponse){
+        const { overlapV } = collisionResponse;
+        console.log("detect!",overlapV);
+        tank.x -= overlapV.x;
+        tank.y -= overlapV.y;
+    }
+
+    setMovementVector(playerId,dir){
         let tank = this.tanks.get(playerId);
-        if (tank) tank.setTankDir(dir);
+        if (tank) tank.setMovementVector(dir);
     }
 }
 

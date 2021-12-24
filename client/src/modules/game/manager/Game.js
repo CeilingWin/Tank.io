@@ -49,7 +49,7 @@ var Game = cc.Class.extend({
             let isClicked = this.input.isClicked();
             let mousePos = this.input.getMousePos();
             let tankPos = this.me.getWoldPos();
-            let cannonDir = cc.pNormalize(cc.pSub(mousePos,tankPos));
+            let cannonDir = cc.pAngleSigned(cc.p(1,0),cc.pSub(mousePos,tankPos));
             this.sendToServer(TYPE_MESSAGE.UPDATE_TANK,[tankDir,cannonDir,isClicked]);
             this.lastTimeSendInput = currentTime;
         }
