@@ -61,11 +61,6 @@ export class MapGame extends schema.Schema {
                 geometry = new Circle(relativePos.add(pos),body.radius);
                 break;
             case "polygon":
-                console.log("before",body.points);
-                body.points.forEach(point=>{
-                    point.y = -point.y;
-                });
-                console.log("after",body.points.reverse());
                 geometry = new Polygon(relativePos.add(pos),body.points.reverse());
                 break;
         }

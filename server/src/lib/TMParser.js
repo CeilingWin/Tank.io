@@ -82,14 +82,12 @@ var TMParser = {
             let x = body.x;
             let y = body.y;
             customBody.x = x;
-            customBody.y = y;
+            customBody.y = _convertPosY(y);
             customBody.points = [];
             body.polygon.forEach(pos => {
-                let px = +pos.x+x;
-                let py = _convertPosY(+pos.y+y);
                 customBody.points.push({
-                    x: px,
-                    y: py
+                    x: +pos.x,
+                    y: -pos.y
                 });
             });
         } else {
