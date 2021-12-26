@@ -56,7 +56,7 @@ export class Game extends schema.Schema{
 
     handleCollisionsTankWithObstacle(tank,collisionResponse){
         const { overlapV } = collisionResponse;
-        console.log(this.ts,"detect!",overlapV);
+        console.log(this.ts,"detect!",overlapV,tank.direction);
         tank.x -= overlapV.x;
         tank.y -= overlapV.y;
     }
@@ -64,6 +64,11 @@ export class Game extends schema.Schema{
     setMovementVector(playerId,dir){
         let tank = this.tanks.get(playerId);
         if (tank) tank.setMovementVector(dir);
+    }
+
+    setCannonDir(playerId,dir){
+        let tank = this.tanks.get(playerId);
+        if (tank) tank.setCannonDirection(dir);
     }
 }
 

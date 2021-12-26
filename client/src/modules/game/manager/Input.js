@@ -68,7 +68,7 @@ var Input = cc.Class.extend({
     initMouseListener: function(){
         this.mouseListener = cc.EventListener.create({
             event: cc.EventListener.MOUSE,
-            onMouseMove: function (event) {
+            onMouseMove: (event) => {
                 this.mousePos = event.getLocation();
             }
         });

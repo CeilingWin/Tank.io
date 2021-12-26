@@ -14,6 +14,7 @@ export class Tank extends schema.Schema{
         this.width = tankConfig.width;
         this.height = tankConfig.height;
         this.direction = 0;
+        this.cannonDirection = 0;
     }
 
     setPosition(pos){
@@ -28,6 +29,10 @@ export class Tank extends schema.Schema{
     setMovementVector(vector){
         this.movementVector.x = vector.x;
         this.movementVector.y = vector.y;
+    }
+
+    setCannonDirection(dir){
+        this.cannonDirection = dir;
     }
 
     update(){
@@ -50,5 +55,6 @@ schema.defineTypes(Tank,{
     x: "float32",
     y: "float32",
     direction: "float32",
-    rotation: "float32"
+    rotation: "float32",
+    cannonDirection: "float32"
 })
