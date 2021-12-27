@@ -182,6 +182,9 @@
   <image width="346" height="284" source="textures/object/287-100.png"/>
  </tile>
  <tile id="32">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="363" height="400" source="textures/object/288-100.png"/>
  </tile>
  <tile id="33">

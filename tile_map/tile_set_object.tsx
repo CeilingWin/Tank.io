@@ -28,21 +28,39 @@
   </objectgroup>
  </tile>
  <tile id="4">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="281" height="176" source="textures/object/263-100.png"/>
  </tile>
  <tile id="5">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="176" height="134" source="textures/object/264-67.png"/>
  </tile>
  <tile id="6">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="139" height="139" source="textures/object/265-71.png"/>
  </tile>
  <tile id="7">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="197" height="196" source="textures/object/265-100.png"/>
  </tile>
  <tile id="8">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="141" height="143" source="textures/object/266-100.png"/>
  </tile>
  <tile id="9">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="148" height="143" source="textures/object/267-70.png"/>
  </tile>
  <tile id="10">
@@ -182,12 +200,21 @@
   <image width="346" height="284" source="textures/object/287-100.png"/>
  </tile>
  <tile id="32">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="363" height="400" source="textures/object/288-100.png"/>
  </tile>
  <tile id="33">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="370" height="342" source="textures/object/290-55.png"/>
  </tile>
  <tile id="34">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="674" height="623" source="textures/object/290-100.png"/>
  </tile>
  <tile id="35">
@@ -197,6 +224,9 @@
   </objectgroup>
  </tile>
  <tile id="36">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="396" height="381" source="textures/object/303-66.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="182" y="186" width="32" height="33">
@@ -205,6 +235,9 @@
   </objectgroup>
  </tile>
  <tile id="37">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="600" height="578" source="textures/object/303-100.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="278" y="277" width="79" height="80">
@@ -213,6 +246,9 @@
   </objectgroup>
  </tile>
  <tile id="38">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="360" height="346" source="textures/object/304-60.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="148" y="142" width="68" height="65">
@@ -221,6 +257,9 @@
   </objectgroup>
  </tile>
  <tile id="39">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="600" height="578" source="textures/object/304-100.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="246" y="247" width="113" height="113">

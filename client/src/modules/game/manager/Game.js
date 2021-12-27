@@ -30,7 +30,6 @@ var Game = cc.Class.extend({
 
     start: function(){
         cc.log("start game");
-        // todo: start sample input
         this.input.start();
         this.lastTimeSendInput = 0;
         // schedule update
@@ -44,7 +43,6 @@ var Game = cc.Class.extend({
     updateInput: function(){
         let currentTime = Date.now();
         if (currentTime - this.lastTimeSendInput >= TIME_TO_SEND_UPDATE_TANK){
-            // todo: send input
             let tankDir = this.input.getDirection();
             let isClicked = this.input.isClicked();
             let mousePos = this.input.getMousePos();

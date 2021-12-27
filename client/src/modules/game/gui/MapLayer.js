@@ -25,7 +25,6 @@ var MapLayer = BaseGui.extend({
 
     follow: function(tank){
         this.tank = tank;
-        this.test();
         let func = ()=>{
             if (this.actionFollow){
                 this.stopAction(this.actionFollow);
@@ -71,7 +70,7 @@ var MapLayer = BaseGui.extend({
                 if (!tile) continue;
                 let resImg = tile.imgRes;
                 let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
-                let object = this.loadObject(resImg,pos.x,pos.y);
+                let object = this.loadObject(resImg,pos.x,pos.y,tile.properties.z);
                 let bodys = tile.bodys;
                 bodys.forEach(body=>this.drawBody(object,body,tile));
             }
@@ -79,16 +78,20 @@ var MapLayer = BaseGui.extend({
     },
 
     addTankToMap: function(tank){
-        this.addChild(tank,10000);
+        this.addChild(tank,100);
     },
 
-    loadObject: function (imgSource,x,y){
+    loadObject: function (imgSource,x,y,z){
         let spr = new cc.Sprite("res/map/"+imgSource);
         spr.anchorX = 0;
         spr.anchorY = 0;
         spr.x = x;
         spr.y = y;
-        this.addChild(spr);
+        if (z) {
+            cc.log("z ",z);
+            this.addChild(spr,z);
+        }
+        else this.addChild(spr);
         return spr;
     },
 

@@ -45,7 +45,7 @@ var GameRoom = cc.Class.extend({
     initGame: function(){
         this.game = new Game();
         gv.game = this.game;
-        this.game.init(this.roomState.mapId);
+        this.game.init(this.roomState["mapId"]);
         // init tank
         this.roomState.game.tanks.forEach((tank,playerId)=>{
             this.game.addTank(playerId,tank, playerId === this.room.sessionId);
@@ -63,7 +63,6 @@ var GameRoom = cc.Class.extend({
     startWaiting: function(){
         cc.log("start waiting");
         let gameStartAt = this.roomState.gameStartAt;
-        cc.log(this.roomState);
         this.gameScene.destroyAllGuis();
         this.initGame();
         this.gameScene.showWaiting(gameStartAt);

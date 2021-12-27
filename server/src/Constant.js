@@ -11,7 +11,7 @@ var GC = {
     DT: 1000/60,
     
     // tank
-    TANK_SPEED : 300,
+    TANK_SPEED : 500,
 }
 
 var TYPE_MESSAGE = {
