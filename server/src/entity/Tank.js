@@ -52,7 +52,7 @@ export class Tank extends schema.Schema {
     }
 
     update() {
-        if (this.movementVector.len() === 0) {
+        if (this.movementVector.len() < 0.1) {
             this.speed = this.minSpeed;
             return;
         }
@@ -63,7 +63,10 @@ export class Tank extends schema.Schema {
         this.x += this.movementVector.x * GC.DT * this.speed / 1000;
         this.y += this.movementVector.y * GC.DT * this.speed / 1000;
         this.direction = Vector.angleSigned(this.movementVector, BASE_VECTOR);
-        // update body
+        this.updateBody();
+    }
+
+    updateBody(){
         this.body.pos.x = this.x;
         this.body.pos.y = this.y;
         this.body.setAngle(this.direction);

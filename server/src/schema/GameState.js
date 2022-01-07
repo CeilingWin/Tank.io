@@ -86,12 +86,7 @@ export class GameState extends Schema {
 
     onUpdateUserTank(client,message){
         if (this.state !== GC.ROOM_STATE.IN_GAME) return;
-        let tankDir = message[0];
-        let cannonDir = message[1];
-        let isClicked = message[2];
-        this.game.setMovementVector(client.sessionId,tankDir);
-        this.game.setCannonDir(client.sessionId,cannonDir);
-
+        this.game.handleMessageUpdateTank(client.sessionId,message);
     }
 }
 

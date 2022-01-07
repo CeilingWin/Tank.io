@@ -4,8 +4,8 @@ import config from "config";
 /**
  * Import your Room files
  */
-import {GameRoom} from "./game/GameRoom.js";
-import { ServerRoom } from "./ServerRoom.js";
+import {GameRoom} from "./room/GameRoom.js";
+import { ServerRoom } from "./room/ServerRoom.js";
 // config
 const gameConfig = config.get("game_config");
 

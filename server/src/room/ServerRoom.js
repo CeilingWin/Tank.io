@@ -1,5 +1,5 @@
 import {Room} from "@colyseus/core";
-import { TYPE_MESSAGE } from "./Constant.js";
+import { TYPE_MESSAGE } from "../Constant.js";
 
 export class ServerRoom extends Room {
     onCreate(options){

@@ -58,16 +58,17 @@ export class Game extends schema.Schema{
         const { overlapV } = collisionResponse;
         tank.x -= overlapV.x;
         tank.y -= overlapV.y;
+        tank.updateBody();
     }
 
-    setMovementVector(playerId,dir){
+    handleMessageUpdateTank(playerId,message){
+        let movementDir = message[0];
+        let cannonDir = message[1];
+        let isClicked = message[2];
         let tank = this.tanks.get(playerId);
-        if (tank) tank.setMovementVector(dir);
-    }
-
-    setCannonDir(playerId,dir){
-        let tank = this.tanks.get(playerId);
-        if (tank) tank.setCannonDirection(dir);
+        if (!tank) return;
+        tank.setMovementVector(movementDir);
+        tank.setCannonDirection(cannonDir);
     }
 }
 
