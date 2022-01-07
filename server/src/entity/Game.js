@@ -56,7 +56,6 @@ export class Game extends schema.Schema{
 
     handleCollisionsTankWithObstacle(tank,collisionResponse){
         const { overlapV } = collisionResponse;
-        console.log(this.ts,"detect!",overlapV,tank.direction);
         tank.x -= overlapV.x;
         tank.y -= overlapV.y;
     }

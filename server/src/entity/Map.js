@@ -18,7 +18,11 @@ export class MapGame extends schema.Schema {
             });
         });
         try {
+            this.system = new System();
             let map = await promiseLoadMap;
+            this.width = map.width*map.tileWidth;
+            this.height = map.height*map.tileHeight;
+            this.initBorder();
             this.loadObstacle(map);
             console.log("Load map success!");
         } catch (err) {
@@ -27,7 +31,6 @@ export class MapGame extends schema.Schema {
     }
 
     loadObstacle(tileMap) {
-        this.system = new System();
         let tileSize = {
             width: tileMap.tileWidth,
             height: tileMap.tileHeight
@@ -48,6 +51,39 @@ export class MapGame extends schema.Schema {
                 });
             }
         }
+    }
+
+    initBorder(){
+        let borderWidth = 10;
+        let borderLeft = new Polygon({x:0,y:0},[
+            {x:0,y:0},
+            {x:0,y:this.height},
+            {x:-borderWidth,y:this.height},
+            {x:-borderWidth,y:0},
+        ]);
+        let borderRight = new Polygon({x:this.width,y:0},[
+            {x:0,y:0},
+            {x:borderWidth,y:0},
+            {x:borderWidth,y:this.height},
+            {x:0,y:this.height}
+        ]);
+        let borderBottom = new Polygon({x:0,y:0},[
+            {x:0,y:0},
+            {x:this.width,y:0},
+            {x:this.width,y:-borderWidth},
+            {x:0,y:-borderWidth}
+        ]);
+        let borderTop = new Polygon({x:0,y:this.height},[
+            {x:0,y:0},
+            {x:this.width,y:0},
+            {x:this.width,y:borderWidth},
+            {x:0,y:borderWidth}
+        ]);
+        this.system.insert(borderLeft);
+        this.system.insert(borderRight);
+        this.system.insert(borderBottom);
+        this.system.insert(borderTop);
+        this.system.update();
     }
 
     addObstacle(pos, body) {
