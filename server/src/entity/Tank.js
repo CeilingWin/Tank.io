@@ -1,5 +1,5 @@
 import * as schema from "@colyseus/schema";
-import { Box } from "detect-collisions";
+import { Box, Polygon } from "detect-collisions";
 import {GC} from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import config from "config";
@@ -15,6 +15,16 @@ export class Tank extends schema.Schema{
         this.height = tankConfig.height;
         this.direction = 0;
         this.cannonDirection = 0;
+        this.initBody();
+    }
+
+    initBody(){
+        this.body = new Polygon(new Vector(0,0),[
+            { x: -this.width / 2, y: -this.height / 2 },
+            { x: this.width / 2, y: -this.height / 2 },
+            { x: this.width / 2, y: this.height / 2 },
+            { x: -this.width / 2, y: this.height / 2 }
+        ]);
     }
 
     setPosition(pos){
@@ -41,13 +51,15 @@ export class Tank extends schema.Schema{
         this.x += this.movementVector.x*GC.DT*GC.TANK_SPEED/1000;
         this.y += this.movementVector.y*GC.DT*GC.TANK_SPEED/1000;
         this.direction = Vector.angleSigned(this.movementVector,BASE_VECTOR);
+        // update body
+        this.body.pos.x = this.x;
+        this.body.pos.y = this.y;
+        this.body.setAngle(this.direction);
+        this.body.updateAABB();
     }
 
     getBody(){
-        let body = new Box(this.getPosition(),this.width,this.height);
-        body.setOffset({x:-this.width/2,y:-this.height/2});
-        body.setAngle(this.direction);
-        return body;
+        return this.body;
     }
 }
 
