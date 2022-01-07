@@ -50,7 +50,7 @@ export class Game extends schema.Schema{
                 if (this.map.checkCollision(tankBody, collider)) {
                   this.handleCollisionsTankWithObstacle(tank,this.map.getCollisionResponse());
                 }
-              });
+            });
         });
     }
 
