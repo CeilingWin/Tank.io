@@ -88,7 +88,6 @@ var MapLayer = BaseGui.extend({
         spr.x = x;
         spr.y = y;
         if (z) {
-            cc.log("z ",z);
             this.addChild(spr,z);
         }
         else this.addChild(spr);

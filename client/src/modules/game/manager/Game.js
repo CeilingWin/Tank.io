@@ -27,7 +27,7 @@ var Game = cc.Class.extend({
     },
 
     start: function(){
-        cc.log("start game");
+        cc.log("Start game");
         this.input.start();
         this.lastTimeSendInput = 0;
         // schedule update

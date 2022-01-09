@@ -43,11 +43,13 @@ var GameRoom = cc.Class.extend({
     },
 
     initGame: function(){
+        cc.log("Init game!");
         this.game = new Game();
         gv.game = this.game;
         this.game.init(this.roomState["mapId"]);
         // init tank
         this.roomState.game.tanks.forEach((tank, playerId) => {
+            cc.log("Init tank:",playerId,this.room.sessionId);
             this.game.addTank(playerId, tank, playerId === this.room.sessionId);
         });
         this.deltaServerTime = Date.now() - this.roomState.game.ts;
@@ -64,10 +66,9 @@ var GameRoom = cc.Class.extend({
     },
 
     startWaiting: function(){
-        cc.log("start waiting");
+        cc.log("Start waiting");
         let gameStartAt = this.roomState.gameStartAt;
         this.gameScene.destroyAllGuis();
-        this.initGame();
         this.gameScene.showWaiting(gameStartAt);
     },
 
@@ -78,6 +79,7 @@ var GameRoom = cc.Class.extend({
     },
 
     processGameUpdate: function () {
+        if (!this.game) this.initGame();
         // copy current update
         let currentUpdate = {}, serverResponse = this.roomState.game;
         currentUpdate.ts = serverResponse.ts;
@@ -106,7 +108,6 @@ var GameRoom = cc.Class.extend({
             const baseUpdate = this.gameUpdates[baseUpdateIndex];
             const nextUpdate = this.gameUpdates[baseUpdateIndex + 1];
             let ratio = (currentServerTime - baseUpdateIndex.ts) / (nextUpdate.ts - baseUpdate.ts);
-            // return nextUpdate;
             return this.interpolateGameState(baseUpdate, nextUpdate, ratio);
         }
     },

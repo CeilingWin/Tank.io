@@ -62,6 +62,7 @@ export class GameState extends Schema {
     handleLobby() {}
 
     async startWaiting() {
+        this.room.lock();
         this.gameStartAt = Date.now() + GC.TIME_TO_READY;
         this.state = GC.ROOM_STATE.WAITING_TO_START;
         await this.initGame();
