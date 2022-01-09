@@ -1,8 +1,7 @@
-const UPDATE_INTERVAL_KEY = "update_game";
 const TIME_TO_SEND_UPDATE_TANK = 1000/30;
 var Game = cc.Class.extend({
     ctor: function(){
-        this.tanks = [];
+        this.tanks = new Map();
         this.sendToServer = GameRoom.getIns().sendToServer.bind(GameRoom.getIns());
     },
 
@@ -15,9 +14,8 @@ var Game = cc.Class.extend({
     addTank: function (playerId, tankData, isMe) {
         let tank = new Tank();
         tank.setPosition(tankData.x,tankData.y);
-        tank.playerId = playerId;
         this.mapLayer.addTankToMap(tank);
-        this.tanks.push(tank);
+        this.tanks.set(playerId,tank);
         if (isMe) {
             this.me = tank;
             this.mapLayer.follow(tank);
@@ -25,7 +23,7 @@ var Game = cc.Class.extend({
     },
 
     getTankById: function(playerId){
-        return this.tanks.find(tank=>tank.playerId === playerId);
+        return this.tanks.get(playerId);
     },
 
     start: function(){
@@ -33,11 +31,31 @@ var Game = cc.Class.extend({
         this.input.start();
         this.lastTimeSendInput = 0;
         // schedule update
-        cc.director.getScheduler().schedule(this.update.bind(this),this.mapLayer,1/60,cc.REPEAT_FOREVER,0,false,UPDATE_INTERVAL_KEY);
+        this.interval = setInterval(this.update.bind(this),1000/60);
+    },
+
+    stop: function (){
+        this.interval && clearInterval(this.interval);
+        this.interval = null;
     },
 
     update: function () {
         this.updateInput();
+        let currentState = gv.gameRoom.getCurrentGameState();
+        this.updateTank(currentState["tanks"]);
+    },
+
+    updateTank: function (tanksData){
+        this.tanks.forEach((tank,id)=>{
+            let tankData = tanksData.get(id);
+            tank.setPosition(tankData.x,tankData.y);
+            tank.setDirection(tankData.direction);
+            tank.setCannonDirection(tankData["cannonDirection"]);
+        });
+    },
+
+    updateBullets: function(bulletsData){
+
     },
 
     updateInput: function(){

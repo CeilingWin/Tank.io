@@ -47,9 +47,12 @@ var GameRoom = cc.Class.extend({
         gv.game = this.game;
         this.game.init(this.roomState["mapId"]);
         // init tank
-        this.roomState.game.tanks.forEach((tank,playerId)=>{
-            this.game.addTank(playerId,tank, playerId === this.room.sessionId);
-        })
+        this.roomState.game.tanks.forEach((tank, playerId) => {
+            this.game.addTank(playerId, tank, playerId === this.room.sessionId);
+        });
+        this.deltaServerTime = Date.now() - this.roomState.game.ts;
+        // queue game state
+        this.gameUpdates = [];
     },
 
     showLobby: function(){
@@ -68,20 +71,78 @@ var GameRoom = cc.Class.extend({
         this.gameScene.showWaiting(gameStartAt);
     },
 
-    startGame: function(){
+    startGame: function () {
         this.gameScene.stopWaiting();
         if (!this.game) this.initGame();
         this.game.start();
     },
 
-    processGameUpdate: function(){
-        this.roomState.game.tanks.forEach(tank=>{
-            this.game.tanks[0].setPosition(tank.x,tank.y);
-            this.game.tanks[0].body.setRotation(tank.direction/Math.PI*180);
-            this.game.tanks[0].cannon.setRotation(tank["cannonDirection"]/Math.PI*180);
-        })
-    }
+    processGameUpdate: function () {
+        // copy current update
+        let currentUpdate = {}, serverResponse = this.roomState.game;
+        currentUpdate.ts = serverResponse.ts;
+        currentUpdate.tanks = new Map();
+        serverResponse.tanks.forEach((tank, id) => {
+            currentUpdate.tanks.set(id, {
+                x: tank.x,
+                y: tank.y,
+                direction: tank.direction,
+                cannonDirection: tank.cannonDirection
+            });
+        });
+        this.gameUpdates.push(currentUpdate);
+        // remove old update
+        let currentServerTime = this.getServerTime();
+        let baseUpdateIndex = this.gameUpdates.lastIndexOf(update => update.ts <= currentServerTime);
+        this.gameUpdates.splice(0, baseUpdateIndex);
+    },
 
+    getCurrentGameState() {
+        let currentServerTime = this.getServerTime();
+        let baseUpdateIndex = this.gameUpdates.lastIndexOf(update => update.ts <= currentServerTime);
+        if (baseUpdateIndex < 0) return this.gameUpdates[this.gameUpdates.length - 1];
+        else if (baseUpdateIndex === this.gameUpdates.length - 1) return this.gameUpdates[baseUpdateIndex];
+        else {
+            const baseUpdate = this.gameUpdates[baseUpdateIndex];
+            const nextUpdate = this.gameUpdates[baseUpdateIndex + 1];
+            let ratio = (currentServerTime - baseUpdateIndex.ts) / (nextUpdate.ts - baseUpdate.ts);
+            // return nextUpdate;
+            return this.interpolateGameState(baseUpdate, nextUpdate, ratio);
+        }
+    },
+
+    getServerTime: function () {
+        return Date.now() - this.deltaServerTime - GC.RENDER_DELAY;
+    },
+
+    interpolateGameState: function (baseUpdate, nextUpdate, ratio) {
+        let interpolateState = {};
+        interpolateState.tanks = new Map();
+        baseUpdate.tanks.forEach((tank,id)=>{
+            let nextTank = nextUpdate.tanks.get(id);
+            interpolateState.tanks.set(id,{
+                x: this._interpolatePosition(tank.x,nextTank.x),
+                y: this._interpolatePosition(tank.y,nextTank.y),
+                direction: this._interpolateAngle(tank.direction,nextTank.direction),
+                cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection)
+            })
+        });
+        return interpolateState;
+    },
+
+    _interpolatePosition: function (p1, p2, ratio) {
+        return p1 + (p2 - p1) * ratio;
+    },
+
+    _interpolateAngle: function (a1, a2, ratio) {
+        let deltaA = Math.abs(a2 - a1);
+        if (deltaA < Math.PI) {
+            return a1 + (a2 - a1) * ratio;
+        } else {
+            if (a1 > a2) return a1 + (Math.PI - deltaA) * ratio;
+            else return a1 - (Math.PI - deltaA) * ratio;
+        }
+    }
 });
 
 GameRoom.getIns = function(){

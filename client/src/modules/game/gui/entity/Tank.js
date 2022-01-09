@@ -18,5 +18,13 @@ var Tank = cc.Node.extend({
 
     getWoldPos: function () {
         return this.getParent().convertToWorldSpace(this.getPosition());
+    },
+
+    setCannonDirection: function(direction){
+        this.cannon.setRotation(direction/Math.PI*180);
+    },
+
+    setDirection(direction){
+        this.body.setRotation(direction/Math.PI*180);
     }
 })

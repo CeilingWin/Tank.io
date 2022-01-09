@@ -8,7 +8,6 @@ export class Tank extends schema.Schema {
     constructor() {
         super();
         this.initAttributes();
-        this.rotation = 0;
         this.movementVector = new Vector();
         this.direction = 0;
         this.cannonDirection = 0;
@@ -82,6 +81,5 @@ schema.defineTypes(Tank, {
     x: "float32",
     y: "float32",
     direction: "float32",
-    rotation: "float32",
     cannonDirection: "float32"
 })
