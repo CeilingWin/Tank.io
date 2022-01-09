@@ -105,6 +105,9 @@
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
+        <Folder Name="bullet">
+          <Image Name="bullet_normal.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

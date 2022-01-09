@@ -2,6 +2,7 @@ const TIME_TO_SEND_UPDATE_TANK = 1000/30;
 var Game = cc.Class.extend({
     ctor: function(){
         this.tanks = new Map();
+        this.bullets = [];
         this.sendToServer = GameRoom.getIns().sendToServer.bind(GameRoom.getIns());
     },
 
@@ -42,7 +43,8 @@ var Game = cc.Class.extend({
     update: function () {
         this.updateInput();
         let currentState = gv.gameRoom.getCurrentGameState();
-        this.updateTank(currentState["tanks"]);
+        this.updateTank(currentState.tanks);
+        this.updateBullets(currentState.bullets);
     },
 
     updateTank: function (tanksData){
@@ -55,7 +57,22 @@ var Game = cc.Class.extend({
     },
 
     updateBullets: function(bulletsData){
-
+        let bullet;
+        for (let i=this.bullets.length;i<bulletsData.length;i++){
+            bullet = new Bullet();
+            this.bullets.push(bullet);
+            this.mapLayer.addBulletToMap(bullet);
+            cc.log("add bl to map");
+        }
+        for (let i= 0;i<this.bullets.length;i++){
+            bullet = this.bullets[i];
+            let bulletData = bulletsData[i];
+            if (bulletData.active) {
+                bullet.setPosition(bulletData.x,bulletData.y);
+                bullet.setVisible(true);
+            }
+            else bullet.setVisible(false);
+        }
     },
 
     updateInput: function(){

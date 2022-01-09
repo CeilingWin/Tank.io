@@ -84,12 +84,21 @@ var GameRoom = cc.Class.extend({
         let currentUpdate = {}, serverResponse = this.roomState.game;
         currentUpdate.ts = serverResponse.ts;
         currentUpdate.tanks = new Map();
+        currentUpdate.bullets = [];
         serverResponse.tanks.forEach((tank, id) => {
             currentUpdate.tanks.set(id, {
                 x: tank.x,
                 y: tank.y,
                 direction: tank.direction,
                 cannonDirection: tank.cannonDirection
+            });
+        });
+        serverResponse.bullets.forEach(bullet => {
+            currentUpdate.bullets.push({
+                x: bullet.x,
+                y: bullet.y,
+                direction: bullet.direction,
+                active: bullet.active
             });
         });
         this.gameUpdates.push(currentUpdate);
@@ -119,15 +128,29 @@ var GameRoom = cc.Class.extend({
     interpolateGameState: function (baseUpdate, nextUpdate, ratio) {
         let interpolateState = {};
         interpolateState.tanks = new Map();
+        interpolateState.bullets = [];
         baseUpdate.tanks.forEach((tank,id)=>{
             let nextTank = nextUpdate.tanks.get(id);
             interpolateState.tanks.set(id,{
-                x: this._interpolatePosition(tank.x,nextTank.x),
-                y: this._interpolatePosition(tank.y,nextTank.y),
-                direction: this._interpolateAngle(tank.direction,nextTank.direction),
-                cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection)
-            })
+                x: this._interpolatePosition(tank.x,nextTank.x,ratio),
+                y: this._interpolatePosition(tank.y,nextTank.y,ratio),
+                direction: this._interpolateAngle(tank.direction,nextTank.direction,ratio),
+                cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection,ratio)
+            });
         });
+        let i = 0;
+        for (;i<baseUpdate.bullets.length;i++){
+            let baseBullet = baseUpdate.bullets[i];
+            let nextBullet = nextUpdate.bullets[i];
+            interpolateState.bullets.push({
+                x: this._interpolatePosition(baseBullet.x, nextBullet.x, ratio),
+                y: this._interpolatePosition(baseBullet.y, nextBullet.y, ratio),
+                active: this._interpolateBoolean(baseBullet.active, nextBullet.active, ratio)
+            });
+        }
+        for (;i<nextUpdate.bullets.length;i++){
+            interpolateState.bullets.push(nextUpdate.bullets[i]);
+        }
         return interpolateState;
     },
 
@@ -143,6 +166,11 @@ var GameRoom = cc.Class.extend({
             if (a1 > a2) return a1 + (Math.PI - deltaA) * ratio;
             else return a1 - (Math.PI - deltaA) * ratio;
         }
+    },
+
+    _interpolateBoolean: function (b1, b2, ratio){
+        if (ratio < 0.99) return b1;
+        return b2;
     }
 });
 

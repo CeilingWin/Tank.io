@@ -34,6 +34,7 @@
         "src/GlobalVar.js",
         "src/resource.js",
         "src/modules/Constant.js",
+        "src/modules/game/gui/entity/Bullet.js",
         "src/modules/game/gui/entity/Tank.js",
         "src/modules/game/gui/GuiGameControl.js",
         "src/modules/game/gui/GuiWaitingToStart.js",

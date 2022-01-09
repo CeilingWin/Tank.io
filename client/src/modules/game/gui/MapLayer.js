@@ -81,6 +81,10 @@ var MapLayer = BaseGui.extend({
         this.addChild(tank,100);
     },
 
+    addBulletToMap: function(bullet){
+        this.addChild(bullet,200);
+    },
+
     loadObject: function (imgSource,x,y,z){
         let spr = new cc.Sprite("res/map/"+imgSource);
         spr.anchorX = 0;

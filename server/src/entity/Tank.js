@@ -4,6 +4,7 @@ import { GC } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
 const BASE_VECTOR = new Vector(1, 0);
+const CANNON_LENGTH = 60;
 export class Tank extends schema.Schema {
     constructor() {
         super();
@@ -12,6 +13,7 @@ export class Tank extends schema.Schema {
         this.direction = 0;
         this.cannonDirection = 0;
         this.speed = this.minSpeed;
+        this.lastShootAt = 0;
         this.initBody();
     }
 
@@ -21,6 +23,7 @@ export class Tank extends schema.Schema {
         this.height = config["height"];
         this.minSpeed = config["min_speed"];
         this.maxSpeed = config["max_speed"];
+        this.bulletRate = config["bullet_rate"];
     }
 
     initBody() {
@@ -50,6 +53,10 @@ export class Tank extends schema.Schema {
         this.cannonDirection = dir;
     }
 
+    getCannonDirection(){
+        return this.cannonDirection;
+    }
+
     update() {
         if (this.movementVector.len() < 0.1) {
             this.speed = this.minSpeed;
@@ -75,11 +82,23 @@ export class Tank extends schema.Schema {
     getBody() {
         return this.body;
     }
+
+    canShoot(){
+        return (Date.now() - this.lastShootAt) >= this.bulletRate;
+    }
+
+    getStartingPositionOfBullet(){
+        return {
+            x: this.x + CANNON_LENGTH * Math.cos(this.cannonDirection),
+            y: this.y + CANNON_LENGTH * Math.sin(-this.cannonDirection)
+        }
+    }
 }
 
 schema.defineTypes(Tank, {
     x: "float32",
     y: "float32",
     direction: "float32",
-    cannonDirection: "float32"
+    cannonDirection: "float32",
+    lastShootAt: "number"
 })
