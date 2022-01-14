@@ -45,16 +45,21 @@ export class Game extends schema.Schema {
 
     updateTank() {
         // check movement
-        this.tanks.forEach(tank => {
+        this.tanks.forEach((tank, playerId) => {
+            if (!tank.isActive()) return;
             tank.update();
+            if (!tank.isMoving()) return;
             let tankBody = tank.getBody();
             let potentials = this.map.getPotentialObstacle(tankBody);
             potentials.forEach((collider) => {
                 if (this.map.checkCollision(tankBody, collider)) {
-                    const { overlapV } = this.map.getCollisionResponse();
-                    tank.x -= overlapV.x;
-                    tank.y -= overlapV.y;
-                    tank.updateBody();
+                    this.handleTankCollision(tank);
+                }
+            });
+            this.tanks.forEach((opponentTank, opponentId) => {
+                if (opponentId === playerId || !opponentTank.isActive()) return;
+                if (this.map.checkCollision(tankBody, opponentTank.getBody())) {
+                    this.handleTankCollision(tank);
                 }
             });
         });
@@ -62,8 +67,18 @@ export class Game extends schema.Schema {
 
     updateBullets() {
         this.bullets.forEach(bullet => {
+            if (!bullet.isActive()) return;
             bullet.update();
             let bulletBody = bullet.getBody();
+            // check collision with tank
+            this.tanks.forEach((tank, id) => {
+                if (!tank.isActive() || bullet.playerId === id) return;
+                if (this.map.checkCollision(bulletBody, tank.getBody())){
+                    tank.takeDamage(bullet.damage);
+                    bullet.setActive(false);
+                }
+            });
+            // check collision with obstacle
             let potentials = this.map.getPotentialObstacle(bulletBody);
             potentials.forEach((collider) => {
                 if (this.map.checkCollision(bulletBody, collider)) {
@@ -78,7 +93,7 @@ export class Game extends schema.Schema {
         let cannonDir = message[1];
         let isClicked = message[2];
         let tank = this.tanks.get(playerId);
-        if (!tank) return;
+        if (!tank || !tank.isActive()) return;
         tank.setMovementVector(movementDir);
         tank.setCannonDirection(cannonDir);
         if (isClicked && tank.canShoot()) {
@@ -94,6 +109,13 @@ export class Game extends schema.Schema {
         }
         bullet.setData(tank.getStartingPositionOfBullet(), tank.getCannonDirection(), true, playerId);
         tank.lastShootAt = Date.now();
+    }
+
+    handleTankCollision(tank) {
+        const { overlapV } = this.map.getCollisionResponse();
+        tank.x -= overlapV.x;
+        tank.y -= overlapV.y;
+        tank.updateBody();
     }
 }
 

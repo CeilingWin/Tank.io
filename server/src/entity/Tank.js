@@ -14,6 +14,7 @@ export class Tank extends schema.Schema {
         this.cannonDirection = 0;
         this.speed = this.minSpeed;
         this.lastShootAt = 0;
+        this.active = true;
         this.initBody();
     }
 
@@ -24,6 +25,7 @@ export class Tank extends schema.Schema {
         this.minSpeed = config["min_speed"];
         this.maxSpeed = config["max_speed"];
         this.bulletRate = config["bullet_rate"];
+        this.hp = config["hp"];
     }
 
     initBody() {
@@ -38,10 +40,15 @@ export class Tank extends schema.Schema {
     setPosition(pos) {
         this.x = pos.x;
         this.y = pos.y;
+        this.updateBody();
     }
 
     getPosition() {
         return new Vector(this.x, this.y);
+    }
+
+    isActive(){
+        return this.active;
     }
 
     setMovementVector(vector) {
@@ -57,8 +64,12 @@ export class Tank extends schema.Schema {
         return this.cannonDirection;
     }
 
+    isMoving(){
+        return this.movementVector.len() > 0.1;
+    }
+
     update() {
-        if (this.movementVector.len() < 0.1) {
+        if (!this.isMoving()) {
             this.speed = this.minSpeed;
             return;
         }
@@ -93,6 +104,14 @@ export class Tank extends schema.Schema {
             y: this.y + CANNON_LENGTH * Math.sin(-this.cannonDirection)
         }
     }
+
+    takeDamage(damage){
+        this.hp -= damage;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            this.active = false;
+        }
+    }
 }
 
 schema.defineTypes(Tank, {
@@ -100,5 +119,7 @@ schema.defineTypes(Tank, {
     y: "float32",
     direction: "float32",
     cannonDirection: "float32",
-    lastShootAt: "number"
+    lastShootAt: "number",
+    hp: "number",
+    active: "boolean"
 })

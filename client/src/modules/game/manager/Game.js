@@ -50,6 +50,10 @@ var Game = cc.Class.extend({
     updateTank: function (tanksData){
         this.tanks.forEach((tank,id)=>{
             let tankData = tanksData.get(id);
+            if (!tankData.active) {
+                tank.setVisible(false);
+                return;
+            }
             tank.setPosition(tankData.x,tankData.y);
             tank.setDirection(tankData.direction);
             tank.setCannonDirection(tankData["cannonDirection"]);

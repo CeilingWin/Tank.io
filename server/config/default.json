@@ -21,7 +21,7 @@
         {
             "type": "normal",
             "speed": 800,
-            "dame": 100,
+            "damage": 100,
             "geometry": "circle",
             "radius": 10
         }

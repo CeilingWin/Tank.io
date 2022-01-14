@@ -22,7 +22,7 @@ export class Bullet extends schema.Schema {
     initAttributes() {
         let config = GameConfig.getBulletConfig("normal");
         this.speed = config["speed"];
-        this.dame = config["dame"];
+        this.damage = config["damage"];
         this.geometry = config["geometry"];
         this.radius = config["radius"];
     }
@@ -50,7 +50,6 @@ export class Bullet extends schema.Schema {
     }
 
     update() {
-        if (!this.active) return;
         this.x += this.speed * GC.DT * Math.cos(this.direction) / 1000;
         this.y += this.speed * GC.DT * Math.sin(-this.direction) / 1000;
         this.updateBody();
@@ -65,6 +64,7 @@ export class Bullet extends schema.Schema {
     getBody() {
         return this.body;
     }
+
 }
 
 schema.defineTypes(Bullet, {
