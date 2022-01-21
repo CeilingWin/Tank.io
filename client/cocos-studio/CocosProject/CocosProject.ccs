@@ -3,6 +3,9 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="bullet">
+          <Image Name="bullet_normal.png" />
+        </Folder>
         <Folder Name="fonts">
           <TTF Name="bold.ttf" />
           <TTF Name="classic.ttf" />
@@ -104,9 +107,6 @@
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
-        </Folder>
-        <Folder Name="bullet">
-          <Image Name="bullet_normal.png" />
         </Folder>
       </RootFolder>
     </Group>

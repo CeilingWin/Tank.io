@@ -3,7 +3,7 @@ var Game = cc.Class.extend({
     ctor: function(){
         this.tanks = new Map();
         this.bullets = [];
-        this.sendToServer = GameRoom.getIns().sendToServer.bind(GameRoom.getIns());
+        this.network = gv.gameRoom.getNetwork();
     },
 
     init: function(mapId){
@@ -66,7 +66,6 @@ var Game = cc.Class.extend({
             bullet = new Bullet();
             this.bullets.push(bullet);
             this.mapLayer.addBulletToMap(bullet);
-            cc.log("add bl to map");
         }
         for (let i= 0;i<this.bullets.length;i++){
             bullet = this.bullets[i];
@@ -87,7 +86,7 @@ var Game = cc.Class.extend({
             let mousePos = this.input.getMousePos();
             let tankPos = this.me.getWoldPos();
             let cannonDir = cc.pAngleSigned(cc.pSub(mousePos,tankPos),cc.p(1,0));
-            this.sendToServer(TYPE_MESSAGE.UPDATE_TANK,[tankDir,cannonDir,isClicked]);
+            this.network.send(TYPE_MESSAGE.UPDATE_TANK,[tankDir,cannonDir,isClicked]);
             this.lastTimeSendInput = currentTime;
         }
     }

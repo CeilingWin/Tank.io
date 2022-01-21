@@ -24,7 +24,9 @@ var TYPE_MESSAGE = {
     // CONTROLL GAME
     START_WAITING : 10,
     START_GAME : 11,
-    UPDATE_TANK : 12
+    UPDATE_TANK : 12,
+
+    PLAYER_WAS_KILLED: 13,
 }
 
 export {GC, TYPE_MESSAGE};

@@ -1,5 +1,5 @@
 import * as schema from "@colyseus/schema";
-import { GC } from "../Constant.js";
+import { GC, TYPE_MESSAGE } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { MapGame } from "./Map.js";
 import { Player } from "./Player.js";
@@ -7,16 +7,25 @@ import { Tank } from "./Tank.js";
 import { Bullet } from "./Bullet.js";
 
 export class Game extends schema.Schema {
-    constructor() {
+    constructor(room) {
         super();
+        this.room = room;
         this.tanks = new schema.MapSchema();
         this.bullets = new schema.ArraySchema();
+        this.leaderBoard = new schema.ArraySchema();
     }
 
     async init(mapId, players) {
+        this.reset();
         await this.initMap(mapId);
         this.initTankForAllPlayers(players);
         this.ts = Date.now();
+    }
+
+    reset() {
+        this.tanks.clear();
+        this.bullets.clear();
+        this.leaderBoard.clear();
     }
 
     async initMap(mapId) {
@@ -77,6 +86,14 @@ export class Game extends schema.Schema {
         }
         bullet.setData(tank.getStartingPositionOfBullet(), tank.getCannonDirection(), true, playerId);
         tank.lastShootAt = Date.now();
+    }
+
+    playerWasKilled(playerId, killerId) {
+        this.leaderBoard.unshift(playerId);
+        this.room.broadcast(TYPE_MESSAGE.PLAYER_WAS_KILLED, {
+            playerId: playerId,
+            killerId: killerId
+        });
     }
 }
 

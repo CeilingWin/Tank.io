@@ -19,10 +19,6 @@ var GameRoom = cc.Class.extend({
         this.roomState.game.listen("ts",this.processGameUpdate.bind(this));
     },
 
-    sendToServer: function(typeMessage,data){
-        this.room.send(typeMessage,data);
-    },
-
     handleGameStateChange: function(){
         switch (this.roomState.state) {
             case GC.ROOM_STATE.LOBBY:
@@ -170,6 +166,14 @@ var GameRoom = cc.Class.extend({
     _interpolateBoolean: function (b1, b2, ratio){
         if (ratio < 0.99) return b1;
         return b2;
+    },
+
+    getNetwork: function (){
+        return this.room;
+    },
+
+    getPlayerDataById: function(playerId){
+        return this.roomState["players"].get(playerId);
     }
 });
 

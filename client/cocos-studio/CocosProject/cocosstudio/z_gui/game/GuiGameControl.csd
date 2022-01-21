@@ -28,6 +28,18 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
+          <AbstractNodeData Name="lbNotification" ActionTag="-1164654100" Tag="6" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="493.5000" RightMargin="493.5000" TopMargin="234.3022" BottomMargin="806.6978" FontSize="30" LabelText="Player a was killed by player b" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="933.0000" Y="39.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="960.0000" Y="826.1978" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.7650" />
+            <PreSize X="0.4859" Y="0.0361" />
+            <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>

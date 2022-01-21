@@ -11,7 +11,7 @@ export class GameState extends Schema {
         super();
         this.room = room;
         // attr
-        this.game = new Game();
+        this.game = new Game(this.room);
         this.players = new MapSchema();
         this.resetState();
         this.initDefault();

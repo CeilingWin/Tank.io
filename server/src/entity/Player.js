@@ -4,7 +4,7 @@ export class Player extends schema.Schema{
     constructor(id,username) {
         super();
         this.id = id;
-        if (!username || username === "") username = "noname";
+        if (!username || username === "") username = "noname" + Math.round(Math.random()*10000);
         this.username = username;
     }
 }

@@ -61,6 +61,9 @@ export class Bullet extends schema.Schema {
             if (!tank.isActive() || this.playerId === id) return;
             if (this.controller.map.checkCollision(bulletBody, tank.getBody())){
                 tank.takeDamage(this.damage);
+                if (!tank.isActive()){
+                    this.controller.playerWasKilled(id,this.playerId);
+                }
                 this.setActive(false);
             }
         });
