@@ -2,10 +2,12 @@ var GC = {
     ROOM_STATE : {
         LOBBY : 0,
         WAITING_TO_START : 1,
-        IN_GAME : 2
+        IN_GAME : 2,
+        SHOW_LEADER_BOARD : 3
     },
     // time: ms
     TIME_TO_READY : 2000,
+    TIME_SHOW_LEADER_BOARD : 5000,
     RENDER_DELAY : 100,
     TIME_TO_SYNC_CS : 1000/20,
     DT: 1000/60,
@@ -27,6 +29,7 @@ var TYPE_MESSAGE = {
     UPDATE_TANK : 12,
 
     PLAYER_WAS_KILLED: 13,
+    SHOW_LEADER_BOARD: 14
 }
 
 export {GC, TYPE_MESSAGE};

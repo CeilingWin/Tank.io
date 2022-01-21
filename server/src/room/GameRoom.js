@@ -10,7 +10,7 @@ export class GameRoom extends Room {
         this.defaultOptions = options;
     }
 
-    async onJoin(client, options) {
+    onJoin(client, options) {
         if (this.state.getNumPlayers() === 0) {
             console.log("host ", client.sessionId);
             let maxPlayer = options.maxPlayer || this.defaultOptions.maxPlayer;
@@ -18,7 +18,7 @@ export class GameRoom extends Room {
             this.state.init(maxPlayer, mapId);
             console.log("INIT GAME with options: max player (", maxPlayer, "); mapId(", mapId, ")");
         }
-        await this.state.addPlayer(client.sessionId, options.username);
+        this.state.addPlayer(client.sessionId, options.username);
         console.log("PLAYER JOIN GAME: username(", options.username, "); id(", client.sessionId, ")");
         // todo: send player join game
     }

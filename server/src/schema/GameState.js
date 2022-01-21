@@ -17,7 +17,7 @@ export class GameState extends Schema {
         this.initDefault();
 
         // sub message
-        this.room.onMessage(TYPE_MESSAGE.UPDATE_TANK,this.onUpdateUserTank.bind(this));
+        this.room.onMessage(TYPE_MESSAGE.UPDATE_TANK, this.onUpdateUserTank.bind(this));
     }
 
     resetState() {
@@ -35,20 +35,19 @@ export class GameState extends Schema {
         this.mapId = 0;
     }
 
-    async addPlayer(id, username) {
+    addPlayer(id, username) {
         let player = new Player(id, username);
         this.players.set(id, player);
-        if (this.state === GC.ROOM_STATE.LOBBY && this.players.size === this.maxPlayer) await this.startWaiting();
     }
 
     getNumPlayers() {
         return this.players.size;
     }
 
-    update() {
+    async update() {
         switch (this.state) {
             case GC.ROOM_STATE.LOBBY:
-                this.handleLobby();
+                await this.handleLobby();
                 break;
             case GC.ROOM_STATE.WAITING_TO_START:
                 this.handleWaiting();
@@ -56,10 +55,15 @@ export class GameState extends Schema {
             case GC.ROOM_STATE.IN_GAME:
                 this.handleGameUpdate();
                 break;
+            case GC.ROOM_STATE.SHOW_LEADER_BOARD:
+                this.handleEndGame();
+                break;
         }
     }
 
-    handleLobby() {}
+    async handleLobby() {
+        if (this.players.size === this.maxPlayer) await this.startWaiting();
+    }
 
     async startWaiting() {
         this.room.lock();
@@ -83,11 +87,29 @@ export class GameState extends Schema {
 
     handleGameUpdate() {
         this.game.update();
+        if (this.game.isEndGame()) {
+            this.showLeaderBoard();
+        }
     }
 
-    onUpdateUserTank(client,message){
+    showLeaderBoard(){
+        console.log("Show leaderboard");
+        this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOARD;
+        let leaderBoard = this.game.getLeaderBoard();
+        this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD,leaderBoard);
+        this.state = GC.ROOM_STATE.SHOW_LEADER_BOARD;
+    }
+
+    handleEndGame() {
+        if (Date.now() >= this.timeFinishShowLeaderBoard) {
+            this.state = GC.ROOM_STATE.LOBBY;
+            console.log("Show lobby");
+        }
+    }
+
+    onUpdateUserTank(client, message) {
         if (this.state !== GC.ROOM_STATE.IN_GAME) return;
-        this.game.handleMessageUpdateTank(client.sessionId,message);
+        this.game.handleMessageUpdateTank(client.sessionId, message);
     }
 }
 

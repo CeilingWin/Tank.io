@@ -12,7 +12,7 @@ export class Game extends schema.Schema {
         this.room = room;
         this.tanks = new schema.MapSchema();
         this.bullets = new schema.ArraySchema();
-        this.leaderBoard = new schema.ArraySchema();
+        this.listDeathPlayers = new schema.ArraySchema();
     }
 
     async init(mapId, players) {
@@ -25,7 +25,7 @@ export class Game extends schema.Schema {
     reset() {
         this.tanks.clear();
         this.bullets.clear();
-        this.leaderBoard.clear();
+        this.listDeathPlayers.clear();
     }
 
     async initMap(mapId) {
@@ -65,6 +65,14 @@ export class Game extends schema.Schema {
         });
     }
 
+    isEndGame() {
+        let numPlayer = this.tanks.size;
+        if (numPlayer - this.listDeathPlayers.length <= 1) {
+            return true;
+        }
+        return false;
+    }
+
     handleMessageUpdateTank(playerId, message) {
         let movementDir = message[0];
         let cannonDir = message[1];
@@ -89,11 +97,25 @@ export class Game extends schema.Schema {
     }
 
     playerWasKilled(playerId, killerId) {
-        this.leaderBoard.unshift(playerId);
+        console.log(playerId, "was killed by", killerId);
+        this.listDeathPlayers.unshift({
+            playerId: playerId,
+            timeDie: this.ts
+        });
         this.room.broadcast(TYPE_MESSAGE.PLAYER_WAS_KILLED, {
             playerId: playerId,
             killerId: killerId
         });
+    }
+
+    getLeaderBoard() {
+        this.tanks.forEach((tank,playerId)=>{
+            if (tank.isActive()) this.listDeathPlayers.unshift({
+                playerId: playerId,
+                timeDie: this.ts
+            })
+        });
+        return this.listDeathPlayers;
     }
 }
 

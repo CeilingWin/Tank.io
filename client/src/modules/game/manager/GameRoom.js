@@ -30,13 +30,15 @@ var GameRoom = cc.Class.extend({
             case GC.ROOM_STATE.IN_GAME:
                 this.startGame();
                 break;
+            case GC.ROOM_STATE.SHOW_LEADER_BOARD:
+                this.handleEndGame();
+                break;
             default:
                 cc.log("unknown state",this.roomState.state);
         }
     },
 
     initGame: function(){
-        cc.log("Init game!");
         this.game = new Game();
         gv.game = this.game;
         this.game.init(this.roomState["mapId"]);
@@ -45,9 +47,6 @@ var GameRoom = cc.Class.extend({
             cc.log("Init tank:",playerId,this.room.sessionId);
             this.game.addTank(playerId, tank, playerId === this.room.sessionId);
         });
-        this.deltaServerTime = Date.now() - this.roomState.game.ts;
-        // queue game state
-        this.gameUpdates = [];
     },
 
     showLobby: function(){
@@ -66,13 +65,16 @@ var GameRoom = cc.Class.extend({
     },
 
     startGame: function () {
+        this.initGame();
         this.gameScene.stopWaiting();
-        if (!this.game) this.initGame();
+        this.deltaServerTime = Date.now() - this.roomState.game.ts;
+        // queue game state
+        this.gameUpdates = [];
         this.game.start();
     },
 
     processGameUpdate: function () {
-        if (!this.game) this.initGame();
+        if (this.roomState.state !== GC.ROOM_STATE.IN_GAME) return;
         // copy current update
         let currentUpdate = {}, serverResponse = this.roomState.game;
         currentUpdate.ts = serverResponse.ts;
@@ -100,6 +102,10 @@ var GameRoom = cc.Class.extend({
         let currentServerTime = this.getServerTime();
         let baseUpdateIndex = this.gameUpdates.lastIndexOf(update => update.ts <= currentServerTime);
         this.gameUpdates.splice(0, baseUpdateIndex);
+    },
+
+    handleEndGame: function (){
+        this.game.stop();
     },
 
     getCurrentGameState() {

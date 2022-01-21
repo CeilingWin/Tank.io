@@ -113,6 +113,7 @@
             "ctype": "TextObjectData"
           },
           {
+            "IsCustomSize": true,
             "FontSize": 30,
             "LabelText": "Player a was killed by player b",
             "FontResource": {
@@ -120,6 +121,8 @@
               "Path": "fonts/bold.ttf",
               "Plist": ""
             },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -151,18 +154,18 @@
               "Y": 0.765
             },
             "PreSize": {
-              "X": 0.4859,
-              "Y": 0.0361
+              "X": 0.7812,
+              "Y": 0.1389
             },
-            "LeftMargin": 493.5,
-            "RightMargin": 493.5,
-            "TopMargin": 234.3022,
-            "BottomMargin": 806.6978,
+            "LeftMargin": 210.0,
+            "RightMargin": 210.0,
+            "TopMargin": 178.8022,
+            "BottomMargin": 751.1978,
             "Tag": 6,
             "ActionTag": -1164654100,
             "Size": {
-              "X": 933.0,
-              "Y": 39.0
+              "X": 1500.0,
+              "Y": 150.0
             },
             "Name": "lbNotification",
             "ctype": "TextObjectData"
