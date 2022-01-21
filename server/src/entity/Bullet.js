@@ -5,8 +5,9 @@ import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
 const BASE_VECTOR = new Vector(1, 0);
 export class Bullet extends schema.Schema {
-    constructor() {
+    constructor(gameController) {
         super();
+        this.controller = gameController;
         this.initAttributes();
         this.initBody();
     }
@@ -50,9 +51,26 @@ export class Bullet extends schema.Schema {
     }
 
     update() {
+        if (!this.isActive()) return;
         this.x += this.speed * GC.DT * Math.cos(this.direction) / 1000;
         this.y += this.speed * GC.DT * Math.sin(-this.direction) / 1000;
         this.updateBody();
+        let bulletBody = this.getBody();
+        // check collision with tank
+        this.controller.tanks.forEach((tank, id) => {
+            if (!tank.isActive() || this.playerId === id) return;
+            if (this.controller.map.checkCollision(bulletBody, tank.getBody())){
+                tank.takeDamage(this.damage);
+                this.setActive(false);
+            }
+        });
+        // check collision with obstacle
+        let potentials = this.controller.map.getPotentialObstacle(bulletBody);
+        potentials.forEach((collider) => {
+            if (this.controller.map.checkCollision(bulletBody, collider)) {
+                this.setActive(false);
+            }
+        });
     }
 
     updateBody() {

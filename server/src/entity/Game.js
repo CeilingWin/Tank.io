@@ -7,7 +7,7 @@ import { Tank } from "./Tank.js";
 import { Bullet } from "./Bullet.js";
 
 export class Game extends schema.Schema {
-    constructor(mapId, players) {
+    constructor() {
         super();
         this.tanks = new schema.MapSchema();
         this.bullets = new schema.ArraySchema();
@@ -27,8 +27,9 @@ export class Game extends schema.Schema {
     initTankForAllPlayers(players) {
         players.forEach(player => {
             let pos = this.getRandomSpawnPosition();
-            let tank = new Tank();
+            let tank = new Tank(this);
             tank.setPosition(pos);
+            tank.playerId = player.id;
             this.tanks.set(player.id, tank);
         });
     }
@@ -44,47 +45,14 @@ export class Game extends schema.Schema {
     }
 
     updateTank() {
-        // check movement
-        this.tanks.forEach((tank, playerId) => {
-            if (!tank.isActive()) return;
+        this.tanks.forEach((tank) => {
             tank.update();
-            if (!tank.isMoving()) return;
-            let tankBody = tank.getBody();
-            let potentials = this.map.getPotentialObstacle(tankBody);
-            potentials.forEach((collider) => {
-                if (this.map.checkCollision(tankBody, collider)) {
-                    this.handleTankCollision(tank);
-                }
-            });
-            this.tanks.forEach((opponentTank, opponentId) => {
-                if (opponentId === playerId || !opponentTank.isActive()) return;
-                if (this.map.checkCollision(tankBody, opponentTank.getBody())) {
-                    this.handleTankCollision(tank);
-                }
-            });
         });
     }
 
     updateBullets() {
         this.bullets.forEach(bullet => {
-            if (!bullet.isActive()) return;
             bullet.update();
-            let bulletBody = bullet.getBody();
-            // check collision with tank
-            this.tanks.forEach((tank, id) => {
-                if (!tank.isActive() || bullet.playerId === id) return;
-                if (this.map.checkCollision(bulletBody, tank.getBody())){
-                    tank.takeDamage(bullet.damage);
-                    bullet.setActive(false);
-                }
-            });
-            // check collision with obstacle
-            let potentials = this.map.getPotentialObstacle(bulletBody);
-            potentials.forEach((collider) => {
-                if (this.map.checkCollision(bulletBody, collider)) {
-                    bullet.setActive(false);
-                }
-            });
         });
     }
 
@@ -104,18 +72,11 @@ export class Game extends schema.Schema {
     playerShoot(playerId, tank) {
         let bullet = this.bullets.find(bullet => !bullet.isActive());
         if (!bullet) {
-            bullet = new Bullet();
+            bullet = new Bullet(this);
             this.bullets.push(bullet);
         }
         bullet.setData(tank.getStartingPositionOfBullet(), tank.getCannonDirection(), true, playerId);
         tank.lastShootAt = Date.now();
-    }
-
-    handleTankCollision(tank) {
-        const { overlapV } = this.map.getCollisionResponse();
-        tank.x -= overlapV.x;
-        tank.y -= overlapV.y;
-        tank.updateBody();
     }
 }
 

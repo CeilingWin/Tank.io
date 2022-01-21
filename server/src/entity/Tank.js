@@ -6,8 +6,9 @@ import { GameConfig } from "../config/GameConfig.js";
 const BASE_VECTOR = new Vector(1, 0);
 const CANNON_LENGTH = 60;
 export class Tank extends schema.Schema {
-    constructor() {
+    constructor(gameController) {
         super();
+        this.controller = gameController;
         this.initAttributes();
         this.movementVector = new Vector();
         this.direction = 0;
@@ -69,6 +70,25 @@ export class Tank extends schema.Schema {
     }
 
     update() {
+        if(!this.isActive()) return;
+        this.updateMovement();
+        if (!this.isMoving()) return;
+        let tankBody = this.getBody();
+        let potentials = this.controller.map.getPotentialObstacle(tankBody);
+        potentials.forEach((collider) => {
+            if (this.controller.map.checkCollision(tankBody, collider)) {
+                this.handleCollision();
+            }
+        });
+        this.controller.tanks.forEach((opponentTank, opponentId) => {
+            if (opponentId === this.playerId || !opponentTank.isActive()) return;
+            if (this.controller.map.checkCollision(tankBody, opponentTank.getBody())) {
+                this.handleCollision();
+            }
+        });
+    }
+
+    updateMovement(){
         if (!this.isMoving()) {
             this.speed = this.minSpeed;
             return;
@@ -111,6 +131,13 @@ export class Tank extends schema.Schema {
             this.hp = 0;
             this.active = false;
         }
+    }
+
+    handleCollision() {
+        const { overlapV } = this.controller.map.getCollisionResponse();
+        this.x -= overlapV.x;
+        this.y -= overlapV.y;
+        this.updateBody();
     }
 }
 

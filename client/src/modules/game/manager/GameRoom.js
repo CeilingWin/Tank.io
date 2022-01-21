@@ -14,9 +14,6 @@ var GameRoom = cc.Class.extend({
     },
 
     listenMessage: function(){
-        this.room.onMessage(TYPE_MESSAGE.START_WAITING,this.startWaiting.bind(this));
-        this.room.onMessage(TYPE_MESSAGE.START_GAME,this.startGame.bind(this));
-
         this.roomState.listen("state",this.handleGameStateChange.bind(this));
         // listen game state update
         this.roomState.game.listen("ts",this.processGameUpdate.bind(this));
