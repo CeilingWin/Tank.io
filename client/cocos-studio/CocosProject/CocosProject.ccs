@@ -105,6 +105,10 @@
             <Project Name="GuiGameControl.csd" Type="Scene" />
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
+            <Project Name="GuiGameResult.csd" Type="Scene" />
+            <Folder Name="element">
+              <Project Name="ElementGameResult.csd" Type="Layer" />
+            </Folder>
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>

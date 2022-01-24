@@ -1,0 +1,427 @@
+{
+  "ID": "4eaaf5d2-5267-4f40-8978-c49d4ce77841",
+  "Version": "2.3.4",
+  "Name": "GuiGameResult",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 27,
+        "Children": [
+          {
+            "ItemMargin": 10,
+            "DirectionType": "Vertical",
+            "HorizontalType": "Align_HorizontalCenter",
+            "ScrollDirectionType": 0,
+            "ClipAble": true,
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 150
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 496.8
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.46
+            },
+            "PreSize": {
+              "X": 0.8333,
+              "Y": 0.6481
+            },
+            "LeftMargin": 160.0,
+            "RightMargin": 160.0,
+            "TopMargin": 233.2,
+            "BottomMargin": 146.8,
+            "Tag": 29,
+            "Children": [
+              {
+                "ClipAble": false,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 620.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.8857
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.1143
+                },
+                "BottomMargin": 620.0,
+                "Tag": 58,
+                "Children": [
+                  {
+                    "FontSize": 28,
+                    "LabelText": "Rank",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 88.9003,
+                      "Y": 38.0991
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 0,
+                      "B": 128
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0556,
+                      "Y": 0.4762
+                    },
+                    "PreSize": {
+                      "X": 0.0719,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": 31.4003,
+                    "RightMargin": 1453.5997,
+                    "TopMargin": 23.9009,
+                    "BottomMargin": 20.0991,
+                    "Tag": 59,
+                    "ActionTag": -1404891397,
+                    "Size": {
+                      "X": 115.0,
+                      "Y": 36.0
+                    },
+                    "Name": "Text_2",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "Username",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 467.2018,
+                      "Y": 40.8002
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 0,
+                      "B": 128
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.292,
+                      "Y": 0.51
+                    },
+                    "PreSize": {
+                      "X": 0.1419,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": 353.7018,
+                    "RightMargin": 1019.2982,
+                    "TopMargin": 21.1998,
+                    "BottomMargin": 22.8002,
+                    "Tag": 60,
+                    "ActionTag": 1021624493,
+                    "Size": {
+                      "X": 227.0,
+                      "Y": 36.0
+                    },
+                    "Name": "Text_2_0",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "Kills",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 1040.1128,
+                      "Y": 42.9811
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 0,
+                      "B": 128
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6501,
+                      "Y": 0.5373
+                    },
+                    "PreSize": {
+                      "X": 0.0894,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": 968.6128,
+                    "RightMargin": 488.3872,
+                    "TopMargin": 19.0189,
+                    "BottomMargin": 24.9811,
+                    "Tag": 61,
+                    "ActionTag": -370364759,
+                    "Size": {
+                      "X": 143.0,
+                      "Y": 36.0
+                    },
+                    "Name": "Text_2_0_0",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "Damage",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 1340.0986,
+                      "Y": 45.1651
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 0,
+                      "B": 128
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8376,
+                      "Y": 0.5646
+                    },
+                    "PreSize": {
+                      "X": 0.1069,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": 1254.5986,
+                    "RightMargin": 174.4014,
+                    "TopMargin": 16.8349,
+                    "BottomMargin": 27.1651,
+                    "Tag": 62,
+                    "ActionTag": -72210889,
+                    "Size": {
+                      "X": 171.0,
+                      "Y": 36.0
+                    },
+                    "Name": "Text_2_0_0_0",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1845145277,
+                "Size": {
+                  "X": 1600.0,
+                  "Y": 80.0
+                },
+                "Name": "Panel_2",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": 1677870799,
+            "Size": {
+              "X": 1600.0,
+              "Y": 700.0
+            },
+            "Name": "lv",
+            "ctype": "ListViewObjectData"
+          },
+          {
+            "FontSize": 80,
+            "LabelText": "#1/100",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/bold.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1542.3529,
+              "Y": 975.5417
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8033,
+              "Y": 0.9033
+            },
+            "PreSize": {
+              "X": 0.2516,
+              "Y": 0.0954
+            },
+            "LeftMargin": 1300.8529,
+            "RightMargin": 136.1471,
+            "TopMargin": 52.9583,
+            "BottomMargin": 924.0417,
+            "Tag": 30,
+            "ActionTag": -342174727,
+            "Size": {
+              "X": 483.0,
+              "Y": 103.0
+            },
+            "Name": "lbRanking",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../fonts/bold.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}
