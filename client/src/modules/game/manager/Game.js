@@ -23,10 +23,6 @@ var Game = cc.Class.extend({
         }
     },
 
-    getTankById: function(playerId){
-        return this.tanks.get(playerId);
-    },
-
     start: function(){
         cc.log("Start game");
         this.input.start();

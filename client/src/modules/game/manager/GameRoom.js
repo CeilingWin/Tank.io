@@ -50,7 +50,7 @@ var GameRoom = cc.Class.extend({
     },
 
     showLobby: function(){
-        cc.log("show lobby");
+        gv.sceneMgr.addGui(new GuiRoomInfo());
     },
 
     rejoinGame: function(){

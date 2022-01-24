@@ -1,20 +1,20 @@
 <GameFile>
-  <PropertyGroup Name="LayerWaiting" Type="Scene" ID="31d416e1-983a-4e5d-b6bf-c1436d5623c2" Version="3.10.0.0" />
+  <PropertyGroup Name="RoomInfo" Type="Scene" ID="31d416e1-983a-4e5d-b6bf-c1436d5623c2" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="20" ctype="GameNodeObjectData">
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
-          <AbstractNodeData Name="sprLoading" ActionTag="-1617562261" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="860.0000" RightMargin="860.0000" TopMargin="486.5000" BottomMargin="486.5000" ctype="SpriteObjectData">
-            <Size X="200.0000" Y="107.0000" />
+          <AbstractNodeData Name="sprLoading" ActionTag="-1617562261" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="937.0000" RightMargin="937.0000" TopMargin="517.0000" BottomMargin="517.0000" ctype="SpriteObjectData">
+            <Size X="140.0000" Y="79.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="960.0000" Y="540.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="0.1042" Y="0.0991" />
-            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
+            <PreSize X="0.0240" Y="0.0426" />
+            <FileData Type="Normal" Path="map/textures/object/441-70.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Text_1" ActionTag="-1226104278" Tag="13" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="460.0000" RightMargin="460.0000" TopMargin="608.9080" BottomMargin="371.0920" IsCustomSize="True" FontSize="70" LabelText="Waiting..." HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

@@ -94,6 +94,7 @@ var res = {
 	TANK_CANNON1_PNG: "res/tank/cannon1.png",
 	Z_GUI_GAME_GAMESCENE_JSON: "res/z_gui/game/GameScene.json",
 	Z_GUI_GAME_GUIGAMECONTROL_JSON: "res/z_gui/game/GuiGameControl.json",
+	Z_GUI_GAME_GUIROOMINFO_JSON: "res/z_gui/game/GuiRoomInfo.json",
 	Z_GUI_GAME_GUIWAITING_JSON: "res/z_gui/game/GuiWaiting.json",
 	Z_GUI_GAME_GUIWAITINGTOSTART_JSON: "res/z_gui/game/GuiWaitingToStart.json",
 	Z_GUI_GAME_LAYERWAITING_JSON: "res/z_gui/game/LayerWaiting.json",
