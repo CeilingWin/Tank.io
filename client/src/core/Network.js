@@ -1,3 +1,4 @@
+var ROOM_DEFINE = "game_room"
 var Network = cc.Class.extend({
     ctor: function (){
         this.connection = new Colyseus.Client('ws://localhost:2567');
@@ -18,8 +19,12 @@ var Network = cc.Class.extend({
         this.serverRoom.onMessage(TYPE_MESSAGE.PING,this.onPingSuccess.bind(this));
     },
 
-    joinRoom: function (roomName,options,callback) {
-        this.connection.joinOrCreate(roomName,options).then(callback);
+    joinRoom: function (options,callback) {
+        this.connection.joinOrCreate(ROOM_DEFINE,options).then(callback);
+    },
+
+    createRoom: function (options,callback){
+        this.connection.create(ROOM_DEFINE,options).then(callback);
     },
     
     pingToServer: function () {

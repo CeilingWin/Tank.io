@@ -11,19 +11,22 @@ var SceneLobby = BaseScene.extend({
     initGui: function () {
         let username = cc.sys.localStorage.getItem("username");
         if (username) this.tfUserName.setString(username);
+        this.tfUserName.addEventListener(()=>{
+            cc.sys.localStorage.setItem("username",username);
+        });
     },
 
     onTouchUIEnded: function(sender){
         switch (sender){
             case this.btnPlayNow:
-                MatchMaker.getIns().playNow(this.tfUserName.getString());
+                MatchMaker.getIns().playNow();
                 break;
             case this.btnJoin:
                 this.initGui();
                 cc.log("join game");
                 break;
             case this.btnNewGame:
-                cc.log("new game");
+                gv.sceneMgr.addGui(new GuiNewGame());
                 break;
         }
     },

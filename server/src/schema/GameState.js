@@ -24,10 +24,11 @@ export class GameState extends Schema {
         this.state = GC.ROOM_STATE.LOBBY;
     }
 
-    init(maxPlayer, mapId) {
+    init(roomName, maxPlayer, mapId) {
         this.resetState();
         this.maxPlayer = maxPlayer;
         this.mapId = mapId;
+        this.roomName = roomName;
     }
 
     initDefault() {
@@ -92,7 +93,7 @@ export class GameState extends Schema {
         }
     }
 
-    showLeaderBoard(){
+    showLeaderBoard() {
         console.log("Show leaderboard");
         this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOARD;
         let leaderBoard = this.game.getLeaderBoard();
@@ -100,7 +101,7 @@ export class GameState extends Schema {
             player.username = this.players.get(player.playerId).username;
             return player;
         })
-        this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD,leaderBoard);
+        this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD, leaderBoard);
         this.state = GC.ROOM_STATE.SHOW_LEADER_BOARD;
     }
 
@@ -123,5 +124,6 @@ schema.defineTypes(GameState, {
     state: "number",
     maxPlayer: "number",
     mapId: "number",
+    roomName: "string",
     gameStartAt: "number"
 });

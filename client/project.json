@@ -47,6 +47,7 @@
         "src/modules/game/manager/GameRoom.js",
         "src/modules/game/manager/Input.js",
         "src/modules/game/MatchMaker.js",
+        "src/modules/lobby/GuiNewGame.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }

@@ -2,10 +2,15 @@ var MatchMaker = cc.Class.extend({
     ctor: function(){
     },
 
-    playNow: function(username){
-        cc.sys.localStorage.setItem("username",username);
+    playNow: function(){
+        let username = cc.sys.localStorage.getItem("username");
         SceneMgr.getIns().setTouchEnabled(false);
-        gv.network.joinRoom("game_room",{username: username},this.onJoinNewRoom.bind(this));
+        gv.network.joinRoom({username: username},this.onJoinNewRoom.bind(this));
+    },
+
+    createNewGame: function(gameConfig){
+        gameConfig.username = cc.sys.localStorage.getItem("username");
+        gv.network.createRoom(gameConfig,this.onJoinNewRoom.bind(this));
     },
 
     onJoinNewRoom: function (room) {

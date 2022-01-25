@@ -5,6 +5,11 @@ var res = {
 	DEFAULT_BUTTON_DISABLE_PNG: "res/Default/Button_Disable.png",
 	DEFAULT_BUTTON_NORMAL_PNG: "res/Default/Button_Normal.png",
 	DEFAULT_BUTTON_PRESS_PNG: "res/Default/Button_Press.png",
+	DEFAULT_CHECKBOXNODE_DISABLE_PNG: "res/Default/CheckBoxNode_Disable.png",
+	DEFAULT_CHECKBOXNODE_NORMAL_PNG: "res/Default/CheckBoxNode_Normal.png",
+	DEFAULT_CHECKBOX_DISABLE_PNG: "res/Default/CheckBox_Disable.png",
+	DEFAULT_CHECKBOX_NORMAL_PNG: "res/Default/CheckBox_Normal.png",
+	DEFAULT_CHECKBOX_PRESS_PNG: "res/Default/CheckBox_Press.png",
 	DEFAULT_LOADINGBARFILE_PNG: "res/Default/LoadingBarFile.png",
 	DEFAULT_SPRITE_PNG: "res/Default/Sprite.png",
 	FONTS_BOLD_TTF: "res/fonts/bold.ttf",
@@ -101,6 +106,7 @@ var res = {
 	Z_GUI_GAME_GUIWAITINGTOSTART_JSON: "res/z_gui/game/GuiWaitingToStart.json",
 	Z_GUI_GAME_LAYERWAITING_JSON: "res/z_gui/game/LayerWaiting.json",
 	Z_GUI_GAME_MAPLAYER_JSON: "res/z_gui/game/MapLayer.json",
+	Z_GUI_GUINEWGAME_JSON: "res/z_gui/GuiNewGame.json",
 	Z_GUI_SCENELOBBY_JSON: "res/z_gui/SceneLobby.json",
 
 };

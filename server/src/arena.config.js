@@ -7,7 +7,7 @@ import config from "config";
 import {GameRoom} from "./room/GameRoom.js";
 import { ServerRoom } from "./room/ServerRoom.js";
 // config
-const gameConfig = config.get("game_config");
+import { GameConfig } from "./config/GameConfig.js";
 
 export default Arena.default({
     getId: () => "Your Colyseus App",
@@ -16,10 +16,12 @@ export default Arena.default({
         /**
          * Define your room handlers:
          */
+        let roomConfig = GameConfig.getRoomConfig();
         gameServer.define('server',ServerRoom);
         gameServer.define('game_room',GameRoom,{
-            maxPlayer : gameConfig["default_num_player"],
-            mapId: 0
+            maxPlayer : roomConfig["default_num_player"],
+            mapId: 0,
+            isPrivate: false,
         });
         if (process.env.NODE_ENV !== "production") {
             gameServer.simulateLatency(100);
