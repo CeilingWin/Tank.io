@@ -9,6 +9,11 @@ var BaseScene = cc.Scene.extend(_injectCCS).extend({
         this._listGui = [];
         this.initJson(jsonFile);
         this.initLayer();
+        this.initGui();
+    },
+
+    initGui: function (){
+
     },
 
     initLayer: function () {

@@ -626,7 +626,8 @@
                     "IsCustomSize": true,
                     "LabelText": "",
                     "PlaceHolderText": "Username",
-                    "MaxLengthText": 10,
+                    "MaxLengthEnable": true,
+                    "MaxLengthText": 20,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,

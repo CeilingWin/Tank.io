@@ -2,9 +2,10 @@ var MatchMaker = cc.Class.extend({
     ctor: function(){
     },
 
-    playNow: function(playerName){
+    playNow: function(username){
+        cc.sys.localStorage.setItem("username",username);
         SceneMgr.getIns().setTouchEnabled(false);
-        gv.network.joinRoom("game_room",{name: playerName,max_player:3},this.onJoinNewRoom.bind(this));
+        gv.network.joinRoom("game_room",{username: username},this.onJoinNewRoom.bind(this));
     },
 
     onJoinNewRoom: function (room) {

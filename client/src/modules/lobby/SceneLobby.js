@@ -9,7 +9,8 @@ var SceneLobby = BaseScene.extend({
     },
 
     initGui: function () {
-
+        let username = cc.sys.localStorage.getItem("username");
+        if (username) this.tfUserName.setString(username);
     },
 
     onTouchUIEnded: function(sender){
@@ -25,7 +26,7 @@ var SceneLobby = BaseScene.extend({
                 cc.log("new game");
                 break;
         }
-    }
+    },
 });
 
 SceneLobby.prototype.className = "SceneLobby";

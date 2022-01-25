@@ -133,7 +133,7 @@
               <AbstractNodeData Name="Panel_4" ActionTag="-641348862" Tag="13" IconVisible="False" LeftMargin="-250.0000" RightMargin="-250.0000" TopMargin="-342.0000" BottomMargin="282.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="500.0000" Y="60.0000" />
                 <Children>
-                  <AbstractNodeData Name="tfUserName" ActionTag="-904648022" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TouchEnable="True" FontSize="40" IsCustomSize="True" LabelText="" PlaceHolderText="Username" MaxLengthText="10" ctype="TextFieldObjectData">
+                  <AbstractNodeData Name="tfUserName" ActionTag="-904648022" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TouchEnable="True" FontSize="40" IsCustomSize="True" LabelText="" PlaceHolderText="Username" MaxLengthEnable="True" MaxLengthText="20" ctype="TextFieldObjectData">
                     <Size X="500.0000" Y="60.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="250.0000" Y="30.0000" />
