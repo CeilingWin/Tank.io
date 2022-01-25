@@ -2,6 +2,7 @@ var GuiGameResult = BaseGui.extend({
     ctor: function(){
         this.lbRanking = null;
         this.lv = null;
+        this.btnBack = null;
         this._super("res/z_gui/game/GuiGameResult.json");
         this.setHaveFog(true);
     },
@@ -17,6 +18,15 @@ var GuiGameResult = BaseGui.extend({
             this.lv.pushBackCustomItem(row);
             rank += 1;
         })
+    },
+
+    onTouchUIEnded: function (sender){
+        switch(sender){
+            case this.btnBack:
+                gv.gameRoom.leave();
+                gv.sceneMgr.runScene(new SceneLobby());
+                break;
+        }
     }
 });
 
