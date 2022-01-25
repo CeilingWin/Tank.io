@@ -11,7 +11,7 @@ var GuiRoomInfo = BaseGui.extend({
 
     initGui: function(){
         this.roomState = gv.gameRoom.roomState;
-        this.lbRoomId.setString("Room ID: " + gv.gameRoom.getNetwork().sessionId);
+        this.lbRoomId.setString("Room ID: " + gv.gameRoom.getNetwork().id);
         this.updateNumPlayer();
         this.sprLoading.runAction(cc.rotateBy(6,360).repeatForever());
     },

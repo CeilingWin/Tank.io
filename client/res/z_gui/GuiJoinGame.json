@@ -1,0 +1,535 @@
+{
+  "ID": "0c28e98f-1186-4618-999f-a4c632673948",
+  "Version": "2.3.4",
+  "Name": "GuiJoinGame",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 57,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 172,
+              "G": 78,
+              "B": 78
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 58,
+            "Children": [
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 456.1349,
+                  "Y": 907.0032
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2376,
+                  "Y": 0.8398
+                },
+                "PreSize": {
+                  "X": 0.3125,
+                  "Y": 0.0741
+                },
+                "LeftMargin": 456.1349,
+                "RightMargin": 863.8651,
+                "TopMargin": 92.9968,
+                "BottomMargin": 907.0032,
+                "Tag": 61,
+                "ActionTag": -1277366303,
+                "Size": {
+                  "X": 600.0,
+                  "Y": 80.0
+                },
+                "Name": "Panel_2",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/bold.ttf",
+                  "Plist": ""
+                },
+                "FontSize": 35,
+                "IsCustomSize": true,
+                "LabelText": "",
+                "PlaceHolderText": "Enter room id",
+                "MaxLengthText": 10,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 747.335,
+                  "Y": 931.8456
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3892,
+                  "Y": 0.8628
+                },
+                "PreSize": {
+                  "X": 0.2604,
+                  "Y": 0.0741
+                },
+                "LeftMargin": 497.335,
+                "RightMargin": 922.665,
+                "TopMargin": 108.1544,
+                "BottomMargin": 891.8456,
+                "Tag": 59,
+                "ActionTag": 1700773116,
+                "Size": {
+                  "X": 500.0,
+                  "Y": 80.0
+                },
+                "Name": "tfRoomId",
+                "ctype": "TextFieldObjectData"
+              },
+              {
+                "FontSize": 35,
+                "ButtonText": "Find",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/bold.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 16,
+                "Scale9Height": 14,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1237.3762,
+                  "Y": 950.2947
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6445,
+                  "Y": 0.8799
+                },
+                "PreSize": {
+                  "X": 0.1562,
+                  "Y": 0.0741
+                },
+                "LeftMargin": 1087.3762,
+                "RightMargin": 532.6238,
+                "TopMargin": 89.7053,
+                "BottomMargin": 910.2947,
+                "Tag": 60,
+                "ActionTag": 684636478,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 80.0
+                },
+                "Name": "btnFindRoom",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "DirectionType": "Vertical",
+                "ScrollDirectionType": 0,
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 296.7307,
+                  "Y": 170.2429
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1545,
+                  "Y": 0.1576
+                },
+                "PreSize": {
+                  "X": 0.7292,
+                  "Y": 0.6481
+                },
+                "LeftMargin": 296.7307,
+                "RightMargin": 223.2693,
+                "TopMargin": 209.7571,
+                "BottomMargin": 170.2429,
+                "Tag": 62,
+                "ActionTag": 969130146,
+                "Size": {
+                  "X": 1400.0,
+                  "Y": 700.0
+                },
+                "Name": "lvRooms",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FontSize": 35,
+                "ButtonText": "X",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/bold.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 16,
+                "Scale9Height": 14,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1802.2253,
+                  "Y": 1006.497
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9387,
+                  "Y": 0.9319
+                },
+                "PreSize": {
+                  "X": 0.0781,
+                  "Y": 0.0741
+                },
+                "LeftMargin": 1727.2253,
+                "RightMargin": 42.7747,
+                "TopMargin": 33.5029,
+                "BottomMargin": 966.497,
+                "Tag": 63,
+                "ActionTag": 415734544,
+                "Size": {
+                  "X": 150.0,
+                  "Y": 80.0
+                },
+                "Name": "btnClose",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 35,
+                "ButtonText": "Refresh",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/bold.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 16,
+                "Scale9Height": 14,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1005.1443,
+                  "Y": 91.7034
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5235,
+                  "Y": 0.0849
+                },
+                "PreSize": {
+                  "X": 0.1562,
+                  "Y": 0.0741
+                },
+                "LeftMargin": 855.1443,
+                "RightMargin": 764.8557,
+                "TopMargin": 948.2966,
+                "BottomMargin": 51.7034,
+                "Tag": 64,
+                "ActionTag": -791048239,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 80.0
+                },
+                "Name": "btnRefresh",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 100,
+                "LabelText": "No games...",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/classic.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1028.1277,
+                  "Y": 507.5718
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5355,
+                  "Y": 0.47
+                },
+                "PreSize": {
+                  "X": 0.2359,
+                  "Y": 0.0815
+                },
+                "LeftMargin": 801.6277,
+                "RightMargin": 665.3723,
+                "TopMargin": 528.4282,
+                "BottomMargin": 463.5718,
+                "Tag": 65,
+                "ActionTag": -764369954,
+                "Size": {
+                  "X": 453.0,
+                  "Y": 88.0
+                },
+                "Name": "lbEmpty",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -985237479,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../Default/Button_Normal.png",
+        "../Default/Button_Press.png",
+        "../fonts/bold.ttf",
+        "../fonts/classic.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

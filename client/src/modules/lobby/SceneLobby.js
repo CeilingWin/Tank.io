@@ -22,8 +22,7 @@ var SceneLobby = BaseScene.extend({
                 MatchMaker.getIns().playNow();
                 break;
             case this.btnJoin:
-                this.initGui();
-                cc.log("join game");
+                gv.sceneMgr.addGui(new GuiJoinGame());
                 break;
             case this.btnNewGame:
                 gv.sceneMgr.addGui(new GuiNewGame());

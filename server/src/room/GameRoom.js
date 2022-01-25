@@ -11,6 +11,8 @@ export class GameRoom extends Room {
         this.setState(new GameState(this));
         this.setSimulationInterval(() => this.state.update(), GC.DT);
         this.defaultOptions = options;
+        // todo: unique room id
+        this.roomId = GameRoom.numRoom.toString();
         GameRoom.numRoom += 1;
     }
 
@@ -33,13 +35,15 @@ export class GameRoom extends Room {
         if (maxPlayer < this.defaultOptions.maxPlayer) maxPlayer = this.defaultOptions.maxPlayer;
         maxPlayer = Math.min(maxPlayer, roomConfig["max_player"]);
         this.state.init(roomName, maxPlayer, mapId);
-        console.log("INIT GAME : ", {
+        let metadata = {
             roomName: roomName,
             maxPlayer: maxPlayer,
             mapId: mapId,
             isPrivate: isPrivate,
             host: client.sessionId
-        });
+        }
+        console.log("INIT GAME : ",this.roomId, metadata);
+        this.setMetadata(metadata);
     }
 
     onLeave(client, consented) {
@@ -47,7 +51,7 @@ export class GameRoom extends Room {
     }
 
     onDispose() {
-        console.log("Destroy room",this.state.roomName);
+        console.log("Destroy room", this.state.roomName);
     }
 
 }

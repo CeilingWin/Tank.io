@@ -112,6 +112,7 @@
           </Folder>
           <Project Name="SceneLobby.csd" Type="Scene" />
           <Project Name="GuiNewGame.csd" Type="Scene" />
+          <Project Name="GuiJoinGame.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>
