@@ -4,7 +4,8 @@ var GuiRoomInfo = BaseGui.extend({
         this.lbNumPlayer = null;
         this.sprLoading = null;
         this._super("res/z_gui/game/GuiRoomInfo.json");
-        gv.gameRoom.roomState.listen("players",this.updateNumPlayer.bind(this));
+        gv.gameRoom.roomState["players"].onAdd = this.updateNumPlayer.bind(this);
+        gv.gameRoom.roomState["players"].onRemove = this.updateNumPlayer.bind(this);
     },
 
     initGui: function(){
