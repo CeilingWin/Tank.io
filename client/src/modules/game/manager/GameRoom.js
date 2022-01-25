@@ -51,6 +51,7 @@ var GameRoom = cc.Class.extend({
     },
 
     showLobby: function(){
+        this.gameScene.clearScene();
         gv.sceneMgr.addGui(new GuiRoomInfo());
     },
 
@@ -190,7 +191,7 @@ var GameRoom = cc.Class.extend({
     },
 
     leave: function (){
-        this.network.leave();
+        this.room.leave();
     }
 });
 

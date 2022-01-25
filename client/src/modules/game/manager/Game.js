@@ -12,6 +12,13 @@ var Game = cc.Class.extend({
         this.input = new Input();
     },
 
+    destroyGuiGame: function(){
+        this.mapLayer && this.mapLayer.destroy();
+        this.guiControl && this.guiControl.destroy();
+        this.mapLayer = null;
+        this.guiControl = null;
+    },
+
     addTank: function (playerId, tankData, isMe) {
         let tank = new Tank();
         tank.setPosition(tankData.x,tankData.y);

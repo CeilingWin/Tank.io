@@ -121,7 +121,7 @@ export class GameState extends Schema {
         // delete all afk player
         for (let playerId of this.players.keys()) {
             let player = this.players.get(playerId);
-            if (playerId.isAfk()) this.players.delete(playerId);
+            if (player.isAfk()) this.players.delete(playerId);
         }
     }
 

@@ -16,6 +16,11 @@ var SceneGame = BaseScene.extend({
 
     stopWaiting: function (){
         this.guiWaiting && this.guiWaiting.destroy();
+    },
+
+    clearScene: function(){
+        if (gv.gameRoom.game) gv.gameRoom.game.destroyGuiGame();
+        this.destroyAllGuis();
     }
 
 })
