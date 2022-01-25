@@ -6,7 +6,7 @@
       <ObjectData Name="Layer" Tag="31" ctype="GameLayerObjectData">
         <Size X="1600.0000" Y="120.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="-1917619694" Tag="32" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TopMargin="-2.1166" BottomMargin="2.1166" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="pn" ActionTag="-1917619694" Tag="32" IconVisible="False" TopMargin="-2.1166" BottomMargin="2.1166" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1600.0000" Y="120.0000" />
             <Children>
               <AbstractNodeData Name="lbName" ActionTag="1906572431" Tag="38" IconVisible="False" LeftMargin="336.3994" RightMargin="663.6006" TopMargin="26.1585" BottomMargin="13.8415" IsCustomSize="True" FontSize="30" LabelText="ceilingwin" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -21,7 +21,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbKill" ActionTag="1438705824" Tag="39" IconVisible="False" LeftMargin="1022.5178" RightMargin="477.4822" TopMargin="26.1586" BottomMargin="13.8414" IsCustomSize="True" FontSize="30" LabelText="2" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbKills" ActionTag="1438705824" Tag="39" IconVisible="False" LeftMargin="1022.5178" RightMargin="477.4822" TopMargin="26.1586" BottomMargin="13.8414" IsCustomSize="True" FontSize="30" LabelText="2" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="100.0000" Y="80.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1072.5178" Y="53.8414" />
@@ -33,7 +33,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbDame" ActionTag="-1254114676" Tag="40" IconVisible="False" LeftMargin="1253.0322" RightMargin="46.9678" TopMargin="26.1586" BottomMargin="13.8414" IsCustomSize="True" FontSize="30" LabelText="1M2" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbDamage" ActionTag="-1254114676" Tag="40" IconVisible="False" LeftMargin="1253.0322" RightMargin="46.9678" TopMargin="26.1586" BottomMargin="13.8414" IsCustomSize="True" FontSize="30" LabelText="1M2" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="300.0000" Y="80.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1403.0322" Y="53.8414" />

@@ -20,11 +20,11 @@
             "HorizontalType": "Align_HorizontalCenter",
             "ScrollDirectionType": 0,
             "ClipAble": true,
-            "BackColorAlpha": 102,
             "ComboBoxIndex": 1,
             "SingleColor": {
-              "R": 150,
-              "G": 150
+              "R": 77,
+              "G": 77,
+              "B": 77
             },
             "FirstColor": {
               "R": 150,
@@ -34,6 +34,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
@@ -80,6 +82,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {

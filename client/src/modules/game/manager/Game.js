@@ -75,6 +75,7 @@ var Game = cc.Class.extend({
     },
 
     updateInput: function(){
+        if (!this.input.isRunning()) return;
         let currentTime = Date.now();
         if (currentTime - this.lastTimeSendInput >= TIME_TO_SEND_UPDATE_TANK){
             let tankDir = this.input.getDirection();
@@ -85,5 +86,5 @@ var Game = cc.Class.extend({
             this.network.send(TYPE_MESSAGE.UPDATE_TANK,[tankDir,cannonDir,isClicked]);
             this.lastTimeSendInput = currentTime;
         }
-    }
+    },
 })

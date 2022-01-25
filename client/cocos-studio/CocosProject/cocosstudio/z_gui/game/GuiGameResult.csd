@@ -6,10 +6,10 @@
       <ObjectData Name="Scene" Tag="27" ctype="GameNodeObjectData">
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
-          <AbstractNodeData Name="lv" ActionTag="1677870799" Tag="29" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="160.0000" RightMargin="160.0000" TopMargin="233.2000" BottomMargin="146.8000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
+          <AbstractNodeData Name="lv" ActionTag="1677870799" Tag="29" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="160.0000" RightMargin="160.0000" TopMargin="233.2000" BottomMargin="146.8000" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
             <Size X="1600.0000" Y="700.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_2" ActionTag="-1845145277" Tag="58" IconVisible="False" BottomMargin="620.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="-1845145277" Tag="58" IconVisible="False" BottomMargin="620.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1600.0000" Y="80.0000" />
                 <Children>
                   <AbstractNodeData Name="Text_2" ActionTag="-1404891397" Tag="59" IconVisible="False" LeftMargin="31.4003" RightMargin="1453.5997" TopMargin="23.9009" BottomMargin="20.0991" FontSize="28" LabelText="Rank" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -79,7 +79,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.4600" />
             <PreSize X="0.8333" Y="0.6481" />
-            <SingleColor A="255" R="150" G="150" B="255" />
+            <SingleColor A="255" R="77" G="77" B="77" />
             <FirstColor A="255" R="150" G="150" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />

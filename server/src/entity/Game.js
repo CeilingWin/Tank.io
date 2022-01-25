@@ -109,13 +109,18 @@ export class Game extends schema.Schema {
     }
 
     getLeaderBoard() {
-        this.tanks.forEach((tank,playerId)=>{
+        this.tanks.forEach((tank, playerId) => {
             if (tank.isActive()) this.listDeathPlayers.unshift({
                 playerId: playerId,
                 timeDie: this.ts
             })
         });
-        return this.listDeathPlayers;
+        return this.listDeathPlayers.map(player => {
+            let tank = this.tanks.get(player.playerId);
+            player.kills = tank.kills;
+            player.totalDamage = tank.totalDamage;
+            return player;
+        });
     }
 }
 

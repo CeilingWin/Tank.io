@@ -96,6 +96,10 @@ export class GameState extends Schema {
         console.log("Show leaderboard");
         this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOARD;
         let leaderBoard = this.game.getLeaderBoard();
+        leaderBoard = leaderBoard.map(player => {
+            player.username = this.players.get(player.playerId).username;
+            return player;
+        })
         this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD,leaderBoard);
         this.state = GC.ROOM_STATE.SHOW_LEADER_BOARD;
     }

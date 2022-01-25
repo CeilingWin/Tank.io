@@ -9,6 +9,8 @@ var Input = cc.Class.extend({
             right: false,
             left: false
         }
+
+        this._running = false;
     },
 
     getDirection: function (){
@@ -35,6 +37,7 @@ var Input = cc.Class.extend({
         this.initKeyListener();
         this.initMouseListener();
         this.initTouchListener();
+        this._running = true;
     },
 
     initKeyListener: function(){
@@ -79,6 +82,7 @@ var Input = cc.Class.extend({
         this._removeListener(this.keyListener);
         this._removeListener(this.mouseListener);
         this._removeListener(this.touchListener);
+        this._running = false;
     },
 
     _removeListener: function (listener){
@@ -125,5 +129,9 @@ var Input = cc.Class.extend({
                 this.keyDir.left = false;
                 break;
         }
+    },
+
+    isRunning: function(){
+        return this._running;
     }
 })

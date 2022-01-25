@@ -18,6 +18,7 @@ export class Bullet extends schema.Schema {
         this.direction = direction;
         this.active = active;
         this.playerId = playerId;
+        this.tank = this.controller.tanks.get(playerId);
     }
 
     initAttributes() {
@@ -60,9 +61,11 @@ export class Bullet extends schema.Schema {
         this.controller.tanks.forEach((tank, id) => {
             if (!tank.isActive() || this.playerId === id) return;
             if (this.controller.map.checkCollision(bulletBody, tank.getBody())){
-                tank.takeDamage(this.damage);
+                let damage = tank.takeDamage(this.damage);
+                this.tank.totalDamage += damage;
                 if (!tank.isActive()){
                     this.controller.playerWasKilled(id,this.playerId);
+                    this.tank.kills += 1;
                 }
                 this.setActive(false);
             }

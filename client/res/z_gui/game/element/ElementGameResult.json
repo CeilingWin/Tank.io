@@ -29,6 +29,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -44,10 +46,6 @@
               "X": 0.0,
               "Y": 0.0176
             },
-            "PercentWidthEnable": true,
-            "PercentHeightEnable": true,
-            "PercentWidthEnabled": true,
-            "PercentHeightEnabled": true,
             "PreSize": {
               "X": 1.0,
               "Y": 1.0
@@ -173,7 +171,7 @@
                   "X": 100.0,
                   "Y": 80.0
                 },
-                "Name": "lbKill",
+                "Name": "lbKills",
                 "ctype": "TextObjectData"
               },
               {
@@ -233,7 +231,7 @@
                   "X": 300.0,
                   "Y": 80.0
                 },
-                "Name": "lbDame",
+                "Name": "lbDamage",
                 "ctype": "TextObjectData"
               },
               {
@@ -302,7 +300,7 @@
               "X": 1600.0,
               "Y": 120.0
             },
-            "Name": "Panel_1",
+            "Name": "pn",
             "ctype": "PanelObjectData"
           }
         ],

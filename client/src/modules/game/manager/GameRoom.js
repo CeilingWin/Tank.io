@@ -17,6 +17,7 @@ var GameRoom = cc.Class.extend({
         this.roomState.listen("state",this.handleGameStateChange.bind(this));
         // listen game state update
         this.roomState.game.listen("ts",this.processGameUpdate.bind(this));
+        this.room.onMessage(TYPE_MESSAGE.SHOW_LEADER_BOARD,this.showLeaderboard.bind(this));
     },
 
     handleGameStateChange: function(){
@@ -105,6 +106,12 @@ var GameRoom = cc.Class.extend({
     },
 
     handleEndGame: function (){
+        this.game.input.stop();
+    },
+
+    showLeaderboard: function (data){
+        let gui = gv.sceneMgr.addGui(new GuiGameResult());
+        gui.showGameResult(data)
         this.game.stop();
     },
 

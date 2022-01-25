@@ -16,10 +16,13 @@ export class Tank extends schema.Schema {
         this.speed = this.minSpeed;
         this.lastShootAt = 0;
         this.active = true;
+        // kda
+        this.kills = 0;
+        this.totalDamage = 0;
         this.initBody();
     }
 
-    initAttributes(){
+    initAttributes() {
         let config = GameConfig.getTankConfig("tank_0");
         this.width = config["width"];
         this.height = config["height"];
@@ -48,7 +51,7 @@ export class Tank extends schema.Schema {
         return new Vector(this.x, this.y);
     }
 
-    isActive(){
+    isActive() {
         return this.active;
     }
 
@@ -61,16 +64,16 @@ export class Tank extends schema.Schema {
         this.cannonDirection = dir;
     }
 
-    getCannonDirection(){
+    getCannonDirection() {
         return this.cannonDirection;
     }
 
-    isMoving(){
+    isMoving() {
         return this.movementVector.len() > 0.1;
     }
 
     update() {
-        if(!this.isActive()) return;
+        if (!this.isActive()) return;
         this.updateMovement();
         if (!this.isMoving()) return;
         let tankBody = this.getBody();
@@ -88,7 +91,7 @@ export class Tank extends schema.Schema {
         });
     }
 
-    updateMovement(){
+    updateMovement() {
         if (!this.isMoving()) {
             this.speed = this.minSpeed;
             return;
@@ -103,7 +106,7 @@ export class Tank extends schema.Schema {
         this.updateBody();
     }
 
-    updateBody(){
+    updateBody() {
         this.body.pos.x = this.x;
         this.body.pos.y = this.y;
         this.body.setAngle(this.direction);
@@ -114,23 +117,25 @@ export class Tank extends schema.Schema {
         return this.body;
     }
 
-    canShoot(){
+    canShoot() {
         return (Date.now() - this.lastShootAt) >= this.bulletRate;
     }
 
-    getStartingPositionOfBullet(){
+    getStartingPositionOfBullet() {
         return {
             x: this.x + CANNON_LENGTH * Math.cos(this.cannonDirection),
             y: this.y + CANNON_LENGTH * Math.sin(-this.cannonDirection)
         }
     }
 
-    takeDamage(damage){
+    takeDamage(damage) {
+        damage = Math.min(this.hp, damage);
         this.hp -= damage;
         if (this.hp <= 0) {
             this.hp = 0;
             this.active = false;
         }
+        return damage;
     }
 
     handleCollision() {
