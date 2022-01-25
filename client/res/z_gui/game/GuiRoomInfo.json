@@ -45,13 +45,13 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.024,
-              "Y": 0.0426
+              "X": 0.0729,
+              "Y": 0.0731
             },
-            "LeftMargin": 937.0,
-            "RightMargin": 937.0,
-            "TopMargin": 517.0,
-            "BottomMargin": 517.0,
+            "LeftMargin": 890.0,
+            "RightMargin": 890.0,
+            "TopMargin": 500.5,
+            "BottomMargin": 500.5,
             "Tag": 12,
             "ActionTag": -1617562261,
             "Size": {
@@ -231,6 +231,86 @@
             },
             "Name": "lbNumPlayer",
             "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 35,
+            "ButtonText": "Cancel",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/bold.ttf",
+              "Plist": ""
+            },
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Normal.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 14,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 974.0656,
+              "Y": 218.2686
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5073,
+              "Y": 0.2021
+            },
+            "PreSize": {
+              "X": 0.2083,
+              "Y": 0.0741
+            },
+            "LeftMargin": 774.0656,
+            "RightMargin": 745.9344,
+            "TopMargin": 821.7313,
+            "BottomMargin": 178.2686,
+            "Tag": 48,
+            "ActionTag": -145021712,
+            "Size": {
+              "X": 400.0,
+              "Y": 80.0
+            },
+            "Name": "btnCancel",
+            "ctype": "ButtonObjectData"
           }
         ],
         "Size": {
@@ -241,6 +321,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../Default/Button_Disable.png",
+        "../../Default/Button_Normal.png",
+        "../../Default/Button_Press.png",
         "../../fonts/bold.ttf",
         "../../fonts/classic.ttf",
         "../../map/textures/object/441-70.png"

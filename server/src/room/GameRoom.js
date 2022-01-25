@@ -16,22 +16,22 @@ export class GameRoom extends Room {
 
     onJoin(client, options) {
         if (this.state.getNumPlayers() === 0) {
-            this.loadGameOptions(client,options);
-        } 
+            this.loadGameOptions(client, options);
+        }
         this.state.addPlayer(client.sessionId, options.username);
         console.log("PLAYER JOIN GAME: username(", options.username, "); id(", client.sessionId, ")");
         // todo: send player join game
     }
 
-    loadGameOptions(client, options){
+    loadGameOptions(client, options) {
         let maxPlayer = options.maxPlayer || this.defaultOptions.maxPlayer;
         let mapId = options.mapId || this.defaultOptions.mapId;
         let isPrivate = options.isPrivate || this.defaultOptions.isPrivate;
         let roomName = options.roomName || this.defaultOptions.roomName;
-        if (isPrivate) this.lock();
+        this.setPrivate(isPrivate);
         if (!roomName) roomName = "Room" + GameRoom.numRoom;
         if (maxPlayer < this.defaultOptions.maxPlayer) maxPlayer = this.defaultOptions.maxPlayer;
-        maxPlayer = Math.min(maxPlayer,roomConfig["max_player"]);
+        maxPlayer = Math.min(maxPlayer, roomConfig["max_player"]);
         this.state.init(roomName, maxPlayer, mapId);
         console.log("INIT GAME : ", {
             roomName: roomName,
@@ -43,7 +43,11 @@ export class GameRoom extends Room {
     }
 
     onLeave(client, consented) {
-        // todo:
+        this.state.removePlayer(client.sessionId);
+    }
+
+    onDispose() {
+        console.log("Destroy room",this.state.roomName);
     }
 
 }

@@ -16,7 +16,7 @@ export class ServerRoom extends Room {
 
     onLeave(client, consented) {
         this.players = this.players.filter(p=> p !== client.sessionId);
-        console.log("Player ",client.sessionId,"leaved ! Total num player: ",this.players.length);
+        console.log("Player ",client.sessionId,"left ! Total num player: ",this.players.length);
     }
 
     handleMessage(client,type,message){

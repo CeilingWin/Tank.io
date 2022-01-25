@@ -77,13 +77,13 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="cbPrivateGame" ActionTag="1836733444" Tag="40" IconVisible="False" LeftMargin="1056.9750" RightMargin="763.0250" TopMargin="816.9189" BottomMargin="163.0811" TouchEnable="True" ctype="CheckBoxObjectData">
+              <AbstractNodeData Name="cbPrivateGame" ActionTag="1836733444" Tag="40" IconVisible="False" LeftMargin="1063.2804" RightMargin="756.7196" TopMargin="813.7665" BottomMargin="166.2335" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="100.0000" Y="100.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1106.9750" Y="213.0811" />
+                <Position X="1113.2804" Y="216.2335" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5765" Y="0.1973" />
+                <PrePosition X="0.5798" Y="0.2002" />
                 <PreSize X="0.0521" Y="0.0926" />
                 <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
                 <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
@@ -107,13 +107,13 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnClose" ActionTag="575414300" Tag="42" IconVisible="False" LeftMargin="1726.0413" RightMargin="43.9587" TopMargin="19.8618" BottomMargin="910.1381" TouchEnable="True" FontSize="40" ButtonText="X" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnClose" ActionTag="575414300" Tag="42" IconVisible="False" LeftMargin="1726.0413" RightMargin="43.9587" TopMargin="16.7092" BottomMargin="913.2907" TouchEnable="True" FontSize="40" ButtonText="X" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="150.0000" Y="150.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1801.0413" Y="985.1381" />
+                <Position X="1801.0413" Y="988.2907" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="0" B="0" />
-                <PrePosition X="0.9380" Y="0.9122" />
+                <PrePosition X="0.9380" Y="0.9151" />
                 <PreSize X="0.0781" Y="0.1389" />
                 <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />

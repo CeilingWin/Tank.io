@@ -187,6 +187,10 @@ var GameRoom = cc.Class.extend({
 
     getPlayerDataById: function(playerId){
         return this.roomState["players"].get(playerId);
+    },
+
+    leave: function (){
+        this.network.leave();
     }
 });
 

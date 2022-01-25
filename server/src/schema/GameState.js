@@ -41,6 +41,16 @@ export class GameState extends Schema {
         this.players.set(id, player);
     }
 
+    removePlayer(id) {
+        this.log("Player", id, "left");
+        if (this.state === GC.ROOM_STATE.LOBBY || this.state === GC.ROOM_STATE.SHOW_LEADER_BOARD) {
+            this.players.delete(id);
+        } else {
+            let player = this.players.get(id);
+            player.setAfk(true);
+        }
+    }
+
     getNumPlayers() {
         return this.players.size;
     }
@@ -63,11 +73,16 @@ export class GameState extends Schema {
     }
 
     async handleLobby() {
-        if (this.players.size === this.maxPlayer) await this.startWaiting();
+        if (this.players.size === this.maxPlayer) {
+            this.room.lock();
+            await this.startWaiting();
+        }
+        else if (this.room.locked) {
+            this.room.unlock();
+        }
     }
 
     async startWaiting() {
-        this.room.lock();
         this.gameStartAt = Date.now() + GC.TIME_TO_READY;
         this.state = GC.ROOM_STATE.WAITING_TO_START;
         await this.initGame();
@@ -103,18 +118,26 @@ export class GameState extends Schema {
         })
         this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD, leaderBoard);
         this.state = GC.ROOM_STATE.SHOW_LEADER_BOARD;
+        // delete all afk player
+        for (let playerId of this.players.keys()) {
+            let player = this.players.get(playerId);
+            if (playerId.isAfk()) this.players.delete(playerId);
+        }
     }
 
     handleEndGame() {
         if (Date.now() >= this.timeFinishShowLeaderBoard) {
             this.state = GC.ROOM_STATE.LOBBY;
-            console.log("Show lobby");
         }
     }
 
     onUpdateUserTank(client, message) {
         if (this.state !== GC.ROOM_STATE.IN_GAME) return;
         this.game.handleMessageUpdateTank(client.sessionId, message);
+    }
+
+    log(...args) {
+        console.log("<Room ", this.roomName + "> ---->", args.join(" "));
     }
 }
 
