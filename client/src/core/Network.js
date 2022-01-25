@@ -30,6 +30,10 @@ var Network = cc.Class.extend({
     joinRoomById: function (roomId,options,callback,catcher){
         this.connection.joinById(roomId,options).then(callback).catch(catcher);
     },
+
+    getAvailableRooms: function (callback){
+        this.connection.getAvailableRooms(ROOM_DEFINE).then(callback);
+    },
     
     pingToServer: function () {
         this.timeSentPing = Date.now();

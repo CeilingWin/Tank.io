@@ -48,16 +48,79 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lvRooms" ActionTag="969130146" Tag="62" IconVisible="False" LeftMargin="296.7307" RightMargin="223.2693" TopMargin="209.7571" BottomMargin="170.2429" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
-                <Size X="1400.0000" Y="700.0000" />
+              <AbstractNodeData Name="lvRooms" ActionTag="969130146" Tag="62" IconVisible="False" LeftMargin="296.7307" RightMargin="223.2693" TopMargin="273.7600" BottomMargin="156.2400" TouchEnable="True" ClipAble="True" BackColorAlpha="88" ComboBoxIndex="1" ColorAngle="90.0000" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
+                <Size X="1400.0000" Y="650.0000" />
                 <AnchorPoint />
-                <Position X="296.7307" Y="170.2429" />
+                <Position X="296.7307" Y="156.2400" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1545" Y="0.1576" />
-                <PreSize X="0.7292" Y="0.6481" />
+                <PrePosition X="0.1545" Y="0.1447" />
+                <PreSize X="0.7292" Y="0.6019" />
                 <SingleColor A="255" R="150" G="150" B="255" />
                 <FirstColor A="255" R="150" G="150" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Panel_4" ActionTag="430056617" Tag="71" IconVisible="False" LeftMargin="296.7307" RightMargin="223.2693" TopMargin="189.6815" BottomMargin="810.3185" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+                <Size X="1400.0000" Y="80.0000" />
+                <Children>
+                  <AbstractNodeData Name="Text_2" ActionTag="-1933792158" Tag="72" IconVisible="False" LeftMargin="59.3275" RightMargin="1277.6725" TopMargin="20.6656" BottomMargin="20.3344" FontSize="30" LabelText="id" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="63.0000" Y="39.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="90.8275" Y="39.8344" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.0649" Y="0.4979" />
+                    <PreSize X="0.0450" Y="0.4875" />
+                    <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Text_2_0" ActionTag="381783872" Tag="73" IconVisible="False" LeftMargin="325.1801" RightMargin="801.8199" TopMargin="21.1100" BottomMargin="19.8900" FontSize="30" LabelText="Room name" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="273.0000" Y="39.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="461.6801" Y="39.3900" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.3298" Y="0.4924" />
+                    <PreSize X="0.1950" Y="0.4875" />
+                    <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Text_2_0_0" ActionTag="-270721802" Tag="74" IconVisible="False" LeftMargin="762.8772" RightMargin="544.1228" TopMargin="18.9127" BottomMargin="22.0873" FontSize="30" LabelText="Map" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="93.0000" Y="39.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="809.3772" Y="41.5873" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.5781" Y="0.5198" />
+                    <PreSize X="0.0664" Y="0.4875" />
+                    <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Text_2_0_0_0" ActionTag="-804052646" Tag="75" IconVisible="False" LeftMargin="1074.0975" RightMargin="142.9025" TopMargin="18.9873" BottomMargin="22.0127" FontSize="30" LabelText="Player" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="183.0000" Y="39.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="1165.5975" Y="41.5127" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.8326" Y="0.5189" />
+                    <PreSize X="0.1307" Y="0.4875" />
+                    <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint />
+                <Position X="296.7307" Y="810.3185" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.1545" Y="0.7503" />
+                <PreSize X="0.7292" Y="0.0741" />
+                <SingleColor A="255" R="128" G="0" B="128" />
+                <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>

@@ -20,6 +20,10 @@ var MatchMaker = cc.Class.extend({
         gv.network.joinRoomById(roomId,options,this.onJoinNewRoom.bind(this),this.onFindRoomFailed.bind(this));
     },
 
+    getAvailableRooms: function (callback){
+        gv.network.getAvailableRooms(callback);
+    },
+
     onJoinNewRoom: function (room) {
         cc.log("join room ", room.id);
         GameRoom.getIns().joinNewRoom(room);

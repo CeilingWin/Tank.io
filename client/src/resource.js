@@ -97,6 +97,7 @@ var res = {
 	MAP_TILE_SET_OBJECT_TSX: "res/map/tile_set_object.tsx",
 	TANK_BODY_PNG: "res/tank/body.png",
 	TANK_CANNON1_PNG: "res/tank/cannon1.png",
+	Z_GUI_GAME_ELEMENT_ELEMENTAVAILABLEROOM_JSON: "res/z_gui/game/element/ElementAvailableRoom.json",
 	Z_GUI_GAME_ELEMENT_ELEMENTGAMERESULT_JSON: "res/z_gui/game/element/ElementGameResult.json",
 	Z_GUI_GAME_GAMESCENE_JSON: "res/z_gui/game/GameScene.json",
 	Z_GUI_GAME_GUIGAMECONTROL_JSON: "res/z_gui/game/GuiGameControl.json",

@@ -1,0 +1,382 @@
+{
+  "ID": "cb7c5b9b-79ef-411e-ba24-3106bc18267c",
+  "Version": "2.3.4",
+  "Name": "ElementAvailableRoom",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 66,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 67,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 5,
+                "Scale9Width": 11,
+                "Scale9Height": 6,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 700.0,
+                  "Y": 40.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 77,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "23",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 79.1715,
+                      "Y": 39.39
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 26,
+                      "G": 26,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0566,
+                      "Y": 0.4924
+                    },
+                    "PreSize": {
+                      "X": 0.045,
+                      "Y": 0.4875
+                    },
+                    "LeftMargin": 47.6715,
+                    "RightMargin": 1289.3285,
+                    "TopMargin": 21.11,
+                    "BottomMargin": 19.89,
+                    "Tag": 76,
+                    "ActionTag": 992648030,
+                    "Size": {
+                      "X": 63.0,
+                      "Y": 39.0
+                    },
+                    "Name": "lbRoomId",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 30,
+                    "LabelText": "Room123",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 438.7821,
+                      "Y": 39.3238
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 26,
+                      "G": 26,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.3134,
+                      "Y": 0.4915
+                    },
+                    "PreSize": {
+                      "X": 0.2857,
+                      "Y": 0.4875
+                    },
+                    "LeftMargin": 238.7821,
+                    "RightMargin": 761.2179,
+                    "TopMargin": 21.1762,
+                    "BottomMargin": 19.8238,
+                    "Tag": 78,
+                    "ActionTag": 1903375131,
+                    "Size": {
+                      "X": 400.0,
+                      "Y": 39.0
+                    },
+                    "Name": "lbRoomName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 30,
+                    "LabelText": "Map 1",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 839.91,
+                      "Y": 41.2448
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 26,
+                      "G": 26,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5999,
+                      "Y": 0.5156
+                    },
+                    "PreSize": {
+                      "X": 0.2857,
+                      "Y": 0.4875
+                    },
+                    "LeftMargin": 639.91,
+                    "RightMargin": 360.0901,
+                    "TopMargin": 19.2552,
+                    "BottomMargin": 21.7448,
+                    "Tag": 79,
+                    "ActionTag": -479464598,
+                    "Size": {
+                      "X": 400.0,
+                      "Y": 39.0
+                    },
+                    "Name": "lbMap",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 30,
+                    "LabelText": "[1/10]",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/bold.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 1195.7513,
+                      "Y": 41.1772
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.1019
+                    },
+                    "CColor": {
+                      "R": 26,
+                      "G": 26,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8541,
+                      "Y": 0.5147
+                    },
+                    "PreSize": {
+                      "X": 0.2857,
+                      "Y": 0.4875
+                    },
+                    "LeftMargin": 995.7513,
+                    "RightMargin": 4.2487,
+                    "TopMargin": 19.3228,
+                    "BottomMargin": 21.6772,
+                    "Tag": 80,
+                    "ActionTag": 409965352,
+                    "Size": {
+                      "X": 400.0,
+                      "Y": 39.0
+                    },
+                    "Name": "lbPlayers",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1934411729,
+                "Size": {
+                  "X": 1400.0,
+                  "Y": 80.0
+                },
+                "Name": "btn",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1231994579,
+            "Size": {
+              "X": 1400.0,
+              "Y": 80.0
+            },
+            "Name": "pn",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1400.0,
+          "Y": 80.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../../../Default/Button_Disable.png",
+        "../../../fonts/bold.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}
