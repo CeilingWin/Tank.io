@@ -19,11 +19,13 @@ var Game = cc.Class.extend({
         this.guiControl = null;
     },
 
-    addTank: function (playerId, tankData, isMe) {
+    addTank: function (playerData, tankData, isMe) {
+        let playerId = playerData["id"];
         let tank = new Tank();
         tank.setPosition(tankData.x,tankData.y);
         this.mapLayer.addTankToMap(tank);
         this.tanks.set(playerId,tank);
+        tank.setData(playerData["username"]);
         if (isMe) {
             this.me = tank;
             this.mapLayer.follow(tank);

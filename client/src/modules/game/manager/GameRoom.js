@@ -46,7 +46,8 @@ var GameRoom = cc.Class.extend({
         // init tank
         this.roomState.game.tanks.forEach((tank, playerId) => {
             cc.log("Init tank:",playerId,this.room.sessionId);
-            this.game.addTank(playerId, tank, playerId === this.room.sessionId);
+            let playerData = this.roomState["players"].get(playerId);
+            this.game.addTank(playerData, tank, playerId === this.room.sessionId);
         });
     },
 

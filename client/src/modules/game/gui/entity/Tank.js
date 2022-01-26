@@ -4,12 +4,22 @@ var Tank = cc.Node.extend({
         this._init();
         this.loadAttributes();
         this.hp = this.maxHp;
+
+        // lb name
+        let lbName = new ccui.Text("",res.FONTS_BOLD_TTF,18);
+        lbName.setPosition(0,50);
+        this.addChild(lbName);
+        this.lbName = lbName;
     },
 
     loadAttributes: function(){
         let config = Config.getIns().getTankConfig();
         this.bulletRate = config["bullet_rate"];
         this.maxHp = config["hp"];
+    },
+
+    setData: function(name){
+        this.lbName.setString(name);
     },
     
     _init: function () {
