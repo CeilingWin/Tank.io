@@ -1,6 +1,8 @@
 var GuiGameControl = BaseGui.extend({
     ctor: function(){
         this.lbNotification = null;
+        this.pbHp = null;
+        this.lbHp = null;
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
     },
@@ -25,8 +27,12 @@ var GuiGameControl = BaseGui.extend({
             cc.delayTime(3),
             cc.fadeOut(2)
         ));
-    }
+    },
 
+    showTankState: function(tank){
+        this.pbHp.setPercent(tank.hp/tank.maxHp*100);
+        this.lbHp.setString(tank.hp + "/" + tank.maxHp);
+    }
 });
 
 GuiGameControl.prototype.className = "GuiGameControl";

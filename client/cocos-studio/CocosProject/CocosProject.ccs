@@ -102,8 +102,8 @@
         <Folder Name="z_gui">
           <Folder Name="game">
             <Folder Name="element">
-              <Project Name="ElementGameResult.csd" Type="Layer" />
               <Project Name="ElementAvailableRoom.csd" Type="Layer" />
+              <Project Name="ElementGameResult.csd" Type="Layer" />
             </Folder>
             <Project Name="GameScene.csd" Type="Scene" />
             <Project Name="GuiGameControl.csd" Type="Scene" />
@@ -111,9 +111,9 @@
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
           </Folder>
-          <Project Name="SceneLobby.csd" Type="Scene" />
-          <Project Name="GuiNewGame.csd" Type="Scene" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />
+          <Project Name="GuiNewGame.csd" Type="Scene" />
+          <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>

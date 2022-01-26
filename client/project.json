@@ -28,6 +28,7 @@
         "src/core/EventCenter.js",
         "src/core/gui/InjectCCS.js",
         "src/core/gui/BaseGui.js",
+        "src/core/Config.js",
         "src/core/gui/BaseScene.js",
         "src/core/gui/SceneMgr.js",
         "src/core/Network.js",

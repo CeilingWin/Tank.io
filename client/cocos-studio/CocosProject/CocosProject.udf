@@ -7,17 +7,5 @@
         <LastRunType Value="Windows" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="z_gui/GuiNewGame.csd" />
-          <FilePathData Path="z_gui/game/GuiRoomInfo.csd" />
-          <FilePathData Path="z_gui/game/GuiGameResult.csd" />
-          <FilePathData Path="z_gui/GuiJoinGame.csd" />
-          <FilePathData Path="z_gui/game/element/ElementAvailableRoom.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="z_gui/game/GuiGameResult.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

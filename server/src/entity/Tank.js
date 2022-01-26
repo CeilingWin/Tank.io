@@ -16,6 +16,7 @@ export class Tank extends schema.Schema {
         this.speed = this.minSpeed;
         this.lastShootAt = 0;
         this.active = true;
+        this.hp = this.maxHp;
         // kda
         this.kills = 0;
         this.totalDamage = 0;
@@ -29,7 +30,7 @@ export class Tank extends schema.Schema {
         this.minSpeed = config["min_speed"];
         this.maxSpeed = config["max_speed"];
         this.bulletRate = config["bullet_rate"];
-        this.hp = config["hp"];
+        this.maxHp = config["hp"];
         this.rotationSpeed = config["rotation_speed"];
     }
 

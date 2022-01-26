@@ -6,14 +6,28 @@
       <ObjectData Name="Scene" Tag="15" ctype="GameNodeObjectData">
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
-          <AbstractNodeData Name="lbHp" ActionTag="1932422603" Tag="16" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="126.8596" RightMargin="1393.1404" TopMargin="32.7439" BottomMargin="1033.2561" ProgressInfo="61" ctype="LoadingBarObjectData">
-            <Size X="400.0000" Y="14.0000" />
+          <AbstractNodeData Name="pbHp" ActionTag="1932422603" Tag="16" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="124.4621" RightMargin="1295.5378" TopMargin="20.3932" BottomMargin="1019.6068" ProgressInfo="100" ctype="LoadingBarObjectData">
+            <Size X="500.0000" Y="40.0000" />
+            <Children>
+              <AbstractNodeData Name="lbHp" ActionTag="1374745689" Tag="52" IconVisible="False" LeftMargin="-3.2214" RightMargin="3.2214" TopMargin="7.8659" BottomMargin="6.1341" IsCustomSize="True" FontSize="20" LabelText="1/10000" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="500.0000" Y="26.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="246.7786" Y="19.1341" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="0" G="0" B="0" />
+                <PrePosition X="0.4936" Y="0.4784" />
+                <PreSize X="1.0000" Y="0.6500" />
+                <FontResource Type="Normal" Path="fonts/bold.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="326.8596" Y="1040.2561" />
+            <Position X="374.4621" Y="1039.6068" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1702" Y="0.9632" />
-            <PreSize X="0.2083" Y="0.0130" />
+            <PrePosition X="0.1950" Y="0.9626" />
+            <PreSize X="0.2604" Y="0.0370" />
             <ImageFileData Type="Default" Path="Default/LoadingBarFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Text_1" ActionTag="77415118" Tag="17" IconVisible="False" LeftMargin="17.9929" RightMargin="1820.0071" TopMargin="19.7356" BottomMargin="1021.2644" FontSize="30" LabelText="HP:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

@@ -2,6 +2,7 @@
 var res = {
 	
 	BULLET_BULLET_NORMAL_PNG: "res/bullet/bullet_normal.png",
+	CONFIG_DEFAULT_JSON: "res/config/default.json",
 	DEFAULT_BUTTON_DISABLE_PNG: "res/Default/Button_Disable.png",
 	DEFAULT_BUTTON_NORMAL_PNG: "res/Default/Button_Normal.png",
 	DEFAULT_BUTTON_PRESS_PNG: "res/Default/Button_Press.png",

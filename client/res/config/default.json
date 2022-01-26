@@ -1,0 +1,30 @@
+{
+    "room_config": {
+        "min_player": 2,
+        "max_player": 12,
+        "default_num_player": 2,
+        "default_map": 0
+    },
+    "tanks": [
+        {
+            "type": "tank_0",
+            "hp": 1000,
+            "width": 70,
+            "height": 78,
+            "min_speed": 100,
+            "max_speed": 500,
+            "bullet_rate": 200,
+            "bullet_type": "normal",
+            "rotation_speed": 6
+        }
+    ],
+    "bullets": [
+        {
+            "type": "normal",
+            "speed": 1600,
+            "damage": 100,
+            "geometry": "circle",
+            "radius": 10
+        }
+    ]
+}

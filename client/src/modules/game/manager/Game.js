@@ -48,6 +48,7 @@ var Game = cc.Class.extend({
         let currentState = gv.gameRoom.getCurrentGameState();
         this.updateTank(currentState.tanks);
         this.updateBullets(currentState.bullets);
+        this.guiControl.showTankState(this.me);
     },
 
     updateTank: function (tanksData){
@@ -60,6 +61,7 @@ var Game = cc.Class.extend({
             tank.setPosition(tankData.x,tankData.y);
             tank.setDirection(tankData.direction);
             tank.setCannonDirection(tankData["cannonDirection"]);
+            tank.setHp(tankData.hp);
         });
     },
 

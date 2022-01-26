@@ -88,7 +88,8 @@ var GameRoom = cc.Class.extend({
                 y: tank.y,
                 direction: tank.direction,
                 cannonDirection: tank.cannonDirection,
-                active: tank.active
+                active: tank.active,
+                hp: tank.hp
             });
         });
         serverResponse.bullets.forEach(bullet => {
@@ -144,7 +145,8 @@ var GameRoom = cc.Class.extend({
                 y: this._interpolatePosition(tank.y,nextTank.y,ratio),
                 direction: this._interpolateAngle(tank.direction,nextTank.direction,ratio),
                 cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection,ratio),
-                active: this._interpolateBoolean(tank.active,nextTank.active,ratio)
+                active: this._interpolateBoolean(tank.active,nextTank.active,ratio),
+                hp: this._interpolate(tank.hp,nextTank.hp,ratio)
             });
         });
         let i = 0;
@@ -180,6 +182,11 @@ var GameRoom = cc.Class.extend({
     _interpolateBoolean: function (b1, b2, ratio){
         if (ratio < 0.99) return b1;
         return b2;
+    },
+
+    _interpolate: function(s1,s2,ratio){
+        if (ratio < 0.5) return s1;
+        return s2;
     },
 
     getNetwork: function (){

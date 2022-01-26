@@ -2,6 +2,14 @@ var Tank = cc.Node.extend({
     ctor: function(){
         this._super();
         this._init();
+        this.loadAttributes();
+        this.hp = this.maxHp;
+    },
+
+    loadAttributes: function(){
+        let config = Config.getIns().getTankConfig();
+        this.bulletRate = config["bullet_rate"];
+        this.maxHp = config["hp"];
     },
     
     _init: function () {
@@ -26,5 +34,9 @@ var Tank = cc.Node.extend({
 
     setDirection(direction){
         this.body.setRotation(direction/Math.PI*180);
+    },
+
+    setHp: function(hp){
+        this.hp = hp;
     }
 })
