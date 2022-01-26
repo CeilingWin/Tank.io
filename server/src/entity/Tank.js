@@ -30,6 +30,7 @@ export class Tank extends schema.Schema {
         this.maxSpeed = config["max_speed"];
         this.bulletRate = config["bullet_rate"];
         this.hp = config["hp"];
+        this.rotationSpeed = config["rotation_speed"];
     }
 
     initBody() {
@@ -99,11 +100,32 @@ export class Tank extends schema.Schema {
         // update speed
         this.speed *= 1.1;
         if (this.speed > this.maxSpeed) this.speed = this.maxSpeed;
+        // cal direction
+        this.updateDirection();
         // move
-        this.x += this.movementVector.x * GC.DT * this.speed / 1000;
-        this.y += this.movementVector.y * GC.DT * this.speed / 1000;
-        this.direction = Vector.angleSigned(this.movementVector, BASE_VECTOR);
+        this.x += Math.cos(-this.direction) * GC.DT * this.speed / 1000;
+        this.y += Math.sin(-this.direction) * GC.DT * this.speed / 1000;
         this.updateBody();
+    }
+
+    updateDirection(){
+        let direction = Vector.angleSigned(this.movementVector, BASE_VECTOR);
+        let dr = Math.abs(direction - this.direction);
+        let deltaR = this.rotationSpeed*GC.DT/1000;
+        if (dr <= deltaR) {
+            this.direction = direction;
+            return;
+        };
+        if(dr < deltaR) deltaR = dr;
+        if (dr < Math.PI){
+            if (direction < this.direction) this.direction -= deltaR;
+            else this.direction += deltaR;
+        } else {
+            if (direction < this.direction) this.direction += deltaR;
+            else this.direction -= deltaR;
+        }
+        if (this.direction > Math.PI) this.direction = this.direction - 2*Math.PI;
+        else if (this.direction < - Math.PI) this.direction = 2*Math.PI + this.direction;
     }
 
     updateBody() {

@@ -14,7 +14,8 @@
             "min_speed": 100,
             "max_speed": 500,
             "bullet_rate": 200,
-            "bullet_type": "normal"
+            "bullet_type": "normal",
+            "rotation_speed": 6
         }
     ],
     "bullets": [
