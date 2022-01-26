@@ -38,7 +38,7 @@ var MapLayer = BaseGui.extend({
         }
     },
 
-    test: function () {
+     test: function () {
         let tank = this.tank;
         let touchEvent = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -72,7 +72,7 @@ var MapLayer = BaseGui.extend({
                 let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
                 let object = this.loadObject(resImg,pos.x,pos.y,tile.properties.z);
                 let bodys = tile.bodys;
-                bodys.forEach(body=>this.drawBody(object,body,tile));
+                // bodys.forEach(body=>this.drawBody(object,body,tile));
             }
         }
     },
