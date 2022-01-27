@@ -201,6 +201,7 @@ var GameRoom = cc.Class.extend({
     },
 
     leave: function (){
+        if (this.game) this.game.stop();
         this.room.leave();
     }
 });

@@ -1070,6 +1070,81 @@
             },
             "Name": "lbNotification",
             "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "back",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Normal.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 14,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1883.65,
+              "Y": 34.5875
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9811,
+              "Y": 0.032
+            },
+            "PreSize": {
+              "X": 0.024,
+              "Y": 0.0333
+            },
+            "LeftMargin": 1860.65,
+            "RightMargin": 13.35,
+            "TopMargin": 1027.4125,
+            "BottomMargin": 16.5875,
+            "Tag": 84,
+            "ActionTag": -1878373518,
+            "Size": {
+              "X": 46.0,
+              "Y": 36.0
+            },
+            "Name": "btnBack",
+            "ctype": "ButtonObjectData"
           }
         ],
         "Size": {
@@ -1083,6 +1158,9 @@
         "../../common/kills.png",
         "../../common/players.png",
         "../../common/rounded-rectangle.png",
+        "../../Default/Button_Disable.png",
+        "../../Default/Button_Normal.png",
+        "../../Default/Button_Press.png",
         "../../Default/LoadingBarFile.png",
         "../../fonts/arial.ttf",
         "../../fonts/arialbd.ttf",

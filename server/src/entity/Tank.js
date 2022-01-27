@@ -79,6 +79,10 @@ export class Tank extends schema.Schema {
         if (!this.isActive()) return;
         this.updateMovement();
         if (!this.isMoving()) return;
+        this.checkCollision();
+    }
+
+    checkCollision() {
         let tankBody = this.getBody();
         let potentials = this.controller.map.getPotentialObstacle(tankBody);
         potentials.forEach((collider) => {
@@ -110,24 +114,24 @@ export class Tank extends schema.Schema {
         this.updateBody();
     }
 
-    updateDirection(){
+    updateDirection() {
         let direction = Vector.angleSigned(this.movementVector, BASE_VECTOR);
         let dr = Math.abs(direction - this.direction);
-        let deltaR = this.rotationSpeed*GC.DT/1000;
+        let deltaR = this.rotationSpeed * GC.DT / 1000;
         if (dr <= deltaR) {
             this.direction = direction;
             return;
         };
-        if(dr < deltaR) deltaR = dr;
-        if (dr < Math.PI){
+        if (dr < deltaR) deltaR = dr;
+        if (dr < Math.PI) {
             if (direction < this.direction) this.direction -= deltaR;
             else this.direction += deltaR;
         } else {
             if (direction < this.direction) this.direction += deltaR;
             else this.direction -= deltaR;
         }
-        if (this.direction > Math.PI) this.direction = this.direction - 2*Math.PI;
-        else if (this.direction < - Math.PI) this.direction = 2*Math.PI + this.direction;
+        if (this.direction > Math.PI) this.direction = this.direction - 2 * Math.PI;
+        else if (this.direction < - Math.PI) this.direction = 2 * Math.PI + this.direction;
     }
 
     updateBody() {

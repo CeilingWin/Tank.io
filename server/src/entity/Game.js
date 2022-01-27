@@ -41,11 +41,12 @@ export class Game extends schema.Schema {
             tank.setPosition(pos);
             tank.playerId = player.id;
             this.tanks.set(player.id, tank);
+            tank.checkCollision();
         });
     }
 
     getRandomSpawnPosition() {
-        return new Vector(Math.random() * 700, Math.random() * 700);
+        return new Vector(Math.random() * this.map.width, Math.random() * this.map.height);
     }
 
     update() {
