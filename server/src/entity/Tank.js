@@ -177,5 +177,6 @@ schema.defineTypes(Tank, {
     cannonDirection: "float32",
     lastShootAt: "number",
     hp: "number",
-    active: "boolean"
+    active: "boolean",
+    kills: "number"
 })

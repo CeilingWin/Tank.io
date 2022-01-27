@@ -8,9 +8,18 @@
         </Folder>
         <Folder Name="common">
           <Image Name="blue_dot.png" />
+          <Image Name="kills.png" />
+          <Image Name="players.png" />
           <Image Name="red_dot.png" />
+          <Image Name="reload.png" />
+          <Image Name="rounded-rectangle.png" />
+          <Image Name="settings.png" />
         </Folder>
         <Folder Name="fonts">
+          <TTF Name="arial.ttf" />
+          <TTF Name="arialbd.ttf" />
+          <TTF Name="arialbi.ttf" />
+          <TTF Name="ariali.ttf" />
           <TTF Name="bold.ttf" />
           <TTF Name="classic.ttf" />
           <TTF Name="normal.ttf" />

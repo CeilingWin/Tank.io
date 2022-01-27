@@ -1,4 +1,5 @@
 var MINIMAP_SCALE = 0.4;
+var NUM_FRAME_TO_UPDATE_FPS = 60;
 var GuiGameControl = BaseGui.extend({
     ctor: function(){
         this.lbNotification = null;
@@ -6,6 +7,10 @@ var GuiGameControl = BaseGui.extend({
         this.minimap = null;
         this.pbHp = null;
         this.lbHp = null;
+        this.lbKills = null;
+        this.lbAlive = null;
+        this.lbFps = null;
+        this.lbPing = null;
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
         this.subEvent(EventId.KEY_M_PRESS,this.onResizeMinimap.bind(this));
@@ -19,6 +24,8 @@ var GuiGameControl = BaseGui.extend({
     start: function (){
         this.loadMinimap();
         this.loadAllTanks();
+        this.lastTime = Date.now();
+        this.numFrame = 0;
     },
 
     loadMinimap: function (){
@@ -46,8 +53,21 @@ var GuiGameControl = BaseGui.extend({
     },
 
     update: function(){
-        this.showTankState(gv.game.getFollowTank());
+        let followTank = gv.game.getFollowTank();
+        this.showTankState(followTank);
         this.updateMinimap();
+        this.lbAlive.setString(gv.gameRoom.roomState["game"]["numAlivePlayer"]);
+        this.lbKills.setString(followTank.kills);
+        this.lbPing.setString(gv.network.getPing());
+        // fps
+        this.numFrame += 1;
+        if (this.numFrame >= NUM_FRAME_TO_UPDATE_FPS){
+            let currentTime = Date.now();
+            let fps = Math.round(1000/(currentTime-this.lastTime)*this.numFrame);
+            this.lbFps.setString(fps);
+            this.lastTime = currentTime;
+            this.numFrame = 0;
+        }
     },
 
     updateMinimap: function(){

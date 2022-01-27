@@ -90,7 +90,8 @@ var GameRoom = cc.Class.extend({
                 direction: tank.direction,
                 cannonDirection: tank.cannonDirection,
                 active: tank.active,
-                hp: tank.hp
+                hp: tank.hp,
+                kills: tank.kills
             });
         });
         serverResponse.bullets.forEach(bullet => {
@@ -147,7 +148,8 @@ var GameRoom = cc.Class.extend({
                 direction: this._interpolateAngle(tank.direction,nextTank.direction,ratio),
                 cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection,ratio),
                 active: this._interpolateBoolean(tank.active,nextTank.active,ratio),
-                hp: this._interpolate(tank.hp,nextTank.hp,ratio)
+                hp: this._interpolate(tank.hp,nextTank.hp,ratio),
+                kills: this._interpolate(tank.kills,nextTank.kills,ratio)
             });
         });
         let i = 0;

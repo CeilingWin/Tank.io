@@ -15,19 +15,27 @@
         "Tag": 15,
         "Children": [
           {
-            "ProgressInfo": 100,
-            "ImageFileData": {
-              "Type": "Default",
-              "Path": "Default/LoadingBarFile.png",
-              "Plist": ""
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 191,
+              "G": 191,
+              "B": 191
             },
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
+            "FirstColor": {
+              "R": 150,
+              "G": 200
             },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {},
             "Position": {
-              "X": 374.4621,
-              "Y": 1039.6068
+              "X": 0.0,
+              "Y": 0.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -36,32 +44,108 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.195,
-              "Y": 0.9626
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 71,
+            "ActionTag": -1266939291,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "VisibleForFrame": false,
+            "Name": "Panel_3_0",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 1080.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 1.0
             },
             "PreSize": {
-              "X": 0.2604,
-              "Y": 0.037
+              "X": 0.0,
+              "Y": 0.0
             },
             "HorizontalEdge": "LeftEdge",
             "VerticalEdge": "TopEdge",
-            "LeftMargin": 124.4621,
-            "RightMargin": 1295.5378,
-            "TopMargin": 20.3932,
-            "BottomMargin": 1019.6068,
-            "Tag": 16,
+            "RightMargin": 1920.0,
+            "BottomMargin": 1080.0,
+            "Tag": 78,
             "Children": [
               {
-                "IsCustomSize": true,
-                "FontSize": 20,
-                "LabelText": "1/10000",
-                "FontResource": {
+                "FileData": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "common/rounded-rectangle.png",
                   "Plist": ""
                 },
-                "HorizontalAlignmentType": "HT_Center",
-                "VerticalAlignmentType": "VT_Center",
+                "Scale9Enable": true,
+                "Scale9OriginX": 31,
+                "Scale9OriginY": 21,
+                "Scale9Width": 1,
+                "Scale9Height": 24,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 154.5736,
+                  "Y": -20.4393
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 4.5736,
+                "RightMargin": -304.5736,
+                "TopMargin": 0.4393,
+                "BottomMargin": -40.4393,
+                "Tag": 79,
+                "ActionTag": -733887869,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 40.0
+                },
+                "Alpha": 160,
+                "Name": "Image_1_0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "Ping:",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arial.ttf",
+                  "Plist": ""
+                },
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -78,160 +162,753 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 246.7786,
-                  "Y": 19.1341
+                  "X": 50.4571,
+                  "Y": -20.9487
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
                 "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
+                  "R": 2,
+                  "B": 2
                 },
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.4936,
-                  "Y": 0.4784
+                  "X": 0.0,
+                  "Y": 0.0
                 },
                 "PreSize": {
-                  "X": 1.0,
-                  "Y": 0.65
+                  "X": 0.0,
+                  "Y": 0.0
                 },
-                "LeftMargin": -3.2214,
-                "RightMargin": 3.2214,
-                "TopMargin": 7.8659,
-                "BottomMargin": 6.1341,
-                "Tag": 52,
-                "ActionTag": 1374745689,
+                "LeftMargin": 27.9571,
+                "RightMargin": -72.9572,
+                "TopMargin": 9.4487,
+                "BottomMargin": -32.4487,
+                "Tag": 80,
+                "ActionTag": -1641516410,
                 "Size": {
-                  "X": 500.0,
-                  "Y": 26.0
+                  "X": 45.0,
+                  "Y": 23.0
                 },
-                "Name": "lbHp",
+                "Name": "Text_6",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 20,
+                "LabelText": "200ms",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arial.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 117.0057,
+                  "Y": -20.9487
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 2,
+                  "B": 2
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 77.0057,
+                "RightMargin": -157.0057,
+                "TopMargin": 9.4487,
+                "BottomMargin": -32.4487,
+                "Tag": 81,
+                "ActionTag": 2107675891,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 23.0
+                },
+                "Name": "lbPing",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "Fps:",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arial.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 183.7658,
+                  "Y": -20.9487
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 2,
+                  "B": 2
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 163.7658,
+                "RightMargin": -203.7658,
+                "TopMargin": 9.4487,
+                "BottomMargin": -32.4487,
+                "Tag": 82,
+                "ActionTag": 601584561,
+                "Size": {
+                  "X": 40.0,
+                  "Y": 23.0
+                },
+                "Name": "Text_6_0_0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 20,
+                "LabelText": "60",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arial.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 249.8133,
+                  "Y": -20.9487
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 2,
+                  "B": 2
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 209.8133,
+                "RightMargin": -289.8133,
+                "TopMargin": 9.4487,
+                "BottomMargin": -32.4487,
+                "Tag": 83,
+                "ActionTag": 572215270,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 23.0
+                },
+                "Name": "lbFps",
                 "ctype": "TextObjectData"
               }
             ],
-            "ActionTag": 1932422603,
+            "ActionTag": -1993811837,
             "Size": {
-              "X": 500.0,
-              "Y": 40.0
+              "X": 0.0,
+              "Y": 0.0
             },
-            "Name": "pbHp",
-            "ctype": "LoadingBarObjectData"
+            "Name": "ndPing",
+            "ctype": "SingleNodeObjectData"
           },
           {
-            "FontSize": 30,
-            "LabelText": "HP:",
-            "FontResource": {
-              "Type": "Normal",
-              "Path": "fonts/bold.ttf",
-              "Plist": ""
-            },
-            "OutlineColor": {
-              "G": 0,
-              "B": 0
-            },
-            "ShadowColor": {
-              "R": 110,
-              "G": 110,
-              "B": 110
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
+            "AnchorPoint": {},
             "Position": {
-              "X": 58.9929,
-              "Y": 1040.7644
+              "X": 12.0,
+              "Y": -25.0
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
             "CColor": {},
-            "IconVisible": false,
+            "IconVisible": true,
             "PrePosition": {
-              "X": 0.0307,
-              "Y": 0.9637
+              "X": 0.0063,
+              "Y": -0.0231
             },
             "PreSize": {
-              "X": 0.0427,
-              "Y": 0.0361
+              "X": 0.0,
+              "Y": 0.0
             },
-            "LeftMargin": 17.9929,
-            "RightMargin": 1820.0071,
-            "TopMargin": 19.7356,
-            "BottomMargin": 1021.2644,
-            "Tag": 17,
-            "ActionTag": 77415118,
+            "LeftMargin": 12.0,
+            "RightMargin": 1908.0,
+            "TopMargin": 1105.0,
+            "BottomMargin": -25.0,
+            "Tag": 73,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/rounded-rectangle.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 26,
+                "Scale9OriginY": 21,
+                "Scale9Width": 29,
+                "Scale9Height": 24,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 141.261,
+                  "Y": 1030.1345
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 16.261,
+                "RightMargin": -266.261,
+                "TopMargin": -1063.1345,
+                "BottomMargin": 997.1345,
+                "Tag": 72,
+                "ActionTag": -1981264412,
+                "Size": {
+                  "X": 250.0,
+                  "Y": 66.0
+                },
+                "Alpha": 160,
+                "Name": "Image_1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/kills.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 51.019,
+                  "Y": 1029.3711
+                },
+                "Scale": {
+                  "ScaleX": 0.3,
+                  "ScaleY": 0.3
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -12.981,
+                "RightMargin": -115.019,
+                "TopMargin": -1093.3711,
+                "BottomMargin": 965.3711,
+                "Tag": 74,
+                "ActionTag": 2101586256,
+                "Size": {
+                  "X": 128.0,
+                  "Y": 128.0
+                },
+                "Name": "kills_6",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "5",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arialbd.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 96.1936,
+                  "Y": 1025.64
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 71.1936,
+                "RightMargin": -121.1936,
+                "TopMargin": -1043.14,
+                "BottomMargin": 1008.14,
+                "Tag": 76,
+                "ActionTag": 1989891426,
+                "Size": {
+                  "X": 50.0,
+                  "Y": 35.0
+                },
+                "Name": "lbKills",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/players.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 173.9912,
+                  "Y": 1028.4709
+                },
+                "Scale": {
+                  "ScaleX": 0.3,
+                  "ScaleY": 0.3
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 109.9912,
+                "RightMargin": -237.9912,
+                "TopMargin": -1095.4709,
+                "BottomMargin": 961.4709,
+                "Tag": 75,
+                "ActionTag": -582819967,
+                "Size": {
+                  "X": 128.0,
+                  "Y": 134.0
+                },
+                "Name": "kills_6_0",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "5",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arialbd.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 224.5392,
+                  "Y": 1025.6404
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 199.5392,
+                "RightMargin": -249.5392,
+                "TopMargin": -1043.1404,
+                "BottomMargin": 1008.1404,
+                "Tag": 77,
+                "ActionTag": 1370835891,
+                "Size": {
+                  "X": 50.0,
+                  "Y": 35.0
+                },
+                "Name": "lbAlive",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1180770676,
             "Size": {
-              "X": 82.0,
-              "Y": 39.0
+              "X": 0.0,
+              "Y": 0.0
             },
-            "Name": "Text_1",
-            "ctype": "TextObjectData"
+            "Name": "ndRoomInfo",
+            "ctype": "SingleNodeObjectData"
           },
           {
-            "IsCustomSize": true,
-            "FontSize": 30,
-            "LabelText": "Player a was killed by player b",
-            "FontResource": {
-              "Type": "Normal",
-              "Path": "fonts/bold.ttf",
-              "Plist": ""
-            },
-            "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
-            "OutlineColor": {
-              "G": 0,
-              "B": 0
-            },
-            "ShadowColor": {
-              "R": 110,
-              "G": 110,
-              "B": 110
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
+            "AnchorPoint": {},
             "Position": {
               "X": 960.0,
-              "Y": 826.1978
+              "Y": 104.0
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
             "CColor": {},
-            "IconVisible": false,
+            "IconVisible": true,
             "PositionPercentXEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.765
+              "Y": 0.0963
             },
             "PreSize": {
-              "X": 0.7812,
-              "Y": 0.1389
+              "X": 0.0,
+              "Y": 0.0
             },
-            "LeftMargin": 210.0,
-            "RightMargin": 210.0,
-            "TopMargin": 178.8022,
-            "BottomMargin": 751.1978,
-            "Tag": 6,
-            "ActionTag": -1164654100,
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 960.0,
+            "RightMargin": 960.0,
+            "TopMargin": 976.0,
+            "BottomMargin": 104.0,
+            "Tag": 58,
+            "Children": [
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 179,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 26,
+                  "G": 26,
+                  "B": 26
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": -252.5,
+                  "Y": -53.65
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -252.5,
+                "RightMargin": -252.5,
+                "TopMargin": 18.65,
+                "BottomMargin": -53.65,
+                "Tag": 59,
+                "Children": [
+                  {
+                    "ProgressInfo": 56,
+                    "ImageFileData": {
+                      "Type": "Default",
+                      "Path": "Default/LoadingBarFile.png",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 252.5,
+                      "Y": 17.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.9901,
+                      "Y": 0.8571
+                    },
+                    "LeftMargin": 2.5,
+                    "RightMargin": 2.5,
+                    "TopMargin": 2.5,
+                    "BottomMargin": 2.5,
+                    "Tag": 16,
+                    "ActionTag": 1932422603,
+                    "Size": {
+                      "X": 500.0,
+                      "Y": 30.0
+                    },
+                    "Name": "pbHp",
+                    "ctype": "LoadingBarObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 30,
+                    "LabelText": "1/10000",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/arialbd.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 253.8802,
+                      "Y": 15.3138
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5027,
+                      "Y": 0.4375
+                    },
+                    "PreSize": {
+                      "X": 0.9901,
+                      "Y": 0.8571
+                    },
+                    "LeftMargin": 3.8802,
+                    "RightMargin": 1.1198,
+                    "TopMargin": 4.6862,
+                    "BottomMargin": 0.3138,
+                    "Tag": 52,
+                    "ActionTag": 1374745689,
+                    "Size": {
+                      "X": 500.0,
+                      "Y": 30.0
+                    },
+                    "Name": "lbHp",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 301707011,
+                "Size": {
+                  "X": 505.0,
+                  "Y": 35.0
+                },
+                "Name": "Panel_2",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FontSize": 50,
+                "LabelText": "HP:",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arialbd.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": -295.9983,
+                  "Y": -34.2947
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -337.9983,
+                "RightMargin": 253.9983,
+                "TopMargin": 5.2947,
+                "BottomMargin": -63.2947,
+                "Tag": 17,
+                "ActionTag": 77415118,
+                "Size": {
+                  "X": 84.0,
+                  "Y": 58.0
+                },
+                "Name": "Text_1",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 494741793,
             "Size": {
-              "X": 1500.0,
-              "Y": 150.0
+              "X": 0.0,
+              "Y": 0.0
             },
-            "Name": "lbNotification",
-            "ctype": "TextObjectData"
+            "Name": "ndHp",
+            "ctype": "SingleNodeObjectData"
           },
           {
             "ClipAble": false,
@@ -259,8 +936,8 @@
               "Y": 1075.0
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 0.4,
+              "ScaleY": 0.4
             },
             "CColor": {},
             "IconVisible": false,
@@ -335,6 +1012,64 @@
             },
             "Name": "minimap",
             "ctype": "PanelObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 60,
+            "LabelText": "Player a was killed by player b",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0002,
+              "Y": 828.8344
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.7674
+            },
+            "PreSize": {
+              "X": 0.7812,
+              "Y": 0.1389
+            },
+            "LeftMargin": 210.0002,
+            "RightMargin": 209.9998,
+            "TopMargin": 176.1656,
+            "BottomMargin": 753.8344,
+            "Tag": 6,
+            "ActionTag": -1164654100,
+            "Size": {
+              "X": 1500.0,
+              "Y": 150.0
+            },
+            "Name": "lbNotification",
+            "ctype": "TextObjectData"
           }
         ],
         "Size": {
@@ -345,8 +1080,12 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../common/kills.png",
+        "../../common/players.png",
+        "../../common/rounded-rectangle.png",
         "../../Default/LoadingBarFile.png",
-        "../../fonts/bold.ttf",
+        "../../fonts/arial.ttf",
+        "../../fonts/arialbd.ttf",
         "../../map/minimap/map0.png"
       ],
       "ctype": "GameFileData"

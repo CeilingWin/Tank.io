@@ -87,8 +87,8 @@ export class GameState extends Schema {
 
     async startWaiting() {
         this.gameStartAt = Date.now() + GC.TIME_TO_READY;
-        this.state = GC.ROOM_STATE.WAITING_TO_START;
         await this.initGame();
+        this.state = GC.ROOM_STATE.WAITING_TO_START;
     }
 
     async initGame() {

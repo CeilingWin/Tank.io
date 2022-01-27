@@ -26,6 +26,7 @@ export class Game extends schema.Schema {
         this.tanks.clear();
         this.bullets.clear();
         this.listDeathPlayers.clear();
+        this.numAlivePlayer = 0;
     }
 
     async initMap(mapId) {
@@ -51,6 +52,7 @@ export class Game extends schema.Schema {
         this.ts = Date.now();
         this.updateTank();
         this.updateBullets();
+        this.numAlivePlayer = this.tanks.size - this.listDeathPlayers.length;
     }
 
     updateTank() {
@@ -66,11 +68,7 @@ export class Game extends schema.Schema {
     }
 
     isEndGame() {
-        let numPlayer = this.tanks.size;
-        if (numPlayer - this.listDeathPlayers.length <= 1) {
-            return true;
-        }
-        return false;
+        return this.numAlivePlayer <= 1;
     }
 
     handleMessageUpdateTank(playerId, message) {
@@ -127,5 +125,6 @@ export class Game extends schema.Schema {
 schema.defineTypes(Game, {
     ts: "number",
     tanks: { map: Tank },
-    bullets: [Bullet]
+    bullets: [Bullet],
+    numAlivePlayer: "number"
 })

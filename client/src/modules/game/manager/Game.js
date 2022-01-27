@@ -74,6 +74,7 @@ var Game = cc.Class.extend({
             tank.setDirection(tankData.direction);
             tank.setCannonDirection(tankData["cannonDirection"]);
             tank.setHp(tankData.hp);
+            tank.kills = tankData.kills;
         });
     },
 

@@ -7,9 +7,10 @@ var Tank = cc.Node.extend({
         this.loadAttributes();
         this.hp = this.maxHp;
         this._isDied = false;
+        this.kills = 0;
         // lb name
-        let lbName = new ccui.Text("",res.FONTS_BOLD_TTF,18);
-        lbName.setPosition(0,50);
+        let lbName = new ccui.Text("",res.FONTS_ARIALBD_TTF,22);
+        lbName.setPosition(0,80);
         this.addChild(lbName);
         this.lbName = lbName;
     },

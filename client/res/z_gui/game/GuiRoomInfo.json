@@ -17,11 +17,11 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "map/textures/object/441-70.png",
+              "Path": "common/reload.png",
               "Plist": ""
             },
             "BlendFunc": {
-              "Src": 1,
+              "Src": 770,
               "Dst": 771
             },
             "AnchorPoint": {
@@ -55,8 +55,8 @@
             "Tag": 12,
             "ActionTag": -1617562261,
             "Size": {
-              "X": 140.0,
-              "Y": 79.0
+              "X": 128.0,
+              "Y": 128.0
             },
             "Name": "sprLoading",
             "ctype": "SpriteObjectData"
@@ -300,8 +300,8 @@
               "Y": 0.0741
             },
             "LeftMargin": 774.0656,
-            "RightMargin": 745.9344,
-            "TopMargin": 821.7313,
+            "RightMargin": 745.9343,
+            "TopMargin": 821.7314,
             "BottomMargin": 178.2686,
             "Tag": 48,
             "ActionTag": -145021712,
@@ -321,12 +321,12 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../common/reload.png",
         "../../Default/Button_Disable.png",
         "../../Default/Button_Normal.png",
         "../../Default/Button_Press.png",
         "../../fonts/bold.ttf",
-        "../../fonts/classic.ttf",
-        "../../map/textures/object/441-70.png"
+        "../../fonts/classic.ttf"
       ],
       "ctype": "GameFileData"
     }

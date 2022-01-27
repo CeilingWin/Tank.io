@@ -7,15 +7,15 @@
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
           <AbstractNodeData Name="sprLoading" ActionTag="-1617562261" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="890.0000" RightMargin="890.0000" TopMargin="500.5000" BottomMargin="500.5000" ctype="SpriteObjectData">
-            <Size X="140.0000" Y="79.0000" />
+            <Size X="128.0000" Y="128.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="960.0000" Y="540.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.0729" Y="0.0731" />
-            <FileData Type="Normal" Path="map/textures/object/441-70.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
+            <FileData Type="Normal" Path="common/reload.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Text_1" ActionTag="-1226104278" Tag="13" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="460.0000" RightMargin="460.0000" TopMargin="608.9080" BottomMargin="371.0920" IsCustomSize="True" FontSize="70" LabelText="Waiting..." HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="1000.0000" Y="100.0000" />
@@ -53,7 +53,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnCancel" ActionTag="-145021712" Tag="48" IconVisible="False" LeftMargin="774.0656" RightMargin="745.9344" TopMargin="821.7313" BottomMargin="178.2686" TouchEnable="True" FontSize="35" ButtonText="Cancel" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btnCancel" ActionTag="-145021712" Tag="48" IconVisible="False" LeftMargin="774.0656" RightMargin="745.9343" TopMargin="821.7314" BottomMargin="178.2686" TouchEnable="True" FontSize="35" ButtonText="Cancel" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="400.0000" Y="80.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="974.0656" Y="218.2686" />
