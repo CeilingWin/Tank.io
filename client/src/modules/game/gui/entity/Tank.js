@@ -14,15 +14,20 @@ var Tank = cc.Node.extend({
         this.addChild(lbName);
         this.lbName = lbName;
         // pb hp
-        // let hpBar = new cc.Sprite("res/common/bg_progress_bar.png");
-        // hpBar.setPosition(0,140);
-        // this.addChild(hpBar);
-        // this.hpBar = hpBar;
-        // let pbHp = new ccui.LoadingBar("res/Default/LoadingBarFile.png",100);
-        // pbHp.setContentSize(80,20);
-        // pbHp.setPosition(hpBar.width/2,hpBar.height/2);
-        // pbHp.setColor(cc.color.GREEN);
-        // this.hpBar.addChild(pbHp);
+        let hpBar = new cc.LayerColor(cc.color.BLACK,145,25);
+        hpBar.setPosition(-hpBar.width/2,110);
+        this.addChild(hpBar);
+        this.hpBar = hpBar;
+        let pbHp = new ccui.LoadingBar(res.DEFAULT_LOADINGBARFILE_PNG,60);
+        pbHp.setScale9Enabled(true);
+        pbHp.width = 140;
+        pbHp.height = 20;
+        pbHp.setPosition(hpBar.width/2,hpBar.height/2);
+        pbHp.setColor(cc.color.GREEN);
+        this.hpBar.addChild(pbHp);
+        this.pbHp = pbHp;
+        this.hpBar.setCascadeOpacityEnabled(true);
+        this.hpBar.setOpacity(0);
     },
 
     loadAttributes: function(){
@@ -63,6 +68,7 @@ var Tank = cc.Node.extend({
 
     setHp: function(hp){
         let deltaHp = hp - this.hp;
+        if (deltaHp === 0) return;
         this.hp = hp;
         if (deltaHp<0){
             let text = new ccui.Text(deltaHp,res.FONTS_ARIALBD_TTF,40);
@@ -77,6 +83,18 @@ var Tank = cc.Node.extend({
                 cc.callFunc(()=>text.removeFromParent())
             ));
         }
+        this.hpBar.stopAllActions();
+        this.hpBar.setOpacity(255);
+        let color;
+        if (this.hp<this.maxHp*0.3) color = cc.color.RED;
+        else if (this.hp<this.maxHp*0.5) color = cc.color.YELLOW;
+        else color = cc.color.GREEN;
+        this.pbHp.setColor(color);
+        this.pbHp.setPercent(this.hp/this.maxHp*100);
+        this.hpBar.runAction(cc.sequence(
+            cc.delayTime(3),
+            cc.fadeOut(1)
+        ));
     },
 
     die: function(){

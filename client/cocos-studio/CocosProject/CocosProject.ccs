@@ -132,6 +132,19 @@
           <Project Name="SceneLobby.csd" Type="Scene" />
           <Project Name="PopupNotification.csd" Type="Scene" />
         </Folder>
+        <Folder Name="battle">
+          <Image Name="big_plane.png" />
+          <Image Name="bullet_fire.png" />
+          <Image Name="bullet_ice.png" />
+          <Image Name="bullet_mini.png" />
+          <Image Name="fire.png" />
+          <Image Name="parachute.png" />
+          <Image Name="rocket.png" />
+          <Image Name="shadow_plane.png" />
+          <Image Name="shield.png" />
+          <Image Name="tail_rocket.png" />
+          <Image Name="tank_death.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

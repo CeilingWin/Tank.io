@@ -36,7 +36,7 @@
         {
             "type": "normal",
             "speed": 1600,
-            "damage": 10,
+            "damage": 100,
             "geometry": "circle",
             "radius": 10
         }
