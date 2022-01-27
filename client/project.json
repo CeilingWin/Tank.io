@@ -45,6 +45,7 @@
         "src/modules/game/gui/GuiWaitingToStart.js",
         "src/modules/game/gui/MapLayer.js",
         "src/modules/game/gui/SceneGame.js",
+        "src/modules/game/InterpolateObject.js",
         "src/modules/game/manager/Game.js",
         "src/modules/game/manager/GameRoom.js",
         "src/modules/game/manager/Input.js",

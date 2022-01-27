@@ -66,15 +66,7 @@ var Game = cc.Class.extend({
         if (!tanksData) return;
         this.tanks.forEach((tank,id)=>{
             let tankData = tanksData.get(id);
-            if (!tankData.active) {
-                tank.die();
-                return;
-            }
-            tank.setPosition(tankData.x,tankData.y);
-            tank.setDirection(tankData.direction);
-            tank.setCannonDirection(tankData["cannonDirection"]);
-            tank.setHp(tankData.hp);
-            tank.kills = tankData.kills;
+            tank.updateData(tankData);
         });
     },
 

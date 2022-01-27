@@ -42,6 +42,18 @@ var Tank = cc.Node.extend({
         this.lbName.setString(name);
     },
     
+    updateData: function (data){
+        if (!data.active) {
+            this.die();
+            return;
+        }
+        this.setPosition(data.x,data.y);
+        this.setDirection(data.direction);
+        this.setCannonDirection(data["cannonDirection"]);
+        this.setHp(data.hp);
+        this.kills = data.kills;
+    },
+    
     _init: function () {
         // body
         let body = new cc.Sprite("res/tank/"+this.type+ "/body" + this.skin + ".png");

@@ -85,23 +85,10 @@ var GameRoom = cc.Class.extend({
         currentUpdate.tanks = new Map();
         currentUpdate.bullets = [];
         serverResponse.tanks.forEach((tank, id) => {
-            currentUpdate.tanks.set(id, {
-                x: tank.x,
-                y: tank.y,
-                direction: tank.direction,
-                cannonDirection: tank.cannonDirection,
-                active: tank.active,
-                hp: tank.hp,
-                kills: tank.kills
-            });
+            currentUpdate.tanks.set(id, InterpolateObject.getObject(InterpolateObject.Tank,tank));
         });
         serverResponse.bullets.forEach(bullet => {
-            currentUpdate.bullets.push({
-                x: bullet.x,
-                y: bullet.y,
-                direction: bullet.direction,
-                active: bullet.active
-            });
+            currentUpdate.bullets.push(InterpolateObject.getObject(InterpolateObject.Bullet, bullet));
         });
         this.gameUpdates.push(currentUpdate);
         // remove old update
@@ -143,54 +130,18 @@ var GameRoom = cc.Class.extend({
         interpolateState.bullets = [];
         baseUpdate.tanks.forEach((tank,id)=>{
             let nextTank = nextUpdate.tanks.get(id);
-            interpolateState.tanks.set(id,{
-                x: this._interpolatePosition(tank.x,nextTank.x,ratio),
-                y: this._interpolatePosition(tank.y,nextTank.y,ratio),
-                direction: this._interpolateAngle(tank.direction,nextTank.direction,ratio),
-                cannonDirection: this._interpolateAngle(tank.cannonDirection,nextTank.cannonDirection,ratio),
-                active: this._interpolateBoolean(tank.active,nextTank.active,ratio),
-                hp: this._interpolate(tank.hp,nextTank.hp,ratio),
-                kills: this._interpolate(tank.kills,nextTank.kills,ratio)
-            });
+            interpolateState.tanks.set(id,InterpolateObject.interpolate(tank,nextTank,ratio));
         });
         let i = 0;
         for (;i<baseUpdate.bullets.length;i++){
             let baseBullet = baseUpdate.bullets[i];
             let nextBullet = nextUpdate.bullets[i];
-            interpolateState.bullets.push({
-                x: this._interpolatePosition(baseBullet.x, nextBullet.x, ratio),
-                y: this._interpolatePosition(baseBullet.y, nextBullet.y, ratio),
-                active: this._interpolateBoolean(baseBullet.active, nextBullet.active, ratio)
-            });
+            interpolateState.bullets.push(InterpolateObject.interpolate(baseBullet,nextBullet,ratio));
         }
         for (;i<nextUpdate.bullets.length;i++){
             interpolateState.bullets.push(nextUpdate.bullets[i]);
         }
         return interpolateState;
-    },
-
-    _interpolatePosition: function (p1, p2, ratio) {
-        return p1 + (p2 - p1) * ratio;
-    },
-
-    _interpolateAngle: function (a1, a2, ratio) {
-        let deltaA = Math.abs(a2 - a1);
-        if (deltaA < Math.PI) {
-            return a1 + (a2 - a1) * ratio;
-        } else {
-            if (a1 > a2) return a1 + (Math.PI - deltaA) * ratio;
-            else return a1 - (Math.PI - deltaA) * ratio;
-        }
-    },
-
-    _interpolateBoolean: function (b1, b2, ratio){
-        if (ratio < 0.99) return b1;
-        return b2;
-    },
-
-    _interpolate: function(s1,s2,ratio){
-        if (ratio < 0.5) return s1;
-        return s2;
     },
 
     getNetwork: function (){
