@@ -42,7 +42,7 @@ var Network = cc.Class.extend({
 
     onPingSuccess: function(){
         let currentTime = Date.now();
-        this.ping = Math.round((currentTime - this.timeSentPing)/2);
+        this.ping = currentTime - this.timeSentPing;
     },
 
     getPing: function(){

@@ -59,7 +59,7 @@ var GuiGameControl = BaseGui.extend({
         this.updateMinimap();
         this.lbAlive.setString(gv.gameRoom.roomState["game"]["numAlivePlayer"]);
         this.lbKills.setString(followTank.kills);
-        this.lbPing.setString(gv.network.getPing());
+        this.lbPing.setString(gv.network.getPing() + "ms");
         // fps
         this.numFrame += 1;
         if (this.numFrame >= NUM_FRAME_TO_UPDATE_FPS){
