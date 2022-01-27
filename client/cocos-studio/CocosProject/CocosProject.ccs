@@ -130,6 +130,7 @@
           <Project Name="GuiJoinGame.csd" Type="Scene" />
           <Project Name="GuiNewGame.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
+          <Project Name="PopupNotification.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>

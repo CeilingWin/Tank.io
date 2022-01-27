@@ -133,6 +133,7 @@ var res = {
 	Z_GUI_GAME_MAPLAYER_JSON: "res/z_gui/game/MapLayer.json",
 	Z_GUI_GUIJOINGAME_JSON: "res/z_gui/GuiJoinGame.json",
 	Z_GUI_GUINEWGAME_JSON: "res/z_gui/GuiNewGame.json",
+	Z_GUI_POPUPNOTIFICATION_JSON: "res/z_gui/PopupNotification.json",
 	Z_GUI_SCENELOBBY_JSON: "res/z_gui/SceneLobby.json",
 
 };

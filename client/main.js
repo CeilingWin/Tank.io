@@ -28,7 +28,7 @@ cc.game.onStart = function(){
 
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
-        gv.network.connectServer();
+        gv.sceneMgr.runScene(new SceneLobby());
     }, this);
 };
 cc.game.run();

@@ -11,6 +11,7 @@ var GameRoom = cc.Class.extend({
         this.roomState = this.room.state;
         this.gameScene = SceneMgr.getIns().runScene(new SceneGame());
         this.listenMessage();
+        this.room.onLeave(this.leave.bind(this));
     },
 
     listenMessage: function(){

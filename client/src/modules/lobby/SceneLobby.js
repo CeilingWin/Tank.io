@@ -16,6 +16,11 @@ var SceneLobby = BaseScene.extend({
         });
     },
 
+    onEnter: function (){
+        this._super();
+        gv.network.connectServer();
+    },
+
     onTouchUIEnded: function(sender){
         switch (sender){
             case this.btnPlayNow:

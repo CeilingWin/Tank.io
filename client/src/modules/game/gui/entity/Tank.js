@@ -13,11 +13,23 @@ var Tank = cc.Node.extend({
         lbName.setPosition(0,80);
         this.addChild(lbName);
         this.lbName = lbName;
+        // pb hp
+        // let hpBar = new cc.Sprite("res/common/bg_progress_bar.png");
+        // hpBar.setPosition(0,140);
+        // this.addChild(hpBar);
+        // this.hpBar = hpBar;
+        // let pbHp = new ccui.LoadingBar("res/Default/LoadingBarFile.png",100);
+        // pbHp.setContentSize(80,20);
+        // pbHp.setPosition(hpBar.width/2,hpBar.height/2);
+        // pbHp.setColor(cc.color.GREEN);
+        // this.hpBar.addChild(pbHp);
     },
 
     loadAttributes: function(){
         let config = Config.getIns().getTankConfig();
         this.bulletRate = config["bullet_rate"];
+        this.bodyWidth = config["width"];
+        this.bodyHeight = config["height"];
         this.maxHp = config["hp"];
     },
 
@@ -50,7 +62,21 @@ var Tank = cc.Node.extend({
     },
 
     setHp: function(hp){
+        let deltaHp = hp - this.hp;
         this.hp = hp;
+        if (deltaHp<0){
+            let text = new ccui.Text(deltaHp,res.FONTS_ARIALBD_TTF,40);
+            text.setColor(cc.color.RED);
+            text.setPosition(cc.pAdd(this.getPosition(),cc.p(0,20)));
+            this.getParent().addChild(text);
+            text.runAction(cc.sequence(
+                cc.spawn(
+                    cc.moveBy(0.6,0,200),
+                    cc.fadeOut(0.6)
+                ),
+                cc.callFunc(()=>text.removeFromParent())
+            ));
+        }
     },
 
     die: function(){

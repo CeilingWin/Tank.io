@@ -6,12 +6,28 @@ var Network = cc.Class.extend({
     },
 
     connectServer: function(){
+        gv.sceneMgr.setTouchEnabled(false);
         this.connection.joinOrCreate("server").then((room)=>{
             this.serverRoom = room;
-            cc.director.runScene(new SceneLobby());
+            if (gv.sceneMgr.getCurSceneName() !== SceneLobby.prototype.className){
+                gv.sceneMgr.runScene(new SceneLobby());
+            }
             this.listenServerResponse();
             this.pingToServer();
             setInterval(this.pingToServer.bind(this),this.pingInterval);
+            gv.sceneMgr.setTouchEnabled(true);
+            this.serverRoom.onLeave(()=>{
+                gv.sceneMgr.setTouchEnabled(true);
+                this.serverRoom = null;
+                let popup = gv.sceneMgr.addGui(new PopupNotification());
+                popup.setNotification("Lost connection to server. Reconnect?");
+                popup.setCallFunc(this.connectServer.bind(this));
+            })
+        }).catch((err)=>{
+            gv.sceneMgr.setTouchEnabled(true);
+            let popup = gv.sceneMgr.addGui(new PopupNotification());
+            popup.setNotification("Connect to server failed. Reconnect?");
+            popup.setCallFunc(this.connectServer.bind(this));
         });
     },
 
@@ -36,6 +52,7 @@ var Network = cc.Class.extend({
     },
     
     pingToServer: function () {
+        if (!this.serverRoom) return;
         this.timeSentPing = Date.now();
         this.serverRoom.send(TYPE_MESSAGE.PING);
     },

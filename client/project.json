@@ -51,6 +51,7 @@
         "src/modules/game/MatchMaker.js",
         "src/modules/lobby/GuiJoinGame.js",
         "src/modules/lobby/GuiNewGame.js",
+        "src/modules/lobby/PopupNotification.js",
         "src/modules/lobby/SceneLobby.js"
     ]
 }
