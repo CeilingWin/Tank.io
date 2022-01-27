@@ -1,5 +1,7 @@
 var Tank = cc.Node.extend({
-    ctor: function(){
+    ctor: function(type, skin){
+        this.type = type;
+        this.skin = skin;
         this._super();
         this._init();
         this.loadAttributes();
@@ -24,12 +26,12 @@ var Tank = cc.Node.extend({
     
     _init: function () {
         // body
-        let body = new cc.Sprite("res/tank/body.png");
+        let body = new cc.Sprite("res/tank/"+this.type+ "/body" + this.skin + ".png");
         this.addChild(body);
         this.body = body;
         //cannon
-        let cannon = new cc.Sprite("res/tank/cannon1.png");
-        cannon.anchorX = 0.4;
+        let cannon = new cc.Sprite("res/tank/"+this.type+ "/cannon" + this.skin + ".png");
+        cannon.anchorX = 0.3;
         this.addChild(cannon);
         this.cannon = cannon;
     },

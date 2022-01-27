@@ -4,12 +4,11 @@ import { GC } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
 const BASE_VECTOR = new Vector(1, 0);
-const CANNON_LENGTH = 60;
 export class Tank extends schema.Schema {
-    constructor(gameController) {
+    constructor(gameController, type) {
         super();
         this.controller = gameController;
-        this.initAttributes();
+        this.initAttributes(type);
         this.movementVector = new Vector();
         this.direction = 0;
         this.cannonDirection = 0;
@@ -23,8 +22,9 @@ export class Tank extends schema.Schema {
         this.initBody();
     }
 
-    initAttributes() {
-        let config = GameConfig.getTankConfig("tank_0");
+    initAttributes(type) {
+        this.type = type;
+        let config = GameConfig.getTankConfig(type);
         this.width = config["width"];
         this.height = config["height"];
         this.minSpeed = config["min_speed"];
@@ -32,6 +32,7 @@ export class Tank extends schema.Schema {
         this.bulletRate = config["bullet_rate"];
         this.maxHp = config["hp"];
         this.rotationSpeed = config["rotation_speed"];
+        this.cannonLength = config["cannon_length"];
     }
 
     initBody() {
@@ -146,8 +147,8 @@ export class Tank extends schema.Schema {
 
     getStartingPositionOfBullet() {
         return {
-            x: this.x + CANNON_LENGTH * Math.cos(this.cannonDirection),
-            y: this.y + CANNON_LENGTH * Math.sin(-this.cannonDirection)
+            x: this.x + this.cannonLength * Math.cos(this.cannonDirection),
+            y: this.y + this.cannonLength * Math.sin(-this.cannonDirection)
         }
     }
 

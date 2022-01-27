@@ -20,7 +20,7 @@ export class GameRoom extends Room {
         if (this.state.getNumPlayers() === 0) {
             this.loadGameOptions(client, options);
         }
-        this.state.addPlayer(client.sessionId, options.username);
+        this.state.addPlayer(client.sessionId, options);
         console.log("PLAYER JOIN GAME: username(", options.username, "); id(", client.sessionId, ")");
         // todo: send player join game
     }

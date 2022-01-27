@@ -21,7 +21,7 @@ export default Arena.default({
         gameServer.define('game_room',GameRoom,{
             maxPlayer : roomConfig["default_num_player"],
             mapId: 0,
-            isPrivate: false,
+            isPrivate: false
         });
         if (process.env.NODE_ENV !== "production") {
             gameServer.simulateLatency(100);

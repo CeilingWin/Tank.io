@@ -2,6 +2,7 @@ import * as schema from "@colyseus/schema";
 import { Game } from "../entity/Game.js";
 import { Player } from "../entity/Player.js";
 import { GC, TYPE_MESSAGE } from "../Constant.js";
+import { GameConfig } from "../config/GameConfig.js";
 const Schema = schema.Schema;
 const MapSchema = schema.MapSchema;
 
@@ -36,8 +37,10 @@ export class GameState extends Schema {
         this.mapId = 0;
     }
 
-    addPlayer(id, username) {
-        let player = new Player(id, username);
+    addPlayer(id, options) {
+        if (!options.tankType) options.tankType = GameConfig.getRoomConfig()["default_tank"];
+        if (!options.skin) options.skin = 0;
+        let player = new Player(id, options.username, options.tankType, options.skin);
         this.players.set(id, player);
     }
 

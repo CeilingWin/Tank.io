@@ -1,21 +1,35 @@
 {
     "room_config": {
-        "min_player": 2,
+        "min_player": 1,
         "max_player": 12,
-        "default_num_player": 2,
-        "default_map": 0
+        "default_num_player": 1,
+        "default_map": 0,
+        "default_tank": "tank0"
     },
     "tanks": [
         {
-            "type": "tank_0",
+            "type": "tank0",
             "hp": 1000,
-            "width": 70,
-            "height": 78,
+            "width": 120,
+            "height": 70,
             "min_speed": 100,
             "max_speed": 500,
             "bullet_rate": 200,
             "bullet_type": "normal",
-            "rotation_speed": 6
+            "rotation_speed": 6,
+            "cannon_length": 80
+        },
+        {
+            "type": "tank1",
+            "hp": 1000,
+            "width": 130,
+            "height": 94,
+            "min_speed": 100,
+            "max_speed": 500,
+            "bullet_rate": 200,
+            "bullet_type": "normal",
+            "rotation_speed": 6,
+            "cannon_length": 90
         }
     ],
     "bullets": [

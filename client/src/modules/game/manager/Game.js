@@ -21,7 +21,7 @@ var Game = cc.Class.extend({
 
     addTank: function (playerData, tankData, isMe) {
         let playerId = playerData["id"];
-        let tank = new Tank();
+        let tank = new Tank(playerData["tankType"], playerData["skin"]);
         tank.setPosition(tankData.x,tankData.y);
         this.mapLayer.addTankToMap(tank);
         this.tanks.set(playerId,tank);

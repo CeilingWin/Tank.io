@@ -36,7 +36,7 @@ export class Game extends schema.Schema {
     initTankForAllPlayers(players) {
         players.forEach(player => {
             let pos = this.getRandomSpawnPosition();
-            let tank = new Tank(this);
+            let tank = new Tank(this, player.tankType);
             tank.setPosition(pos);
             tank.playerId = player.id;
             this.tanks.set(player.id, tank);
