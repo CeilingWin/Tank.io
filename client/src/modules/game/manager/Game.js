@@ -56,12 +56,14 @@ var Game = cc.Class.extend({
     update: function () {
         this.updateInput();
         let currentState = gv.gameRoom.getCurrentGameState();
+        if (!currentState) return;
         this.updateTank(currentState.tanks);
         this.updateBullets(currentState.bullets);
         this.guiControl.update();
     },
 
     updateTank: function (tanksData){
+        if (!tanksData) return;
         this.tanks.forEach((tank,id)=>{
             let tankData = tanksData.get(id);
             if (!tankData.active) {

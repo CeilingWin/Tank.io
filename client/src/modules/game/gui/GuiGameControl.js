@@ -58,7 +58,6 @@ var GuiGameControl = BaseGui.extend({
             } else {
                 let x = tank.x/this.actualSizeMap.width*this.sizeMinimap.width;
                 let y = tank.y/this.actualSizeMap.height*this.sizeMinimap.height;
-                cc.log(x,y,this.actualSizeMap,this.sizeMinimap);
                 sprTank.setPosition(x,y);
             }
         });

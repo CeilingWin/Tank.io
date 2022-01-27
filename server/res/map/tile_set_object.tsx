@@ -28,21 +28,39 @@
   </objectgroup>
  </tile>
  <tile id="4">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="281" height="176" source="textures/object/263-100.png"/>
  </tile>
  <tile id="5">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="176" height="134" source="textures/object/264-67.png"/>
  </tile>
  <tile id="6">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="139" height="139" source="textures/object/265-71.png"/>
  </tile>
  <tile id="7">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="197" height="196" source="textures/object/265-100.png"/>
  </tile>
  <tile id="8">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="141" height="143" source="textures/object/266-100.png"/>
  </tile>
  <tile id="9">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="148" height="143" source="textures/object/267-70.png"/>
  </tile>
  <tile id="10">
@@ -87,18 +105,43 @@
  </tile>
  <tile id="15">
   <image width="273" height="261" source="textures/object/278-43.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="body" x="37.3333" y="25.3333">
+    <polygon points="0,0 136,18.6667 218.667,154.667 164,213.333 -21.3333,81.3333"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="16">
   <image width="489" height="468" source="textures/object/278-77.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="body" x="61.3333" y="46.6667">
+    <polygon points="0,0 238.667,32 409.333,276 293.333,376 16,192 -36,82.6667"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="17">
   <image width="240" height="170" source="textures/object/279-43.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="body" x="33.3333" y="14.6667">
+    <polygon points="0,0 144,12 192,90.6667 154.667,140 8,106.667 -21.3333,52"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="18">
   <image width="284" height="238" source="textures/object/280-50.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="44" y="109.333">
+    <polygon points="0,0 146.667,-60 217.333,-20 208,50.6667 88,104 10.6667,96 -17.3333,64"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="19">
   <image width="569" height="477" source="textures/object/280-100.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="2" name="body" x="72" y="254.667">
+    <polygon points="0,0 310.667,-160 448,-78.6667 424,69.3333 208,172 60,154.667 -6.66667,88"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="20">
   <image width="252" height="225" source="textures/object/281-100.png"/>
@@ -174,9 +217,29 @@
  </tile>
  <tile id="29">
   <image width="196" height="191" source="textures/object/286-79.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="60.6667" y="29.3333" width="39.3333" height="36"/>
+   <object id="3" x="30.6667" y="115.333">
+    <polygon points="0,0 16.6667,-26 58.6667,-38 123.333,-36.6667 130.667,24 75.3333,43.3333 35.3333,36.6667 10.6667,26.6667"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="30">
   <image width="173" height="142" source="textures/object/287-50.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="21.3333" y="52">
+    <polygon points="0,0 18.6667,-14 36.6667,2 28.6667,17.3333 9.33333,28"/>
+   </object>
+   <object id="2" x="72" y="53.3333">
+    <polygon points="0,0 25.3333,-33.3333 62.6667,-22 28,40.6667 4.66667,31.3333"/>
+   </object>
+   <object id="3" x="53.25" y="100.167" width="20.6667" height="20">
+    <ellipse/>
+   </object>
+   <object id="5" x="132.5" y="67.75" width="19.75" height="17.75">
+    <ellipse/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="31">
   <image width="346" height="284" source="textures/object/287-100.png"/>
@@ -188,9 +251,15 @@
   <image width="363" height="400" source="textures/object/288-100.png"/>
  </tile>
  <tile id="33">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="370" height="342" source="textures/object/290-55.png"/>
  </tile>
  <tile id="34">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="674" height="623" source="textures/object/290-100.png"/>
  </tile>
  <tile id="35">
@@ -200,6 +269,9 @@
   </objectgroup>
  </tile>
  <tile id="36">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="396" height="381" source="textures/object/303-66.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="182" y="186" width="32" height="33">
@@ -208,6 +280,9 @@
   </objectgroup>
  </tile>
  <tile id="37">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="600" height="578" source="textures/object/303-100.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="278" y="277" width="79" height="80">
@@ -216,6 +291,9 @@
   </objectgroup>
  </tile>
  <tile id="38">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="360" height="346" source="textures/object/304-60.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="148" y="142" width="68" height="65">
@@ -224,6 +302,9 @@
   </objectgroup>
  </tile>
  <tile id="39">
+  <properties>
+   <property name="z" type="int" value="1000"/>
+  </properties>
   <image width="600" height="578" source="textures/object/304-100.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="body" x="246" y="247" width="113" height="113">
@@ -257,6 +338,11 @@
  </tile>
  <tile id="43">
   <image width="285" height="263" source="textures/object/401-100.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="9" y="35" width="269" height="190"/>
+   <object id="2" x="100" y="4" width="86" height="31"/>
+   <object id="3" x="95" y="227" width="86" height="27"/>
+  </objectgroup>
  </tile>
  <tile id="44">
   <image width="238" height="238" source="textures/object/404-76.png"/>
