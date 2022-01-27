@@ -158,7 +158,7 @@
           <AbstractNodeData Name="ndHp" ActionTag="494741793" Tag="58" IconVisible="True" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="960.0000" RightMargin="960.0000" TopMargin="976.0000" BottomMargin="104.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_2" ActionTag="301707011" Tag="59" IconVisible="False" LeftMargin="-252.5000" RightMargin="-252.5000" TopMargin="18.6500" BottomMargin="-53.6500" ClipAble="False" BackColorAlpha="179" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="301707011" Tag="59" IconVisible="False" LeftMargin="-252.5000" RightMargin="-252.5000" TopMargin="18.6500" BottomMargin="-53.6500" ClipAble="False" BackColorAlpha="179" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="505.0000" Y="35.0000" />
                 <Children>
                   <AbstractNodeData Name="pbHp" ActionTag="1932422603" Tag="16" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="2.5000" BottomMargin="2.5000" ProgressInfo="56" ctype="LoadingBarObjectData">
@@ -215,7 +215,7 @@
             <PrePosition X="0.5000" Y="0.0963" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="820.0000" Y="820.0000" />
             <Children>
               <AbstractNodeData Name="sprMinimap" ActionTag="-899870694" Tag="55" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="10.0000" TopMargin="10.0000" BottomMargin="10.0000" ctype="SpriteObjectData">

@@ -8,26 +8,8 @@ var Tank = cc.Node.extend({
         this.hp = this.maxHp;
         this._isDied = false;
         this.kills = 0;
-        // lb name
-        let lbName = new ccui.Text("",res.FONTS_ARIALBD_TTF,22);
-        lbName.setPosition(0,80);
-        this.addChild(lbName);
-        this.lbName = lbName;
-        // pb hp
-        let hpBar = new cc.LayerColor(cc.color.BLACK,145,25);
-        hpBar.setPosition(-hpBar.width/2,110);
-        this.addChild(hpBar);
-        this.hpBar = hpBar;
-        let pbHp = new ccui.LoadingBar(res.DEFAULT_LOADINGBARFILE_PNG,60);
-        pbHp.setScale9Enabled(true);
-        pbHp.width = 140;
-        pbHp.height = 20;
-        pbHp.setPosition(hpBar.width/2,hpBar.height/2);
-        pbHp.setColor(cc.color.GREEN);
-        this.hpBar.addChild(pbHp);
-        this.pbHp = pbHp;
-        this.hpBar.setCascadeOpacityEnabled(true);
-        this.hpBar.setOpacity(0);
+        this.lastShootAt = 0;
+        this.cannonDirection = 0;
     },
 
     loadAttributes: function(){
@@ -51,7 +33,30 @@ var Tank = cc.Node.extend({
         this.setDirection(data.direction);
         this.setCannonDirection(data["cannonDirection"]);
         this.setHp(data.hp);
+        this.checkShoot(data["lastShootAt"]);
         this.kills = data.kills;
+    },
+
+    checkShoot: function (lastShootAt){
+        if (lastShootAt > this.lastShootAt){
+            this.lastShootAt = lastShootAt;
+            this.cannon.stopAllActions();
+            this.cannon.setPosition(0,0);
+            let dx = Math.cos(-this.cannonDirection);
+            let dy = Math.sin(-this.cannonDirection);
+            this.cannon.runAction(cc.sequence(
+                cc.moveBy(0.1,dx*7,dy*7),
+                cc.moveBy(0.1,-dx*14,-dy*14),
+                cc.moveTo(0.1,0,0)
+            ));
+            let fire = this.cannon.fire;
+            fire.stopAllActions();
+            fire.setOpacity(0);
+            fire.runAction(cc.sequence(
+                cc.fadeIn(0.1),
+                cc.fadeOut(0.1)
+            ));
+        }
     },
     
     _init: function () {
@@ -64,6 +69,32 @@ var Tank = cc.Node.extend({
         cannon.anchorX = 0.3;
         this.addChild(cannon);
         this.cannon = cannon;
+        let fire = new cc.Sprite("res/battle/fire.png");
+        fire.anchorX = 0;
+        fire.setPosition(cannon.width*0.95,cannon.height/2);
+        fire.setOpacity(0);
+        this.cannon.addChild(fire);
+        this.cannon.fire = fire;
+        // lb name
+        let lbName = new ccui.Text("",res.FONTS_ARIALBD_TTF,22);
+        lbName.setPosition(0,80);
+        this.addChild(lbName);
+        this.lbName = lbName;
+        // pb hp
+        let hpBar = new cc.LayerColor(cc.color.BLACK,145,25);
+        hpBar.setPosition(-hpBar.width/2,110);
+        this.addChild(hpBar);
+        this.hpBar = hpBar;
+        let pbHp = new ccui.LoadingBar(res.DEFAULT_LOADINGBARFILE_PNG,60);
+        pbHp.setScale9Enabled(true);
+        pbHp.width = 140;
+        pbHp.height = 20;
+        pbHp.setPosition(hpBar.width/2,hpBar.height/2);
+        pbHp.setColor(cc.color.GREEN);
+        this.hpBar.addChild(pbHp);
+        this.pbHp = pbHp;
+        this.hpBar.setCascadeOpacityEnabled(true);
+        this.hpBar.setOpacity(0);
     },
 
     getWoldPos: function () {
@@ -71,6 +102,7 @@ var Tank = cc.Node.extend({
     },
 
     setCannonDirection: function(direction){
+        this.cannonDirection = direction;
         this.cannon.setRotation(direction/Math.PI*180);
     },
 

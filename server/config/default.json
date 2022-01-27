@@ -26,7 +26,7 @@
             "height": 94,
             "min_speed": 100,
             "max_speed": 500,
-            "bullet_rate": 500,
+            "bullet_rate": 200,
             "bullet_type": "normal",
             "rotation_speed": 6,
             "cannon_length": 90

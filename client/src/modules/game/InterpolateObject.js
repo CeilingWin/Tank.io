@@ -32,7 +32,8 @@ InterpolateObject.Tank = {
     cannonDirection : interpolateAngle,
     active : interpolateBoolean,
     hp : interpolate,
-    kills : interpolate
+    kills : interpolate,
+    lastShootAt: interpolate
 }
 
 InterpolateObject.Bullet = {

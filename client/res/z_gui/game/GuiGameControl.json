@@ -706,6 +706,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "AnchorPoint": {},
                 "Position": {
                   "X": -252.5,
@@ -926,6 +928,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 1.0,

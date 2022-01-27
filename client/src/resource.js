@@ -1,6 +1,17 @@
 
 var res = {
 	
+	BATTLE_BIG_PLANE_PNG: "res/battle/big_plane.png",
+	BATTLE_BULLET_FIRE_PNG: "res/battle/bullet_fire.png",
+	BATTLE_BULLET_ICE_PNG: "res/battle/bullet_ice.png",
+	BATTLE_BULLET_MINI_PNG: "res/battle/bullet_mini.png",
+	BATTLE_FIRE_PNG: "res/battle/fire.png",
+	BATTLE_PARACHUTE_PNG: "res/battle/parachute.png",
+	BATTLE_ROCKET_PNG: "res/battle/rocket.png",
+	BATTLE_SHADOW_PLANE_PNG: "res/battle/shadow_plane.png",
+	BATTLE_SHIELD_PNG: "res/battle/shield.png",
+	BATTLE_TAIL_ROCKET_PNG: "res/battle/tail_rocket.png",
+	BATTLE_TANK_DEATH_PNG: "res/battle/tank_death.png",
 	BULLET_BULLET_NORMAL_PNG: "res/bullet/bullet_normal.png",
 	COMMON_BLUE_DOT_PNG: "res/common/blue_dot.png",
 	COMMON_KILLS_PNG: "res/common/kills.png",
