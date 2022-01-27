@@ -16,6 +16,10 @@ var MapLayer = BaseGui.extend({
         });
     },
 
+    getSize: function(){
+        return cc.size(this.mapWidth,this.mapHeight);
+    },
+
     _loadDone: function () {
         if (this.callFunc) {
             this.callFunc();

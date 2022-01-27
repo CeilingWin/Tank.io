@@ -2,7 +2,7 @@
     "room_config": {
         "min_player": 1,
         "max_player": 12,
-        "default_num_player": 1,
+        "default_num_player": 2,
         "default_map": 0,
         "default_tank": "tank0"
     },
@@ -14,7 +14,7 @@
             "height": 70,
             "min_speed": 100,
             "max_speed": 500,
-            "bullet_rate": 200,
+            "bullet_rate": 300,
             "bullet_type": "normal",
             "rotation_speed": 6,
             "cannon_length": 80

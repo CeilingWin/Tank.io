@@ -107,6 +107,9 @@ var Input = cc.Class.extend({
             case cc.KEY.left:
                 this.keyDir.left = true;
                 break;
+            case cc.KEY.m:
+                EventCenter.pub(EventId.KEY_M_PRESS);
+                break;
         }
     },
 

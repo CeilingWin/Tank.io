@@ -6,7 +6,7 @@ var Tank = cc.Node.extend({
         this._init();
         this.loadAttributes();
         this.hp = this.maxHp;
-
+        this._isDied = false;
         // lb name
         let lbName = new ccui.Text("",res.FONTS_BOLD_TTF,18);
         lbName.setPosition(0,50);
@@ -50,5 +50,14 @@ var Tank = cc.Node.extend({
 
     setHp: function(hp){
         this.hp = hp;
+    },
+
+    die: function(){
+        this.setVisible(false);
+        this._isDied = true;
+    },
+
+    isDied: function(){
+        return this._isDied;
     }
 })

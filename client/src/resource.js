@@ -2,6 +2,8 @@
 var res = {
 	
 	BULLET_BULLET_NORMAL_PNG: "res/bullet/bullet_normal.png",
+	COMMON_BLUE_DOT_PNG: "res/common/blue_dot.png",
+	COMMON_RED_DOT_PNG: "res/common/red_dot.png",
 	CONFIG_DEFAULT_JSON: "res/config/default.json",
 	DEFAULT_BUTTON_DISABLE_PNG: "res/Default/Button_Disable.png",
 	DEFAULT_BUTTON_NORMAL_PNG: "res/Default/Button_Normal.png",
@@ -17,6 +19,8 @@ var res = {
 	FONTS_CLASSIC_TTF: "res/fonts/classic.ttf",
 	FONTS_NORMAL_TTF: "res/fonts/normal.ttf",
 	MAP_MAP_0_TMX: "res/map/map_0.tmx",
+	MAP_MINIMAP_MAP0_PNG: "res/map/minimap/map0.png",
+	MAP_MINIMAP_MAP_0_PNG: "res/map/minimap/map_0.png",
 	MAP_TEXTURES_DECO_242_100_PNG: "res/map/textures/deco/242-100.png",
 	MAP_TEXTURES_DECO_268_100_PNG: "res/map/textures/deco/268-100.png",
 	MAP_TEXTURES_DECO_269_100_PNG: "res/map/textures/deco/269-100.png",

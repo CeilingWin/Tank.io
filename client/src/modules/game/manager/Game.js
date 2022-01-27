@@ -7,6 +7,7 @@ var Game = cc.Class.extend({
     },
 
     init: function(mapId){
+        this.mapId = mapId;
         this.mapLayer = gv.sceneMgr.addGui(new MapLayer(mapId));
         this.guiControl = gv.sceneMgr.addGui(new GuiGameControl());
         this.input = new Input();
@@ -28,12 +29,19 @@ var Game = cc.Class.extend({
         tank.setData(playerData["username"]);
         if (isMe) {
             this.me = tank;
+            tank.isMe = true;
             this.mapLayer.follow(tank);
+            this.followTank = tank;
         }
+    },
+
+    getFollowTank: function (){
+        return this.followTank;
     },
 
     start: function(){
         cc.log("Start game");
+        this.guiControl.start();
         this.input.start();
         this.lastTimeSendInput = 0;
         // schedule update
@@ -50,14 +58,14 @@ var Game = cc.Class.extend({
         let currentState = gv.gameRoom.getCurrentGameState();
         this.updateTank(currentState.tanks);
         this.updateBullets(currentState.bullets);
-        this.guiControl.showTankState(this.me);
+        this.guiControl.update();
     },
 
     updateTank: function (tanksData){
         this.tanks.forEach((tank,id)=>{
             let tankData = tanksData.get(id);
             if (!tankData.active) {
-                tank.setVisible(false);
+                tank.die();
                 return;
             }
             tank.setPosition(tankData.x,tankData.y);

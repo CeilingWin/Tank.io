@@ -6,6 +6,10 @@
         <Folder Name="bullet">
           <Image Name="bullet_normal.png" />
         </Folder>
+        <Folder Name="common">
+          <Image Name="blue_dot.png" />
+          <Image Name="red_dot.png" />
+        </Folder>
         <Folder Name="fonts">
           <TTF Name="bold.ttf" />
           <TTF Name="classic.ttf" />
@@ -98,6 +102,9 @@
           <TmxFile Name="map_0.tmx" />
           <File Name="tile_set_deco.tsx" />
           <File Name="tile_set_object.tsx" />
+          <Folder Name="minimap">
+            <Image Name="map0.png" />
+          </Folder>
         </Folder>
         <Folder Name="z_gui">
           <Folder Name="game">

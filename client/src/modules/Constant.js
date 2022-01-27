@@ -24,3 +24,7 @@ var TYPE_MESSAGE = {
     PLAYER_WAS_KILLED: 13,
     SHOW_LEADER_BOARD: 14,
 }
+
+var EventId = {
+    KEY_M_PRESS: "KEY_M_PRESS"
+}

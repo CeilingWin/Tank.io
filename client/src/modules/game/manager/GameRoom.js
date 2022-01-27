@@ -65,10 +65,10 @@ var GameRoom = cc.Class.extend({
         let gameStartAt = this.roomState.gameStartAt;
         this.gameScene.destroyAllGuis();
         this.gameScene.showWaiting(gameStartAt);
+        this.initGame();
     },
 
     startGame: function () {
-        this.initGame();
         this.gameScene.stopWaiting();
         this.deltaServerTime = Date.now() - this.roomState.game.ts;
         // queue game state
