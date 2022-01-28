@@ -38,6 +38,7 @@ var BaseGui = cc.Layer.extend(_injectCCS).extend({
         this._clickOutsideListener = null;
         this.fogLayer = null;
         this.removeFromParent();
+        gv.sceneMgr.removeGui(this.className);
     },
 
     setHaveFog: function (bool) {

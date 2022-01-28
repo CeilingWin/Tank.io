@@ -3,6 +3,19 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="battle">
+          <Image Name="big_plane.png" />
+          <Image Name="bullet_fire.png" />
+          <Image Name="bullet_ice.png" />
+          <Image Name="bullet_mini.png" />
+          <Image Name="fire.png" />
+          <Image Name="parachute.png" />
+          <Image Name="rocket.png" />
+          <Image Name="shadow_plane.png" />
+          <Image Name="shield.png" />
+          <Image Name="tail_rocket.png" />
+          <Image Name="tank_death.png" />
+        </Folder>
         <Folder Name="bullet">
           <Image Name="bullet_normal.png" />
         </Folder>
@@ -115,6 +128,22 @@
             <Image Name="map0.png" />
           </Folder>
         </Folder>
+        <Folder Name="tank">
+          <Folder Name="tank0">
+            <Image Name="body0.png" />
+            <Image Name="body1.png" />
+            <Image Name="body2.png" />
+            <Image Name="cannon0.png" />
+            <Image Name="cannon1.png" />
+            <Image Name="cannon2.png" />
+          </Folder>
+          <Folder Name="tank1">
+            <Image Name="body0.png" />
+            <Image Name="body1.png" />
+            <Image Name="cannon0.png" />
+            <Image Name="cannon1.png" />
+          </Folder>
+        </Folder>
         <Folder Name="z_gui">
           <Folder Name="game">
             <Folder Name="element">
@@ -131,19 +160,8 @@
           <Project Name="GuiNewGame.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
           <Project Name="PopupNotification.csd" Type="Scene" />
-        </Folder>
-        <Folder Name="battle">
-          <Image Name="big_plane.png" />
-          <Image Name="bullet_fire.png" />
-          <Image Name="bullet_ice.png" />
-          <Image Name="bullet_mini.png" />
-          <Image Name="fire.png" />
-          <Image Name="parachute.png" />
-          <Image Name="rocket.png" />
-          <Image Name="shadow_plane.png" />
-          <Image Name="shield.png" />
-          <Image Name="tail_rocket.png" />
-          <Image Name="tank_death.png" />
+          <Project Name="GuiSelectTank.csd" Type="Scene" />
+          <Project Name="ElementSkinTank.csd" Type="Layer" />
         </Folder>
       </RootFolder>
     </Group>

@@ -13,7 +13,7 @@ var Tank = cc.Node.extend({
     },
 
     loadAttributes: function(){
-        let config = Config.getIns().getTankConfig();
+        let config = Config.getIns().getTankConfig(this.type);
         this.bulletRate = config["bullet_rate"];
         this.bodyWidth = config["width"];
         this.bodyHeight = config["height"];
@@ -61,11 +61,11 @@ var Tank = cc.Node.extend({
     
     _init: function () {
         // body
-        let body = new cc.Sprite("res/tank/"+this.type+ "/body" + this.skin + ".png");
+        let body = new cc.Sprite(ResourceUtils.getTankBody(this.type,this.skin));
         this.addChild(body);
         this.body = body;
         //cannon
-        let cannon = new cc.Sprite("res/tank/"+this.type+ "/cannon" + this.skin + ".png");
+        let cannon = new cc.Sprite(ResourceUtils.getCannon(this.type,this.skin));
         cannon.anchorX = 0.3;
         this.addChild(cannon);
         this.cannon = cannon;

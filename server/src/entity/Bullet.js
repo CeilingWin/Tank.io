@@ -22,7 +22,7 @@ export class Bullet extends schema.Schema {
     }
 
     initAttributes() {
-        let config = GameConfig.getBulletConfig("normal");
+        let config = GameConfig.getBulletConfig("bullet0");
         this.speed = config["speed"];
         this.damage = config["damage"];
         this.geometry = config["geometry"];

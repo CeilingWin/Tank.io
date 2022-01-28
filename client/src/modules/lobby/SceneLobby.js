@@ -5,11 +5,12 @@ var SceneLobby = BaseScene.extend({
         this.btnJoin = null;
         this.btnNewGame = null;
         this.tfUserName = null;
+        this.btnChangeTank = null;
         this._super("res/z_gui/SceneLobby.json");
     },
 
     initGui: function () {
-        let username = cc.sys.localStorage.getItem("username");
+        let username = LocalStorage.getUsername();
         if (username) this.tfUserName.setString(username);
         this.tfUserName.addEventListener(()=>{
             cc.sys.localStorage.setItem("username",this.tfUserName.getString());
@@ -31,6 +32,9 @@ var SceneLobby = BaseScene.extend({
                 break;
             case this.btnNewGame:
                 gv.sceneMgr.addGui(new GuiNewGame());
+                break;
+            case this.btnChangeTank:
+                gv.sceneMgr.addGui(new GuiSelectTank());
                 break;
         }
     },

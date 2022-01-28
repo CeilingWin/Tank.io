@@ -13,28 +13,28 @@
             "width": 120,
             "height": 70,
             "min_speed": 100,
-            "max_speed": 500,
-            "bullet_rate": 500,
-            "bullet_type": "normal",
+            "max_speed": 600,
+            "bullet_rate": 400,
+            "bullet_type": "bullet0",
             "rotation_speed": 6,
             "cannon_length": 80
         },
         {
             "type": "tank1",
-            "hp": 1000,
+            "hp": 1500,
             "width": 130,
             "height": 94,
             "min_speed": 100,
-            "max_speed": 500,
-            "bullet_rate": 200,
-            "bullet_type": "normal",
+            "max_speed": 450,
+            "bullet_rate": 600,
+            "bullet_type": "bullet0",
             "rotation_speed": 6,
             "cannon_length": 90
         }
     ],
     "bullets": [
         {
-            "type": "normal",
+            "type": "bullet0",
             "speed": 1600,
             "damage": 100,
             "geometry": "circle",

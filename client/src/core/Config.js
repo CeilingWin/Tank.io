@@ -5,10 +5,19 @@ var Config = cc.Class.extend({
         });
     },
 
-    getTankConfig: function(){
-        // todo:
-        cc.log(this.json);
-        return this.json["tanks"][0];
+    getTankConfig: function(type){
+        return this.json["tanks"].find(cf=>cf["type"]===type);
+    },
+
+    getDefaultTank: function(){
+        return this.json["room_config"]["default_tank"];
+    },
+
+    getTanksConfig: function(){
+        return this.json["tanks"].map(cf=>{
+            cf.bullet = this.json["bullets"].find(b=>b["type"] === cf["bullet_type"]);
+            return cf;
+        });
     }
 });
 

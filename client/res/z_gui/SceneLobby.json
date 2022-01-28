@@ -700,6 +700,86 @@
             },
             "Name": "ndCenter",
             "ctype": "SingleNodeObjectData"
+          },
+          {
+            "FontSize": 25,
+            "ButtonText": "Change Tank",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Normal.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 14,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 231.5017,
+              "Y": 114.5325
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1206,
+              "Y": 0.106
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.0926
+            },
+            "LeftMargin": 81.5017,
+            "RightMargin": 1538.4983,
+            "TopMargin": 915.4675,
+            "BottomMargin": 64.5325,
+            "Tag": 177,
+            "ActionTag": -1649814634,
+            "Size": {
+              "X": 300.0,
+              "Y": 100.0
+            },
+            "Name": "btnChangeTank",
+            "ctype": "ButtonObjectData"
           }
         ],
         "Size": {
@@ -711,6 +791,8 @@
       },
       "UsedResources": [
         "../Default/Button_Disable.png",
+        "../Default/Button_Normal.png",
+        "../Default/Button_Press.png",
         "../fonts/arial.ttf",
         "../fonts/arialbd.ttf",
         "../map/textures/deco/242-100.png",
