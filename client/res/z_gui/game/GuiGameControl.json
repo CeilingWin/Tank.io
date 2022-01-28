@@ -668,8 +668,8 @@
               "Y": 104.0
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 0.85,
+              "ScaleY": 0.85
             },
             "CColor": {},
             "IconVisible": true,

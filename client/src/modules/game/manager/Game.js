@@ -80,11 +80,7 @@ var Game = cc.Class.extend({
         for (let i= 0;i<this.bullets.length;i++){
             bullet = this.bullets[i];
             let bulletData = bulletsData[i];
-            if (bulletData.active) {
-                bullet.setPosition(bulletData.x,bulletData.y);
-                bullet.setVisible(true);
-            }
-            else bullet.setVisible(false);
+            bullet.updateData(bulletData);
         }
     },
 

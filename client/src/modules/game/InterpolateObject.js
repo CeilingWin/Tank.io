@@ -39,6 +39,7 @@ InterpolateObject.Tank = {
 InterpolateObject.Bullet = {
     x : interpolatePosition,
     y : interpolatePosition,
+    direction : interpolateAngle,
     active : interpolateBoolean
 }
 

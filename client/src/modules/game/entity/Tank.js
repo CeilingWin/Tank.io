@@ -45,8 +45,8 @@ var Tank = cc.Node.extend({
             let dx = Math.cos(-this.cannonDirection);
             let dy = Math.sin(-this.cannonDirection);
             this.cannon.runAction(cc.sequence(
-                cc.moveBy(0.1,dx*7,dy*7),
-                cc.moveBy(0.1,-dx*14,-dy*14),
+                cc.moveBy(0.1,dx*4,dy*4),
+                cc.moveBy(0.1,-dx*8,-dy*8),
                 cc.moveTo(0.1,0,0)
             ));
             let fire = this.cannon.fire;
@@ -142,8 +142,16 @@ var Tank = cc.Node.extend({
     },
 
     die: function(){
+        if (this.isDied()) return;
         this.setVisible(false);
         this._isDied = true;
+        // eff
+        let spr = new cc.Sprite(res.BATTLE_TANK_DEATH_PNG);
+        spr.setPosition(this.x,this.y);
+        this.getParent().addChild(spr);
+        spr.setOpacity(0);
+        spr.setRotation(Math.random()*Math.PI*2);
+        spr.runAction(cc.fadeIn(0.3));
     },
 
     isDied: function(){

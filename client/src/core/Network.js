@@ -1,7 +1,7 @@
 var ROOM_DEFINE = "game_room"
 var Network = cc.Class.extend({
     ctor: function (){
-        this.connection = new Colyseus.Client('ws://localhost:2567');
+        this.connection = new Colyseus.Client('ws://192.168.20.9:2567');
         this.pingInterval = 2000;
     },
 

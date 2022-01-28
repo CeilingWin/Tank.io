@@ -210,7 +210,7 @@
             </Children>
             <AnchorPoint />
             <Position X="960.0000" Y="104.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <Scale ScaleX="0.8500" ScaleY="0.8500" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.0963" />
             <PreSize X="0.0000" Y="0.0000" />
