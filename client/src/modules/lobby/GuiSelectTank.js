@@ -40,7 +40,6 @@ var GuiSelectTank = BaseGui.extend({
 
     selectSkin: function (skin){
         this.skin = skin;
-        cc.log("select skin",skin);
         this.loadTank(this.tankType,skin);
         this.listSkinUI.forEach(ui=>{
             ui.pn.setVisible(ui.skin===skin);
@@ -49,14 +48,12 @@ var GuiSelectTank = BaseGui.extend({
 
     loadTank: function(tankType, skin){
         this.tankType = tankType;
-        cc.log("load tank",this.tankType,skin);
         this.body.setTexture(ResourceUtils.getTankBody(tankType,skin));
         this.cannon.setTexture(ResourceUtils.getCannon(tankType,skin));
         this.lbTankName.setString(tankType);
     },
 
     loadAllSkin: function(tankType){
-        cc.log("load all skin");
         let skin = 0;
         this.lvSkins.removeAllItems();
         this.listSkinUI = [];
