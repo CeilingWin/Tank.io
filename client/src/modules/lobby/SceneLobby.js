@@ -12,7 +12,7 @@ var SceneLobby = BaseScene.extend({
         let username = cc.sys.localStorage.getItem("username");
         if (username) this.tfUserName.setString(username);
         this.tfUserName.addEventListener(()=>{
-            cc.sys.localStorage.setItem("username",username);
+            cc.sys.localStorage.setItem("username",this.tfUserName.getString());
         });
     },
 
