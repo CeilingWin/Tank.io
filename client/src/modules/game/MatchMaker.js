@@ -3,21 +3,16 @@ var MatchMaker = cc.Class.extend({
     },
 
     playNow: function () {
-        let username = LocalStorage.getUsername();
         SceneMgr.getIns().setTouchEnabled(false);
-        gv.network.joinRoom({username: username}, this.onJoinNewRoom.bind(this));
+        gv.network.joinRoom(this.mergeOptions({}), this.onJoinNewRoom.bind(this));
     },
 
     createNewGame: function (gameConfig) {
-        gameConfig.username = LocalStorage.getUsername();
-        gv.network.createRoom(gameConfig, this.onJoinNewRoom.bind(this));
+        gv.network.createRoom(this.mergeOptions(gameConfig), this.onJoinNewRoom.bind(this));
     },
 
     joinRoomById: function (roomId) {
-        let options = {
-            username: LocalStorage.getUsername()
-        }
-        gv.network.joinRoomById(roomId,options,this.onJoinNewRoom.bind(this),this.onFindRoomFailed.bind(this));
+        gv.network.joinRoomById(roomId,this.mergeOptions({}),this.onJoinNewRoom.bind(this),this.onFindRoomFailed.bind(this));
     },
 
     getAvailableRooms: function (callback){
@@ -33,6 +28,13 @@ var MatchMaker = cc.Class.extend({
         cc.log("Find room failed",error);
         // todo: show error
     },
+
+    mergeOptions: function (option){
+        option.username = LocalStorage.getUsername();
+        option.tankType = LocalStorage.getTankType();
+        option.skin = Number(LocalStorage.getSkin());
+        return option;
+    }
 });
 
 MatchMaker.getIns = function(){
