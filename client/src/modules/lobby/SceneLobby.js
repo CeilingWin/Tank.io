@@ -15,6 +15,7 @@ var SceneLobby = BaseScene.extend({
         this.tfUserName.addEventListener(()=>{
             cc.sys.localStorage.setItem("username",this.tfUserName.getString());
         });
+        GuiUtils.addEventOnHover(this.btnPlayNow);
     },
 
     onEnter: function (){

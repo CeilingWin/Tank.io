@@ -23,6 +23,8 @@ var GuiSelectTank = BaseGui.extend({
 
         this.body.runAction(cc.rotateBy(10,360).repeatForever());
         this.cannon.runAction(cc.rotateBy(8.5,-360).repeatForever());
+        GuiUtils.addEventOnHover(this.btnNext);
+        GuiUtils.addEventOnHover(this.btnPrev);
     },
 
     selectTank: function(tankType){

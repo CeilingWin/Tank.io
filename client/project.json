@@ -58,6 +58,7 @@
         "src/modules/lobby/GuiSelectTank.js",
         "src/modules/lobby/PopupNotification.js",
         "src/modules/lobby/SceneLobby.js",
+        "src/utils/GuiUtils.js",
         "src/utils/ResourceUtils.js"
     ]
 }
