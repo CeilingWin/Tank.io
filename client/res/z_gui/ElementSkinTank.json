@@ -16,6 +16,7 @@
         "Children": [
           {
             "ClipAble": false,
+            "BackColorAlpha": 207,
             "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 128,
@@ -30,6 +31,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -60,11 +63,10 @@
           },
           {
             "ClipAble": false,
-            "ComboBoxIndex": 1,
             "SingleColor": {
-              "R": 79,
-              "G": 189,
-              "B": 186
+              "R": 191,
+              "G": 191,
+              "B": 191
             },
             "FirstColor": {
               "R": 150,
@@ -104,6 +106,55 @@
             "BottomMargin": 5.0,
             "Tag": 184,
             "Children": [
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 157,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 229,
+                  "G": 229,
+                  "B": 229
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 78,
+                "ActionTag": -2089929156,
+                "Size": {
+                  "X": 490.0,
+                  "Y": 290.0
+                },
+                "Name": "Panel_2",
+                "ctype": "PanelObjectData"
+              },
               {
                 "FontSize": 14,
                 "ButtonText": "",

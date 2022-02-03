@@ -6,6 +6,17 @@
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="1920.0000" Y="1080.0000" />
         <Children>
+          <AbstractNodeData Name="background_1" ActionTag="551437280" Tag="79" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-247.5000" RightMargin="-247.5000" ctype="SpriteObjectData">
+            <Size X="1920.0000" Y="1080.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="960.0000" Y="540.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.5000" />
+            <PreSize X="1.2578" Y="1.0000" />
+            <FileData Type="Normal" Path="common/background.jpg" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
           <AbstractNodeData Name="ndCenter" ActionTag="-2039440847" Tag="3" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="960.0000" RightMargin="960.0000" TopMargin="540.0000" BottomMargin="540.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
@@ -135,10 +146,10 @@
               <AbstractNodeData Name="Panel_4" ActionTag="-641348862" Tag="13" IconVisible="False" LeftMargin="-250.0000" RightMargin="-250.0000" TopMargin="-342.0000" BottomMargin="282.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="500.0000" Y="60.0000" />
                 <Children>
-                  <AbstractNodeData Name="tfUserName" ActionTag="-904648022" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-2.2657" BottomMargin="2.2657" TouchEnable="True" FontSize="40" IsCustomSize="True" LabelText="" PlaceHolderText="Username" MaxLengthEnable="True" MaxLengthText="20" ctype="TextFieldObjectData">
+                  <AbstractNodeData Name="tfUserName" ActionTag="-904648022" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-2.2680" BottomMargin="2.2680" TouchEnable="True" FontSize="40" IsCustomSize="True" LabelText="" PlaceHolderText="Username" MaxLengthEnable="True" MaxLengthText="20" ctype="TextFieldObjectData">
                     <Size X="500.0000" Y="60.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="250.0000" Y="32.2657" />
+                    <Position X="250.0000" Y="32.2680" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="0" G="0" B="0" />
                     <PrePosition X="0.5000" Y="0.5378" />

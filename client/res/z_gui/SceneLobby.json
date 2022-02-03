@@ -14,6 +14,51 @@
       "ObjectData": {
         "Children": [
           {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/background.jpg",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 540.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.2578,
+              "Y": 1.0
+            },
+            "LeftMargin": -247.5,
+            "RightMargin": -247.5,
+            "Tag": 79,
+            "ActionTag": 551437280,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "background_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
             "AnchorPoint": {},
             "Position": {
               "X": 960.0,
@@ -650,7 +695,7 @@
                     },
                     "Position": {
                       "X": 250.0,
-                      "Y": 32.2657
+                      "Y": 32.268
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -672,8 +717,8 @@
                       "X": 1.0,
                       "Y": 1.0
                     },
-                    "TopMargin": -2.2657,
-                    "BottomMargin": 2.2657,
+                    "TopMargin": -2.268,
+                    "BottomMargin": 2.268,
                     "Tag": 12,
                     "ActionTag": -904648022,
                     "Size": {
@@ -765,7 +810,7 @@
               "Y": 0.106
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 81.5017,
@@ -790,6 +835,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../common/background.jpg",
         "../Default/Button_Disable.png",
         "../Default/Button_Normal.png",
         "../Default/Button_Press.png",

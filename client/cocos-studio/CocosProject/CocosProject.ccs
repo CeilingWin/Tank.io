@@ -20,6 +20,7 @@
           <Image Name="bullet_normal.png" />
         </Folder>
         <Folder Name="common">
+          <Image Name="background.jpg" />
           <Image Name="blue_dot.png" />
           <Image Name="kills.png" />
           <Image Name="players.png" />
@@ -142,6 +143,18 @@
             <Image Name="body1.png" />
             <Image Name="cannon0.png" />
             <Image Name="cannon1.png" />
+          </Folder>
+          <Folder Name="tank2">
+            <Image Name="body0.png" />
+            <Image Name="body1.png" />
+            <Image Name="body2.png" />
+            <Image Name="body3.png" />
+            <Image Name="body4.png" />
+            <Image Name="cannon0.png" />
+            <Image Name="cannon1.png" />
+            <Image Name="cannon2.png" />
+            <Image Name="cannon3.png" />
+            <Image Name="cannon4.png" />
           </Folder>
         </Folder>
         <Folder Name="z_gui">

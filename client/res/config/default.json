@@ -30,6 +30,18 @@
             "bullet_type": "bullet0",
             "rotation_speed": 6,
             "cannon_length": 90
+        },
+        {
+            "type": "tank2",
+            "hp": 1200,
+            "width": 125,
+            "height": 76,
+            "min_speed": 100,
+            "max_speed": 510,
+            "bullet_rate": 500,
+            "bullet_type": "bullet0",
+            "rotation_speed": 6,
+            "cannon_length": 90
         }
     ],
     "bullets": [
