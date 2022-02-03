@@ -76,8 +76,11 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
+            "Scale9Enable": true,
+            "Scale9OriginX": -33,
+            "Scale9OriginY": -33,
+            "Scale9Width": 66,
+            "Scale9Height": 66,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -109,7 +112,11 @@
               {
                 "ClipAble": false,
                 "BackColorAlpha": 157,
-                "ComboBoxIndex": 1,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bg_tf.png",
+                  "Plist": ""
+                },
                 "SingleColor": {
                   "R": 229,
                   "G": 229,
@@ -123,6 +130,11 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Enable": true,
+                "Scale9OriginX": 33,
+                "Scale9OriginY": 33,
+                "Scale9Width": 34,
+                "Scale9Height": 34,
                 "AnchorPoint": {},
                 "Position": {
                   "X": 0.0,
@@ -369,6 +381,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "../common/bg_tf.png",
         "../Default/Button_Disable.png",
         "../tank/tank1/body1.png",
         "../tank/tank1/cannon1.png"

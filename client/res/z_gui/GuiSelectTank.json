@@ -230,7 +230,11 @@
           {
             "ClipAble": false,
             "BackColorAlpha": 191,
-            "ComboBoxIndex": 1,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
+              "Plist": ""
+            },
             "SingleColor": {
               "R": 26,
               "G": 26,
@@ -244,6 +248,11 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Enable": true,
+            "Scale9OriginX": 33,
+            "Scale9OriginY": 33,
+            "Scale9Width": 34,
+            "Scale9Height": 34,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
@@ -302,7 +311,7 @@
             "AnchorPoint": {},
             "Position": {
               "X": 1067.9551,
-              "Y": 196.0943
+              "Y": 207.09
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -312,21 +321,21 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.5562,
-              "Y": 0.1816
+              "Y": 0.1917
             },
             "PreSize": {
               "X": 0.3125,
-              "Y": 0.7407
+              "Y": 0.7222
             },
             "LeftMargin": 1067.9551,
             "RightMargin": 252.0449,
-            "TopMargin": 83.9057,
-            "BottomMargin": 196.0943,
+            "TopMargin": 92.91,
+            "BottomMargin": 207.09,
             "Tag": 140,
             "ActionTag": 656110357,
             "Size": {
               "X": 600.0,
-              "Y": 800.0
+              "Y": 780.0
             },
             "Name": "lvSkins",
             "ctype": "ListViewObjectData"
@@ -457,7 +466,11 @@
               {
                 "ClipAble": false,
                 "BackColorAlpha": 191,
-                "ComboBoxIndex": 1,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bg_tf.png",
+                  "Plist": ""
+                },
                 "SingleColor": {
                   "R": 26,
                   "G": 26,
@@ -471,6 +484,11 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Enable": true,
+                "Scale9OriginX": 33,
+                "Scale9OriginY": 33,
+                "Scale9Width": 34,
+                "Scale9Height": 34,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
@@ -1298,7 +1316,11 @@
               {
                 "ClipAble": false,
                 "BackColorAlpha": 191,
-                "ComboBoxIndex": 1,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bg_tf.png",
+                  "Plist": ""
+                },
                 "SingleColor": {
                   "R": 26,
                   "G": 26,
@@ -1312,8 +1334,11 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
-                "Scale9Width": 1,
-                "Scale9Height": 1,
+                "Scale9Enable": true,
+                "Scale9OriginX": 33,
+                "Scale9OriginY": 33,
+                "Scale9Width": 34,
+                "Scale9Height": 34,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
@@ -1686,6 +1711,7 @@
       },
       "UsedResources": [
         "../common/background.jpg",
+        "../common/bg_tf.png",
         "../Default/Button_Disable.png",
         "../Default/Button_Normal.png",
         "../Default/Button_Press.png",

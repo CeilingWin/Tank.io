@@ -49,7 +49,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_9" ActionTag="544130017" Tag="69" IconVisible="False" LeftMargin="1067.9600" RightMargin="252.0400" TopMargin="83.9100" BottomMargin="196.0900" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_9" ActionTag="544130017" Tag="69" IconVisible="False" LeftMargin="1067.9600" RightMargin="252.0400" TopMargin="83.9100" BottomMargin="196.0900" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="PanelObjectData">
             <Size X="600.0000" Y="800.0000" />
             <AnchorPoint />
             <Position X="1067.9600" Y="196.0900" />
@@ -57,19 +57,20 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5562" Y="0.1816" />
             <PreSize X="0.3125" Y="0.7407" />
+            <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
             <SingleColor A="255" R="26" G="26" B="26" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lvSkins" ActionTag="656110357" Tag="140" IconVisible="False" LeftMargin="1067.9551" RightMargin="252.0449" TopMargin="83.9057" BottomMargin="196.0943" TouchEnable="True" ClipAble="True" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
-            <Size X="600.0000" Y="800.0000" />
+          <AbstractNodeData Name="lvSkins" ActionTag="656110357" Tag="140" IconVisible="False" LeftMargin="1067.9551" RightMargin="252.0449" TopMargin="92.9100" BottomMargin="207.0900" TouchEnable="True" ClipAble="True" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
+            <Size X="600.0000" Y="780.0000" />
             <AnchorPoint />
-            <Position X="1067.9551" Y="196.0943" />
+            <Position X="1067.9551" Y="207.0900" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5562" Y="0.1816" />
-            <PreSize X="0.3125" Y="0.7407" />
+            <PrePosition X="0.5562" Y="0.1917" />
+            <PreSize X="0.3125" Y="0.7222" />
             <SingleColor A="255" R="26" G="26" B="26" />
             <FirstColor A="255" R="150" G="150" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
@@ -94,7 +95,7 @@
           <AbstractNodeData Name="Panel_2" ActionTag="-1581186803" Tag="143" IconVisible="False" LeftMargin="153.5192" RightMargin="1066.4808" TopMargin="506.9844" BottomMargin="173.0156" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="700.0000" Y="400.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_5" ActionTag="810053838" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_5" ActionTag="810053838" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="PanelObjectData">
                 <Size X="700.0000" Y="400.0000" />
                 <AnchorPoint />
                 <Position />
@@ -102,6 +103,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="1.0000" Y="1.0000" />
+                <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
                 <SingleColor A="255" R="26" G="26" B="26" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
@@ -314,7 +316,7 @@
           <AbstractNodeData Name="Panel_7" ActionTag="-457129476" Tag="161" IconVisible="False" LeftMargin="295.7297" RightMargin="1224.2703" TopMargin="75.6177" BottomMargin="604.3823" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="400.0000" Y="400.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_5_0" ActionTag="88989159" Tag="67" IconVisible="False" LeftMargin="9.9999" RightMargin="-9.9999" TopMargin="10.0000" BottomMargin="-10.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_5_0" ActionTag="88989159" Tag="67" IconVisible="False" LeftMargin="9.9999" RightMargin="-9.9999" TopMargin="10.0000" BottomMargin="-10.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="191" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="PanelObjectData">
                 <Size X="400.0000" Y="400.0000" />
                 <AnchorPoint />
                 <Position X="9.9999" Y="-10.0000" />
@@ -322,6 +324,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0250" Y="-0.0250" />
                 <PreSize X="1.0000" Y="1.0000" />
+                <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
                 <SingleColor A="255" R="26" G="26" B="26" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />

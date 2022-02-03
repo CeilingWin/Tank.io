@@ -19,10 +19,10 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="pnTop" ActionTag="127536623" Tag="184" IconVisible="False" LeftMargin="5.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="5.0000" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="pnTop" ActionTag="127536623" Tag="184" IconVisible="False" LeftMargin="5.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="5.0000" ClipAble="False" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="-33" Scale9OriginY="-33" Scale9Width="66" Scale9Height="66" ctype="PanelObjectData">
             <Size X="490.0000" Y="290.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_2" ActionTag="-2089929156" Tag="78" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="False" BackColorAlpha="157" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="-2089929156" Tag="78" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="False" BackColorAlpha="157" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="PanelObjectData">
                 <Size X="490.0000" Y="290.0000" />
                 <AnchorPoint />
                 <Position />
@@ -30,6 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="1.0000" Y="1.0000" />
+                <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
                 <SingleColor A="255" R="229" G="229" B="229" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
