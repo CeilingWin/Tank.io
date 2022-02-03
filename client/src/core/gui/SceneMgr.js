@@ -32,6 +32,14 @@ var SceneMgr = cc.Class.extend({
     },
     setTouchEnabled: function(enable){
         this.getRunningScene().setTouchEnabled(enable);
+    },
+
+    showWaiting: function(bool){
+        let gui = this.getGui(GuiWaiting.prototype.className);
+        gui && gui.destroy();
+        if (bool) {
+            this.addGui(new GuiWaiting(),Layer.TOP);
+        }
     }
 });
 

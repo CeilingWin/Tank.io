@@ -38,6 +38,9 @@
           <TTF Name="normal.ttf" />
         </Folder>
         <Folder Name="map">
+          <Folder Name="minimap">
+            <Image Name="map0.png" />
+          </Folder>
           <Folder Name="textures">
             <Folder Name="deco">
               <Image Name="242-100.png" />
@@ -124,9 +127,6 @@
           <TmxFile Name="map_0.tmx" />
           <File Name="tile_set_deco.tsx" />
           <File Name="tile_set_object.tsx" />
-          <Folder Name="minimap">
-            <Image Name="map0.png" />
-          </Folder>
         </Folder>
         <Folder Name="tank">
           <Folder Name="tank0">
@@ -156,12 +156,13 @@
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
           </Folder>
+          <Project Name="ElementSkinTank.csd" Type="Layer" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />
           <Project Name="GuiNewGame.csd" Type="Scene" />
-          <Project Name="SceneLobby.csd" Type="Scene" />
-          <Project Name="PopupNotification.csd" Type="Scene" />
           <Project Name="GuiSelectTank.csd" Type="Scene" />
-          <Project Name="ElementSkinTank.csd" Type="Layer" />
+          <Project Name="PopupNotification.csd" Type="Scene" />
+          <Project Name="SceneLobby.csd" Type="Scene" />
+          <Project Name="GuiWaiting.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>

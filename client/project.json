@@ -30,6 +30,7 @@
         "src/core/gui/BaseGui.js",
         "src/core/Config.js",
         "src/core/gui/BaseScene.js",
+        "src/core/gui/GuiWaiting.js",
         "src/core/gui/SceneMgr.js",
         "src/core/LocalStorage.js",
         "src/core/Network.js",

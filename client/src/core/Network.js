@@ -1,12 +1,12 @@
 var ROOM_DEFINE = "game_room"
 var Network = cc.Class.extend({
     ctor: function (){
-        this.connection = new Colyseus.Client('ws://192.168.20.9:2567');
+        this.connection = new Colyseus.Client('ws://127.0.0.1:2567');
         this.pingInterval = 2000;
     },
 
     connectServer: function(){
-        gv.sceneMgr.setTouchEnabled(false);
+        gv.sceneMgr.showWaiting(true);
         this.connection.joinOrCreate("server").then((room)=>{
             this.serverRoom = room;
             if (gv.sceneMgr.getCurSceneName() !== SceneLobby.prototype.className){
@@ -15,16 +15,16 @@ var Network = cc.Class.extend({
             this.listenServerResponse();
             this.pingToServer();
             setInterval(this.pingToServer.bind(this),this.pingInterval);
-            gv.sceneMgr.setTouchEnabled(true);
+            gv.sceneMgr.showWaiting(false);
             this.serverRoom.onLeave(()=>{
-                gv.sceneMgr.setTouchEnabled(true);
+                gv.sceneMgr.showWaiting(false);
                 this.serverRoom = null;
                 let popup = gv.sceneMgr.addGui(new PopupNotification());
                 popup.setNotification("Lost connection to server. Reconnect?");
                 popup.setCallFunc(this.connectServer.bind(this));
             })
         }).catch((err)=>{
-            gv.sceneMgr.setTouchEnabled(true);
+            gv.sceneMgr.showWaiting(false);
             let popup = gv.sceneMgr.addGui(new PopupNotification());
             popup.setNotification("Connect to server failed. Reconnect?");
             popup.setCallFunc(this.connectServer.bind(this));
