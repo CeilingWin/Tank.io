@@ -63,7 +63,7 @@ var GuiNewGame = BaseGui.extend({
             roomName: roomName,
             maxPlayer: numPlayer,
             isPrivate: isPrivate,
-            mapId: this.mapId
+            mapId: Number(this.mapId)
         })
     }
 });
