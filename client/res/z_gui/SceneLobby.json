@@ -250,13 +250,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.48,
-                      "Y": 0.4
+                      "X": 0.4825,
+                      "Y": 0.4167
                     },
-                    "LeftMargin": 104.0,
-                    "RightMargin": 104.0,
-                    "TopMargin": 36.0,
-                    "BottomMargin": 36.0,
+                    "LeftMargin": 103.5,
+                    "RightMargin": 103.5,
+                    "TopMargin": 35.0,
+                    "BottomMargin": 35.0,
                     "Tag": 5,
                     "ActionTag": 1134857097,
                     "Size": {
@@ -436,13 +436,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.515,
-                      "Y": 0.4
+                      "X": 0.5175,
+                      "Y": 0.4167
                     },
-                    "LeftMargin": 97.0,
-                    "RightMargin": 97.0,
-                    "TopMargin": 36.0,
-                    "BottomMargin": 36.0,
+                    "LeftMargin": 96.5,
+                    "RightMargin": 96.5,
+                    "TopMargin": 35.0,
+                    "BottomMargin": 35.0,
                     "Tag": 8,
                     "ActionTag": -2021403392,
                     "Size": {
@@ -623,13 +623,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.52,
-                      "Y": 0.4
+                      "X": 0.5225,
+                      "Y": 0.4167
                     },
-                    "LeftMargin": 96.0,
-                    "RightMargin": 96.0,
-                    "TopMargin": 36.0,
-                    "BottomMargin": 36.0,
+                    "LeftMargin": 95.5,
+                    "RightMargin": 95.5,
+                    "TopMargin": 35.0,
+                    "BottomMargin": 35.0,
                     "Tag": 11,
                     "ActionTag": 2110260646,
                     "Size": {

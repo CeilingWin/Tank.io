@@ -17,35 +17,35 @@
             <FileData Type="Normal" Path="common/background.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnPrev" ActionTag="-2052942613" Alpha="198" Tag="137" IconVisible="False" LeftMargin="177.7338" RightMargin="1642.2662" TopMargin="189.6703" BottomMargin="690.3297" TouchEnable="True" FontSize="40" ButtonText="&lt;" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btnPrev" ActionTag="-2052942613" Tag="137" IconVisible="False" LeftMargin="177.7337" RightMargin="1642.2664" TopMargin="187.2338" BottomMargin="692.7662" TouchEnable="True" FontSize="40" ButtonText="&lt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="200.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="227.7338" Y="790.3297" />
+            <Position X="227.7337" Y="792.7662" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="26" G="26" B="26" />
-            <PrePosition X="0.1186" Y="0.7318" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.1186" Y="0.7340" />
             <PreSize X="0.0521" Y="0.1852" />
             <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <TextColor A="255" R="65" G="65" B="70" />
+            <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="common/bg_tf.png" Plist="" />
+            <NormalFileData Type="Normal" Path="common/bg_tf.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnNext" ActionTag="-860425972" Alpha="198" Tag="139" IconVisible="False" LeftMargin="728.2100" RightMargin="1091.7900" TopMargin="189.6703" BottomMargin="690.3297" TouchEnable="True" FontSize="40" ButtonText="&gt;" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btnNext" ActionTag="-860425972" Tag="139" IconVisible="False" LeftMargin="728.2100" RightMargin="1091.7900" TopMargin="189.6703" BottomMargin="690.3297" TouchEnable="True" FontSize="40" ButtonText="&gt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="200.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="778.2100" Y="790.3297" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="26" G="26" B="26" />
+            <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4053" Y="0.7318" />
             <PreSize X="0.0521" Y="0.1852" />
             <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <TextColor A="255" R="65" G="65" B="70" />
+            <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="common/bg_tf.png" Plist="" />
+            <NormalFileData Type="Normal" Path="common/bg_tf.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -76,19 +76,19 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnBack" ActionTag="-1230555152" Tag="141" IconVisible="False" LeftMargin="601.0700" RightMargin="1018.9300" TopMargin="936.4301" BottomMargin="63.5699" TouchEnable="True" FontSize="35" ButtonText="Back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="300.0000" Y="80.0000" />
+          <AbstractNodeData Name="btnBack" ActionTag="-1230555152" Tag="141" IconVisible="False" LeftMargin="601.0700" RightMargin="1018.9300" TopMargin="926.4301" BottomMargin="53.5699" TouchEnable="True" FontSize="35" ButtonText="BACK" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="300.0000" Y="100.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="751.0700" Y="103.5699" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.3912" Y="0.0959" />
-            <PreSize X="0.1563" Y="0.0741" />
+            <PreSize X="0.1563" Y="0.0926" />
             <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <TextColor A="255" R="65" G="65" B="70" />
+            <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="common/btn_back.png" Plist="" />
+            <NormalFileData Type="Normal" Path="common/btn_back.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -402,19 +402,19 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnOk" ActionTag="1843586338" Tag="142" IconVisible="False" LeftMargin="960.7340" RightMargin="659.2660" TopMargin="934.4573" BottomMargin="65.5427" TouchEnable="True" FontSize="35" ButtonText="Ok" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="300.0000" Y="80.0000" />
+          <AbstractNodeData Name="btnOk" ActionTag="1843586338" Tag="142" IconVisible="False" LeftMargin="960.7340" RightMargin="659.2660" TopMargin="924.4573" BottomMargin="55.5427" TouchEnable="True" FontSize="35" ButtonText="OK" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="70" Scale9Height="78" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="300.0000" Y="100.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1110.7340" Y="105.5427" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5785" Y="0.0977" />
-            <PreSize X="0.1563" Y="0.0741" />
+            <PreSize X="0.1563" Y="0.0926" />
             <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <TextColor A="255" R="65" G="65" B="70" />
+            <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="common/btn_ok2.png" Plist="" />
+            <NormalFileData Type="Normal" Path="common/btn_ok2.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

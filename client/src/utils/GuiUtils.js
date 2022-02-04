@@ -9,6 +9,15 @@ GuiUtils.addEventOnHover = function (button, onHover, onNotHover){
         onNotHover = ()=>{
             button.setColor(oldColor);
         }
+    } else if (typeof onHover === "string"){
+        let resPath = onHover;
+        onHover = ()=>{
+            button.loadTextures(resPath,resPath);
+        }
+        let resPath2 = onNotHover;
+        onNotHover = ()=>{
+            button.loadTextures(resPath2,resPath2);
+        }
     }
     cc.eventManager.addListener({
         event: cc.EventListener.MOUSE,

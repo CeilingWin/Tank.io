@@ -65,31 +65,27 @@
               "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
               "Plist": ""
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 15,
-            "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 40,
+            "Scale9Height": 40,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -107,38 +103,33 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 227.7338,
-              "Y": 790.3297
+              "X": 227.7337,
+              "Y": 792.7662
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {
-              "R": 26,
-              "G": 26,
-              "B": 26
-            },
+            "CColor": {},
             "IconVisible": false,
             "PrePosition": {
               "X": 0.1186,
-              "Y": 0.7318
+              "Y": 0.734
             },
             "PreSize": {
               "X": 0.0521,
               "Y": 0.1852
             },
-            "LeftMargin": 177.7338,
-            "RightMargin": 1642.2662,
-            "TopMargin": 189.6703,
-            "BottomMargin": 690.3297,
+            "LeftMargin": 177.7337,
+            "RightMargin": 1642.2664,
+            "TopMargin": 187.2338,
+            "BottomMargin": 692.7662,
             "Tag": 137,
             "ActionTag": -2052942613,
             "Size": {
               "X": 100.0,
               "Y": 200.0
             },
-            "Alpha": 198,
             "Name": "btnPrev",
             "ctype": "ButtonObjectData"
           },
@@ -150,31 +141,27 @@
               "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
               "Plist": ""
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 15,
-            "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 40,
+            "Scale9Height": 40,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -199,11 +186,7 @@
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {
-              "R": 26,
-              "G": 26,
-              "B": 26
-            },
+            "CColor": {},
             "IconVisible": false,
             "PrePosition": {
               "X": 0.4053,
@@ -223,7 +206,6 @@
               "X": 100.0,
               "Y": 200.0
             },
-            "Alpha": 198,
             "Name": "btnNext",
             "ctype": "ButtonObjectData"
           },
@@ -342,37 +324,33 @@
           },
           {
             "FontSize": 35,
-            "ButtonText": "Back",
+            "ButtonText": "BACK",
             "FontResource": {
               "Type": "Normal",
               "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
               "Plist": ""
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 15,
-            "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 40,
+            "Scale9Height": 40,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -405,17 +383,17 @@
             },
             "PreSize": {
               "X": 0.1562,
-              "Y": 0.0741
+              "Y": 0.0926
             },
             "LeftMargin": 601.07,
             "RightMargin": 1018.93,
-            "TopMargin": 936.4301,
-            "BottomMargin": 63.5699,
+            "TopMargin": 926.4301,
+            "BottomMargin": 53.5699,
             "Tag": 141,
             "ActionTag": -1230555152,
             "Size": {
               "X": 300.0,
-              "Y": 80.0
+              "Y": 100.0
             },
             "Name": "btnBack",
             "ctype": "ButtonObjectData"
@@ -1623,37 +1601,33 @@
           },
           {
             "FontSize": 35,
-            "ButtonText": "Ok",
+            "ButtonText": "OK",
             "FontResource": {
               "Type": "Normal",
               "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
               "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
             "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9Width": 70,
+            "Scale9Height": 78,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -1686,17 +1660,17 @@
             },
             "PreSize": {
               "X": 0.1562,
-              "Y": 0.0741
+              "Y": 0.0926
             },
             "LeftMargin": 960.734,
             "RightMargin": 659.266,
-            "TopMargin": 934.4573,
-            "BottomMargin": 65.5427,
+            "TopMargin": 924.4573,
+            "BottomMargin": 55.5427,
             "Tag": 142,
             "ActionTag": 1843586338,
             "Size": {
               "X": 300.0,
-              "Y": 80.0
+              "Y": 100.0
             },
             "Name": "btnOk",
             "ctype": "ButtonObjectData"
@@ -1712,9 +1686,9 @@
       "UsedResources": [
         "../common/background.jpg",
         "../common/bg_tf.png",
+        "../common/btn_back.png",
+        "../common/btn_ok2.png",
         "../Default/Button_Disable.png",
-        "../Default/Button_Normal.png",
-        "../Default/Button_Press.png",
         "../Default/LoadingBarFile.png",
         "../fonts/arial.ttf",
         "../fonts/arialbd.ttf",

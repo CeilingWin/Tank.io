@@ -23,8 +23,10 @@ var GuiSelectTank = BaseGui.extend({
 
         this.body.runAction(cc.rotateBy(10,360).repeatForever());
         this.cannon.runAction(cc.rotateBy(8.5,-360).repeatForever());
-        GuiUtils.addEventOnHover(this.btnNext);
-        GuiUtils.addEventOnHover(this.btnPrev);
+        GuiUtils.addEventOnHover(this.btnNext,res.COMMON_BG_TF2_PNG,res.COMMON_BG_TF_PNG);
+        GuiUtils.addEventOnHover(this.btnPrev,res.COMMON_BG_TF2_PNG,res.COMMON_BG_TF_PNG);
+        GuiUtils.addEventOnHover(this.btnBack,res.COMMON_BTN_BACK2_PNG,res.COMMON_BTN_BACK_PNG);
+        GuiUtils.addEventOnHover(this.btnOk,res.COMMON_BTN_OK2_PNG,res.COMMON_BG_TF2_PNG);
     },
 
     selectTank: function(tankType){

@@ -15,7 +15,9 @@ var SceneLobby = BaseScene.extend({
         this.tfUserName.addEventListener(()=>{
             cc.sys.localStorage.setItem("username",this.tfUserName.getString());
         });
-        GuiUtils.addEventOnHover(this.btnPlayNow);
+        GuiUtils.addEventOnHover(this.btnPlayNow,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
+        GuiUtils.addEventOnHover(this.btnNewGame,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
+        GuiUtils.addEventOnHover(this.btnJoin,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
     },
 
     onEnter: function (){

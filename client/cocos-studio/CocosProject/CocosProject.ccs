@@ -22,10 +22,15 @@
         <Folder Name="common">
           <Image Name="background.jpg" />
           <Image Name="bg_tf.png" />
+          <Image Name="bg_tf2.png" />
           <Image Name="blue_dot.png" />
+          <Image Name="btn_back.png" />
+          <Image Name="btn_back2.png" />
+          <Image Name="btn_ok2.png" />
           <Image Name="kills.png" />
           <Image Name="players.png" />
           <Image Name="rectangle.png" />
+          <Image Name="rectangle_selected.png" />
           <Image Name="red_dot.png" />
           <Image Name="reload.png" />
           <Image Name="rounded-rectangle.png" />
