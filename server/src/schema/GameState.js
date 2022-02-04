@@ -106,9 +106,9 @@ export class GameState extends Schema {
 
     handleGameUpdate() {
         this.game.update();
-        if (this.game.isEndGame()) {
-            this.showLeaderBoard();
-        }
+        // if (this.game.isEndGame()) {
+        //     this.showLeaderBoard();
+        // }
     }
 
     showLeaderBoard() {

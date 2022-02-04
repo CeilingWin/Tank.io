@@ -225,10 +225,10 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnNext" ActionTag="1095321060" Tag="283" IconVisible="False" LeftMargin="925.8829" RightMargin="-1010.8829" TopMargin="-209.0500" BottomMargin="-190.9500" TouchEnable="True" FontSize="40" ButtonText="&gt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btnNext" ActionTag="1095321060" Tag="283" IconVisible="False" LeftMargin="925.8829" RightMargin="-1010.8829" TopMargin="-214.0500" BottomMargin="-185.9500" TouchEnable="True" FontSize="40" ButtonText="&gt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="85.0000" Y="400.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="968.3829" Y="9.0500" />
+                    <Position X="968.3829" Y="14.0500" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -241,10 +241,10 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnPrev" ActionTag="-1676079103" Tag="284" IconVisible="False" LeftMargin="402.7151" RightMargin="-487.7151" TopMargin="-209.0501" BottomMargin="-190.9499" TouchEnable="True" FontSize="40" ButtonText="&lt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btnPrev" ActionTag="-1676079103" Tag="284" IconVisible="False" LeftMargin="402.7150" RightMargin="-487.7150" TopMargin="-214.0500" BottomMargin="-185.9500" TouchEnable="True" FontSize="40" ButtonText="&lt;" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="40" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="85.0000" Y="400.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.2151" Y="9.0501" />
+                    <Position X="445.2150" Y="14.0500" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />

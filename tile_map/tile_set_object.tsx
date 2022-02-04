@@ -249,18 +249,33 @@
    <property name="z" type="int" value="1000"/>
   </properties>
   <image width="363" height="400" source="textures/object/288-100.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="166" y="192" width="37" height="34">
+    <ellipse/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="33">
   <properties>
    <property name="z" type="int" value="1000"/>
   </properties>
   <image width="370" height="342" source="textures/object/290-55.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="172" y="159" width="26" height="25">
+    <ellipse/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="34">
   <properties>
    <property name="z" type="int" value="1000"/>
   </properties>
   <image width="674" height="623" source="textures/object/290-100.png"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="295" y="285" width="65" height="58">
+    <ellipse/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="35">
   <image width="256" height="128" source="textures/object/297-100.png"/>

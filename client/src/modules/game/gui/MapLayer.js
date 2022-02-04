@@ -6,9 +6,12 @@ var MapLayer = BaseGui.extend({
     initGui: function(){
         TMParser.parseFile("res/map/map_0.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) return cc.log("Cannot load map");
-            this.loadMap(map,"background");
-            this.loadMap(map,"deco")
-            this.loadMap(map,"object");
+            this.loadLayer(map,"background");
+            this.loadLayer(map,"deco");
+            this.loadLayer(map,"object");
+            this.tankLayer = new cc.Layer();
+            this.addChild(this.tankLayer);
+            this.loadLayer(map,"trees");
             this.mapWidth = map.tileWidth*map.width;
             this.mapHeight = map.tileHeight*map.height;
             this.isLoadedMap = true;
@@ -25,6 +28,7 @@ var MapLayer = BaseGui.extend({
             this.callFunc();
             this.callFunc = null;
         }
+        gv.game.loadMapDone();
     },
 
     follow: function(tank){
@@ -64,7 +68,9 @@ var MapLayer = BaseGui.extend({
 
     },
 
-    loadMap: function(tileMap,layerName){
+    loadLayer: function(tileMap,layerName){
+        let layer = new cc.Layer();
+        this.addChild(layer);
         let tileSize = cc.size(tileMap.tileWidth, tileMap.tileHeight);
         let mapSize = cc.size(tileMap.width, tileMap.height);
         let objectLayer = tileMap.layers.find(layer => layer.name === layerName);
@@ -74,7 +80,7 @@ var MapLayer = BaseGui.extend({
                 if (!tile) continue;
                 let resImg = tile.imgRes;
                 let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
-                let object = this.loadObject(resImg,pos.x,pos.y,tile.properties.z);
+                let object = this.loadObject(layer,resImg,pos.x,pos.y,tile.properties.z);
                 let bodys = tile.bodys;
                 // bodys.forEach(body=>this.drawBody(object,body,tile));
             }
@@ -82,23 +88,24 @@ var MapLayer = BaseGui.extend({
     },
 
     addTankToMap: function(tank){
-        this.addChild(tank,100);
+        cc.log("add tank");
+        this.tankLayer.addChild(tank,100);
     },
 
     addBulletToMap: function(bullet){
-        this.addChild(bullet,200);
+        this.tankLayer.addChild(bullet,200);
     },
 
-    loadObject: function (imgSource,x,y,z){
+    loadObject: function (parent,imgSource,x,y,z){
         let spr = new cc.Sprite("res/map/"+imgSource);
         spr.anchorX = 0;
         spr.anchorY = 0;
         spr.x = x;
         spr.y = y;
         if (z) {
-            this.addChild(spr,z);
+            parent.addChild(spr,z);
         }
-        else this.addChild(spr);
+        else parent.addChild(spr);
         return spr;
     },
 

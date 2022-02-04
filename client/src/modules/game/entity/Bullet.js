@@ -7,7 +7,7 @@ var Bullet = cc.Node.extend({
     },
 
     _init: function () {
-        let spr = new cc.Sprite("res/battle/bullet_mini.png");
+        let spr = new cc.Sprite("res/bullet/bullet_normal.png");
         spr.anchorX = 0.7;
         this.spr = spr;
         this.addChild(spr);

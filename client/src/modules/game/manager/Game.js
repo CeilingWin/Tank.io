@@ -6,11 +6,17 @@ var Game = cc.Class.extend({
         this.network = gv.gameRoom.getNetwork();
     },
 
-    init: function(mapId){
+    init: function(mapId,callback){
         this.mapId = mapId;
         this.mapLayer = gv.sceneMgr.addGui(new MapLayer(mapId));
         this.guiControl = gv.sceneMgr.addGui(new GuiGameControl());
         this.input = new Input();
+        this.callback = callback;
+    },
+
+    loadMapDone: function(){
+        this.callback && this.callback();
+        this.callback = null;
     },
 
     destroyGuiGame: function(){
