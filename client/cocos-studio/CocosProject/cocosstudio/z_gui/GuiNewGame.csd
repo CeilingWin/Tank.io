@@ -36,7 +36,7 @@
                   <AbstractNodeData Name="Image_1" ActionTag="1231535260" Tag="229" IconVisible="False" LeftMargin="456.3400" RightMargin="-956.3400" TopMargin="-50.0800" BottomMargin="-29.9200" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="ImageViewObjectData">
                     <Size X="500.0000" Y="80.0000" />
                     <Children>
-                      <AbstractNodeData Name="tfRoomName" ActionTag="-937227946" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="12.5000" RightMargin="12.5000" TopMargin="18.2480" BottomMargin="-8.2480" TouchEnable="True" FontSize="35" IsCustomSize="True" LabelText="room38833" PlaceHolderText="" MaxLengthEnable="True" MaxLengthText="21" ctype="TextFieldObjectData">
+                      <AbstractNodeData Name="tfRoomName" ActionTag="-937227946" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="12.5000" RightMargin="12.5000" TopMargin="18.2480" BottomMargin="-8.2480" TouchEnable="True" FontSize="35" IsCustomSize="True" LabelText="" PlaceHolderText="" MaxLengthEnable="True" MaxLengthText="21" ctype="TextFieldObjectData">
                         <Size X="475.0000" Y="70.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="250.0000" Y="26.7520" />
@@ -91,7 +91,7 @@
                   <AbstractNodeData Name="Image_1" ActionTag="949113786" Tag="237" IconVisible="False" LeftMargin="456.3401" RightMargin="-956.3401" TopMargin="-50.0801" BottomMargin="-29.9199" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="ImageViewObjectData">
                     <Size X="500.0000" Y="80.0000" />
                     <Children>
-                      <AbstractNodeData Name="tfNumPlayer" ActionTag="1438333166" Tag="238" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="12.5000" RightMargin="12.5000" TopMargin="19.0480" BottomMargin="-9.0480" TouchEnable="True" FontSize="35" IsCustomSize="True" LabelText="100" PlaceHolderText="" MaxLengthEnable="True" MaxLengthText="3" ctype="TextFieldObjectData">
+                      <AbstractNodeData Name="tfNumPlayer" ActionTag="1438333166" Tag="238" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="12.5000" RightMargin="12.5000" TopMargin="19.0480" BottomMargin="-9.0480" TouchEnable="True" FontSize="35" IsCustomSize="True" LabelText="" PlaceHolderText="" MaxLengthEnable="True" MaxLengthText="3" ctype="TextFieldObjectData">
                         <Size X="475.0000" Y="70.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="250.0000" Y="25.9520" />
