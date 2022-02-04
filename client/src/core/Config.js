@@ -13,6 +13,10 @@ var Config = cc.Class.extend({
         return this.json["room_config"]["default_tank"];
     },
 
+    getDefaultMapId: function(){
+        return this.json["room_config"]["default_map"];
+    },
+
     getTanksConfig: function(){
         return this.json["tanks"].map(cf=>{
             cf.bullet = this.json["bullets"].find(b=>b["type"] === cf["bullet_type"]);

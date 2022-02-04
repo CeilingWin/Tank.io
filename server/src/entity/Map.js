@@ -10,9 +10,8 @@ export class MapGame extends schema.Schema {
     }
 
     async initMap(mapId) {
-        // todo: load map base on map id
         let promiseLoadMap = new Promise((resolve, reject) => {
-            TMParser.parseFile("res/map/map_0.tmx", null, (err, map) => {
+            TMParser.parseFile("res/map/map_" + mapId + ".tmx", null, (err, map) => {
                 if (err) reject(err);
                 else resolve(map);
             });

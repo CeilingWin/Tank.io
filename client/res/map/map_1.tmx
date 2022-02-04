@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="120" height="120" tilewidth="30" tileheight="30" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="tile_set_deco.tsx"/>
+ <tileset firstgid="23" source="tile_set_object.tsx"/>
+ <layer id="1" name="background" width="120" height="120">
+  <data encoding="base64" compression="zlib">
+   eJzt2gEJADAMwLBZuH+zF3EGPSQCqqAzAAAAAAAAAADAlqOnp/dtDwAAAAAAAAAA2FP/h/QAAAAAAAAAAICq+j+kBwAAAAAAAAAAVNX/IT0AAAAAAAAAAKCq/g/pAQAAAAAAAADws/pfovfmAhc1Ass=
+  </data>
+ </layer>
+ <layer id="2" name="deco" width="120" height="120">
+  <data encoding="base64" compression="zlib">
+   eJzt3DsKgDAMANAuHRy8/3Vd3FzEVpvE98C1hPwsCLYGAAAAAAAAAAAAjNhWBwDwY311AAXJKQBVeccRgT6sTX2Bquw3ItCHwGxVvvHajwBr2cMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADn4vzzkYV7hH8w6q+i9cXJYQ+Q6Ro4tGrkCIrOj8lAreC7j/GSM+QtZ8pIlTgCAiHq7d59y5wIAAAC42s9n5nkzzT7vLQcV/gDJ
+  </data>
+ </layer>
+ <layer id="3" name="object" width="120" height="120">
+  <data encoding="base64" compression="zlib">
+   eJzt3KEOwjAYhdG9BUGDAwkGRUAQlvD+r4PCspB1u7Q9x27d/6mKptkwAAAAAAAAzHdOBwAAAABAyDEdAAD8rftKa4D6XNMBAAAAwFdz7scfilUAtOWUDgAAAAAAAAAAgA7dGv0OfOyCs7fB2QAAAAAAQNYzHQAAADRtnw4AuuB8AwAAAABIcT4JwJTk/0TWskkHAFTm0tjzqfcBAABgKa90QEGPdABAQS3tz1CDsdPZ/M7+DAAs4Q2E/weJ
+  </data>
+ </layer>
+ <layer id="4" name="trees" width="120" height="120">
+  <data encoding="base64" compression="zlib">
+   eJzt3VsKgzAQBVAXIrTbkLb731Y/+iMoJdjHHZNzPn1xYciYgJJpAgD4n/lLx4+ee3dP6zUtz4C1SzoAH1E/gDr0ZAAAgBfrI4Cakv3ZuwEAAAA4i2s6AAAAAAAAAAAAAPBzj3QAAAAAKOCeDgAAAAAAAAAAAAADsI8fbPnPE/pkbAPQwhoJ9plLjUvtAQCOMY/aWtIBACDklg4AAABQiG9zAPL04r6pL/THuAaoQT8em/r3TX0BzukJvjUE8A==
+  </data>
+ </layer>
+</map>

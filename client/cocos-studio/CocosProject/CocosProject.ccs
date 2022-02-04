@@ -47,6 +47,7 @@
         </Folder>
         <Folder Name="map">
           <Folder Name="minimap">
+            <Image Name="map1.png" />
             <Image Name="map0.png" />
           </Folder>
           <Folder Name="textures">
@@ -133,6 +134,7 @@
             </Folder>
           </Folder>
           <TmxFile Name="map_0.tmx" />
+          <TmxFile Name="map_1.tmx" />
           <File Name="tile_set_deco.tsx" />
           <File Name="tile_set_object.tsx" />
         </Folder>

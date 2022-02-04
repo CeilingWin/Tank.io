@@ -1,10 +1,11 @@
 var MapLayer = BaseGui.extend({
-    ctor: function(){
+    ctor: function(mapId){
+        this.mapId = mapId;
         this._super();
     },
 
     initGui: function(){
-        TMParser.parseFile("res/map/map_0.tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
+        TMParser.parseFile("res/map/map_" + this.mapId + ".tmx",cc.loader.getRes.bind(cc.loader), (err,map)=>{
             if (err) return cc.log("Cannot load map");
             this.loadLayer(map,"background");
             this.loadLayer(map,"deco");

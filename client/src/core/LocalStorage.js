@@ -11,6 +11,10 @@ var LocalStorage = {
         return cc.sys.localStorage.getItem("skin") || 0;
     },
 
+    getMapId: function (){
+        return cc.sys.localStorage.getItem("mapId") || Config.getIns().getDefaultMapId();
+    },
+
     setItem: function (key, value){
         cc.sys.localStorage.setItem(key, value);
     }
