@@ -11,7 +11,7 @@ var MapLayer = BaseGui.extend({
             this.loadLayer(map,"object");
             this.tankLayer = new cc.Layer();
             this.addChild(this.tankLayer);
-            this.loadLayer(map,"trees");
+            this.loadTrees(map);
             this.mapWidth = map.tileWidth*map.width;
             this.mapHeight = map.tileHeight*map.height;
             this.isLoadedMap = true;
@@ -70,6 +70,7 @@ var MapLayer = BaseGui.extend({
 
     loadLayer: function(tileMap,layerName){
         let layer = new cc.Layer();
+        layer.setName(layerName);
         this.addChild(layer);
         let tileSize = cc.size(tileMap.tileWidth, tileMap.tileHeight);
         let mapSize = cc.size(tileMap.width, tileMap.height);
@@ -81,10 +82,67 @@ var MapLayer = BaseGui.extend({
                 let resImg = tile.imgRes;
                 let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
                 let object = this.loadObject(layer,resImg,pos.x,pos.y,tile.properties.z);
-                let bodys = tile.bodys;
-                // bodys.forEach(body=>this.drawBody(object,body,tile));
+                // tile.bodys.forEach(body=>this.drawBody(object,body,tile));
             }
         }
+    },
+
+    loadTrees: function(tileMap){
+        this.trees = [];
+        const layerName = "trees";
+        let layer = new cc.Layer();
+        layer.setName(layerName);
+        this.addChild(layer);
+        let tileSize = cc.size(tileMap.tileWidth, tileMap.tileHeight);
+        let mapSize = cc.size(tileMap.width, tileMap.height);
+        let objectLayer = tileMap.layers.find(layer => layer.name === layerName);
+        let blur = function(bool){
+            if (this._isBlur === bool) return;
+            if (bool){
+                this.setOpacity(120);
+                this.body.forEach(b=>b.setVisible(true));
+            } else {
+                this.setOpacity(255);
+                this.body.forEach(b=>b.setVisible(false));
+            }
+            this._isBlur = bool;
+        }
+        for (let xIndex=0;xIndex<mapSize.width;xIndex++){
+            for (let yIndex=0;yIndex<mapSize.height;yIndex++){
+                let tile = objectLayer.tileAt(xIndex, yIndex);
+                if (!tile) continue;
+                let resImg = tile.imgRes;
+                let pos = tileMap.convertTilePosToXYPos(xIndex,yIndex);
+                let tree = this.loadObject(layer,resImg,pos.x,pos.y);
+                tree.center = cc.pAdd(tree.getPosition(),cc.p(tree.width/2,tree.height/2));
+                tree.radius = tree.width/2;
+                tree.blur = blur;
+                tree.body = [];
+                tile.bodys.forEach(body=>{
+                    let ndBody = new cc.DrawNode();
+                    ndBody.x = 0; ndBody.y = 0;
+                    ndBody.setPosition(tree.getPosition());
+                    ndBody.setVisible(false);
+                    layer.addChild(ndBody);
+                    let pos = cc.p(body.x,body.y);
+                    let r = body.radius;
+                    ndBody.drawDot(pos,r,cc.color(94,53,38));
+                    tree.body.push(ndBody);
+                });
+                this.trees.push(tree);
+            }
+        }
+    },
+
+    update: function(){
+        let tank = gv.game.getFollowTank();
+        this.trees.forEach(tree=>{
+            if (cc.pDistance(tank.getPosition(), tree.center) <= tree.radius){
+                tree.blur(true);
+            } else {
+                tree.blur(false);
+            }
+        })
     },
 
     addTankToMap: function(tank){

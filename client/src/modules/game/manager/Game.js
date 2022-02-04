@@ -65,6 +65,7 @@ var Game = cc.Class.extend({
         if (!currentState) return;
         this.updateTank(currentState.tanks);
         this.updateBullets(currentState.bullets);
+        this.mapLayer.update();
         this.guiControl.update();
     },
 

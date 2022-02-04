@@ -23,14 +23,15 @@ export class MapGame extends schema.Schema {
             this.width = map.width*map.tileWidth;
             this.height = map.height*map.tileHeight;
             this.initBorder();
-            this.loadObstacle(map);
+            this.loadObstacle(map, "object");
+            this.loadObstacle(map, "trees");
             console.log("Load map success!");
         } catch (err) {
             console.error("Load map failed!", err);
         }
     }
 
-    loadObstacle(tileMap) {
+    loadObstacle(tileMap, layerName) {
         let tileSize = {
             width: tileMap.tileWidth,
             height: tileMap.tileHeight
@@ -39,7 +40,7 @@ export class MapGame extends schema.Schema {
             width: tileMap.width,
             height: tileMap.height
         };
-        let objectLayer = tileMap.layers.find(layer => layer.name === "object");
+        let objectLayer = tileMap.layers.find(layer => layer.name === layerName);
         for (let xIndex = 0; xIndex < mapSize.width; xIndex++) {
             for (let yIndex = 0; yIndex < mapSize.height; yIndex++) {
                 let tile = objectLayer.tileAt(xIndex, yIndex);
@@ -54,7 +55,7 @@ export class MapGame extends schema.Schema {
     }
 
     initBorder(){
-        let borderWidth = 10;
+        let borderWidth = 200;
         let borderLeft = new Polygon({x:0,y:0},[
             {x:0,y:0},
             {x:0,y:this.height},
