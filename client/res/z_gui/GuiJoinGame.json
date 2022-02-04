@@ -15,8 +15,50 @@
         "Tag": 57,
         "Children": [
           {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/background.jpg",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 540.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 97,
+            "ActionTag": -880817858,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "background_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
             "ClipAble": false,
-            "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 172,
               "G": 78,
@@ -30,11 +72,13 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
-              "Y": 0.0
+              "Y": 2.8712
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -44,7 +88,7 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.0,
-              "Y": 0.0
+              "Y": 0.0027
             },
             "PercentWidthEnable": true,
             "PercentHeightEnable": true,
@@ -54,12 +98,19 @@
               "X": 1.0,
               "Y": 1.0
             },
+            "LeftMargin": 0.0,
+            "TopMargin": -2.8712,
+            "BottomMargin": 2.8712,
             "Tag": 58,
             "Children": [
               {
                 "ClipAble": false,
                 "BackColorAlpha": 102,
-                "ComboBoxIndex": 1,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bg_tf.png",
+                  "Plist": ""
+                },
                 "SingleColor": {
                   "R": 150,
                   "G": 200
@@ -72,6 +123,11 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Enable": true,
+                "Scale9OriginX": 33,
+                "Scale9OriginY": 33,
+                "Scale9Width": 34,
+                "Scale9Height": 34,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
@@ -108,10 +164,10 @@
               {
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
-                "FontSize": 35,
+                "FontSize": 40,
                 "IsCustomSize": true,
                 "LabelText": "",
                 "PlaceHolderText": "Enter room id",
@@ -123,21 +179,17 @@
                 },
                 "Position": {
                   "X": 747.335,
-                  "Y": 931.8456
+                  "Y": 926.85
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.3892,
-                  "Y": 0.8628
+                  "Y": 0.8582
                 },
                 "PreSize": {
                   "X": 0.2604,
@@ -145,8 +197,8 @@
                 },
                 "LeftMargin": 497.335,
                 "RightMargin": 922.665,
-                "TopMargin": 108.1544,
-                "BottomMargin": 891.8456,
+                "TopMargin": 113.15,
+                "BottomMargin": 886.85,
                 "Tag": 59,
                 "ActionTag": 1700773116,
                 "Size": {
@@ -157,38 +209,34 @@
                 "ctype": "TextFieldObjectData"
               },
               {
-                "FontSize": 35,
-                "ButtonText": "Find",
+                "FontSize": 40,
+                "ButtonText": "FIND",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
+                "TextColor": {},
                 "DisabledFileData": {
                   "Type": "Default",
                   "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
                 "PressedFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Press.png",
+                  "Type": "Normal",
+                  "Path": "common/rectangle.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Normal.png",
+                  "Type": "Normal",
+                  "Path": "common/rectangle.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 16,
-                "Scale9Height": 14,
+                "Scale9OriginX": 30,
+                "Scale9OriginY": 30,
+                "Scale9Width": 40,
+                "Scale9Height": 40,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -220,21 +268,67 @@
                   "Y": 0.8799
                 },
                 "PreSize": {
-                  "X": 0.1563,
-                  "Y": 0.0741
+                  "X": 0.1562,
+                  "Y": 0.0926
                 },
                 "LeftMargin": 1087.3762,
                 "RightMargin": 532.6238,
-                "TopMargin": 89.7053,
-                "BottomMargin": 910.2947,
+                "TopMargin": 79.7053,
+                "BottomMargin": 900.2947,
                 "Tag": 60,
                 "ActionTag": 684636478,
                 "Size": {
                   "X": 300.0,
-                  "Y": 80.0
+                  "Y": 100.0
                 },
                 "Name": "btnFindRoom",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bg_tf.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 33,
+                "Scale9OriginY": 33,
+                "Scale9Width": 34,
+                "Scale9Height": 34,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1001.4243,
+                  "Y": 475.66
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5216,
+                  "Y": 0.4404
+                },
+                "PreSize": {
+                  "X": 0.75,
+                  "Y": 0.6111
+                },
+                "LeftMargin": 281.4243,
+                "RightMargin": 198.5757,
+                "TopMargin": 274.34,
+                "BottomMargin": 145.66,
+                "Tag": 166,
+                "ActionTag": 148841107,
+                "Size": {
+                  "X": 1440.0,
+                  "Y": 660.0
+                },
+                "Name": "Image_1",
+                "ctype": "ImageViewObjectData"
               },
               {
                 "ItemMargin": 10,
@@ -243,7 +337,6 @@
                 "ScrollDirectionType": 0,
                 "ClipAble": true,
                 "BackColorAlpha": 88,
-                "ComboBoxIndex": 1,
                 "SingleColor": {
                   "R": 150,
                   "G": 150
@@ -256,11 +349,19 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Enable": true,
+                "Scale9OriginX": -33,
+                "Scale9OriginY": -33,
+                "Scale9Width": 66,
+                "Scale9Height": 66,
                 "TouchEnable": true,
-                "AnchorPoint": {},
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
                 "Position": {
-                  "X": 296.7307,
-                  "Y": 156.24
+                  "X": 1001.1591,
+                  "Y": 472.6485
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -268,18 +369,20 @@
                 },
                 "CColor": {},
                 "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.1545,
-                  "Y": 0.1447
+                  "X": 0.5214,
+                  "Y": 0.4376
                 },
                 "PreSize": {
                   "X": 0.7292,
                   "Y": 0.6019
                 },
-                "LeftMargin": 296.7307,
-                "RightMargin": 223.2693,
-                "TopMargin": 273.76,
-                "BottomMargin": 156.24,
+                "LeftMargin": 301.1591,
+                "RightMargin": 218.8409,
+                "TopMargin": 282.3515,
+                "BottomMargin": 147.6485,
                 "Tag": 62,
                 "ActionTag": 969130146,
                 "Size": {
@@ -305,6 +408,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
@@ -332,11 +437,11 @@
                 "Tag": 71,
                 "Children": [
                   {
-                    "FontSize": 30,
-                    "LabelText": "id",
+                    "FontSize": 40,
+                    "LabelText": "ID",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -356,7 +461,7 @@
                     },
                     "Position": {
                       "X": 90.8275,
-                      "Y": 39.8344
+                      "Y": 36.83
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -366,31 +471,31 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.0649,
-                      "Y": 0.4979
+                      "Y": 0.4604
                     },
                     "PreSize": {
-                      "X": 0.045,
-                      "Y": 0.4875
+                      "X": 0.0286,
+                      "Y": 0.575
                     },
-                    "LeftMargin": 59.3275,
-                    "RightMargin": 1277.6725,
-                    "TopMargin": 20.6656,
-                    "BottomMargin": 20.3344,
+                    "LeftMargin": 70.8275,
+                    "RightMargin": 1289.1725,
+                    "TopMargin": 20.17,
+                    "BottomMargin": 13.83,
                     "Tag": 72,
                     "ActionTag": -1933792158,
                     "Size": {
-                      "X": 63.0,
-                      "Y": 39.0
+                      "X": 40.0,
+                      "Y": 46.0
                     },
                     "Name": "Text_2",
                     "ctype": "TextObjectData"
                   },
                   {
-                    "FontSize": 30,
-                    "LabelText": "Room name",
+                    "FontSize": 40,
+                    "LabelText": "ROOM NAME",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -410,7 +515,7 @@
                     },
                     "Position": {
                       "X": 461.6801,
-                      "Y": 39.39
+                      "Y": 36.8299
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -420,31 +525,31 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.3298,
-                      "Y": 0.4924
+                      "Y": 0.4604
                     },
                     "PreSize": {
-                      "X": 0.195,
-                      "Y": 0.4875
+                      "X": 0.18,
+                      "Y": 0.575
                     },
-                    "LeftMargin": 325.1801,
-                    "RightMargin": 801.8199,
-                    "TopMargin": 21.11,
-                    "BottomMargin": 19.89,
+                    "LeftMargin": 335.6801,
+                    "RightMargin": 812.3199,
+                    "TopMargin": 20.1701,
+                    "BottomMargin": 13.8299,
                     "Tag": 73,
                     "ActionTag": 381783872,
                     "Size": {
-                      "X": 273.0,
-                      "Y": 39.0
+                      "X": 252.0,
+                      "Y": 46.0
                     },
                     "Name": "Text_2_0",
                     "ctype": "TextObjectData"
                   },
                   {
-                    "FontSize": 30,
-                    "LabelText": "Map",
+                    "FontSize": 40,
+                    "LabelText": "MAP",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -463,8 +568,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 809.3772,
-                      "Y": 41.5873
+                      "X": 836.8902,
+                      "Y": 36.8299
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -473,32 +578,32 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.5781,
-                      "Y": 0.5198
+                      "X": 0.5978,
+                      "Y": 0.4604
                     },
                     "PreSize": {
-                      "X": 0.0664,
-                      "Y": 0.4875
+                      "X": 0.0629,
+                      "Y": 0.575
                     },
-                    "LeftMargin": 762.8772,
-                    "RightMargin": 544.1228,
-                    "TopMargin": 18.9127,
-                    "BottomMargin": 22.0873,
+                    "LeftMargin": 792.8902,
+                    "RightMargin": 519.1098,
+                    "TopMargin": 20.1701,
+                    "BottomMargin": 13.8299,
                     "Tag": 74,
                     "ActionTag": -270721802,
                     "Size": {
-                      "X": 93.0,
-                      "Y": 39.0
+                      "X": 88.0,
+                      "Y": 46.0
                     },
                     "Name": "Text_2_0_0",
                     "ctype": "TextObjectData"
                   },
                   {
-                    "FontSize": 30,
-                    "LabelText": "Player",
+                    "FontSize": 40,
+                    "LabelText": "PLAYER",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -517,8 +622,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 1165.5975,
-                      "Y": 41.5127
+                      "X": 1200.6,
+                      "Y": 36.8299
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -527,22 +632,22 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.8326,
-                      "Y": 0.5189
+                      "X": 0.8576,
+                      "Y": 0.4604
                     },
                     "PreSize": {
-                      "X": 0.1307,
-                      "Y": 0.4875
+                      "X": 0.1129,
+                      "Y": 0.575
                     },
-                    "LeftMargin": 1074.0975,
-                    "RightMargin": 142.9025,
-                    "TopMargin": 18.9873,
-                    "BottomMargin": 22.0127,
+                    "LeftMargin": 1121.6,
+                    "RightMargin": 120.4,
+                    "TopMargin": 20.1701,
+                    "BottomMargin": 13.8299,
                     "Tag": 75,
                     "ActionTag": -804052646,
                     "Size": {
-                      "X": 183.0,
-                      "Y": 39.0
+                      "X": 158.0,
+                      "Y": 46.0
                     },
                     "Name": "Text_2_0_0_0",
                     "ctype": "TextObjectData"
@@ -557,174 +662,11 @@
                 "ctype": "PanelObjectData"
               },
               {
-                "FontSize": 35,
-                "ButtonText": "X",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
-                  "Plist": ""
-                },
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Press.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Normal.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 16,
-                "Scale9Height": 14,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 1802.2253,
-                  "Y": 1006.497
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.9387,
-                  "Y": 0.9319
-                },
-                "PreSize": {
-                  "X": 0.0781,
-                  "Y": 0.0741
-                },
-                "LeftMargin": 1727.2253,
-                "RightMargin": 42.7747,
-                "TopMargin": 33.5029,
-                "BottomMargin": 966.497,
-                "Tag": 63,
-                "ActionTag": 415734544,
-                "Size": {
-                  "X": 150.0,
-                  "Y": 80.0
-                },
-                "Name": "btnClose",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 35,
-                "ButtonText": "Refresh",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
-                  "Plist": ""
-                },
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Press.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Normal.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 16,
-                "Scale9Height": 14,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 1005.1443,
-                  "Y": 91.7034
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.5235,
-                  "Y": 0.0849
-                },
-                "PreSize": {
-                  "X": 0.1563,
-                  "Y": 0.0741
-                },
-                "LeftMargin": 855.1443,
-                "RightMargin": 764.8557,
-                "TopMargin": 948.2966,
-                "BottomMargin": 51.7034,
-                "Tag": 64,
-                "ActionTag": -791048239,
-                "Size": {
-                  "X": 300.0,
-                  "Y": 80.0
-                },
-                "Name": "btnRefresh",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 100,
+                "FontSize": 60,
                 "LabelText": "No games...",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/classic.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -750,25 +692,29 @@
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {},
+                "CColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.5355,
                   "Y": 0.47
                 },
                 "PreSize": {
-                  "X": 0.2359,
-                  "Y": 0.0815
+                  "X": 0.1745,
+                  "Y": 0.0639
                 },
-                "LeftMargin": 801.6277,
-                "RightMargin": 665.3723,
-                "TopMargin": 528.4282,
-                "BottomMargin": 463.5718,
+                "LeftMargin": 860.6277,
+                "RightMargin": 724.3723,
+                "TopMargin": 537.9282,
+                "BottomMargin": 473.0718,
                 "Tag": 65,
                 "ActionTag": -764369954,
                 "Size": {
-                  "X": 453.0,
-                  "Y": 88.0
+                  "X": 335.0,
+                  "Y": 69.0
                 },
                 "Name": "lbEmpty",
                 "ctype": "TextObjectData"
@@ -781,6 +727,158 @@
             },
             "Name": "Panel_1",
             "ctype": "PanelObjectData"
+          },
+          {
+            "FontSize": 35,
+            "ButtonText": "REFRESH",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "TextColor": {},
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 70,
+            "Scale9Height": 78,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1211.2274,
+              "Y": 88.3158
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.6308,
+              "Y": 0.0818
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.0926
+            },
+            "LeftMargin": 1061.2274,
+            "RightMargin": 558.7726,
+            "TopMargin": 941.6842,
+            "BottomMargin": 38.3158,
+            "Tag": 142,
+            "ActionTag": 2008243358,
+            "Size": {
+              "X": 300.0,
+              "Y": 100.0
+            },
+            "Name": "btnRefresh",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 35,
+            "ButtonText": "BACK",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "TextColor": {},
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 40,
+            "Scale9Height": 40,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 851.5624,
+              "Y": 86.3429
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4435,
+              "Y": 0.0799
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.0926
+            },
+            "LeftMargin": 701.5624,
+            "RightMargin": 918.4376,
+            "TopMargin": 943.6571,
+            "BottomMargin": 36.3429,
+            "Tag": 143,
+            "ActionTag": 1140125633,
+            "Size": {
+              "X": 300.0,
+              "Y": 100.0
+            },
+            "Name": "btnClose",
+            "ctype": "ButtonObjectData"
           }
         ],
         "Size": {
@@ -791,11 +889,13 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../common/background.jpg",
+        "../common/bg_tf.png",
+        "../common/btn_back.png",
+        "../common/btn_ok2.png",
+        "../common/rectangle.png",
         "../Default/Button_Disable.png",
-        "../Default/Button_Normal.png",
-        "../Default/Button_Press.png",
-        "../fonts/bold.ttf",
-        "../fonts/classic.ttf"
+        "../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
     }

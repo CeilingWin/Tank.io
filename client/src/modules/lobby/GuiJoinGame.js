@@ -11,6 +11,9 @@ var GuiJoinGame = BaseGui.extend({
 
     initGui: function(){
         MatchMaker.getIns().getAvailableRooms(this.reloadAvailableRooms.bind(this));
+        GuiUtils.addEventOnHover(this.btnFindRoom,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
+        GuiUtils.addEventOnHover(this.btnClose,res.COMMON_BTN_BACK2_PNG,res.COMMON_BTN_BACK_PNG);
+        GuiUtils.addEventOnHover(this.btnRefresh,res.COMMON_BTN_OK2_PNG,res.COMMON_BG_TF2_PNG);
     },
 
     onTouchUIEnded: function(sender){

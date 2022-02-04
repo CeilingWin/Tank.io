@@ -16,7 +16,11 @@
         "Children": [
           {
             "ClipAble": false,
-            "ComboBoxIndex": 1,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
+              "Plist": ""
+            },
             "SingleColor": {
               "R": 150,
               "G": 200
@@ -29,6 +33,11 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Enable": true,
+            "Scale9OriginX": 33,
+            "Scale9OriginY": 33,
+            "Scale9Width": 34,
+            "Scale9Height": 34,
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -64,10 +73,10 @@
                   "Plist": ""
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 5,
-                "Scale9Width": 11,
-                "Scale9Height": 6,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -5,
+                "Scale9Width": 30,
+                "Scale9Height": 10,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -105,11 +114,12 @@
                 "Tag": 77,
                 "Children": [
                   {
-                    "FontSize": 30,
+                    "IsCustomSize": true,
+                    "FontSize": 40,
                     "LabelText": "23",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -135,40 +145,36 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {
-                      "R": 26,
-                      "G": 26,
-                      "B": 26
-                    },
+                    "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.0566,
                       "Y": 0.4924
                     },
                     "PreSize": {
-                      "X": 0.045,
-                      "Y": 0.4875
+                      "X": 0.0714,
+                      "Y": 0.575
                     },
-                    "LeftMargin": 47.6715,
-                    "RightMargin": 1289.3285,
-                    "TopMargin": 21.11,
-                    "BottomMargin": 19.89,
+                    "LeftMargin": 29.1715,
+                    "RightMargin": 1270.8285,
+                    "TopMargin": 17.61,
+                    "BottomMargin": 16.39,
                     "Tag": 76,
                     "ActionTag": 992648030,
                     "Size": {
-                      "X": 63.0,
-                      "Y": 39.0
+                      "X": 100.0,
+                      "Y": 46.0
                     },
                     "Name": "lbRoomId",
                     "ctype": "TextObjectData"
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 40,
                     "LabelText": "Room123",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -196,11 +202,7 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {
-                      "R": 26,
-                      "G": 26,
-                      "B": 26
-                    },
+                    "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.3134,
@@ -225,11 +227,11 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 40,
                     "LabelText": "Map 1",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -257,11 +259,7 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {
-                      "R": 26,
-                      "G": 26,
-                      "B": 26
-                    },
+                    "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.5999,
@@ -286,11 +284,11 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 40,
                     "LabelText": "[1/10]",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "fonts/bold.ttf",
+                      "Path": "fonts/arialbd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -318,11 +316,7 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.1019
                     },
-                    "CColor": {
-                      "R": 26,
-                      "G": 26,
-                      "B": 26
-                    },
+                    "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.8541,
@@ -372,8 +366,9 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "../../../common/bg_tf.png",
         "../../../Default/Button_Disable.png",
-        "../../../fonts/bold.ttf"
+        "../../../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
     }

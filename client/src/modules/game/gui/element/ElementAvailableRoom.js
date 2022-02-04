@@ -12,6 +12,11 @@ var ElementAvailableRoom = ccui.Layout.extend(_injectCCS).extend({
         this.setContentSize(this.pn.getContentSize());
         this.btn.addClickEventListener(this.onClick.bind(this));
         this.setCascadeOpacityEnabled(true);
+        GuiUtils.addEventOnHover(this,()=>{
+            this.pn.setBackGroundImage(res.COMMON_BG_TF2_PNG);
+        },()=>{
+            this.pn.setBackGroundImage(res.COMMON_BG_TF_PNG);
+        })
     },
 
     load: function(roomData){
