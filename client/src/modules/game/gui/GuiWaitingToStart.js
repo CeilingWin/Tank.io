@@ -15,6 +15,10 @@ var GuiWaitingToStart = BaseGui.extend({
         let currentTime = Date.now();
         let timeRemaining = Math.round(this.gameStartAt - currentTime);
         timeRemaining = Math.max(0,timeRemaining);
-        this.lbTimeRemaining.setString(timeRemaining);
+        timeRemaining = Math.round(timeRemaining/1000);
+        if (timeRemaining !== this.lastScond){
+            this.lbTimeRemaining.setString(timeRemaining);
+            this.lastScond = timeRemaining;
+        }
     }
 })

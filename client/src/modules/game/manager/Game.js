@@ -104,4 +104,9 @@ var Game = cc.Class.extend({
             this.lastTimeSendInput = currentTime;
         }
     },
+
+    endGame: function (){
+        this.input.stop();
+        this.guiControl.runAction(cc.fadeOut(1.5));
+    }
 })

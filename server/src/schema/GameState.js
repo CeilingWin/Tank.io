@@ -106,20 +106,21 @@ export class GameState extends Schema {
 
     handleGameUpdate() {
         this.game.update();
-        // if (this.game.isEndGame()) {
-        //     this.showLeaderBoard();
-        // }
+        if (this.game.isEndGame()) {
+            this.showLeaderBoard();
+        }
     }
 
     showLeaderBoard() {
         console.log("Show leaderboard");
-        this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOARD;
+        const TIME_DELAY = 2000;
+        this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOAR + TIME_DELAY;
         let leaderBoard = this.game.getLeaderBoard();
         leaderBoard = leaderBoard.map(player => {
             player.username = this.players.get(player.playerId).username;
             return player;
         })
-        this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD, leaderBoard);
+        setTimeout(()=>this.room.broadcast(TYPE_MESSAGE.SHOW_LEADER_BOARD, leaderBoard),TIME_DELAY);
         this.state = GC.ROOM_STATE.SHOW_LEADER_BOARD;
         // delete all afk player
         for (let playerId of this.players.keys()) {

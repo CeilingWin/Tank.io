@@ -7,7 +7,7 @@ var GC = {
     },
     // time: ms
     TIME_TO_READY : 2000,
-    TIME_SHOW_LEADER_BOARD : 5000,
+    TIME_SHOW_LEADER_BOARD : 10000,
     RENDER_DELAY : 100,
     TIME_TO_SYNC_CS : 1000/20,
     DT: 1000/60,

@@ -15,6 +15,7 @@ var GuiGameControl = BaseGui.extend({
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
         this.subEvent(EventId.KEY_M_PRESS,this.onResizeMinimap.bind(this));
+        this.setCascadeOpacityEnabled(true);
     },
 
     initGui: function(){

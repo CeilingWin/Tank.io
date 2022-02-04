@@ -99,7 +99,8 @@ var GameRoom = cc.Class.extend({
     },
 
     handleEndGame: function (){
-        this.game.input.stop();
+        this.game.endGame();
+        this.gameScene.stopWaiting();
     },
 
     showLeaderboard: function (data){

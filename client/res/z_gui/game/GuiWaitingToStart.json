@@ -15,63 +15,98 @@
         "Tag": 27,
         "Children": [
           {
-            "IsCustomSize": true,
-            "FontSize": 60,
-            "LabelText": "Text Label",
-            "FontResource": {
-              "Type": "Normal",
-              "Path": "fonts/bold.ttf",
-              "Plist": ""
-            },
-            "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
-            "OutlineColor": {
-              "G": 0,
-              "B": 0
-            },
-            "ShadowColor": {
-              "R": 110,
-              "G": 110,
-              "B": 110
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
+            "AnchorPoint": {},
             "Position": {
               "X": 960.0,
-              "Y": 540.0
+              "Y": 723.6
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
             "CColor": {},
-            "IconVisible": false,
+            "IconVisible": true,
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.5
+              "Y": 0.67
             },
             "PreSize": {
-              "X": 0.4167,
-              "Y": 0.0926
+              "X": 0.0,
+              "Y": 0.0
             },
-            "LeftMargin": 560.0,
-            "RightMargin": 560.0,
-            "TopMargin": 490.0,
-            "BottomMargin": 490.0,
-            "Tag": 28,
-            "ActionTag": -1768300474,
+            "LeftMargin": 960.0,
+            "RightMargin": 960.0,
+            "TopMargin": 356.4,
+            "BottomMargin": 723.6,
+            "Tag": 393,
+            "Children": [
+              {
+                "IsCustomSize": true,
+                "FontSize": 100,
+                "LabelText": "Text Label",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arialbd.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -400.0,
+                "RightMargin": -400.0,
+                "TopMargin": -50.0,
+                "BottomMargin": -50.0,
+                "Tag": 28,
+                "ActionTag": -1768300474,
+                "Size": {
+                  "X": 800.0,
+                  "Y": 100.0
+                },
+                "Name": "lbTimeRemaining",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -417296136,
             "Size": {
-              "X": 800.0,
-              "Y": 100.0
+              "X": 0.0,
+              "Y": 0.0
             },
-            "Name": "lbTimeRemaining",
-            "ctype": "TextObjectData"
+            "Name": "ndTime",
+            "ctype": "SingleNodeObjectData"
           }
         ],
         "Size": {
@@ -82,7 +117,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/bold.ttf"
+        "../../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
     }
