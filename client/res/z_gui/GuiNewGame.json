@@ -457,7 +457,7 @@
                         },
                         "FontSize": 35,
                         "IsCustomSize": true,
-                        "LabelText": "",
+                        "LabelText": "4",
                         "PlaceHolderText": "",
                         "MaxLengthEnable": true,
                         "MaxLengthText": 3,

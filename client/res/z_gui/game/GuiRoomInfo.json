@@ -17,6 +17,51 @@
           {
             "FileData": {
               "Type": "Normal",
+              "Path": "common/background.jpg",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0002,
+              "Y": 540.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 0.0002,
+            "RightMargin": -0.0002,
+            "Tag": 363,
+            "ActionTag": -502764456,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "background_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
               "Path": "common/reload.png",
               "Plist": ""
             },
@@ -45,13 +90,13 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.0729,
-              "Y": 0.0731
+              "X": 0.0667,
+              "Y": 0.1185
             },
-            "LeftMargin": 890.0,
-            "RightMargin": 890.0,
-            "TopMargin": 500.5,
-            "BottomMargin": 500.5,
+            "LeftMargin": 896.0,
+            "RightMargin": 896.0,
+            "TopMargin": 476.0,
+            "BottomMargin": 476.0,
             "Tag": 12,
             "ActionTag": -1617562261,
             "Size": {
@@ -63,11 +108,11 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 70,
-            "LabelText": "Waiting...",
+            "FontSize": 50,
+            "LabelText": "Waiting for other players...",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/classic.ttf",
+              "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -122,11 +167,11 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 40,
-            "LabelText": "Room ID: ",
+            "FontSize": 30,
+            "LabelText": "Room ID : ",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/bold.ttf",
+              "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
             "OutlineColor": {
@@ -145,8 +190,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 520.0,
-              "Y": 1013.2009
+              "X": 525.743,
+              "Y": 1027.5657
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -155,18 +200,18 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.2708,
-              "Y": 0.9381
+              "X": 0.2738,
+              "Y": 0.9514
             },
             "PreSize": {
               "X": 0.5208,
               "Y": 0.0481
             },
             "HorizontalEdge": "LeftEdge",
-            "LeftMargin": 20.0,
-            "RightMargin": 900.0,
-            "TopMargin": 40.7991,
-            "BottomMargin": 987.2009,
+            "LeftMargin": 25.743,
+            "RightMargin": 894.2571,
+            "TopMargin": 26.4343,
+            "BottomMargin": 1001.5657,
             "Tag": 27,
             "ActionTag": -1326157977,
             "Size": {
@@ -178,11 +223,11 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 40,
-            "LabelText": "Players: 0",
+            "FontSize": 30,
+            "LabelText": "Players   : 0",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/bold.ttf",
+              "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
             "OutlineColor": {
@@ -201,8 +246,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 520.0,
-              "Y": 941.2
+              "X": 525.743,
+              "Y": 918.238
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -211,18 +256,18 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.2708,
-              "Y": 0.8715
+              "X": 0.2738,
+              "Y": 0.8502
             },
             "PreSize": {
               "X": 0.5208,
               "Y": 0.0481
             },
             "HorizontalEdge": "LeftEdge",
-            "LeftMargin": 20.0,
-            "RightMargin": 900.0,
-            "TopMargin": 112.8,
-            "BottomMargin": 915.2,
+            "LeftMargin": 25.743,
+            "RightMargin": 894.2571,
+            "TopMargin": 135.762,
+            "BottomMargin": 892.238,
             "Tag": 11,
             "ActionTag": 776845619,
             "Size": {
@@ -233,38 +278,34 @@
             "ctype": "TextObjectData"
           },
           {
-            "FontSize": 35,
+            "FontSize": 40,
             "ButtonText": "Cancel",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/bold.ttf",
+              "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/btn_back.png",
               "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
             "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9Width": 70,
+            "Scale9Height": 78,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -282,8 +323,64 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 974.0656,
-              "Y": 218.2686
+              "X": 960.0,
+              "Y": 201.53
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.1866
+            },
+            "PreSize": {
+              "X": 0.2604,
+              "Y": 0.0926
+            },
+            "LeftMargin": 710.0,
+            "RightMargin": 710.0,
+            "TopMargin": 828.47,
+            "BottomMargin": 151.53,
+            "Tag": 48,
+            "ActionTag": -145021712,
+            "Size": {
+              "X": 500.0,
+              "Y": 100.0
+            },
+            "Name": "btnCancel",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 30,
+            "LabelText": "Room     : ",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 525.743,
+              "Y": 972.9019
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -292,25 +389,26 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5073,
-              "Y": 0.2021
+              "X": 0.2738,
+              "Y": 0.9008
             },
             "PreSize": {
-              "X": 0.2083,
-              "Y": 0.0741
+              "X": 0.5208,
+              "Y": 0.0481
             },
-            "LeftMargin": 774.0656,
-            "RightMargin": 745.9343,
-            "TopMargin": 821.7314,
-            "BottomMargin": 178.2686,
-            "Tag": 48,
-            "ActionTag": -145021712,
+            "HorizontalEdge": "LeftEdge",
+            "LeftMargin": 25.743,
+            "RightMargin": 894.2571,
+            "TopMargin": 81.0981,
+            "BottomMargin": 946.9019,
+            "Tag": 364,
+            "ActionTag": 1075795968,
             "Size": {
-              "X": 400.0,
-              "Y": 80.0
+              "X": 1000.0,
+              "Y": 52.0
             },
-            "Name": "btnCancel",
-            "ctype": "ButtonObjectData"
+            "Name": "lbRoomName",
+            "ctype": "TextObjectData"
           }
         ],
         "Size": {
@@ -321,12 +419,11 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../common/background.jpg",
+        "../../common/btn_back.png",
         "../../common/reload.png",
         "../../Default/Button_Disable.png",
-        "../../Default/Button_Normal.png",
-        "../../Default/Button_Press.png",
-        "../../fonts/bold.ttf",
-        "../../fonts/classic.ttf"
+        "../../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
     }

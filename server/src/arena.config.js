@@ -24,7 +24,7 @@ export default Arena.default({
             isPrivate: false
         });
         if (process.env.NODE_ENV !== "production") {
-            gameServer.simulateLatency(200);
+            gameServer.simulateLatency(50);
         }
     },
 

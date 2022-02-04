@@ -27,7 +27,7 @@ var GuiNewGame = BaseGui.extend({
             }
         }
         this.numMap = numMap;
-        let mapId = LocalStorage.getMapId();
+        let mapId = Number(LocalStorage.getMapId());
         this.loadMap(mapId);
     },
 
