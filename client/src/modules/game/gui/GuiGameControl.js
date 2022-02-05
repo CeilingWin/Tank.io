@@ -46,7 +46,11 @@ var GuiGameControl = BaseGui.extend({
         tanks.forEach((tank,id)=>{
             let sprTankPos = new cc.Sprite();
             if (tank.isMe) sprTankPos.setTexture("res/common/blue_dot.png");
-            else sprTankPos.setTexture("res/common/red_dot.png");
+            else {
+                sprTankPos.setTexture("res/common/red_dot.png");
+                // todo: hide tank
+                // sprTankPos.setVisible(false);
+            }
             sprTankPos.tankId = id;
             this.sprMinimap.addChild(sprTankPos);
             this.tanks.push(sprTankPos);
