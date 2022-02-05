@@ -47,8 +47,8 @@
         </Folder>
         <Folder Name="map">
           <Folder Name="minimap">
-            <Image Name="map1.png" />
             <Image Name="map0.png" />
+            <Image Name="map1.png" />
           </Folder>
           <Folder Name="textures">
             <Folder Name="deco">
@@ -182,9 +182,9 @@
           <Project Name="GuiJoinGame.csd" Type="Scene" />
           <Project Name="GuiNewGame.csd" Type="Scene" />
           <Project Name="GuiSelectTank.csd" Type="Scene" />
+          <Project Name="GuiWaiting.csd" Type="Scene" />
           <Project Name="PopupNotification.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
-          <Project Name="GuiWaiting.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>

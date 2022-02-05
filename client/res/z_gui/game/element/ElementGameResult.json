@@ -16,7 +16,11 @@
         "Children": [
           {
             "ClipAble": false,
-            "ComboBoxIndex": 1,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/bg_tf.png",
+              "Plist": ""
+            },
             "SingleColor": {
               "R": 30,
               "G": 144
@@ -29,8 +33,11 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
+            "Scale9Enable": true,
+            "Scale9OriginX": 33,
+            "Scale9OriginY": 33,
+            "Scale9Width": 34,
+            "Scale9Height": 34,
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -44,7 +51,7 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.0,
-              "Y": 0.0176
+              "Y": 0.0265
             },
             "PreSize": {
               "X": 1.0,
@@ -56,11 +63,11 @@
             "Children": [
               {
                 "IsCustomSize": true,
-                "FontSize": 30,
+                "FontSize": 35,
                 "LabelText": "ceilingwin",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
                 "VerticalAlignmentType": "VT_Center",
@@ -81,46 +88,42 @@
                 },
                 "Position": {
                   "X": 636.3994,
-                  "Y": 53.8415
+                  "Y": 39.85
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.3977,
-                  "Y": 0.4487
+                  "Y": 0.4981
                 },
                 "PreSize": {
                   "X": 0.375,
-                  "Y": 0.6667
+                  "Y": 0.875
                 },
                 "LeftMargin": 336.3994,
                 "RightMargin": 663.6006,
-                "TopMargin": 26.1585,
-                "BottomMargin": 13.8415,
+                "TopMargin": 5.15,
+                "BottomMargin": 4.85,
                 "Tag": 38,
                 "ActionTag": 1906572431,
                 "Size": {
                   "X": 600.0,
-                  "Y": 80.0
+                  "Y": 70.0
                 },
                 "Name": "lbName",
                 "ctype": "TextObjectData"
               },
               {
                 "IsCustomSize": true,
-                "FontSize": 30,
+                "FontSize": 35,
                 "LabelText": "2",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
                 "VerticalAlignmentType": "VT_Center",
@@ -140,47 +143,43 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 1072.5178,
-                  "Y": 53.8414
+                  "X": 959.52,
+                  "Y": 39.85
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.6703,
-                  "Y": 0.4487
+                  "X": 0.5997,
+                  "Y": 0.4981
                 },
                 "PreSize": {
                   "X": 0.0625,
-                  "Y": 0.6667
+                  "Y": 0.875
                 },
-                "LeftMargin": 1022.5178,
-                "RightMargin": 477.4822,
-                "TopMargin": 26.1586,
-                "BottomMargin": 13.8414,
+                "LeftMargin": 909.52,
+                "RightMargin": 590.48,
+                "TopMargin": 5.15,
+                "BottomMargin": 4.85,
                 "Tag": 39,
                 "ActionTag": 1438705824,
                 "Size": {
                   "X": 100.0,
-                  "Y": 80.0
+                  "Y": 70.0
                 },
                 "Name": "lbKills",
                 "ctype": "TextObjectData"
               },
               {
                 "IsCustomSize": true,
-                "FontSize": 30,
+                "FontSize": 35,
                 "LabelText": "1M2",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
                 "VerticalAlignmentType": "VT_Center",
@@ -200,47 +199,43 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 1403.0322,
-                  "Y": 53.8414
+                  "X": 1403.0326,
+                  "Y": 39.85
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.8769,
-                  "Y": 0.4487
+                  "Y": 0.4981
                 },
                 "PreSize": {
                   "X": 0.1875,
-                  "Y": 0.6667
+                  "Y": 0.875
                 },
-                "LeftMargin": 1253.0322,
-                "RightMargin": 46.9678,
-                "TopMargin": 26.1586,
-                "BottomMargin": 13.8414,
+                "LeftMargin": 1253.0326,
+                "RightMargin": 46.9674,
+                "TopMargin": 5.15,
+                "BottomMargin": 4.85,
                 "Tag": 40,
                 "ActionTag": -1254114676,
                 "Size": {
                   "X": 300.0,
-                  "Y": 80.0
+                  "Y": 70.0
                 },
                 "Name": "lbDamage",
                 "ctype": "TextObjectData"
               },
               {
                 "IsCustomSize": true,
-                "FontSize": 30,
+                "FontSize": 35,
                 "LabelText": "1",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "fonts/bold.ttf",
+                  "Path": "fonts/arialbd.ttf",
                   "Plist": ""
                 },
                 "VerticalAlignmentType": "VT_Center",
@@ -261,35 +256,31 @@
                 },
                 "Position": {
                   "X": 115.0233,
-                  "Y": 56.54
+                  "Y": 39.85
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.0719,
-                  "Y": 0.4712
+                  "Y": 0.4981
                 },
                 "PreSize": {
                   "X": 0.0625,
-                  "Y": 0.6667
+                  "Y": 0.875
                 },
                 "LeftMargin": 65.0233,
                 "RightMargin": 1434.9767,
-                "TopMargin": 23.46,
-                "BottomMargin": 16.54,
+                "TopMargin": 5.15,
+                "BottomMargin": 4.85,
                 "Tag": 51,
                 "ActionTag": 345400000,
                 "Size": {
                   "X": 100.0,
-                  "Y": 80.0
+                  "Y": 70.0
                 },
                 "Name": "lbRank",
                 "ctype": "TextObjectData"
@@ -298,7 +289,7 @@
             "ActionTag": -1917619694,
             "Size": {
               "X": 1600.0,
-              "Y": 120.0
+              "Y": 80.0
             },
             "Name": "pn",
             "ctype": "PanelObjectData"
@@ -306,13 +297,14 @@
         ],
         "Size": {
           "X": 1600.0,
-          "Y": 120.0
+          "Y": 80.0
         },
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "../../../fonts/bold.ttf"
+        "../../../common/bg_tf.png",
+        "../../../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
     }
