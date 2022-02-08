@@ -112,7 +112,6 @@ export class GameState extends Schema {
     }
 
     showLeaderBoard() {
-        console.log("Show leaderboard");
         const TIME_DELAY = 2000;
         this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOAR + TIME_DELAY;
         let leaderBoard = this.game.getLeaderBoard();
@@ -152,5 +151,6 @@ schema.defineTypes(GameState, {
     maxPlayer: "number",
     mapId: "number",
     roomName: "string",
-    gameStartAt: "number"
+    gameStartAt: "number",
+    timeFinishShowLeaderBoard: "number"
 });

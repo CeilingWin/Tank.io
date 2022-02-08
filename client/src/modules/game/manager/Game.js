@@ -30,6 +30,7 @@ var Game = cc.Class.extend({
         let playerId = playerData["id"];
         let tank = new Tank(playerData["tankType"], playerData["skin"]);
         tank.setPosition(tankData.x,tankData.y);
+        tank.playerId = playerId;
         this.mapLayer.addTankToMap(tank);
         this.tanks.set(playerId,tank);
         tank.setData(playerData["username"]);
@@ -74,6 +75,7 @@ var Game = cc.Class.extend({
         this.tanks.forEach((tank,id)=>{
             let tankData = tanksData.get(id);
             tank.updateData(tankData);
+            // if (tank.playerId === this.getFollowTank().playerId &&)
         });
     },
 

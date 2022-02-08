@@ -59,9 +59,66 @@
               "X": 1920.0,
               "Y": 1080.0
             },
-            "VisibleForFrame": false,
             "Name": "Panel_3",
             "ctype": "PanelObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 25,
+            "LabelText": "Next game begins in 20 seconds",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/arialbd.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 171.36
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.1587
+            },
+            "PreSize": {
+              "X": 0.5208,
+              "Y": 0.0269
+            },
+            "LeftMargin": 460.0,
+            "RightMargin": 460.0,
+            "TopMargin": 894.14,
+            "BottomMargin": 156.86,
+            "Tag": 53,
+            "ActionTag": 2070336792,
+            "Size": {
+              "X": 1000.0,
+              "Y": 29.0
+            },
+            "Name": "lbNextGame",
+            "ctype": "TextObjectData"
           },
           {
             "FileData": {
@@ -80,18 +137,18 @@
             },
             "Position": {
               "X": 960.0,
-              "Y": 494.62
+              "Y": 520.62
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 0.8,
+              "ScaleY": 0.8
             },
             "CColor": {},
             "IconVisible": false,
             "PositionPercentXEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.458
+              "Y": 0.4821
             },
             "PreSize": {
               "X": 0.8438,
@@ -99,8 +156,8 @@
             },
             "LeftMargin": 150.0,
             "RightMargin": 150.0,
-            "TopMargin": 250.38,
-            "BottomMargin": 159.62,
+            "TopMargin": 224.38,
+            "BottomMargin": 185.62,
             "Tag": 44,
             "ActionTag": 1272337669,
             "Size": {
@@ -142,18 +199,18 @@
             },
             "Position": {
               "X": 960.0,
-              "Y": 495.8
+              "Y": 518.1636
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 0.8,
+              "ScaleY": 0.8
             },
             "CColor": {},
             "IconVisible": false,
             "PositionPercentXEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.4591
+              "Y": 0.4798
             },
             "PreSize": {
               "X": 0.8333,
@@ -161,8 +218,8 @@
             },
             "LeftMargin": 160.0,
             "RightMargin": 160.0,
-            "TopMargin": 259.2,
-            "BottomMargin": 170.8,
+            "TopMargin": 236.8364,
+            "BottomMargin": 193.1636,
             "Tag": 29,
             "ActionTag": 1677870799,
             "Size": {
@@ -190,29 +247,32 @@
             "Scale9Width": 1,
             "Scale9Height": 1,
             "TouchEnable": true,
-            "AnchorPoint": {},
+            "AnchorPoint": {
+              "ScaleX": 0.5
+            },
             "Position": {
-              "X": 160.8338,
-              "Y": 830.9293
+              "X": 960.0,
+              "Y": 789.93
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 0.8,
+              "ScaleY": 0.8
             },
             "CColor": {},
             "IconVisible": false,
+            "PositionPercentXEnabled": true,
             "PrePosition": {
-              "X": 0.0838,
-              "Y": 0.7694
+              "X": 0.5,
+              "Y": 0.7314
             },
             "PreSize": {
               "X": 0.8333,
               "Y": 0.0741
             },
-            "LeftMargin": 160.8338,
-            "RightMargin": 159.1663,
-            "TopMargin": 169.0707,
-            "BottomMargin": 830.9293,
+            "LeftMargin": 160.0,
+            "RightMargin": 160.0,
+            "TopMargin": 210.07,
+            "BottomMargin": 789.93,
             "Tag": 58,
             "Children": [
               {
@@ -480,8 +540,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 1542.3529,
-              "Y": 975.5417
+              "X": 1547.6229,
+              "Y": 962.3583
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -492,17 +552,17 @@
             },
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.8033,
-              "Y": 0.9033
+              "X": 0.8061,
+              "Y": 0.8911
             },
             "PreSize": {
               "X": 0.1594,
               "Y": 0.1065
             },
-            "LeftMargin": 1389.3529,
-            "RightMargin": 224.6471,
-            "TopMargin": 46.9583,
-            "BottomMargin": 918.0417,
+            "LeftMargin": 1394.6229,
+            "RightMargin": 219.3771,
+            "TopMargin": 60.1417,
+            "BottomMargin": 904.8583,
             "Tag": 30,
             "ActionTag": -342174727,
             "Size": {
@@ -537,10 +597,10 @@
               "Plist": ""
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 15,
-            "Scale9OriginY": 11,
-            "Scale9Width": 70,
-            "Scale9Height": 78,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 40,
+            "Scale9Height": 40,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -559,7 +619,7 @@
             },
             "Position": {
               "X": 960.0,
-              "Y": 79.53
+              "Y": 109.53
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -570,21 +630,21 @@
             "PositionPercentXEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.0736
+              "Y": 0.1014
             },
             "PreSize": {
               "X": 0.2604,
-              "Y": 0.0926
+              "Y": 0.0741
             },
             "LeftMargin": 710.0,
             "RightMargin": 710.0,
-            "TopMargin": 950.47,
-            "BottomMargin": 29.53,
+            "TopMargin": 930.47,
+            "BottomMargin": 69.53,
             "Tag": 24,
             "ActionTag": -1316159109,
             "Size": {
               "X": 500.0,
-              "Y": 100.0
+              "Y": 80.0
             },
             "Name": "btnBack",
             "ctype": "ButtonObjectData"

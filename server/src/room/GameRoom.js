@@ -1,5 +1,5 @@
 import { Room } from "@colyseus/core";
-import { GameState } from "../schema/GameState.js";
+import { GameState } from "../states/RoomState.js";
 import { Player } from "../entity/Player.js";
 import { GC } from "../Constant.js";
 import { GameConfig } from "../config/GameConfig.js";
