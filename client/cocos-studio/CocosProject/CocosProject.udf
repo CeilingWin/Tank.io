@@ -20,7 +20,7 @@
           <FilePathData Path="z_gui/GuiJoinGame.csd" />
           <FilePathData Path="z_gui/ElementSkinTank.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="z_gui/SceneLobby.csd" />
+        <ActiveDocument Path="z_gui/game/GuiGameResult.csd" />
       </Value>
     </Item>
   </Properties>
