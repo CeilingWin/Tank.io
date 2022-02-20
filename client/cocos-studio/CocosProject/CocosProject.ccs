@@ -35,6 +35,7 @@
           <Image Name="reload.png" />
           <Image Name="rounded-rectangle.png" />
           <Image Name="settings.png" />
+          <Image Name="bullets.png" />
         </Folder>
         <Folder Name="fonts">
           <TTF Name="arial.ttf" />

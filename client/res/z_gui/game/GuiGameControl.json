@@ -183,7 +183,7 @@
                   "Y": 0.0
                 },
                 "LeftMargin": 27.9571,
-                "RightMargin": -72.9572,
+                "RightMargin": -72.9571,
                 "TopMargin": 9.4487,
                 "BottomMargin": -32.4487,
                 "Tag": 80,
@@ -665,7 +665,7 @@
             "AnchorPoint": {},
             "Position": {
               "X": 960.0,
-              "Y": 104.0
+              "Y": 65.0
             },
             "Scale": {
               "ScaleX": 0.85,
@@ -676,7 +676,7 @@
             "PositionPercentXEnabled": true,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.0963
+              "Y": 0.0602
             },
             "PreSize": {
               "X": 0.0,
@@ -685,8 +685,8 @@
             "VerticalEdge": "TopEdge",
             "LeftMargin": 960.0,
             "RightMargin": 960.0,
-            "TopMargin": 976.0,
-            "BottomMargin": 104.0,
+            "TopMargin": 1015.0,
+            "BottomMargin": 65.0,
             "Tag": 58,
             "Children": [
               {
@@ -1044,7 +1044,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 960.0002,
+              "X": 960.0,
               "Y": 828.8344
             },
             "Scale": {
@@ -1059,11 +1059,11 @@
               "Y": 0.7674
             },
             "PreSize": {
-              "X": 0.7813,
+              "X": 0.7812,
               "Y": 0.1389
             },
-            "LeftMargin": 210.0002,
-            "RightMargin": 209.9998,
+            "LeftMargin": 210.0,
+            "RightMargin": 210.0,
             "TopMargin": 176.1656,
             "BottomMargin": 753.8344,
             "Tag": 6,
@@ -1149,6 +1149,142 @@
             },
             "Name": "btnBack",
             "ctype": "ButtonObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": -1.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": -0.0009
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": 1920.0,
+            "TopMargin": 1081.0,
+            "BottomMargin": -1.0,
+            "Tag": 48,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "common/bullets.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 879.9532,
+                  "Y": 85.0127
+                },
+                "Scale": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 829.9532,
+                "RightMargin": -929.9532,
+                "TopMargin": -135.0127,
+                "BottomMargin": 35.0127,
+                "Tag": 47,
+                "ActionTag": -1541425840,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 60.0
+                },
+                "Name": "bullets_1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 28,
+                "LabelText": "99/99",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arialbd.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 954.132,
+                  "Y": 82.0098
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 904.132,
+                "RightMargin": -1004.132,
+                "TopMargin": -98.0098,
+                "BottomMargin": 66.0098,
+                "Tag": 49,
+                "ActionTag": -1417010620,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 32.0
+                },
+                "Name": "lbNumBullet",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -104223028,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "ndBullet",
+            "ctype": "SingleNodeObjectData"
           }
         ],
         "Size": {
@@ -1159,6 +1295,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../common/bullets.png",
         "../../common/kills.png",
         "../../common/players.png",
         "../../common/rounded-rectangle.png",

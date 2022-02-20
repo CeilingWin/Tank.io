@@ -18,6 +18,8 @@ var Tank = cc.Node.extend({
         this.bodyWidth = config["width"];
         this.bodyHeight = config["height"];
         this.maxHp = config["hp"];
+        this.maxBullets = config["max_bullets"];
+        this.timeReloadBullet = config["time_reload_bullet"];
     },
 
     setData: function(name){
@@ -34,7 +36,17 @@ var Tank = cc.Node.extend({
         this.setCannonDirection(data["cannonDirection"]);
         this.setHp(data.hp);
         this.checkShoot(data["lastShootAt"]);
+        this.updateBullet(data["numBullet"],data["timeRemainToFullBullet"]);
         this.kills = data.kills;
+    },
+    
+    updateBullet: function (numBullet, timeRemainToFullBullet){
+        this.numBullet = numBullet;
+        if (numBullet > 0) this.bulletBar.setOpacity(0);
+        else {
+            this.bulletBar.setOpacity(255);
+            this.pbBullet.setPercent(timeRemainToFullBullet/this.timeReloadBullet*100);
+        }
     },
 
     checkShoot: function (lastShootAt){
@@ -81,20 +93,35 @@ var Tank = cc.Node.extend({
         this.addChild(lbName);
         this.lbName = lbName;
         // pb hp
-        let hpBar = new cc.LayerColor(cc.color.BLACK,145,25);
+        let hpBar = new cc.LayerColor(cc.color(0,0,0,100),145,15);
         hpBar.setPosition(-hpBar.width/2,110);
         this.addChild(hpBar);
         this.hpBar = hpBar;
         let pbHp = new ccui.LoadingBar(res.DEFAULT_LOADINGBARFILE_PNG,60);
         pbHp.setScale9Enabled(true);
         pbHp.width = 140;
-        pbHp.height = 20;
+        pbHp.height = 12;
         pbHp.setPosition(hpBar.width/2,hpBar.height/2);
         pbHp.setColor(cc.color.GREEN);
         this.hpBar.addChild(pbHp);
         this.pbHp = pbHp;
         this.hpBar.setCascadeOpacityEnabled(true);
         this.hpBar.setOpacity(0);
+        // pb bullet
+        let bulletBar = new cc.LayerColor(cc.color(0,0,0,100),145,15);
+        bulletBar.setPosition(-bulletBar.width/2,90);
+        this.addChild(bulletBar);
+        this.bulletBar = bulletBar;
+        let pbBullet = new ccui.LoadingBar(res.DEFAULT_LOADINGBARFILE_PNG,60);
+        pbBullet.setScale9Enabled(true);
+        pbBullet.width = 140;
+        pbBullet.height = 12;
+        pbBullet.setPosition(bulletBar.width/2,bulletBar.height/2);
+        pbBullet.setColor(cc.color.WHITE);
+        this.bulletBar.addChild(pbBullet);
+        this.pbBullet = pbBullet;
+        this.bulletBar.setCascadeOpacityEnabled(true);
+        this.bulletBar.setOpacity(0);
     },
 
     getWoldPos: function () {

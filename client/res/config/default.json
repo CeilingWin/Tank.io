@@ -1,7 +1,7 @@
 {
     "room_config": {
         "min_player": 1,
-        "max_player": 12,
+        "max_player": 50,
         "default_num_player": 2,
         "default_map": 0,
         "default_tank": "tank1"
@@ -17,7 +17,9 @@
             "bullet_rate": 400,
             "bullet_type": "bullet0",
             "rotation_speed": 6,
-            "cannon_length": 80
+            "cannon_length": 80,
+            "max_bullets": 10,
+            "time_reload_bullet":2000
         },
         {
             "type": "tank1",
@@ -29,7 +31,9 @@
             "bullet_rate": 600,
             "bullet_type": "bullet0",
             "rotation_speed": 6,
-            "cannon_length": 90
+            "cannon_length": 90,
+            "max_bullets": 11,
+            "time_reload_bullet":2000
         },
         {
             "type": "tank2",
@@ -41,7 +45,9 @@
             "bullet_rate": 500,
             "bullet_type": "bullet0",
             "rotation_speed": 6,
-            "cannon_length": 90
+            "cannon_length": 90,
+            "max_bullets": 12,
+            "time_reload_bullet":2000
         }
     ],
     "bullets": [

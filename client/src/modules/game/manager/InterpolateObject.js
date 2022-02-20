@@ -1,6 +1,6 @@
 var InterpolateObject = InterpolateObject || {};
 
-var interpolatePosition = function (p1, p2, ratio) {
+var interpolateLinear = function (p1, p2, ratio) {
     return p1 + (p2 - p1) * ratio;
 }
 
@@ -26,19 +26,21 @@ var interpolate = function(s1,s2,ratio){
 
 // OBJECT DEFINE
 InterpolateObject.Tank = {
-    x : interpolatePosition,
-    y : interpolatePosition,
+    x : interpolateLinear,
+    y : interpolateLinear,
     direction : interpolateAngle,
     cannonDirection : interpolateAngle,
     active : interpolateBoolean,
     hp : interpolate,
     kills : interpolate,
-    lastShootAt: interpolate
+    lastShootAt: interpolate,
+    numBullet: interpolate,
+    timeRemainToFullBullet: interpolateLinear
 }
 
 InterpolateObject.Bullet = {
-    x : interpolatePosition,
-    y : interpolatePosition,
+    x : interpolateLinear,
+    y : interpolateLinear,
     direction : interpolateAngle,
     active : interpolateBoolean
 }

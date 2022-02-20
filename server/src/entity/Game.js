@@ -81,18 +81,8 @@ export class Game extends schema.Schema {
         tank.setMovementVector(movementDir);
         tank.setCannonDirection(cannonDir);
         if (isClicked && tank.canShoot()) {
-            this.playerShoot(playerId, tank);
+            tank.shoot();
         }
-    }
-
-    playerShoot(playerId, tank) {
-        let bullet = this.bullets.find(bullet => !bullet.isActive());
-        if (!bullet) {
-            bullet = new Bullet(this);
-            this.bullets.push(bullet);
-        }
-        bullet.setData(tank.getStartingPositionOfBullet(), tank.getCannonDirection(), true, playerId);
-        tank.lastShootAt = Date.now();
     }
 
     playerWasKilled(playerId, killerId) {

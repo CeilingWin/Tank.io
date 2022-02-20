@@ -113,7 +113,7 @@ export class GameState extends Schema {
 
     showLeaderBoard() {
         const TIME_DELAY = 2000;
-        this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOAR + TIME_DELAY;
+        this.timeFinishShowLeaderBoard = Date.now() + GC.TIME_SHOW_LEADER_BOARD + TIME_DELAY;
         let leaderBoard = this.game.getLeaderBoard();
         leaderBoard = leaderBoard.map(player => {
             player.username = this.players.get(player.playerId).username;

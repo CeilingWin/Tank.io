@@ -12,6 +12,7 @@ var GuiGameControl = BaseGui.extend({
         this.lbFps = null;
         this.lbPing = null;
         this.btnBack = null;
+        this.lbNumBullet = null;
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
         this.subEvent(EventId.KEY_M_PRESS,this.onResizeMinimap.bind(this));
@@ -120,6 +121,7 @@ var GuiGameControl = BaseGui.extend({
     showTankState: function(tank){
         this.pbHp.setPercent(tank.hp/tank.maxHp*100);
         this.lbHp.setString(tank.hp + "/" + tank.maxHp);
+        this.lbNumBullet.setString(tank.numBullet + "/" + tank.maxBullets);
     },
 
     onTouchUIEnded: function (sender){

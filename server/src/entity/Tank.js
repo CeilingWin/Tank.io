@@ -3,6 +3,7 @@ import { Box, Polygon } from "detect-collisions";
 import { GC } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
+import { Bullet } from "./Bullet.js";
 const BASE_VECTOR = new Vector(1, 0);
 export class Tank extends schema.Schema {
     constructor(gameController, type) {
@@ -16,6 +17,9 @@ export class Tank extends schema.Schema {
         this.lastShootAt = 0;
         this.active = true;
         this.hp = this.maxHp;
+        this.numBullet = this.maxBullets;
+        this.timeToFullBullet = 0;
+        this.timeRemainToFullBullet = 0;
         // kda
         this.kills = 0;
         this.totalDamage = 0;
@@ -33,6 +37,8 @@ export class Tank extends schema.Schema {
         this.maxHp = config["hp"];
         this.rotationSpeed = config["rotation_speed"];
         this.cannonLength = config["cannon_length"];
+        this.maxBullets = config["max_bullets"];
+        this.timeReloadBullet = config["time_reload_bullet"];
     }
 
     initBody() {
@@ -76,6 +82,7 @@ export class Tank extends schema.Schema {
     }
 
     update() {
+        this.updateBullet();
         if (!this.isActive()) return;
         this.updateMovement();
         if (!this.isMoving()) return;
@@ -141,12 +148,29 @@ export class Tank extends schema.Schema {
         this.body.updateAABB();
     }
 
+    updateBullet(){
+        if (this.numBullet > 0) return;
+        if (this.numBullet === 0 && this.timeToFullBullet === 0){
+            this.timeToFullBullet = Date.now() + this.timeReloadBullet;
+            this.timeRemainToFullBullet = this.timeReloadBullet;
+            return;
+        }
+        let currentTime = Date.now();
+        if (currentTime >= this.timeToFullBullet){
+            this.numBullet = this.maxBullets;
+            this.timeToFullBullet = 0;
+            this.timeRemainToFullBullet = 0;
+        } else {
+            this.timeRemainToFullBullet = this.timeToFullBullet - currentTime;
+        }
+    }
+
     getBody() {
         return this.body;
     }
 
     canShoot() {
-        return (Date.now() - this.lastShootAt) >= this.bulletRate;
+        return (this.numBullet > 0) && ((Date.now() - this.lastShootAt) >= this.bulletRate);
     }
 
     getStartingPositionOfBullet() {
@@ -172,6 +196,17 @@ export class Tank extends schema.Schema {
         this.y -= overlapV.y;
         this.updateBody();
     }
+
+    shoot(){
+        let bullet = this.controller.bullets.find(bullet => !bullet.isActive());
+        if (!bullet) {
+            bullet = new Bullet(this.controller);
+            this.controller.bullets.push(bullet);
+        }
+        bullet.setData(this.getStartingPositionOfBullet(), this.getCannonDirection(), true, this.playerId);
+        this.lastShootAt = Date.now();
+        this.numBullet -= 1;
+    }
 }
 
 schema.defineTypes(Tank, {
@@ -182,5 +217,7 @@ schema.defineTypes(Tank, {
     lastShootAt: "number",
     hp: "number",
     active: "boolean",
-    kills: "number"
+    kills: "number",
+    numBullet: "number",
+    timeRemainToFullBullet: "number"
 })

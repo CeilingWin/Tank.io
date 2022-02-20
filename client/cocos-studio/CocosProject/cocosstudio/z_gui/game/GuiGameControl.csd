@@ -32,7 +32,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="common/rounded-rectangle.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text_6" ActionTag="-1641516410" Tag="80" IconVisible="False" LeftMargin="27.9571" RightMargin="-72.9572" TopMargin="9.4487" BottomMargin="-32.4487" FontSize="20" LabelText="Ping:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="Text_6" ActionTag="-1641516410" Tag="80" IconVisible="False" LeftMargin="27.9571" RightMargin="-72.9571" TopMargin="9.4487" BottomMargin="-32.4487" FontSize="20" LabelText="Ping:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="45.0000" Y="23.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="50.4571" Y="-20.9487" />
@@ -155,7 +155,7 @@
             <PrePosition X="0.0063" Y="-0.0231" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="ndHp" ActionTag="494741793" Tag="58" IconVisible="True" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="960.0000" RightMargin="960.0000" TopMargin="976.0000" BottomMargin="104.0000" ctype="SingleNodeObjectData">
+          <AbstractNodeData Name="ndHp" ActionTag="494741793" Tag="58" IconVisible="True" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="960.0000" RightMargin="960.0000" TopMargin="1015.0000" BottomMargin="65.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="Panel_2" ActionTag="301707011" Tag="59" IconVisible="False" LeftMargin="-252.5000" RightMargin="-252.5000" TopMargin="18.6500" BottomMargin="-53.6500" ClipAble="False" BackColorAlpha="179" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -209,10 +209,10 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="960.0000" Y="104.0000" />
+            <Position X="960.0000" Y="65.0000" />
             <Scale ScaleX="0.8500" ScaleY="0.8500" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.0963" />
+            <PrePosition X="0.5000" Y="0.0602" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -241,10 +241,10 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbNotification" ActionTag="-1164654100" Tag="6" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="210.0002" RightMargin="209.9998" TopMargin="176.1656" BottomMargin="753.8344" IsCustomSize="True" FontSize="60" LabelText="Player a was killed by player b" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="lbNotification" ActionTag="-1164654100" Tag="6" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="210.0000" RightMargin="210.0000" TopMargin="176.1656" BottomMargin="753.8344" IsCustomSize="True" FontSize="60" LabelText="Player a was killed by player b" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="1500.0000" Y="150.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="960.0002" Y="828.8344" />
+            <Position X="960.0000" Y="828.8344" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.7674" />
@@ -267,6 +267,40 @@
             <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="ndBullet" ActionTag="-104223028" Tag="48" IconVisible="True" RightMargin="1920.0000" TopMargin="1081.0000" BottomMargin="-1.0000" ctype="SingleNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <Children>
+              <AbstractNodeData Name="bullets_1" ActionTag="-1541425840" Tag="47" IconVisible="False" LeftMargin="829.9532" RightMargin="-929.9532" TopMargin="-135.0127" BottomMargin="35.0127" ctype="SpriteObjectData">
+                <Size X="60.0000" Y="60.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="879.9532" Y="85.0127" />
+                <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="common/bullets.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="lbNumBullet" ActionTag="-1417010620" Tag="49" IconVisible="False" LeftMargin="904.1320" RightMargin="-1004.1320" TopMargin="-98.0098" BottomMargin="66.0098" IsCustomSize="True" FontSize="28" LabelText="99/99" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="100.0000" Y="32.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="954.1320" Y="82.0098" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position Y="-1.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition Y="-0.0009" />
+            <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
         </Children>
       </ObjectData>
