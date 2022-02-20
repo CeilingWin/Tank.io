@@ -154,6 +154,10 @@ var GameRoom = cc.Class.extend({
         return this.roomState["players"].get(playerId);
     },
 
+    getPlayerId: function(){
+        return this.room.sessionId;
+    },
+
     leave: function (){
         if (this.game) this.game.stop();
         this.room.leave();
