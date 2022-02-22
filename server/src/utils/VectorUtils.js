@@ -13,6 +13,13 @@ class Vector extends SAT.Vector{
             return 0.0;
         return angle;
     }
+
+    static multi(vector, f){
+        vector = vector.clone();
+        vector.x *= f;
+        vector.y *= f;
+        return vector;
+    }
 }
 
 export { Vector }

@@ -39,6 +39,7 @@
         "src/resource.js",
         "src/modules/Constant.js",
         "src/modules/game/entity/Bullet.js",
+        "src/modules/game/entity/JetPlane.js",
         "src/modules/game/entity/Tank.js",
         "src/modules/game/gui/element/ElementAvailableRoom.js",
         "src/modules/game/gui/element/ElementGameResult.js",

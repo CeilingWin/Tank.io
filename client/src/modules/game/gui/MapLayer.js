@@ -155,6 +155,10 @@ var MapLayer = BaseGui.extend({
         this.tankLayer.addChild(bullet,200);
     },
 
+    addJetPlaneToMap: function(jetPlane){
+        this.addChild(jetPlane,1000);
+    },
+
     loadObject: function (parent,imgSource,x,y,z){
         let spr = new cc.Sprite("res/map/"+imgSource);
         spr.anchorX = 0;

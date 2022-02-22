@@ -85,11 +85,15 @@ var GameRoom = cc.Class.extend({
         currentUpdate.ts = serverResponse.ts;
         currentUpdate.tanks = new Map();
         currentUpdate.bullets = [];
+        currentUpdate.jetPlanes = [];
         serverResponse.tanks.forEach((tank, id) => {
             currentUpdate.tanks.set(id, InterpolateObject.getObject(InterpolateObject.Tank,tank));
         });
         serverResponse.bullets.forEach(bullet => {
             currentUpdate.bullets.push(InterpolateObject.getObject(InterpolateObject.Bullet, bullet));
+        });
+        serverResponse.jetPlanes.forEach(jetPlane => {
+            currentUpdate.jetPlanes.push(InterpolateObject.getObject(InterpolateObject.JetPlane, jetPlane));
         });
         this.gameUpdates.push(currentUpdate);
         // remove old update

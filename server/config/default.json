@@ -58,5 +58,8 @@
             "geometry": "circle",
             "radius": 10
         }
-    ]
+    ],
+    "jet_plane": {
+        "speed": 800
+    }
 }

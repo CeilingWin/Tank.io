@@ -9,7 +9,7 @@ export class GameRoom extends Room {
     onCreate(options) {
         this.setPatchRate(GC.TIME_TO_SYNC_CS);
         this.setState(new GameState(this));
-        this.setSimulationInterval(() => this.state.update(), GC.DT);
+        this.setSimulationInterval(async () => await this.state.update(), GC.DT);
         this.defaultOptions = options;
         // todo: unique room id
         this.roomId = GameRoom.numRoom.toString();

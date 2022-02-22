@@ -78,6 +78,7 @@ export class GameState extends Schema {
     async handleLobby() {
         if (this.players.size === this.maxPlayer) {
             this.room.lock();
+            this.state = 100;
             await this.startWaiting();
         }
         else if (this.room.locked) {

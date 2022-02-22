@@ -178,6 +178,9 @@
             <Project Name="GuiGameResult.csd" Type="Scene" />
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
+            <Folder Name="entity">
+              <Project Name="JetPlane.csd" Type="Node" />
+            </Folder>
           </Folder>
           <Project Name="ElementSkinTank.csd" Type="Layer" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />

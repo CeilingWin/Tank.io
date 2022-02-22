@@ -5,6 +5,7 @@ import { MapGame } from "./Map.js";
 import { Player } from "./Player.js";
 import { Tank } from "./Tank.js";
 import { Bullet } from "./Bullet.js";
+import { JetPlane } from "./JetPlane.js";
 
 export class Game extends schema.Schema {
     constructor(room) {
@@ -12,6 +13,7 @@ export class Game extends schema.Schema {
         this.room = room;
         this.tanks = new schema.MapSchema();
         this.bullets = new schema.ArraySchema();
+        this.jetPlanes = new schema.ArraySchema();
         this.listDeathPlayers = new schema.ArraySchema();
     }
 
@@ -19,12 +21,14 @@ export class Game extends schema.Schema {
         this.reset();
         await this.initMap(mapId);
         this.initTankForAllPlayers(players);
+        this.initJetPlanes();
         this.ts = Date.now();
     }
 
     reset() {
         this.tanks.clear();
         this.bullets.clear();
+        this.jetPlanes.clear();
         this.listDeathPlayers.clear();
         this.numAlivePlayer = 0;
     }
@@ -45,6 +49,15 @@ export class Game extends schema.Schema {
         });
     }
 
+    initJetPlanes(){
+        const NUM_JET_PLANE = 10;
+        for (let i=0;i<NUM_JET_PLANE;i++){
+            let jetPlane = new JetPlane(this);
+            this.jetPlanes.push(jetPlane);
+            jetPlane.reset();
+        }
+    }
+
     getRandomSpawnPosition() {
         return new Vector(Math.random() * this.map.width, Math.random() * this.map.height);
     }
@@ -53,6 +66,7 @@ export class Game extends schema.Schema {
         this.ts = Date.now();
         this.updateTank();
         this.updateBullets();
+        this.updateJetPlane();
         this.numAlivePlayer = this.tanks.size - this.listDeathPlayers.length;
     }
 
@@ -66,6 +80,12 @@ export class Game extends schema.Schema {
         this.bullets.forEach(bullet => {
             bullet.update();
         });
+    }
+
+    updateJetPlane(){
+        this.jetPlanes.forEach(jetPlane => {
+            jetPlane.update();
+        })
     }
 
     isEndGame() {
@@ -117,5 +137,6 @@ schema.defineTypes(Game, {
     ts: "number",
     tanks: { map: Tank },
     bullets: [Bullet],
+    jetPlanes: [JetPlane],
     numAlivePlayer: "number"
 })

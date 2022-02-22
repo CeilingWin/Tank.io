@@ -45,6 +45,13 @@ InterpolateObject.Bullet = {
     active : interpolateBoolean
 }
 
+InterpolateObject.JetPlane = {
+    x : interpolateLinear,
+    y : interpolateLinear,
+    direction : interpolateAngle,
+    active : interpolateBoolean
+}
+
 Object.entries(InterpolateObject).forEach(([key,value])=>{
     value.entries = Object.entries(value);
 });
