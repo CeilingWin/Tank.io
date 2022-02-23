@@ -24,12 +24,15 @@ export class JetPlane extends schema.Schema {
         this.direction = MathUtils.randomBetween(-Math.PI, Math.PI);
         let centerPos = new Vector();
         let delta = 0;
-        centerPos.x = MathUtils.randomBetween(mapWidth-delta,mapWidth+delta);
-        centerPos.y = MathUtils.randomBetween(mapHeight-delta,mapHeight+delta);
-        let startPos = new Vector(Math.cos(this.direction),Math.sin(this.direction));
-        startPos = Vector.multi(startPos,-Math.sqrt(mapWidth*mapWidth + mapHeight*mapHeight));
+        centerPos.x = MathUtils.randomBetween(mapWidth-delta,mapWidth+delta)/2;
+        centerPos.y = MathUtils.randomBetween(mapHeight-delta,mapHeight+delta)/2;
+        let dMap = Math.sqrt(mapWidth*mapWidth + mapHeight*mapHeight);
+        let vectorDirection = new Vector(Math.cos(this.direction),Math.sin(this.direction));
+        let startPos = centerPos.clone().add(Vector.multi(vectorDirection,-dMap/2));
         this.x = startPos.x;
         this.y = startPos.y;
+        this.centerMap = new Vector(mapWidth/2, mapHeight/2);
+        this.activeRadius = dMap/2;
         this.setActive(true);
     }
 
@@ -42,9 +45,20 @@ export class JetPlane extends schema.Schema {
     }
 
     update() {
-        if (!this.isActive()) return;
-        this.x += this.speed * GC.DT * Math.cos(this.direction) / 1000;
-        this.y += this.speed * GC.DT * Math.sin(-this.direction) / 1000;
+        if (!this.isActive()) {
+            if (Math.random() > 0.8) this.reset();
+        } else {
+            this.x += this.speed * GC.DT * Math.cos(this.direction) / 1000;
+            this.y += this.speed * GC.DT * Math.sin(-this.direction) / 1000;
+            if (Math.random() > 0.8) this.dropItem();
+            if (Vector.distance(new Vector(this.x,this.y),this.centerMap) >= this.activeRadius){
+                this.setActive(false);
+            }
+        }
+    }
+
+    dropItem(){
+
     }
 }
 

@@ -54,7 +54,6 @@ export class Game extends schema.Schema {
         for (let i=0;i<NUM_JET_PLANE;i++){
             let jetPlane = new JetPlane(this);
             this.jetPlanes.push(jetPlane);
-            jetPlane.reset();
         }
     }
 
@@ -89,7 +88,7 @@ export class Game extends schema.Schema {
     }
 
     isEndGame() {
-        return this.numAlivePlayer <= 1;
+        return this.numAlivePlayer <= 0;
     }
 
     handleMessageUpdateTank(playerId, message) {

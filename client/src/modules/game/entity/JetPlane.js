@@ -2,6 +2,7 @@ var JetPlane = cc.Node.extend(_injectCCS).extend({
     ctor: function(){
         this._super();
         this.rootNode = this.initJson("res/z_gui/game/entity/JetPlane.json");
+        this.rootNode.setScale(0.7,0.7);
         this.active = false;
         this.direction = 0;
     },

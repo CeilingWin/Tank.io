@@ -20,6 +20,11 @@ class Vector extends SAT.Vector{
         vector.y *= f;
         return vector;
     }
+
+    static distance(v1,v2){
+        let v = v1.sub(v2);
+        return v.len();
+    }
 }
 
 export { Vector }
