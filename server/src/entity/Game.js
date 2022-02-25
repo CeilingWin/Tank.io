@@ -2,10 +2,11 @@ import * as schema from "@colyseus/schema";
 import { GC, TYPE_MESSAGE } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { MapGame } from "./Map.js";
-import { Player } from "./Player.js";
 import { Tank } from "./Tank.js";
 import { Bullet } from "./Bullet.js";
 import { JetPlane } from "./JetPlane.js";
+import { GameConfig } from "../config/GameConfig.js";
+import { Item } from "./Item.js";
 
 export class Game extends schema.Schema {
     constructor(room) {
@@ -14,6 +15,7 @@ export class Game extends schema.Schema {
         this.tanks = new schema.MapSchema();
         this.bullets = new schema.ArraySchema();
         this.jetPlanes = new schema.ArraySchema();
+        this.items = new schema.ArraySchema();
         this.listDeathPlayers = new schema.ArraySchema();
     }
 
@@ -29,6 +31,7 @@ export class Game extends schema.Schema {
         this.tanks.clear();
         this.bullets.clear();
         this.jetPlanes.clear();
+        this.items.clear();
         this.listDeathPlayers.clear();
         this.numAlivePlayer = 0;
     }
@@ -50,10 +53,18 @@ export class Game extends schema.Schema {
     }
 
     initJetPlanes(){
-        const NUM_JET_PLANE = 10;
-        for (let i=0;i<NUM_JET_PLANE;i++){
+        const MAX_JET_PLANE = GameConfig.getRoomConfig()["max_jet_plane_on_map"];
+        for (let i=0;i<MAX_JET_PLANE;i++){
             let jetPlane = new JetPlane(this);
             this.jetPlanes.push(jetPlane);
+        }
+    }
+
+    initItems(){
+        const MAX_ITEMS = GameConfig.getRoomConfig()["max_item_on_map"];
+        for (let i=0;i<MAX_ITEMS;i++){
+            let item = new Item(this);
+            this.items.push(item);
         }
     }
 
@@ -66,6 +77,7 @@ export class Game extends schema.Schema {
         this.updateTank();
         this.updateBullets();
         this.updateJetPlane();
+        this.initItems();
         this.numAlivePlayer = this.tanks.size - this.listDeathPlayers.length;
     }
 
@@ -129,6 +141,17 @@ export class Game extends schema.Schema {
             player.totalDamage = tank.totalDamage;
             return player;
         });
+    }
+
+    canPutObjectOnMap(object){
+        let body = object.getBody();
+        let potentials = this.map.getPotentialObstacle(body);
+        potentials.forEach((collider) => {
+            if (this.map.checkCollision(body, collider)) {
+                return false;
+            }
+        });
+        return true;
     }
 }
 

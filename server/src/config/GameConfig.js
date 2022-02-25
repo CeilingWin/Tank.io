@@ -5,6 +5,7 @@ const tankConfig = config.get("tanks");
 const bulletConfig = config.get("bullets");
 const roomConfig = config.get("room_config");
 const jetPlaneConfig = config.get("jet_plane");
+const itemsConfig = config.get("items");
 
 var GameConfig = {
     getTankConfig: function(typeTank){
@@ -21,6 +22,10 @@ var GameConfig = {
 
     getRoomConfig: function(){
         return roomConfig;
+    },
+
+    getItemsConfig: function(){
+        return itemsConfig;
     }
 }
 

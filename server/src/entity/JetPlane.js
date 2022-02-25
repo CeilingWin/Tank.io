@@ -4,6 +4,7 @@ import { GC } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
 const BASE_VECTOR = new Vector(1, 0);
+const TIME_TO_DROP_ITEM = 4000;
 export class JetPlane extends schema.Schema {
     constructor(gameController) {
         super();
@@ -34,6 +35,11 @@ export class JetPlane extends schema.Schema {
         this.centerMap = new Vector(mapWidth/2, mapHeight/2);
         this.activeRadius = dMap/2;
         this.setActive(true);
+        this.timeRemainToDropItem = TIME_TO_DROP_ITEM;
+    }
+
+    getPosition(){
+        return new Vector(this.x,this.y);
     }
 
     setActive(bool) {
@@ -50,7 +56,11 @@ export class JetPlane extends schema.Schema {
         } else {
             this.x += this.speed * GC.DT * Math.cos(this.direction) / 1000;
             this.y += this.speed * GC.DT * Math.sin(-this.direction) / 1000;
-            if (Math.random() > 0.8) this.dropItem();
+            this.timeRemainToDropItem -= GC.DT;
+            if (this.timeRemainToDropItem <= 0){
+                this.timeRemainToDropItem = TIME_TO_DROP_ITEM;
+                this.dropItem();
+            }
             if (Vector.distance(new Vector(this.x,this.y),this.centerMap) >= this.activeRadius){
                 this.setActive(false);
             }
@@ -58,7 +68,13 @@ export class JetPlane extends schema.Schema {
     }
 
     dropItem(){
-
+        let item = this.controller.items.find(item => !item.isActive());
+        if (!item) return;
+        item.setPosition(this.getPosition());
+        if (this.controller.canPutObjectOnMap(item)){
+            console.log("drop item",this.getPosition());
+            item.initWithEffect(0);
+        }
     }
 }
 

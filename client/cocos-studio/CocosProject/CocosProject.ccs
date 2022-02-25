@@ -27,6 +27,7 @@
           <Image Name="btn_back.png" />
           <Image Name="btn_back2.png" />
           <Image Name="btn_ok2.png" />
+          <Image Name="bullets.png" />
           <Image Name="kills.png" />
           <Image Name="players.png" />
           <Image Name="rectangle.png" />
@@ -35,7 +36,6 @@
           <Image Name="reload.png" />
           <Image Name="rounded-rectangle.png" />
           <Image Name="settings.png" />
-          <Image Name="bullets.png" />
         </Folder>
         <Folder Name="fonts">
           <TTF Name="arial.ttf" />
@@ -173,14 +173,14 @@
               <Project Name="ElementAvailableRoom.csd" Type="Layer" />
               <Project Name="ElementGameResult.csd" Type="Layer" />
             </Folder>
+            <Folder Name="entity">
+              <Project Name="JetPlane.csd" Type="Node" />
+            </Folder>
             <Project Name="GameScene.csd" Type="Scene" />
             <Project Name="GuiGameControl.csd" Type="Scene" />
             <Project Name="GuiGameResult.csd" Type="Scene" />
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
-            <Folder Name="entity">
-              <Project Name="JetPlane.csd" Type="Node" />
-            </Folder>
           </Folder>
           <Project Name="ElementSkinTank.csd" Type="Layer" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />

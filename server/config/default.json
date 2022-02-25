@@ -4,7 +4,9 @@
         "max_player": 50,
         "default_num_player": 2,
         "default_map": 0,
-        "default_tank": "tank1"
+        "default_tank": "tank1",
+        "max_item_on_map" : 40,
+        "max_jet_plane_on_map": 10
     },
     "tanks": [
         {
@@ -60,6 +62,11 @@
         }
     ],
     "jet_plane": {
-        "speed": 800
+        "speed": 500
+    },
+    "items": {
+        "radius": 40,
+        "time_alive": 30000,
+        "time_to_appear": 2000
     }
 }
