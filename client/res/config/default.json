@@ -2,9 +2,11 @@
     "room_config": {
         "min_player": 1,
         "max_player": 50,
-        "default_num_player": 2,
+        "default_num_player": 1,
         "default_map": 0,
-        "default_tank": "tank1"
+        "default_tank": "tank1",
+        "max_item_on_map" : 10,
+        "max_jet_plane_on_map": 3
     },
     "tanks": [
         {
@@ -58,5 +60,13 @@
             "geometry": "circle",
             "radius": 10
         }
-    ]
+    ],
+    "jet_plane": {
+        "speed": 500
+    },
+    "items": {
+        "radius": 40,
+        "time_alive": 3000,
+        "time_to_appear": 2000
+    }
 }

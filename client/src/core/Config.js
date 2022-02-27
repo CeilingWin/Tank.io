@@ -22,6 +22,10 @@ var Config = cc.Class.extend({
             cf.bullet = this.json["bullets"].find(b=>b["type"] === cf["bullet_type"]);
             return cf;
         });
+    },
+
+    getItemsConfig: function(){
+        return this.json["items"];
     }
 });
 

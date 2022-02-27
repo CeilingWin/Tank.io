@@ -9,5 +9,9 @@ var ResourceUtils = {
 
     getMiniMap: function (mapId){
         return "res/map/minimap/map" + mapId + ".png";
+    },
+
+    getItem: function (type){
+        return "res/items/item_" + type + ".png";
     }
 }

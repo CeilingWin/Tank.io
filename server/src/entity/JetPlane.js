@@ -35,7 +35,7 @@ export class JetPlane extends schema.Schema {
         this.centerMap = new Vector(mapWidth/2, mapHeight/2);
         this.activeRadius = dMap/2;
         this.setActive(true);
-        this.timeRemainToDropItem = TIME_TO_DROP_ITEM;
+        this.timeRemainToDropItem = MathUtils.randomBetween(0,TIME_TO_DROP_ITEM);
     }
 
     getPosition(){
@@ -59,7 +59,7 @@ export class JetPlane extends schema.Schema {
             this.timeRemainToDropItem -= GC.DT;
             if (this.timeRemainToDropItem <= 0){
                 this.timeRemainToDropItem = TIME_TO_DROP_ITEM;
-                this.dropItem();
+                if (Math.random() > 0.3) this.dropItem();
             }
             if (Vector.distance(new Vector(this.x,this.y),this.centerMap) >= this.activeRadius){
                 this.setActive(false);
@@ -72,8 +72,7 @@ export class JetPlane extends schema.Schema {
         if (!item) return;
         item.setPosition(this.getPosition());
         if (this.controller.canPutObjectOnMap(item)){
-            console.log("drop item",this.getPosition());
-            item.initWithEffect(0);
+            item.initWithEffect(1);
         }
     }
 }

@@ -24,6 +24,7 @@ export class Game extends schema.Schema {
         await this.initMap(mapId);
         this.initTankForAllPlayers(players);
         this.initJetPlanes();
+        this.initItems();
         this.ts = Date.now();
     }
 
@@ -77,7 +78,7 @@ export class Game extends schema.Schema {
         this.updateTank();
         this.updateBullets();
         this.updateJetPlane();
-        this.initItems();
+        this.updateItems();
         this.numAlivePlayer = this.tanks.size - this.listDeathPlayers.length;
     }
 
@@ -96,11 +97,17 @@ export class Game extends schema.Schema {
     updateJetPlane(){
         this.jetPlanes.forEach(jetPlane => {
             jetPlane.update();
-        })
+        });
+    }
+
+    updateItems(){
+        this.items.forEach(item => {
+            item.update();
+        });
     }
 
     isEndGame() {
-        return this.numAlivePlayer <= 0;
+        return this.numAlivePlayer <= 1;
     }
 
     handleMessageUpdateTank(playerId, message) {
@@ -144,6 +151,7 @@ export class Game extends schema.Schema {
     }
 
     canPutObjectOnMap(object){
+        if (object.x <= 0 || object.y <=0 || object.x >= this.map.width || object.y >= this.map.height) return false;
         let body = object.getBody();
         let potentials = this.map.getPotentialObstacle(body);
         potentials.forEach((collider) => {
@@ -160,5 +168,6 @@ schema.defineTypes(Game, {
     tanks: { map: Tank },
     bullets: [Bullet],
     jetPlanes: [JetPlane],
+    items: [Item],
     numAlivePlayer: "number"
 })

@@ -10,13 +10,15 @@ export class Item extends schema.Schema{
         this.controller = gameController;
         this.initAttributes();
         this.setActive(false);
+        this.timeRemainToAppear = 0;
+        this.effectType = 0;
     }
 
     initAttributes() {
         let config = GameConfig.getItemsConfig();
         this.radius = config["radius"];
         this.timeAlive = config["time_alive"];
-        this.timeToAppear = config["time_to_appear"];
+        this.timeToAppear = Number(config["time_to_appear"]);
     }
 
     initWithEffect(effectType){
@@ -38,6 +40,7 @@ export class Item extends schema.Schema{
         this.x = pos.x;
         this.y = pos.y;
         this.initBody();
+        this.body.updateAABB();
     }
 
     setActive(bool) {
@@ -64,5 +67,5 @@ schema.defineTypes(Item, {
     y: "float32",
     effectType: "number",
     active: "boolean",
-    timeRemainToAppear: "int"
+    timeRemainToAppear: "int16"
 })

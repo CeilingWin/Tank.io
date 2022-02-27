@@ -52,6 +52,14 @@ InterpolateObject.JetPlane = {
     active : interpolateBoolean
 }
 
+InterpolateObject.Item = {
+    x : interpolateLinear,
+    y : interpolateLinear,
+    effectType : interpolate,
+    timeRemainToAppear : interpolateLinear,
+    active : interpolateBoolean
+}
+
 Object.entries(InterpolateObject).forEach(([key,value])=>{
     value.entries = Object.entries(value);
 });

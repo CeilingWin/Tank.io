@@ -190,6 +190,11 @@
           <Project Name="PopupNotification.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
+        <Folder Name="items">
+          <Image Name="item_0.png" />
+          <Image Name="item_1.png" />
+          <Image Name="parachute.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

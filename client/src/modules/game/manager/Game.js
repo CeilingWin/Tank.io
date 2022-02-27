@@ -4,6 +4,7 @@ var Game = cc.Class.extend({
         this.tanks = new Map();
         this.bullets = [];
         this.jetPlanes = [];
+        this.items = [];
         this.network = gv.gameRoom.getNetwork();
     },
 
@@ -68,6 +69,7 @@ var Game = cc.Class.extend({
         this.updateTank(currentState.tanks);
         this.updateBullets(currentState.bullets);
         this.updateJetPlanes(currentState.jetPlanes);
+        this.updateItems(currentState.items);
         this.mapLayer.update();
         this.guiControl.update();
     },
@@ -104,8 +106,22 @@ var Game = cc.Class.extend({
         }
         for (let i= 0;i<this.jetPlanes.length;i++){
             jetPlane = this.jetPlanes[i];
-            let bulletData = jetPlanesData[i];
-            jetPlane.updateData(bulletData);
+            let jetPlaneData = jetPlanesData[i];
+            jetPlane.updateData(jetPlaneData);
+        }
+    },
+
+    updateItems: function(itemsData){
+        let item;
+        for (let i=this.items.length;i<itemsData.length;i++){
+            item = new Item();
+            this.items.push(item);
+            this.mapLayer.addItemToMap(item);
+        }
+        for (let i= 0;i<this.items.length;i++){
+            item = this.items[i];
+            let itemData = itemsData[i];
+            item.updateData(itemData);
         }
     },
 

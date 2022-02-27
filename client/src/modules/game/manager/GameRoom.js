@@ -86,6 +86,7 @@ var GameRoom = cc.Class.extend({
         currentUpdate.tanks = new Map();
         currentUpdate.bullets = [];
         currentUpdate.jetPlanes = [];
+        currentUpdate.items = [];
         serverResponse.tanks.forEach((tank, id) => {
             currentUpdate.tanks.set(id, InterpolateObject.getObject(InterpolateObject.Tank,tank));
         });
@@ -95,6 +96,9 @@ var GameRoom = cc.Class.extend({
         serverResponse.jetPlanes.forEach(jetPlane => {
             currentUpdate.jetPlanes.push(InterpolateObject.getObject(InterpolateObject.JetPlane, jetPlane));
         });
+        serverResponse.items.forEach(item => {
+            currentUpdate.items.push(InterpolateObject.getObject(InterpolateObject.Item, item));
+        })
         this.gameUpdates.push(currentUpdate);
         // remove old update
         let currentServerTime = this.getServerTime();
