@@ -5,8 +5,8 @@
         "default_num_player": 1,
         "default_map": 0,
         "default_tank": "tank1",
-        "max_item_on_map" : 10,
-        "max_jet_plane_on_map": 3
+        "max_item_on_map" : 15,
+        "max_jet_plane_on_map": 4
     },
     "tanks": [
         {
@@ -79,7 +79,7 @@
         {
             "type": 1,
             "name": "shield",
-            "duration": 5000,
+            "duration": 15000,
             "radius": 150
         }
     ]
