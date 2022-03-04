@@ -132,6 +132,8 @@ export class GameState extends Schema {
     handleEndGame() {
         if (Date.now() >= this.timeFinishShowLeaderBoard) {
             this.state = GC.ROOM_STATE.LOBBY;
+        } else {
+            this.game.update();
         }
     }
 

@@ -68,7 +68,10 @@ export class Item extends schema.Schema{
         let iterator = this.controller.tanks.values();
         let tank = iterator.next().value;
         while (tank){
-            if (!tank.isActive()) continue;
+            if (!tank.isActive()) {
+                tank = iterator.next().value;
+                continue;
+            }
             if (this.controller.map.checkCollision(tank.getBody(),this.getBody())){
                 tank.performEffect(this.effectType);
                 this.setActive(false);
