@@ -46,6 +46,11 @@
           <TTF Name="classic.ttf" />
           <TTF Name="normal.ttf" />
         </Folder>
+        <Folder Name="items">
+          <Image Name="eff_0.png" />
+          <Image Name="eff_1.png" />
+          <Image Name="parachute.png" />
+        </Folder>
         <Folder Name="map">
           <Folder Name="minimap">
             <Image Name="map0.png" />
@@ -190,10 +195,9 @@
           <Project Name="PopupNotification.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
         </Folder>
-        <Folder Name="items">
-          <Image Name="item_0.png" />
-          <Image Name="item_1.png" />
-          <Image Name="parachute.png" />
+        <Folder Name="effect">
+          <Image Name="eff_heal2.png" />
+          <Image Name="shield.png" />
         </Folder>
       </RootFolder>
     </Group>

@@ -98,7 +98,7 @@ var GameRoom = cc.Class.extend({
         });
         serverResponse.items.forEach(item => {
             currentUpdate.items.push(InterpolateObject.getObject(InterpolateObject.Item, item));
-        })
+        });
         this.gameUpdates.push(currentUpdate);
         // remove old update
         let currentServerTime = this.getServerTime();

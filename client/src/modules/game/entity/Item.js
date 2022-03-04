@@ -27,7 +27,7 @@ var Item = cc.Node.extend({
             this.setPosition(data.x,data.y);
             let effectType = data["effectType"];
             if (this.effectType !== effectType){
-                this.iconEffect.setTexture(ResourceUtils.getItem(effectType));
+                this.iconEffect.setTexture(ResourceUtils.getEffect(effectType));
                 this.effectType = effectType;
             }
             let timeRemainToAppear = data["timeRemainToAppear"];

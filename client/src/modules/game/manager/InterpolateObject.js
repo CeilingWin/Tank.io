@@ -35,7 +35,8 @@ InterpolateObject.Tank = {
     kills : interpolate,
     lastShootAt: interpolate,
     numBullet: interpolate,
-    timeRemainToFullBullet: interpolateLinear
+    timeRemainToFullBullet: interpolateLinear,
+    effects: interpolateBoolean
 }
 
 InterpolateObject.Bullet = {

@@ -1,9 +1,11 @@
 import * as schema from "@colyseus/schema";
-import { Box, Polygon } from "detect-collisions";
+import { Polygon } from "detect-collisions";
 import { GC } from "../Constant.js";
 import { Vector } from "../utils/VectorUtils.js";
 import { GameConfig } from "../config/GameConfig.js";
 import { Bullet } from "./Bullet.js";
+import {Effect} from "./effect/Effect.js";
+import {EffectFactory} from "./effect/EffectFactory.js";
 const BASE_VECTOR = new Vector(1, 0);
 export class Tank extends schema.Schema {
     constructor(gameController, type) {
@@ -16,13 +18,14 @@ export class Tank extends schema.Schema {
         this.speed = this.minSpeed;
         this.lastShootAt = 0;
         this.active = true;
-        this.hp = this.maxHp;
+        this.hp = this.maxHp/3.5;
         this.numBullet = this.maxBullets;
         this.timeToFullBullet = 0;
         this.timeRemainToFullBullet = 0;
         // kda
         this.kills = 0;
         this.totalDamage = 0;
+        this.effects = new schema.ArraySchema();
         this.initBody();
     }
 
@@ -84,6 +87,7 @@ export class Tank extends schema.Schema {
     update() {
         this.updateBullet();
         if (!this.isActive()) return;
+        this.updateEffect();
         this.updateMovement();
         if (!this.isMoving()) return;
         this.checkCollision();
@@ -165,6 +169,17 @@ export class Tank extends schema.Schema {
         }
     }
 
+    updateEffect(){
+        let numEffect = this.effects.length;
+        let isHaveEffectOutOfDate = false;
+        for (let i=0;i<numEffect;i++){
+            let eff = this.effects[i];
+            eff.update();
+            if (!eff.isActive()) isHaveEffectOutOfDate = true;
+        }
+        if (isHaveEffectOutOfDate) this.effects = this.effects.filter(eff=>eff.isActive());
+    }
+
     getBody() {
         return this.body;
     }
@@ -181,6 +196,7 @@ export class Tank extends schema.Schema {
     }
 
     takeDamage(damage) {
+        if (this.effects.find(eff=>eff.isShield)) return;
         damage = Math.min(this.hp, damage);
         this.hp -= damage;
         if (this.hp <= 0) {
@@ -188,6 +204,12 @@ export class Tank extends schema.Schema {
             this.active = false;
         }
         return damage;
+    }
+
+    heal(hp){
+        let newHp = this.hp + hp;
+        newHp = Math.min(newHp,this.maxHp);
+        this.hp = newHp;
     }
 
     handleCollision() {
@@ -207,6 +229,12 @@ export class Tank extends schema.Schema {
         this.lastShootAt = Date.now();
         this.numBullet -= 1;
     }
+
+    performEffect(effectType){
+        let effect = EffectFactory.createEffect(effectType,this);
+        this.effects = this.effects.filter(effect=>effect.type !== effectType);
+        this.effects.push(effect);
+    }
 }
 
 schema.defineTypes(Tank, {
@@ -215,9 +243,10 @@ schema.defineTypes(Tank, {
     direction: "float32",
     cannonDirection: "float32",
     lastShootAt: "number",
-    hp: "number",
+    hp: "int32",
     active: "boolean",
     kills: "number",
     numBullet: "number",
-    timeRemainToFullBullet: "number"
+    timeRemainToFullBullet: "number",
+    effects: [Effect]
 })

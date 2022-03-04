@@ -58,6 +58,23 @@ export class Item extends schema.Schema{
         } else {
             this.timeAliveRemain -= GC.DT;
             if (this.timeAliveRemain <= 0) this.setActive(false);
+            else {
+                this.checkCollisionWithTanks();
+            }
+        }
+    }
+
+    checkCollisionWithTanks(){
+        let iterator = this.controller.tanks.values();
+        let tank = iterator.next().value;
+        while (tank){
+            if (!tank.isActive()) continue;
+            if (this.controller.map.checkCollision(tank.getBody(),this.getBody())){
+                tank.performEffect(this.effectType);
+                this.setActive(false);
+                break;
+            }
+            tank = iterator.next().value;
         }
     }
 }

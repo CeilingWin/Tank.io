@@ -1,3 +1,4 @@
+
 var Tank = cc.Node.extend({
     ctor: function(type, skin){
         this.type = type;
@@ -37,7 +38,15 @@ var Tank = cc.Node.extend({
         this.setHp(data.hp);
         this.checkShoot(data["lastShootAt"]);
         this.updateBullet(data["numBullet"],data["timeRemainToFullBullet"]);
+        this.updateEffect(data["effects"]);
         this.kills = data.kills;
+    },
+
+    updateEffect: function (effects){
+        if (effects.find(effect=>effect.type === GC.EFFECT_TYPE.HEAL)) this.ndHeal.setVisible(true);
+        else this.ndHeal.setVisible(false);
+        if (effects.find(effect=>effect.type === GC.EFFECT_TYPE.SHIELD)) this.ndShield.setVisible(true);
+        else this.ndShield.setVisible(false);
     },
     
     updateBullet: function (numBullet, timeRemainToFullBullet){
@@ -122,6 +131,52 @@ var Tank = cc.Node.extend({
         this.pbBullet = pbBullet;
         this.bulletBar.setCascadeOpacityEnabled(true);
         this.bulletBar.setOpacity(0);
+        // eff heal
+        this.ndHeal = new cc.Node();
+        this.addChild(this.ndHeal);
+        const numIcon = 5;
+        const d = 60, t = 0.7;
+        for (let i=0;i<numIcon;i++){
+            let icon = new cc.Sprite("res/effect/eff_heal2.png");
+            icon.setColor(cc.color.GREEN);
+            icon.setOpacity(0);
+            let x = Math.random()*1.6*d - d*0.8;
+            let y = -Math.random()*d + d*0.2;
+            icon.oldPos = cc.p(x,y);
+            icon.setPosition(x,y);
+            this.ndHeal.addChild(icon);
+            let delay = Math.random()*0.3 + 0.1;
+            icon.runAction(cc.sequence(
+                cc.delayTime(delay),
+                cc.callFunc(()=>{
+                    icon.y = icon.oldPos.y;
+                    icon.setOpacity(255);
+                }),
+                cc.spawn(
+                    cc.moveBy(t,0,80),
+                    cc.sequence(
+                        cc.delayTime(t*0.5),
+                        cc.fadeOut(t*0.5)
+                    )
+                )
+            ).repeatForever());
+        }
+        // eff shield
+        this.ndShield = new cc.Node();
+        this.addChild(this.ndShield);
+        const numSpr = 4, rotationSpeed = 180;
+        for (let i=0;i<numSpr;i++){
+            let shield = new cc.Sprite("res/effect/shield.png");
+            shield.anchorX = 0.29;
+            shield.anchorY = 0.47;
+            shield.setPosition(0,0);
+            shield.rotation = 360/numSpr*i;
+            let rotationBy = i%2===0? rotationSpeed : rotationSpeed/2;
+            shield.runAction(cc.rotateBy(1,rotationBy).repeatForever());
+            this.ndShield.addChild(shield);
+        }
+        this.ndHeal.setVisible(false);
+        this.ndShield.setVisible(false);
     },
 
     getWoldPos: function () {
@@ -138,6 +193,7 @@ var Tank = cc.Node.extend({
     },
 
     setHp: function(hp){
+        hp = Math.round(hp);
         let deltaHp = hp - this.hp;
         if (deltaHp === 0) return;
         this.hp = hp;

@@ -66,7 +66,21 @@
     },
     "items": {
         "radius": 40,
-        "time_alive": 3000,
+        "time_alive": 9000,
         "time_to_appear": 2000
-    }
+    },
+    "effects": [
+        {
+            "type": 0,
+            "name": "heal",
+            "duration": 5000,
+            "healRate": 100
+        },
+        {
+            "type": 1,
+            "name": "shield",
+            "duration": 5000,
+            "radius": 150
+        }
+    ]
 }

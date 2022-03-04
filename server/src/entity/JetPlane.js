@@ -72,7 +72,7 @@ export class JetPlane extends schema.Schema {
         if (!item) return;
         item.setPosition(this.getPosition());
         if (this.controller.canPutObjectOnMap(item)){
-            item.initWithEffect(1);
+            item.initWithEffect(MathUtils.randomInt(0,1));
         }
     }
 }

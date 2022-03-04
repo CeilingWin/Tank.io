@@ -5,9 +5,22 @@ var GC = {
         IN_GAME : 2,
         SHOW_LEADER_BOARD : 3
     },
+    // time: ms
     TIME_TO_READY : 2000,
+    TIME_SHOW_LEADER_BOARD : 10000,
     RENDER_DELAY : 100,
-    TIME_TO_SYNC_CS : 50 //ms
+    TIME_TO_SYNC_CS : 1000/20,
+    DT: 1000/60,
+
+    // tank
+    TANK_MIN_SPEED : 100,
+    TANK_MAX_SPEED : 500,
+
+    // effect
+    EFFECT_TYPE: {
+        HEAL: 0,
+        SHIELD: 1
+    }
 }
 
 var TYPE_MESSAGE = {
@@ -22,7 +35,7 @@ var TYPE_MESSAGE = {
     UPDATE_TANK : 12,
 
     PLAYER_WAS_KILLED: 13,
-    SHOW_LEADER_BOARD: 14,
+    SHOW_LEADER_BOARD: 14
 }
 
 var EventId = {

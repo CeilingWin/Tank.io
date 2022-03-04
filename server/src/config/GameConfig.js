@@ -6,6 +6,7 @@ const bulletConfig = config.get("bullets");
 const roomConfig = config.get("room_config");
 const jetPlaneConfig = config.get("jet_plane");
 const itemsConfig = config.get("items");
+const effectsConfig = config.get("effects");
 
 var GameConfig = {
     getTankConfig: function(typeTank){
@@ -26,6 +27,10 @@ var GameConfig = {
 
     getItemsConfig: function(){
         return itemsConfig;
+    },
+
+    getEffectConfig: function (){
+        return effectsConfig;
     }
 }
 

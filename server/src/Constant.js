@@ -15,6 +15,12 @@ var GC = {
     // tank
     TANK_MIN_SPEED : 100,
     TANK_MAX_SPEED : 500,
+
+    // effect
+    EFFECT_TYPE: {
+        HEAL: 0,
+        SHIELD: 1
+    }
 }
 
 var TYPE_MESSAGE = {

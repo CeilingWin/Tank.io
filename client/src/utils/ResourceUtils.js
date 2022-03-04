@@ -11,7 +11,7 @@ var ResourceUtils = {
         return "res/map/minimap/map" + mapId + ".png";
     },
 
-    getItem: function (type){
-        return "res/items/item_" + type + ".png";
+    getEffect: function (type){
+        return "res/items/eff_" + type + ".png";
     }
 }
