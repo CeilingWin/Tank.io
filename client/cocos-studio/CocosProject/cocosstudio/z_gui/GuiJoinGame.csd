@@ -17,7 +17,7 @@
             <FileData Type="Normal" Path="common/background.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_1" ActionTag="-985237479" Tag="58" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="0.0000" TopMargin="-2.8712" BottomMargin="2.8712" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="-985237479" Tag="58" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TopMargin="-2.8712" BottomMargin="2.8712" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1920.0000" Y="1080.0000" />
             <Children>
               <AbstractNodeData Name="Panel_2" ActionTag="-1277366303" Tag="61" IconVisible="False" LeftMargin="456.1349" RightMargin="863.8651" TopMargin="92.9968" BottomMargin="907.0032" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="PanelObjectData">
@@ -33,6 +33,18 @@
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="lbError" ActionTag="-1020185179" Tag="266" IconVisible="False" LeftMargin="495.3588" RightMargin="1303.6412" TopMargin="67.1150" BottomMargin="989.8850" FontSize="20" LabelText="Enter room id" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="121.0000" Y="23.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="555.8588" Y="1001.3850" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="0" B="0" />
+                <PrePosition X="0.2895" Y="0.9272" />
+                <PreSize X="0.0630" Y="0.0213" />
+                <FontResource Type="Normal" Path="fonts/arial.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
               <AbstractNodeData Name="tfRoomId" ActionTag="1700773116" Tag="59" IconVisible="False" LeftMargin="497.3350" RightMargin="922.6650" TopMargin="113.1500" BottomMargin="886.8500" TouchEnable="True" FontSize="40" IsCustomSize="True" LabelText="" PlaceHolderText="Enter room id" MaxLengthText="10" ctype="TextFieldObjectData">
                 <Size X="500.0000" Y="80.0000" />
@@ -70,10 +82,10 @@
                 <PreSize X="0.7500" Y="0.6111" />
                 <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lvRooms" ActionTag="969130146" Tag="62" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="301.1591" RightMargin="218.8409" TopMargin="282.3515" BottomMargin="147.6485" TouchEnable="True" ClipAble="True" BackColorAlpha="88" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="-33" Scale9OriginY="-33" Scale9Width="66" Scale9Height="66" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
+              <AbstractNodeData Name="lvRooms" ActionTag="969130146" Tag="62" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="301.0880" RightMargin="218.9121" TopMargin="282.3920" BottomMargin="147.6080" TouchEnable="True" ClipAble="True" BackColorAlpha="88" ColorAngle="90.0000" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="-33" Scale9OriginY="-33" Scale9Width="66" Scale9Height="66" ScrollDirectionType="0" ItemMargin="10" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
                 <Size X="1400.0000" Y="650.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1001.1591" Y="472.6485" />
+                <Position X="1001.0880" Y="472.6080" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5214" Y="0.4376" />
@@ -160,10 +172,10 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="0.0000" Y="2.8712" />
+            <Position Y="2.8712" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0000" Y="0.0027" />
+            <PrePosition Y="0.0027" />
             <PreSize X="1.0000" Y="1.0000" />
             <SingleColor A="255" R="172" G="78" B="78" />
             <FirstColor A="255" R="150" G="200" B="255" />

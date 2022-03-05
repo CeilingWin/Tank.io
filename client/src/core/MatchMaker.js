@@ -25,8 +25,9 @@ var MatchMaker = cc.Class.extend({
     },
 
     onFindRoomFailed: function (error){
-        cc.log("Find room failed",error);
-        // todo: show error
+        let popup = new PopupNotification();
+        popup.setNotification(error);
+        gv.sceneMgr.addGui(popup);
     },
 
     mergeOptions: function (option){

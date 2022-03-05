@@ -6,6 +6,7 @@ var GuiJoinGame = BaseGui.extend({
         this.lvRooms = null;
         this.lbEmpty = null;
         this.btnRefresh = null;
+        this.lbError = null;
         this._super("res/z_gui/GuiJoinGame.json");
     },
 
@@ -14,6 +15,8 @@ var GuiJoinGame = BaseGui.extend({
         GuiUtils.addEventOnHover(this.btnFindRoom,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
         GuiUtils.addEventOnHover(this.btnClose,res.COMMON_BTN_BACK2_PNG,res.COMMON_BTN_BACK_PNG);
         GuiUtils.addEventOnHover(this.btnRefresh,res.COMMON_BTN_OK2_PNG,res.COMMON_BG_TF2_PNG);
+        this.lbError.setOpacity(0);
+        this.lbError.oldPos = this.lbError.getPosition();
     },
 
     onTouchUIEnded: function(sender){
@@ -32,7 +35,18 @@ var GuiJoinGame = BaseGui.extend({
 
     onBtnFindRoomClick: function(){
         let roomId = this.tfRoomId.getString().toUpperCase();
-        MatchMaker.getIns().joinRoomById(roomId);
+        if (roomId === ""){
+            this.lbError.stopAllActions();
+            this.lbError.setOpacity(255);
+            this.lbError.y -= 20;
+            this.lbError.runAction(cc.sequence(
+                cc.moveTo(0.5,this.lbError.oldPos.x,this.lbError.oldPos.y).easing(cc.easeBackOut()),
+                cc.delayTime(5),
+                cc.fadeOut(1)
+            ));
+        } else {
+            MatchMaker.getIns().joinRoomById(roomId);
+        }
     },
 
     reloadAvailableRooms: function(rooms){

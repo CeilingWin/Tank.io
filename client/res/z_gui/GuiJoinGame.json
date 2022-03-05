@@ -161,6 +161,63 @@
                 "ctype": "PanelObjectData"
               },
               {
+                "FontSize": 20,
+                "LabelText": "Enter room id",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/arial.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 555.8588,
+                  "Y": 1001.385
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2895,
+                  "Y": 0.9272
+                },
+                "PreSize": {
+                  "X": 0.063,
+                  "Y": 0.0213
+                },
+                "LeftMargin": 495.3588,
+                "RightMargin": 1303.6412,
+                "TopMargin": 67.115,
+                "BottomMargin": 989.885,
+                "Tag": 266,
+                "ActionTag": -1020185179,
+                "Size": {
+                  "X": 121.0,
+                  "Y": 23.0
+                },
+                "Name": "lbError",
+                "ctype": "TextObjectData"
+              },
+              {
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/arialbd.ttf",
@@ -267,7 +324,7 @@
                   "Y": 0.8799
                 },
                 "PreSize": {
-                  "X": 0.1563,
+                  "X": 0.1562,
                   "Y": 0.0926
                 },
                 "LeftMargin": 1087.3762,
@@ -359,8 +416,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 1001.1591,
-                  "Y": 472.6485
+                  "X": 1001.088,
+                  "Y": 472.608
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -378,10 +435,10 @@
                   "X": 0.7292,
                   "Y": 0.6019
                 },
-                "LeftMargin": 301.1591,
-                "RightMargin": 218.8409,
-                "TopMargin": 282.3515,
-                "BottomMargin": 147.6485,
+                "LeftMargin": 301.088,
+                "RightMargin": 218.9121,
+                "TopMargin": 282.392,
+                "BottomMargin": 147.608,
                 "Tag": 62,
                 "ActionTag": 969130146,
                 "Size": {
@@ -787,7 +844,7 @@
               "Y": 0.0818
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 1061.2274,
@@ -863,7 +920,7 @@
               "Y": 0.0799
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 701.5624,
@@ -894,6 +951,7 @@
         "../common/btn_ok2.png",
         "../common/rectangle.png",
         "../Default/Button_Disable.png",
+        "../fonts/arial.ttf",
         "../fonts/arialbd.ttf"
       ],
       "ctype": "GameFileData"
