@@ -10,8 +10,19 @@ var GuiGameResult = BaseGui.extend({
     },
 
     initGui: function () {
-        this.lbRanking.setString("");
         GuiUtils.addEventOnHover(this.btnBack, res.COMMON_BTN_BACK2_PNG, res.COMMON_BTN_BACK_PNG);
+        this.lbRanking.setString("");
+        this.lbRanking.scale = 1.5;
+        this.lbRanking.setOpacity(100);
+        this.lbRanking.runAction(cc.spawn(
+            cc.fadeIn(0.8),
+            cc.scaleTo(0.5,1,1)
+        ));
+        let func = (node) => {
+            node.setOpacity(0);
+            node.runAction(cc.fadeIn(1));
+        }
+        func(this.btnBack);
         this.timeFinishShowLeaderBoard = gv.gameRoom.roomState["timeFinishShowLeaderBoard"];
         this.schedule(this.update.bind(this), 1);
         this.update();

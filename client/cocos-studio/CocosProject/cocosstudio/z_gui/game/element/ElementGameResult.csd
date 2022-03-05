@@ -58,11 +58,11 @@
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
-            <AnchorPoint />
-            <Position Y="2.1166" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="800.0000" Y="42.1166" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition Y="0.0265" />
+            <PrePosition X="0.5000" Y="0.5265" />
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="common/bg_tf.png" Plist="" />
             <SingleColor A="255" R="30" G="144" B="255" />

@@ -21,5 +21,12 @@ var ElementGameResult = ccui.Layout.extend(_injectCCS).extend({
         } else {
             this.pn.setBackGroundImage(res.COMMON_BG_TF_PNG);
         }
+        this.pn.setScale(0);
+        this.pn.runAction(cc.sequence(
+            cc.delayTime(0.06*rank),
+            cc.scaleTo(0.3,1.05,1.01),
+            cc.scaleTo(0.1,0.97,0.98),
+            cc.scaleTo(0.1,1,1)
+        ));
     }
 })

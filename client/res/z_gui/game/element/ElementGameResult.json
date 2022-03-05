@@ -38,10 +38,13 @@
             "Scale9OriginY": 33,
             "Scale9Width": 34,
             "Scale9Height": 34,
-            "AnchorPoint": {},
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
             "Position": {
-              "X": 0.0,
-              "Y": 2.1166
+              "X": 800.0,
+              "Y": 42.1166
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -50,8 +53,8 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0265
+              "X": 0.5,
+              "Y": 0.5265
             },
             "PreSize": {
               "X": 1.0,
