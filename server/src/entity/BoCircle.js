@@ -37,9 +37,13 @@ export class BoCircle extends schema.Schema {
 
     update(){
         let boPosition = this.getPosition();
-        this.controller.tanks.forEach(tank=>{
+        this.controller.tanks.forEach((tank,id)=>{
+            if (!tank.isActive()) return;
             if (Vector.distance(boPosition,tank.getPosition())>this.radius){
                 tank.takeDamage(this.damage);
+                if (!tank.isActive()) {
+                    this.controller.playerWasKilled(id,null);
+                }
             }
         });
 

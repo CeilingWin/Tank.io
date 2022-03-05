@@ -22,8 +22,9 @@ class Vector extends SAT.Vector{
     }
 
     static distance(v1,v2){
-        let v = v1.sub(v2);
-        return v.len();
+        let dx = v1.x - v2.x;
+        let dy = v1.y - v2.y;
+        return Math.sqrt(dx*dx+dy*dy);
     }
 }
 

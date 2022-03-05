@@ -155,11 +155,23 @@ var Game = cc.Class.extend({
         let killerId = message["killerId"];
         let currentFollowTank = this.getFollowTank();
         if (deathPlayerId === currentFollowTank.playerId){
-            this.follow(this.tanks.get(killerId));
+            currentFollowTank.setActive(false);
+            let tank;
+            if (!killerId){
+                let iterator = this.tanks.values();
+                tank = iterator.next().value;
+                while (tank){
+                    if (tank.isActive()) break;
+                    tank = iterator.next().value;
+                }
+            } else {
+                tank = this.tanks.get(killerId);
+            }
+            if (tank) this.follow(tank);
         }
         if (deathPlayerId === this.me.playerId){
             this.input.stop();
-            gv.sceneMgr.addGui(new GuiDeathScreen(gv.gameRoom.getPlayerDataById(killerId)));
+            if (gv.gameRoom.roomState.game["numAlivePlayer"] > 1) gv.sceneMgr.addGui(new GuiDeathScreen(gv.gameRoom.getPlayerDataById(killerId)));
         }
     }
 })

@@ -116,8 +116,11 @@ var GuiGameControl = BaseGui.extend({
             this.ndHp.setVisible(false);
             this.ndBullet.setVisible(false);
         } else {
+            let killerUserName ;
+            if (!killer) killerUserName = "BO CIRCLE";
+            else killerUserName = killer["username"];
             let mess = "@player was killed by @killer";
-            mess = mess.replace("@player",player["username"]).replace("@killer",killer["username"]);
+            mess = mess.replace("@player",player["username"]).replace("@killer",killerUserName);
             this.showMessage(mess);
         }
     },

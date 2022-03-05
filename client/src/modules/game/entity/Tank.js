@@ -11,6 +11,7 @@ var Tank = cc.Node.extend({
         this.kills = 0;
         this.lastShootAt = 0;
         this.cannonDirection = 0;
+        this._active = true;
     },
 
     loadAttributes: function(){
@@ -28,6 +29,7 @@ var Tank = cc.Node.extend({
     },
     
     updateData: function (data){
+        this._active = data.active;
         if (!data.active) {
             this.die();
             return;
@@ -40,6 +42,14 @@ var Tank = cc.Node.extend({
         this.updateBullet(data["numBullet"],data["timeRemainToFullBullet"]);
         this.updateEffect(data["effects"]);
         this.kills = data.kills;
+    },
+
+    isActive: function (){
+        return this._active;
+    },
+
+    setActive: function (active) {
+        this._active = active;
     },
 
     updateEffect: function (effects){

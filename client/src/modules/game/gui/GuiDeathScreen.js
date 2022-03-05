@@ -30,7 +30,9 @@ var GuiDeathScreen = BaseGui.extend({
     },
 
     loadData: function (){
-        let killerName = this.killer["username"];
+        let killerName;
+        if (!this.killer) killerName = "BO CIRCLE";
+        else killerName = this.killer["username"];
         this.lbKillBy.setString("Killed by " + killerName);
     },
 

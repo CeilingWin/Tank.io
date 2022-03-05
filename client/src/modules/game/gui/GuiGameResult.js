@@ -15,6 +15,8 @@ var GuiGameResult = BaseGui.extend({
         this.timeFinishShowLeaderBoard = gv.gameRoom.roomState["timeFinishShowLeaderBoard"];
         this.schedule(this.update.bind(this), 1);
         this.update();
+        let gui = gv.sceneMgr.getGui(GuiDeathScreen.prototype.className);
+        gui && gui.destroy();
     },
 
     update: function () {
