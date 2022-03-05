@@ -1,5 +1,6 @@
 var MINIMAP_SCALE = 0.4;
 var NUM_FRAME_TO_UPDATE_FPS = 60;
+var VIEW_RANGE = 900;
 var GuiGameControl = BaseGui.extend({
     ctor: function(){
         this.lbNotification = null;
@@ -82,11 +83,14 @@ var GuiGameControl = BaseGui.extend({
     },
 
     updateMinimap: function(){
+        let followTank = gv.game.getFollowTank();
+        let followTankPos = followTank.getPosition();
         this.tanks.forEach(sprTank=>{
             let tank = gv.game.tanks.get(sprTank.tankId);
-            if (tank.isDied()){
+            if (tank.isDied() || cc.pDistance(followTankPos,tank.getPosition())>VIEW_RANGE){
                 sprTank.setVisible(false);
             } else {
+                sprTank.setVisible(true);
                 let x = tank.x/this.actualSizeMap.width*this.sizeMinimap.width;
                 let y = tank.y/this.actualSizeMap.height*this.sizeMinimap.height;
                 sprTank.setPosition(x,y);
