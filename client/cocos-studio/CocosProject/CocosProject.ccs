@@ -39,14 +39,13 @@
           <Image Name="settings.png" />
           <Image Name="view.png" />
         </Folder>
+        <Folder Name="effect">
+          <Image Name="eff_heal2.png" />
+          <Image Name="shield.png" />
+        </Folder>
         <Folder Name="fonts">
           <TTF Name="arial.ttf" />
           <TTF Name="arialbd.ttf" />
-          <TTF Name="arialbi.ttf" />
-          <TTF Name="ariali.ttf" />
-          <TTF Name="bold.ttf" />
-          <TTF Name="classic.ttf" />
-          <TTF Name="normal.ttf" />
         </Folder>
         <Folder Name="items">
           <Image Name="eff_0.png" />
@@ -184,11 +183,11 @@
               <Project Name="JetPlane.csd" Type="Node" />
             </Folder>
             <Project Name="GameScene.csd" Type="Scene" />
+            <Project Name="GuiDeathScreen.csd" Type="Scene" />
             <Project Name="GuiGameControl.csd" Type="Scene" />
             <Project Name="GuiGameResult.csd" Type="Scene" />
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
-            <Project Name="GuiDeathScreen.csd" Type="Scene" />
           </Folder>
           <Project Name="ElementSkinTank.csd" Type="Layer" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />
@@ -197,10 +196,6 @@
           <Project Name="GuiWaiting.csd" Type="Scene" />
           <Project Name="PopupNotification.csd" Type="Scene" />
           <Project Name="SceneLobby.csd" Type="Scene" />
-        </Folder>
-        <Folder Name="effect">
-          <Image Name="eff_heal2.png" />
-          <Image Name="shield.png" />
         </Folder>
       </RootFolder>
     </Group>
