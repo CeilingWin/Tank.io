@@ -226,7 +226,7 @@
             <FileData Type="Normal" Path="common/view.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="820.0000" Y="820.0000" />
             <Children>
               <AbstractNodeData Name="sprMinimap" ActionTag="-899870694" Tag="55" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="10.0000" TopMargin="10.0000" BottomMargin="10.0000" ctype="SpriteObjectData">

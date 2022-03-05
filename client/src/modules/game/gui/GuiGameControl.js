@@ -98,6 +98,19 @@ var GuiGameControl = BaseGui.extend({
         });
     },
 
+    updateBo: function(boData){
+        if (!this.bo){
+            this.bo = new cc.DrawNode();
+            let x = boData.x/this.actualSizeMap.width*this.sizeMinimap.width;
+            let y = boData.y/this.actualSizeMap.height*this.sizeMinimap.height;
+            this.bo.setPosition(x,y);
+            this.bo.drawCircle(cc.p(0,0),100,0,100,false,2,cc.color.BLUE);
+            this.minimap.addChild(this.bo);
+        }
+        let radius = boData.radius;
+        this.bo.scale = radius/this.actualSizeMap.width*this.sizeMinimap.width/100;
+    },
+
     onResizeMinimap: function(){
         this.isShowMap = !this.isShowMap;
         this.minimap.stopAllActions();

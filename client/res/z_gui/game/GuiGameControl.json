@@ -958,7 +958,7 @@
             "ctype": "SpriteObjectData"
           },
           {
-            "ClipAble": false,
+            "ClipAble": true,
             "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 107,

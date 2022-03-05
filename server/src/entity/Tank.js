@@ -196,7 +196,7 @@ export class Tank extends schema.Schema {
     }
 
     takeDamage(damage) {
-        if (this.effects.find(eff=>eff.isShield)) return;
+        if (this.effects.find(eff=>eff.isShield)) return 0;
         damage = Math.min(this.hp, damage);
         this.hp -= damage;
         if (this.hp <= 0) {

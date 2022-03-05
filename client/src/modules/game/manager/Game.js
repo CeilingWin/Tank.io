@@ -75,8 +75,8 @@ var Game = cc.Class.extend({
         this.updateBullets(currentState.bullets);
         this.updateJetPlanes(currentState.jetPlanes);
         this.updateItems(currentState.items);
+        this.updateBo(currentState.boCircle);
         this.mapLayer.update();
-        this.mapLayer.updateBo(currentState.boCircle);
         this.guiControl.update();
     },
 
@@ -129,6 +129,11 @@ var Game = cc.Class.extend({
             let itemData = itemsData[i];
             item.updateData(itemData);
         }
+    },
+
+    updateBo: function (boData){
+        this.mapLayer.updateBo(boData);
+        this.guiControl.updateBo(boData);
     },
 
     updateInput: function(){
