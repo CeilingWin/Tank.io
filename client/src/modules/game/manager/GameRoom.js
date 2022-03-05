@@ -79,7 +79,7 @@ var GameRoom = cc.Class.extend({
     },
 
     processGameUpdate: function () {
-        if (this.roomState.state !== GC.ROOM_STATE.IN_GAME) return;
+        if (this.roomState.state !== GC.ROOM_STATE.IN_GAME && this.roomState.state !== GC.ROOM_STATE.SHOW_LEADER_BOARD) return;
         // copy current update
         let currentUpdate = {}, serverResponse = this.roomState.game;
         currentUpdate.ts = serverResponse.ts;

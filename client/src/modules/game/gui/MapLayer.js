@@ -18,6 +18,7 @@ var MapLayer = BaseGui.extend({
             this.isLoadedMap = true;
             this._loadDone();
         });
+        this.setScale(0.5,0.5);
     },
 
     getSize: function(){
@@ -38,7 +39,7 @@ var MapLayer = BaseGui.extend({
             if (this.actionFollow){
                 this.stopAction(this.actionFollow);
             }
-            this.actionFollow = this.runAction(cc.follow(tank,cc.rect(0,0,this.mapWidth,this.mapHeight)));
+            this.actionFollow = this.runAction(cc.follow(tank,cc.rect(0,0,this.mapWidth*this.scaleX,this.mapHeight*this.scaleY)));
         }
         if (!this.isLoadedMap){
             this.callFunc = func;

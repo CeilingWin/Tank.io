@@ -145,7 +145,7 @@ export class Game extends schema.Schema {
         return this.listDeathPlayers.map(player => {
             let tank = this.tanks.get(player.playerId);
             player.kills = tank.kills;
-            player.totalDamage = tank.totalDamage;
+            player.totalDamage = Math.round(tank.totalDamage);
             return player;
         });
     }
