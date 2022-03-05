@@ -7,6 +7,7 @@ import { Bullet } from "./Bullet.js";
 import { JetPlane } from "./JetPlane.js";
 import { GameConfig } from "../config/GameConfig.js";
 import { Item } from "./Item.js";
+import {BoCircle} from "./BoCircle.js";
 
 export class Game extends schema.Schema {
     constructor(room) {
@@ -25,6 +26,7 @@ export class Game extends schema.Schema {
         this.initTankForAllPlayers(players);
         this.initJetPlanes();
         this.initItems();
+        this.initBoCircle();
         this.ts = Date.now();
     }
 
@@ -69,6 +71,10 @@ export class Game extends schema.Schema {
         }
     }
 
+    initBoCircle(){
+        this.boCircle = new BoCircle(this);
+    }
+
     getRandomSpawnPosition() {
         return new Vector(Math.random() * this.map.width, Math.random() * this.map.height);
     }
@@ -79,6 +85,7 @@ export class Game extends schema.Schema {
         this.updateBullets();
         this.updateJetPlane();
         this.updateItems();
+        this.boCircle.update();
         this.numAlivePlayer = this.tanks.size - this.listDeathPlayers.length;
     }
 
@@ -169,5 +176,6 @@ schema.defineTypes(Game, {
     bullets: [Bullet],
     jetPlanes: [JetPlane],
     items: [Item],
+    boCircle: BoCircle,
     numAlivePlayer: "number"
 })

@@ -87,6 +87,7 @@ var GameRoom = cc.Class.extend({
         currentUpdate.bullets = [];
         currentUpdate.jetPlanes = [];
         currentUpdate.items = [];
+        currentUpdate.boCircle = InterpolateObject.getObject(InterpolateObject.BoCircle,serverResponse["boCircle"]);
         serverResponse.tanks.forEach((tank, id) => {
             currentUpdate.tanks.set(id, InterpolateObject.getObject(InterpolateObject.Tank,tank));
         });

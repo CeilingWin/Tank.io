@@ -82,5 +82,12 @@
             "duration": 15000,
             "radius": 150
         }
-    ]
+    ],
+    "bo": {
+        "breakTime": 5000,
+        "scaleSpeed": 100,
+        "scaleTime": 5000,
+        "damage": 10,
+        "damageIncreaseRate": 1.5
+    }
 }

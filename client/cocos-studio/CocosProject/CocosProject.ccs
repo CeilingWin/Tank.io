@@ -28,6 +28,7 @@
           <Image Name="btn_back2.png" />
           <Image Name="btn_ok2.png" />
           <Image Name="bullets.png" />
+          <Image Name="circle.png" />
           <Image Name="kills.png" />
           <Image Name="players.png" />
           <Image Name="rectangle.png" />

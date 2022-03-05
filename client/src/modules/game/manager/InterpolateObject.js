@@ -61,6 +61,12 @@ InterpolateObject.Item = {
     active : interpolateBoolean
 }
 
+InterpolateObject.BoCircle = {
+    x : interpolateLinear,
+    y : interpolateLinear,
+    radius : interpolateLinear
+}
+
 Object.entries(InterpolateObject).forEach(([key,value])=>{
     value.entries = Object.entries(value);
 });

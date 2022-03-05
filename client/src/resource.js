@@ -21,6 +21,7 @@ var res = {
 	COMMON_BTN_BACK2_PNG: "res/common/btn_back2.png",
 	COMMON_BTN_OK2_PNG: "res/common/btn_ok2.png",
 	COMMON_BULLETS_PNG: "res/common/bullets.png",
+	COMMON_CIRCLE_PNG: "res/common/circle.png",
 	COMMON_KILLS_PNG: "res/common/kills.png",
 	COMMON_PLAYERS_PNG: "res/common/players.png",
 	COMMON_RECTANGLE_PNG: "res/common/rectangle.png",

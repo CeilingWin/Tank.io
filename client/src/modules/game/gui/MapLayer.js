@@ -16,9 +16,72 @@ var MapLayer = BaseGui.extend({
             this.mapWidth = map.tileWidth*map.width;
             this.mapHeight = map.tileHeight*map.height;
             this.isLoadedMap = true;
+            this.initBo();
             this._loadDone();
         });
-        this.setScale(0.5,0.5);
+        // this.setScale(0.5,0.5);
+    },
+
+    initBo: function (){
+        this.ndBo = new cc.Node();
+        this.ndBo.setOpacity(50);
+        this.ndBo.setCascadeOpacityEnabled(true);
+        this.addChild(this.ndBo,1000000);
+        this.sprBoCircle = new cc.Sprite(res.COMMON_CIRCLE_PNG);
+        this.pnTop = new cc.LayerColor(cc.color.RED,this.mapWidth,this.mapHeight);
+        this.pnBottom = new cc.LayerColor(cc.color.RED,this.mapWidth,this.mapHeight);
+        this.pnLeft = new cc.LayerColor(cc.color.RED,this.mapWidth,this.mapHeight);
+        this.pnRight = new cc.LayerColor(cc.color.RED,this.mapWidth,this.mapHeight);
+
+        this.pnTop = new ccui.Layout();
+        this.pnBottom = new ccui.Layout();
+        this.pnLeft = new ccui.Layout();
+        this.pnRight = new ccui.Layout();
+
+        let listPn = [this.pnTop,this.pnBottom,this.pnLeft,this.pnRight];
+        listPn.forEach(pn=>{
+            pn.setContentSize(this.getSize());
+            pn.setBackGroundColorType(ccui.Layout.BG_COLOR_SOLID);
+            pn.setBackGroundColor(cc.color.RED);
+        });
+
+        this.pnTop.setAnchorPoint(0.5,0);
+        this.pnBottom.setAnchorPoint(0.5,1);
+        this.pnLeft.setAnchorPoint(1,0.5);
+        this.pnRight.setAnchorPoint(0,0.5);
+        this.pnTop.x = this.mapWidth/2;
+        this.pnBottom.x = this.mapWidth/2;
+        this.pnRight.y = this.mapHeight/2;
+        this.pnLeft.y = this.mapHeight/2;
+        this.ndBo.addChild(this.sprBoCircle);
+        this.ndBo.addChild(this.pnTop);
+        this.ndBo.addChild(this.pnBottom);
+        this.ndBo.addChild(this.pnLeft);
+        this.ndBo.addChild(this.pnRight);
+        this.defaultBoRadius = this.sprBoCircle.getContentSize().width/2;
+        this.ndBo.setVisible(false);
+        this.lastBoPos = null;
+    },
+
+    updateBo: function (boCircle){
+        if (!this.lastBoPos) {
+            this.sprBoCircle.setPosition(boCircle.x,boCircle.y);
+            this.lastBoPos = true;
+            this.ndBo.setVisible(true);
+        }
+        this.setBoRadius(boCircle.radius);
+    },
+
+    setBoRadius: function(radius){
+        let scale = radius/this.defaultBoRadius;
+        this.sprBoCircle.setScale(scale);
+        this.pnTop.y = this.sprBoCircle.y + radius;
+        this.pnBottom.y = this.sprBoCircle.y - radius;
+        this.pnRight.setPosition(this.sprBoCircle.x + radius,this.sprBoCircle.y);
+        this.pnLeft.setPosition(this.sprBoCircle.x - radius,this.sprBoCircle.y);
+        let scaleLR = (2*radius)/this.mapHeight;
+        this.pnRight.scaleY = scaleLR;
+        this.pnLeft.scaleY = scaleLR;
     },
 
     getSize: function(){

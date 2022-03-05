@@ -76,6 +76,7 @@ var Game = cc.Class.extend({
         this.updateJetPlanes(currentState.jetPlanes);
         this.updateItems(currentState.items);
         this.mapLayer.update();
+        this.mapLayer.updateBo(currentState.boCircle);
         this.guiControl.update();
     },
 
