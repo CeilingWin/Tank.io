@@ -3,7 +3,6 @@ var NUM_FRAME_TO_UPDATE_FPS = 60;
 var VIEW_RANGE = 900;
 var GuiGameControl = BaseGui.extend({
     ctor: function(){
-        this.lbNotification = null;
         this.sprMinimap = null;
         this.minimap = null;
         this.ndHp = null;
@@ -17,6 +16,7 @@ var GuiGameControl = BaseGui.extend({
         this.lbNumBullet = null;
         this.sprViewMode = null;
         this.ndBullet = null;
+        this.ndNotification = null;
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
         this.subEvent(EventId.KEY_M_PRESS,this.onResizeMinimap.bind(this));
@@ -24,9 +24,25 @@ var GuiGameControl = BaseGui.extend({
     },
 
     initGui: function(){
-        this.lbNotification.setOpacity(0);
         this.minimap.setVisible(false);
         this.sprViewMode.setVisible(false);
+        this.ndNotification.currentY = 20;
+    },
+
+    showNotification: function(noti){
+        let lb = new ccui.Text(noti,res.FONTS_ARIAL_TTF,24);
+        lb.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_RIGHT);
+        lb.setPosition(cc.p(0,this.ndNotification.currentY));
+        lb.anchorX = 1;
+        this.ndNotification.addChild(lb);
+        let dy = lb.getContentSize().height + 8;
+        this.ndNotification.currentY += dy;
+        this.ndNotification.runAction(cc.moveBy(0.5,0,-dy));
+        lb.runAction(cc.sequence(
+            cc.delayTime(5),
+            cc.fadeOut(1),
+            cc.callFunc(()=>lb.removeFromParent())
+        ));
     },
 
     start: function (){
@@ -133,23 +149,18 @@ var GuiGameControl = BaseGui.extend({
             this.ndHp.setVisible(false);
             this.ndBullet.setVisible(false);
         } else {
-            let killerUserName ;
-            if (!killer) killerUserName = "BO CIRCLE";
-            else killerUserName = killer["username"];
-            let mess = "@player was killed by @killer";
-            mess = mess.replace("@player",player["username"]).replace("@killer",killerUserName);
-            this.showMessage(mess);
+            let mess ;
+            if (!killer) {
+                mess = "@player die outside the play zone";
+                mess = mess.replace("@player",player["username"]);
+            }
+            else {
+                let killerUserName = killer["username"];
+                mess = "@player was killed by @killer";
+                mess = mess.replace("@player",player["username"]).replace("@killer",killerUserName);
+            }
+            this.showNotification(mess);
         }
-    },
-
-    showMessage: function(mess){
-        this.lbNotification.stopAllActions();
-        this.lbNotification.setOpacity(255);
-        this.lbNotification.setString(mess);
-        this.lbNotification.runAction(cc.sequence(
-            cc.delayTime(3),
-            cc.fadeOut(2)
-        ));
     },
 
     showTankState: function(tank){

@@ -44,7 +44,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbPing" ActionTag="2107675891" Tag="81" IconVisible="False" LeftMargin="77.0057" RightMargin="-157.0057" TopMargin="9.4487" BottomMargin="-32.4487" IsCustomSize="True" FontSize="20" LabelText="200ms" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbPing" ActionTag="2107675891" Tag="81" IconVisible="False" LeftMargin="77.0057" RightMargin="-157.0057" TopMargin="9.4487" BottomMargin="-32.4487" IsCustomSize="True" FontSize="20" LabelText="" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="80.0000" Y="23.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="117.0057" Y="-20.9487" />
@@ -68,7 +68,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbFps" ActionTag="572215270" Tag="83" IconVisible="False" LeftMargin="209.8133" RightMargin="-289.8133" TopMargin="9.4487" BottomMargin="-32.4487" IsCustomSize="True" FontSize="20" LabelText="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbFps" ActionTag="572215270" Tag="83" IconVisible="False" LeftMargin="209.8133" RightMargin="-289.8133" TopMargin="9.4487" BottomMargin="-32.4487" IsCustomSize="True" FontSize="20" LabelText="&#xA;" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="80.0000" Y="23.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="249.8133" Y="-20.9487" />
@@ -112,7 +112,7 @@
                 <FileData Type="Normal" Path="common/kills.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbKills" ActionTag="1989891426" Tag="76" IconVisible="False" LeftMargin="71.1936" RightMargin="-121.1936" TopMargin="-1043.1400" BottomMargin="1008.1400" IsCustomSize="True" FontSize="30" LabelText="5" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbKills" ActionTag="1989891426" Tag="76" IconVisible="False" LeftMargin="71.1936" RightMargin="-121.1936" TopMargin="-1043.1400" BottomMargin="1008.1400" IsCustomSize="True" FontSize="30" LabelText="&#xA;" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="50.0000" Y="35.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="96.1936" Y="1025.6400" />
@@ -135,7 +135,7 @@
                 <FileData Type="Normal" Path="common/players.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbAlive" ActionTag="1370835891" Tag="77" IconVisible="False" LeftMargin="199.5392" RightMargin="-249.5392" TopMargin="-1043.1404" BottomMargin="1008.1404" IsCustomSize="True" FontSize="30" LabelText="5" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbAlive" ActionTag="1370835891" Tag="77" IconVisible="False" LeftMargin="199.5392" RightMargin="-249.5392" TopMargin="-1043.1404" BottomMargin="1008.1404" IsCustomSize="True" FontSize="30" LabelText="&#xA;" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="50.0000" Y="35.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="224.5392" Y="1025.6404" />
@@ -161,7 +161,7 @@
               <AbstractNodeData Name="Panel_2" ActionTag="301707011" Tag="59" IconVisible="False" LeftMargin="-252.5000" RightMargin="-252.5000" TopMargin="18.6500" BottomMargin="-53.6500" ClipAble="False" BackColorAlpha="179" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="505.0000" Y="35.0000" />
                 <Children>
-                  <AbstractNodeData Name="pbHp" ActionTag="1932422603" Tag="16" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="2.5000" BottomMargin="2.5000" ProgressInfo="56" ctype="LoadingBarObjectData">
+                  <AbstractNodeData Name="pbHp" ActionTag="1932422603" Tag="16" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="2.5000" BottomMargin="2.5000" ProgressInfo="0" ctype="LoadingBarObjectData">
                     <Size X="500.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="252.5000" Y="17.5000" />
@@ -171,7 +171,7 @@
                     <PreSize X="0.9901" Y="0.8571" />
                     <ImageFileData Type="Default" Path="Default/LoadingBarFile.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbHp" ActionTag="1374745689" Tag="52" IconVisible="False" LeftMargin="3.8802" RightMargin="1.1198" TopMargin="4.6862" BottomMargin="0.3138" IsCustomSize="True" FontSize="30" LabelText="1/10000" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="lbHp" ActionTag="1374745689" Tag="52" IconVisible="False" LeftMargin="3.8802" RightMargin="1.1198" TopMargin="4.6862" BottomMargin="0.3138" IsCustomSize="True" FontSize="30" LabelText="" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="500.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="253.8802" Y="15.3138" />
@@ -252,18 +252,6 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbNotification" ActionTag="-1164654100" Tag="6" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="210.0000" RightMargin="210.0000" TopMargin="176.1656" BottomMargin="753.8344" IsCustomSize="True" FontSize="60" LabelText="Player a was killed by player b" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="1500.0000" Y="150.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="960.0000" Y="828.8344" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.7674" />
-            <PreSize X="0.7813" Y="0.1389" />
-            <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
           <AbstractNodeData Name="btnBack" ActionTag="-1878373518" Tag="84" IconVisible="False" LeftMargin="1860.6500" RightMargin="13.3500" TopMargin="1027.4125" BottomMargin="16.5875" TouchEnable="True" FontSize="14" ButtonText="back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -293,7 +281,7 @@
                 <FileData Type="Normal" Path="common/bullets.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbNumBullet" ActionTag="-1417010620" Tag="49" IconVisible="False" LeftMargin="904.1320" RightMargin="-1004.1320" TopMargin="-98.0098" BottomMargin="66.0098" IsCustomSize="True" FontSize="28" LabelText="99/99" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbNumBullet" ActionTag="-1417010620" Tag="49" IconVisible="False" LeftMargin="904.1320" RightMargin="-1004.1320" TopMargin="-98.0098" BottomMargin="66.0098" IsCustomSize="True" FontSize="28" LabelText="" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="100.0000" Y="32.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="954.1320" Y="82.0098" />
@@ -311,6 +299,24 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition Y="-0.0009" />
+            <PreSize X="0.0000" Y="0.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="ndSpawnNotification" ActionTag="157771969" Tag="56" IconVisible="True" LeftMargin="1549.1046" RightMargin="370.8954" TopMargin="-20.0000" BottomMargin="1100.0000" ctype="SingleNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="1549.1046" Y="1100.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8068" Y="1.0185" />
+            <PreSize X="0.0000" Y="0.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="ndNotification" ActionTag="-1427686788" Tag="58" IconVisible="True" LeftMargin="1560.1100" RightMargin="359.8900" TopMargin="9.0000" BottomMargin="1071.0000" ctype="SingleNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="1560.1100" Y="1071.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8126" Y="0.9917" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
         </Children>
