@@ -118,9 +118,12 @@ export class Game extends schema.Schema {
     }
 
     handleMessageUpdateTank(playerId, message) {
-        let movementDir = message[0];
-        let cannonDir = message[1];
-        let isClicked = message[2];
+        let movementDir = {
+            x:message[0],
+            y:message[1]
+        }
+        let cannonDir = message[2];
+        let isClicked = message[3];
         let tank = this.tanks.get(playerId);
         if (!tank || !tank.isActive()) return;
         tank.setMovementVector(movementDir);

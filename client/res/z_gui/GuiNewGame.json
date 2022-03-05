@@ -176,6 +176,64 @@
                     "ctype": "ImageViewObjectData"
                   },
                   {
+                    "IsCustomSize": true,
+                    "FontSize": 20,
+                    "LabelText": "Error",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/arial.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 712.9318,
+                      "Y": 57.5807
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 462.9318,
+                    "RightMargin": -962.9318,
+                    "TopMargin": -69.0807,
+                    "BottomMargin": 46.0807,
+                    "Tag": 268,
+                    "ActionTag": -2008326782,
+                    "Size": {
+                      "X": 500.0,
+                      "Y": 23.0
+                    },
+                    "Name": "lbErrorRoomName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
                     "FileData": {
                       "Type": "Normal",
                       "Path": "common/bg_tf.png",
@@ -325,64 +383,6 @@
                       "Y": 46.0
                     },
                     "Name": "Text_1",
-                    "ctype": "TextObjectData"
-                  },
-                  {
-                    "IsCustomSize": true,
-                    "FontSize": 20,
-                    "LabelText": "Error",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/arial.ttf",
-                      "Plist": ""
-                    },
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 712.9318,
-                      "Y": 57.5807
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 462.9318,
-                    "RightMargin": -962.9318,
-                    "TopMargin": -69.0807,
-                    "BottomMargin": 46.0807,
-                    "Tag": 268,
-                    "ActionTag": -2008326782,
-                    "Size": {
-                      "X": 500.0,
-                      "Y": 23.0
-                    },
-                    "Name": "lbErrorRoomName",
                     "ctype": "TextObjectData"
                   }
                 ],

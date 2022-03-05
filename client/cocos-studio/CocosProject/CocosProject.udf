@@ -9,7 +9,13 @@
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
-        <ActiveDocument />
+        <OpenedDocuments>
+          <FilePathData Path="z_gui/GuiNewGame.csd" />
+          <FilePathData Path="z_gui/ElementSkinTank.csd" />
+          <FilePathData Path="z_gui/GuiWaiting.csd" />
+          <FilePathData Path="z_gui/GuiJoinGame.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="z_gui/GuiNewGame.csd" />
       </Value>
     </Item>
   </Properties>

@@ -33,6 +33,18 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="common/rectangle_selected.png" Plist="" />
                   </AbstractNodeData>
+                  <AbstractNodeData Name="lbErrorRoomName" ActionTag="-2008326782" Tag="268" IconVisible="False" LeftMargin="462.9318" RightMargin="-962.9318" TopMargin="-69.0807" BottomMargin="46.0807" IsCustomSize="True" FontSize="20" LabelText="Error" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="500.0000" Y="23.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="712.9318" Y="57.5807" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="0" B="0" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FontResource Type="Normal" Path="fonts/arial.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
                   <AbstractNodeData Name="Image_1" ActionTag="1231535260" Tag="229" IconVisible="False" LeftMargin="456.3400" RightMargin="-956.3400" TopMargin="-50.0800" BottomMargin="-29.9200" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="33" BottomEage="33" Scale9OriginX="33" Scale9OriginY="33" Scale9Width="34" Scale9Height="34" ctype="ImageViewObjectData">
                     <Size X="500.0000" Y="80.0000" />
                     <Children>
@@ -64,18 +76,6 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="lbErrorRoomName" ActionTag="-2008326782" Tag="268" IconVisible="False" LeftMargin="462.9318" RightMargin="-962.9318" TopMargin="-69.0807" BottomMargin="46.0807" IsCustomSize="True" FontSize="20" LabelText="Error" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="500.0000" Y="23.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="712.9318" Y="57.5807" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="0" B="0" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FontResource Type="Normal" Path="fonts/arial.ttf" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

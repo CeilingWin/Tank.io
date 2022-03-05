@@ -145,7 +145,7 @@ var Game = cc.Class.extend({
             let mousePos = this.input.getMousePos();
             let tankPos = this.me.getWoldPos();
             let cannonDir = cc.pAngleSigned(cc.pSub(mousePos,tankPos),cc.p(1,0));
-            this.network.send(TYPE_MESSAGE.UPDATE_TANK,[tankDir,cannonDir,isClicked]);
+            this.network.send(TYPE_MESSAGE.UPDATE_TANK,[tankDir.x,tankDir.y,cannonDir,isClicked]);
             this.lastTimeSendInput = currentTime;
         }
     },

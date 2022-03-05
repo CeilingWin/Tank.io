@@ -1,0 +1,11 @@
+{
+  "name": "test_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "colyseus-loadtest bot.js --room game_room --numClients 49"
+  },
+  "author": "",
+  "license": "ISC"
+}
