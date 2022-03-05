@@ -6,7 +6,10 @@ var SceneLobby = BaseScene.extend({
         this.btnNewGame = null;
         this.tfUserName = null;
         this.btnChangeTank = null;
+        this.body = null;
+        this.cannon = null;
         this._super("res/z_gui/SceneLobby.json");
+        this.subEvent(EventId.CHANGED_TANK,this.loadTank.bind(this));
     },
 
     initGui: function () {
@@ -18,6 +21,17 @@ var SceneLobby = BaseScene.extend({
         GuiUtils.addEventOnHover(this.btnPlayNow,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
         GuiUtils.addEventOnHover(this.btnNewGame,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
         GuiUtils.addEventOnHover(this.btnJoin,res.COMMON_RECTANGLE_SELECTED_PNG,res.COMMON_RECTANGLE_PNG);
+        GuiUtils.addEventOnHover(this.btnChangeTank,res.COMMON_BTN_OK2_PNG,res.COMMON_RECTANGLE_PNG);
+        this.body.runAction(cc.rotateBy(10,360).repeatForever());
+        this.cannon.runAction(cc.rotateBy(8.5,-360).repeatForever());
+        this.loadTank();
+    },
+
+    loadTank: function (){
+        let tankType = LocalStorage.getTankType();
+        let skin = Number(LocalStorage.getSkin());
+        this.body.setTexture(ResourceUtils.getTankBody(tankType,skin));
+        this.cannon.setTexture(ResourceUtils.getCannon(tankType,skin));
     },
 
     onEnter: function (){

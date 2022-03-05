@@ -771,31 +771,27 @@
               "Path": "fonts/arialbd.ttf",
               "Plist": ""
             },
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
+            "TextColor": {},
             "DisabledFileData": {
               "Type": "Default",
               "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
               "Plist": ""
             },
             "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
+              "Type": "Normal",
+              "Path": "common/btn_ok2.png",
               "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
             "Scale9OriginY": 11,
-            "Scale9Width": 16,
-            "Scale9Height": 14,
+            "Scale9Width": 70,
+            "Scale9Height": 78,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -827,7 +823,7 @@
               "Y": 0.106
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 81.5017,
@@ -842,6 +838,133 @@
             },
             "Name": "btnChangeTank",
             "ctype": "ButtonObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 230.5067,
+              "Y": 289.2
+            },
+            "Scale": {
+              "ScaleX": 2.0,
+              "ScaleY": 2.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.1201,
+              "Y": 0.2678
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 230.5067,
+            "RightMargin": 1689.4933,
+            "TopMargin": 790.8,
+            "BottomMargin": 289.2,
+            "Tag": 157,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "tank/tank0/body2.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -66.0,
+                "RightMargin": -66.0,
+                "TopMargin": -44.5,
+                "BottomMargin": -44.5,
+                "Tag": 158,
+                "ActionTag": -122126981,
+                "Size": {
+                  "X": 132.0,
+                  "Y": 89.0
+                },
+                "Name": "body",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "tank/tank0/cannon2.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.3,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "RotationSkewX": -889.0,
+                "RotationSkewY": -889.0,
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -37.2,
+                "RightMargin": -86.8,
+                "TopMargin": -24.0,
+                "BottomMargin": -24.0,
+                "Tag": 159,
+                "ActionTag": 1383793479,
+                "Size": {
+                  "X": 124.0,
+                  "Y": 48.0
+                },
+                "Name": "cannon",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 466108254,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "ndTank",
+            "ctype": "SingleNodeObjectData"
           }
         ],
         "Size": {
@@ -854,12 +977,13 @@
       "UsedResources": [
         "../common/background.jpg",
         "../common/bg_tf.png",
+        "../common/btn_ok2.png",
         "../common/rectangle.png",
         "../Default/Button_Disable.png",
-        "../Default/Button_Normal.png",
-        "../Default/Button_Press.png",
         "../fonts/arial.ttf",
-        "../fonts/arialbd.ttf"
+        "../fonts/arialbd.ttf",
+        "../tank/tank0/body2.png",
+        "../tank/tank0/cannon2.png"
       ],
       "ctype": "GameFileData"
     }

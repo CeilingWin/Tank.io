@@ -87,6 +87,7 @@ var GuiSelectTank = BaseGui.extend({
                 LocalStorage.setItem("tankType",this.tankType);
                 LocalStorage.setItem("skin",this.skin);
                 cc.log("save tank:",this.tankType,"skin",this.skin);
+                EventCenter.pub(EventId.CHANGED_TANK);
                 this.destroy();
                 break;
         }

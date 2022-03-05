@@ -9,7 +9,7 @@
           <AbstractNodeData Name="ndTime" ActionTag="-417296136" Tag="393" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="960.0000" RightMargin="960.0000" TopMargin="356.4000" BottomMargin="723.6000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
-              <AbstractNodeData Name="lbTimeRemaining" ActionTag="-1768300474" Tag="28" IconVisible="False" LeftMargin="-400.0000" RightMargin="-400.0000" TopMargin="-50.0000" BottomMargin="-50.0000" IsCustomSize="True" FontSize="100" LabelText="Text Label" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="lbTimeRemaining" ActionTag="-1768300474" Tag="28" IconVisible="False" LeftMargin="-400.0000" RightMargin="-400.0000" TopMargin="-50.0000" BottomMargin="-50.0000" IsCustomSize="True" FontSize="100" LabelText="" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="800.0000" Y="100.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position />

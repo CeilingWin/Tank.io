@@ -45,7 +45,7 @@
               {
                 "IsCustomSize": true,
                 "FontSize": 100,
-                "LabelText": "Text Label",
+                "LabelText": "",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/arialbd.ttf",

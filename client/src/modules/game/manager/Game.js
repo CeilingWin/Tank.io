@@ -153,6 +153,7 @@ var Game = cc.Class.extend({
     endGame: function (){
         this.input.stop();
         this.guiControl.runAction(cc.fadeOut(1.5));
+        this.guiControl.bo.setVisible(false);
     },
 
     onPlayerWasKilled(message){

@@ -180,7 +180,7 @@
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btnChangeTank" ActionTag="-1649814634" Tag="177" IconVisible="False" LeftMargin="81.5017" RightMargin="1538.4983" TopMargin="915.4675" BottomMargin="64.5325" TouchEnable="True" FontSize="25" ButtonText="Change Tank" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btnChangeTank" ActionTag="-1649814634" Tag="177" IconVisible="False" LeftMargin="81.5017" RightMargin="1538.4983" TopMargin="915.4675" BottomMargin="64.5325" TouchEnable="True" FontSize="25" ButtonText="Change Tank" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="70" Scale9Height="78" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="300.0000" Y="100.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="231.5017" Y="114.5325" />
@@ -189,12 +189,45 @@
             <PrePosition X="0.1206" Y="0.1060" />
             <PreSize X="0.1563" Y="0.0926" />
             <FontResource Type="Normal" Path="fonts/arialbd.ttf" Plist="" />
-            <TextColor A="255" R="65" G="65" B="70" />
+            <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="common/btn_ok2.png" Plist="" />
+            <NormalFileData Type="Normal" Path="common/btn_ok2.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="ndTank" ActionTag="466108254" Tag="157" IconVisible="True" LeftMargin="230.5067" RightMargin="1689.4933" TopMargin="790.8000" BottomMargin="289.2000" ctype="SingleNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <Children>
+              <AbstractNodeData Name="body" ActionTag="-122126981" Tag="158" IconVisible="False" LeftMargin="-66.0000" RightMargin="-66.0000" TopMargin="-44.5000" BottomMargin="-44.5000" ctype="SpriteObjectData">
+                <Size X="132.0000" Y="89.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="tank/tank0/body2.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="cannon" ActionTag="1383793479" Tag="159" RotationSkewX="-889.0000" RotationSkewY="-889.0000" IconVisible="False" LeftMargin="-37.2000" RightMargin="-86.8000" TopMargin="-24.0000" BottomMargin="-24.0000" ctype="SpriteObjectData">
+                <Size X="124.0000" Y="48.0000" />
+                <AnchorPoint ScaleX="0.3000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="tank/tank0/cannon2.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="230.5067" Y="289.2000" />
+            <Scale ScaleX="2.0000" ScaleY="2.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.1201" Y="0.2678" />
+            <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

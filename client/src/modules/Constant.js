@@ -39,5 +39,6 @@ var TYPE_MESSAGE = {
 }
 
 var EventId = {
-    KEY_M_PRESS: "KEY_M_PRESS"
+    KEY_M_PRESS: "KEY_M_PRESS",
+    CHANGED_TANK: "CHANGED_TANK"
 }

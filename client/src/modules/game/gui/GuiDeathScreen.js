@@ -29,6 +29,11 @@ var GuiDeathScreen = BaseGui.extend({
         func(this.btnView);
     },
 
+    onEnter: function(){
+        this._super();
+        if (gv.sceneMgr.getGui(GuiGameResult.prototype.className)) this.destroy();
+    },
+
     loadData: function (){
         let killerName;
         if (!this.killer) killerName = "BO CIRCLE";
