@@ -913,6 +913,51 @@
             "ctype": "SingleNodeObjectData"
           },
           {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "common/view.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 308.6617,
+              "Y": 1003.7771
+            },
+            "Scale": {
+              "ScaleX": 0.35,
+              "ScaleY": 0.35
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1608,
+              "Y": 0.9294
+            },
+            "PreSize": {
+              "X": 0.024,
+              "Y": 0.0426
+            },
+            "LeftMargin": 228.6617,
+            "RightMargin": 1531.3383,
+            "TopMargin": 12.2229,
+            "BottomMargin": 939.7771,
+            "Tag": 33,
+            "ActionTag": -1825820690,
+            "Size": {
+              "X": 160.0,
+              "Y": 128.0
+            },
+            "Name": "sprViewMode",
+            "ctype": "SpriteObjectData"
+          },
+          {
             "ClipAble": false,
             "ComboBoxIndex": 1,
             "SingleColor": {
@@ -1059,7 +1104,7 @@
               "Y": 0.7674
             },
             "PreSize": {
-              "X": 0.7813,
+              "X": 0.7812,
               "Y": 0.1389
             },
             "LeftMargin": 210.0,
@@ -1207,10 +1252,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 829.9532,
-                "RightMargin": -929.9532,
-                "TopMargin": -135.0127,
-                "BottomMargin": 35.0127,
+                "LeftMargin": 849.9532,
+                "RightMargin": -909.9532,
+                "TopMargin": -115.0127,
+                "BottomMargin": 55.0127,
                 "Tag": 47,
                 "ActionTag": -1541425840,
                 "Size": {
@@ -1299,6 +1344,7 @@
         "../../common/kills.png",
         "../../common/players.png",
         "../../common/rounded-rectangle.png",
+        "../../common/view.png",
         "../../Default/Button_Disable.png",
         "../../Default/Button_Normal.png",
         "../../Default/Button_Press.png",

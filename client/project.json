@@ -44,6 +44,7 @@
         "src/modules/game/entity/Tank.js",
         "src/modules/game/gui/element/ElementAvailableRoom.js",
         "src/modules/game/gui/element/ElementGameResult.js",
+        "src/modules/game/gui/GuiDeathScreen.js",
         "src/modules/game/gui/GuiGameControl.js",
         "src/modules/game/gui/GuiGameResult.js",
         "src/modules/game/gui/GuiRoomInfo.js",

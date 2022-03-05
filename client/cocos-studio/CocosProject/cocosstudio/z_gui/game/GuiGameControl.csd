@@ -215,6 +215,17 @@
             <PrePosition X="0.5000" Y="0.0602" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
+          <AbstractNodeData Name="sprViewMode" ActionTag="-1825820690" Tag="33" IconVisible="False" LeftMargin="228.6617" RightMargin="1531.3383" TopMargin="12.2229" BottomMargin="939.7771" ctype="SpriteObjectData">
+            <Size X="160.0000" Y="128.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="308.6617" Y="1003.7771" />
+            <Scale ScaleX="0.3500" ScaleY="0.3500" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.1608" Y="0.9294" />
+            <PreSize X="0.0240" Y="0.0426" />
+            <FileData Type="Normal" Path="common/view.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
           <AbstractNodeData Name="minimap" ActionTag="1997240762" Tag="56" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1095.0000" RightMargin="5.0000" TopMargin="5.0000" BottomMargin="255.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="820.0000" Y="820.0000" />
             <Children>
@@ -271,7 +282,7 @@
           <AbstractNodeData Name="ndBullet" ActionTag="-104223028" Tag="48" IconVisible="True" RightMargin="1920.0000" TopMargin="1081.0000" BottomMargin="-1.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
-              <AbstractNodeData Name="bullets_1" ActionTag="-1541425840" Tag="47" IconVisible="False" LeftMargin="829.9532" RightMargin="-929.9532" TopMargin="-135.0127" BottomMargin="35.0127" ctype="SpriteObjectData">
+              <AbstractNodeData Name="bullets_1" ActionTag="-1541425840" Tag="47" IconVisible="False" LeftMargin="849.9532" RightMargin="-909.9532" TopMargin="-115.0127" BottomMargin="55.0127" ctype="SpriteObjectData">
                 <Size X="60.0000" Y="60.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="879.9532" Y="85.0127" />

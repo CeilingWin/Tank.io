@@ -5,6 +5,7 @@ var GuiGameControl = BaseGui.extend({
         this.lbNotification = null;
         this.sprMinimap = null;
         this.minimap = null;
+        this.ndHp = null;
         this.pbHp = null;
         this.lbHp = null;
         this.lbKills = null;
@@ -13,6 +14,8 @@ var GuiGameControl = BaseGui.extend({
         this.lbPing = null;
         this.btnBack = null;
         this.lbNumBullet = null;
+        this.sprViewMode = null;
+        this.ndBullet = null;
         this._super("res/z_gui/game/GuiGameControl.json");
         gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
         this.subEvent(EventId.KEY_M_PRESS,this.onResizeMinimap.bind(this));
@@ -22,6 +25,7 @@ var GuiGameControl = BaseGui.extend({
     initGui: function(){
         this.lbNotification.setOpacity(0);
         this.minimap.setVisible(false);
+        this.sprViewMode.setVisible(false);
     },
 
     start: function (){
@@ -103,9 +107,19 @@ var GuiGameControl = BaseGui.extend({
     onPlayerWasKilled: function(message){
         let player = gv.gameRoom.getPlayerDataById(message["playerId"]);
         let killer = gv.gameRoom.getPlayerDataById(message["killerId"]);
-        let mess = "@player was killed by @killer";
-        mess = mess.replace("@player",player["username"]).replace("@killer",killer["username"]);
-        this.showMessage(mess);
+        if (message["playerId"] === gv.game.me.playerId) {
+            this.sprViewMode.setVisible(true);
+            this.sprViewMode.runAction(cc.sequence(
+                cc.fadeOut(1),
+                cc.fadeIn(1)
+            ).repeatForever());
+            this.ndHp.setVisible(false);
+            this.ndBullet.setVisible(false);
+        } else {
+            let mess = "@player was killed by @killer";
+            mess = mess.replace("@player",player["username"]).replace("@killer",killer["username"]);
+            this.showMessage(mess);
+        }
     },
 
     showMessage: function(mess){

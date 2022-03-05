@@ -36,6 +36,7 @@
           <Image Name="reload.png" />
           <Image Name="rounded-rectangle.png" />
           <Image Name="settings.png" />
+          <Image Name="view.png" />
         </Folder>
         <Folder Name="fonts">
           <TTF Name="arial.ttf" />
@@ -186,6 +187,7 @@
             <Project Name="GuiGameResult.csd" Type="Scene" />
             <Project Name="GuiRoomInfo.csd" Type="Scene" />
             <Project Name="GuiWaitingToStart.csd" Type="Scene" />
+            <Project Name="GuiDeathScreen.csd" Type="Scene" />
           </Folder>
           <Project Name="ElementSkinTank.csd" Type="Layer" />
           <Project Name="GuiJoinGame.csd" Type="Scene" />

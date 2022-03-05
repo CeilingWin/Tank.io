@@ -6,6 +6,7 @@ var Game = cc.Class.extend({
         this.jetPlanes = [];
         this.items = [];
         this.network = gv.gameRoom.getNetwork();
+        gv.gameRoom.getNetwork().onMessage(TYPE_MESSAGE.PLAYER_WAS_KILLED,this.onPlayerWasKilled.bind(this));
     },
 
     init: function(mapId,callback){
@@ -39,9 +40,13 @@ var Game = cc.Class.extend({
         if (isMe) {
             this.me = tank;
             tank.isMe = true;
-            this.mapLayer.follow(tank);
-            this.followTank = tank;
+            this.follow(tank);
         }
+    },
+
+    follow: function (tank){
+        this.mapLayer.follow(tank);
+        this.followTank = tank;
     },
 
     getFollowTank: function (){
@@ -142,5 +147,18 @@ var Game = cc.Class.extend({
     endGame: function (){
         this.input.stop();
         this.guiControl.runAction(cc.fadeOut(1.5));
+    },
+
+    onPlayerWasKilled(message){
+        let deathPlayerId = message["playerId"];
+        let killerId = message["killerId"];
+        let currentFollowTank = this.getFollowTank();
+        if (deathPlayerId === currentFollowTank.playerId){
+            this.follow(this.tanks.get(killerId));
+        }
+        if (deathPlayerId === this.me.playerId){
+            this.input.stop();
+            gv.sceneMgr.addGui(new GuiDeathScreen(gv.gameRoom.getPlayerDataById(killerId)));
+        }
     }
 })
