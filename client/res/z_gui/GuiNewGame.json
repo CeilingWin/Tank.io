@@ -162,7 +162,7 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 38.8234,
-                    "RightMargin": -1038.8234,
+                    "RightMargin": -1038.8235,
                     "TopMargin": -85.1488,
                     "BottomMargin": -64.8512,
                     "Tag": 233,
@@ -326,6 +326,64 @@
                     },
                     "Name": "Text_1",
                     "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 20,
+                    "LabelText": "Error",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/arial.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 712.9318,
+                      "Y": 57.5807
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 462.9318,
+                    "RightMargin": -962.9318,
+                    "TopMargin": -69.0807,
+                    "BottomMargin": 46.0807,
+                    "Tag": 268,
+                    "ActionTag": -2008326782,
+                    "Size": {
+                      "X": 500.0,
+                      "Y": 23.0
+                    },
+                    "Name": "lbErrorRoomName",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": 1030567496,
@@ -379,7 +437,7 @@
                     },
                     "Position": {
                       "X": 538.8234,
-                      "Y": 10.1488
+                      "Y": 10.15
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -396,9 +454,9 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 38.8234,
-                    "RightMargin": -1038.8234,
-                    "TopMargin": -85.1488,
-                    "BottomMargin": -64.8512,
+                    "RightMargin": -1038.8235,
+                    "TopMargin": -85.15,
+                    "BottomMargin": -64.85,
                     "Tag": 236,
                     "ActionTag": 312979118,
                     "Size": {
@@ -408,6 +466,64 @@
                     "Alpha": 148,
                     "Name": "Image_2",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 20,
+                    "LabelText": "Error",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/arial.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 712.9316,
+                      "Y": 57.8023
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 462.9316,
+                    "RightMargin": -962.9316,
+                    "TopMargin": -69.3023,
+                    "BottomMargin": 46.3023,
+                    "Tag": 267,
+                    "ActionTag": -1412964468,
+                    "Size": {
+                      "X": 500.0,
+                      "Y": 23.0
+                    },
+                    "Name": "lbErrorNumPlayer",
+                    "ctype": "TextObjectData"
                   },
                   {
                     "FileData": {
@@ -630,7 +746,7 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 38.8234,
-                    "RightMargin": -1038.8234,
+                    "RightMargin": -1038.8235,
                     "TopMargin": -85.1488,
                     "BottomMargin": -64.8512,
                     "Tag": 241,
@@ -828,7 +944,7 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 38.8234,
-                    "RightMargin": -1038.8234,
+                    "RightMargin": -1038.8235,
                     "TopMargin": -280.1488,
                     "BottomMargin": -259.8512,
                     "Tag": 247,
@@ -1220,7 +1336,7 @@
               "Y": 0.0765
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 1012.4182,
@@ -1296,7 +1412,7 @@
               "Y": 0.0746
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.0926
             },
             "LeftMargin": 652.7534,
@@ -1332,6 +1448,7 @@
         "../Default/CheckBox_Press.png",
         "../Default/CheckBoxNode_Disable.png",
         "../Default/CheckBoxNode_Normal.png",
+        "../fonts/arial.ttf",
         "../fonts/arialbd.ttf",
         "../map/minimap/map0.png"
       ],

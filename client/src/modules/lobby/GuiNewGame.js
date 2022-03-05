@@ -8,6 +8,8 @@ var GuiNewGame = BaseGui.extend({
         this.btnNext = null;
         this.btnPrev = null;
         this.sprMap = null;
+        this.lbErrorRoomName = null;
+        this.lbErrorNumPlayer = null;
         this._super("res/z_gui/GuiNewGame.json");
     },
 
@@ -29,6 +31,12 @@ var GuiNewGame = BaseGui.extend({
         this.numMap = numMap;
         let mapId = Number(LocalStorage.getMapId());
         this.loadMap(mapId);
+        let func = (lb) => {
+            lb.setOpacity(0);
+            lb.oldPos = lb.getPosition();
+        }
+        func(this.lbErrorRoomName);
+        func(this.lbErrorNumPlayer);
     },
 
     loadMap: function(mapId){
@@ -54,17 +62,60 @@ var GuiNewGame = BaseGui.extend({
     },
 
     onBtnNewGameClick: function(){
+        if (!this.isValidInput()) return;
         let roomName = this.tfRoomName.getString();
         let numPlayer = Number(this.tfNumPlayer.getString());
         let isPrivate = this.cbPrivateGame.isSelected();
         LocalStorage.setItem("mapId",this.mapId);
-        // todo: check input
         MatchMaker.getIns().createNewGame({
             roomName: roomName,
             maxPlayer: numPlayer,
             isPrivate: isPrivate,
             mapId: Number(this.mapId)
         })
+    },
+
+    isValidInput: function (){
+        this.disAppearLbError(this.lbErrorNumPlayer);
+        this.disAppearLbError(this.lbErrorRoomName);
+        let validRoomName = true, validNumPlayers = true;
+        if (this.tfRoomName.getString() === "") {
+            this.doAppearLbError(this.lbErrorRoomName,"Enter room name");
+            validRoomName = false;
+        }
+        if (this.tfNumPlayer.getString() === "") {
+            this.doAppearLbError(this.lbErrorNumPlayer, "Enter num player");
+            validNumPlayers = false;
+        }
+        else {
+            let numPlayer = Number(this.tfNumPlayer.getString());
+            if (isNaN(numPlayer)) {
+                this.doAppearLbError(this.lbErrorNumPlayer,"Invalid num player");
+                validNumPlayers = false;
+            }
+            else if (numPlayer < 2 || numPlayer > 50) {
+                this.doAppearLbError(this.lbErrorNumPlayer, "Num player must be between 2 and 50");
+                validNumPlayers = false;
+            }
+        }
+        return validNumPlayers && validRoomName;
+    },
+
+    disAppearLbError: function (lb){
+        lb.stopAllActions();
+        lb.setOpacity(0);
+    },
+
+    doAppearLbError: function(lbError, message){
+        lbError.stopAllActions();
+        lbError.setString(message);
+        lbError.setOpacity(255);
+        lbError.y = lbError.oldPos.y - 20;
+        lbError.runAction(cc.sequence(
+            cc.moveTo(0.5,lbError.oldPos.x,lbError.oldPos.y).easing(cc.easeBackOut()),
+            cc.delayTime(5),
+            cc.fadeOut(1)
+        ));
     }
 });
 
