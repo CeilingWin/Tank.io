@@ -25,15 +25,6 @@ var SceneLobby = BaseScene.extend({
         this.body.runAction(cc.rotateBy(10,360).repeatForever());
         this.cannon.runAction(cc.rotateBy(8.5,-360).repeatForever());
         this.loadTank();
-
-        let rt = new ccui.RichText();
-        rt.setContentSize(cc.size(1000,200));
-        rt.setPosition(500,500);
-        this.addChild(rt);
-        let t1 = new ccui.RichElementText(0,cc.color.RED,255,"Test1",res.FONTS_ARIAL_TTF,50);
-        let t2 = new ccui.RichElementText(0,cc.color.GREEN,255,"Test2",res.FONTS_ARIAL_TTF,50);
-        rt.pushBackElement(t1);
-        rt.pushBackElement(t2);
     },
 
     loadTank: function (){

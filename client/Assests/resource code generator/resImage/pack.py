@@ -8,7 +8,7 @@ g_data_code_folder = os.path.join(g_current_folder, g_root_path + 'src/')
 g_data_code_file = "resource.js"
 g_resource_input_folder = os.path.join(g_current_folder, g_root_path + 'res')
 
-g_list_ext = ['.png', '.jpg','.ttf','.json','.tmx','.tsx','.mp3','.ogg']
+g_list_ext = ['.png', '.jpg','.ttf','.json','.tmx','.tsx','.mp3','.ogg','.plist']
 resource_temp = ""
 g_list_data = []
 g_list_data_path = []

@@ -19,7 +19,6 @@ var MapLayer = BaseGui.extend({
             this.initBo();
             this._loadDone();
         });
-        // this.setScale(0.5,0.5);
     },
 
     initBo: function (){
@@ -228,7 +227,9 @@ var MapLayer = BaseGui.extend({
     },
 
     loadObject: function (parent,imgSource,x,y,z){
-        let spr = new cc.Sprite("res/map/"+imgSource);
+        let sprName = imgSource.substr(imgSource.lastIndexOf("/")+1);
+        let spr = ResourceUtils.getTile(sprName);
+        if (!spr) spr = new cc.Sprite("res/map/" + imgSource);
         spr.anchorX = 0;
         spr.anchorY = 0;
         spr.x = x;
