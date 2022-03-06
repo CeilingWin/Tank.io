@@ -73,18 +73,18 @@
         {
             "type": 0,
             "name": "heal",
-            "duration": 5000,
-            "healRate": 100
+            "duration": 8000,
+            "healRate": 80
         },
         {
             "type": 1,
             "name": "shield",
-            "duration": 15000,
+            "duration": 10000,
             "radius": 150
         }
     ],
     "bo": {
-        "breakTime": 5000,
+        "breakTime": 8000,
         "scaleSpeed": 100,
         "scaleTime": 5000,
         "damage": 10,

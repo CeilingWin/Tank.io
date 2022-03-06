@@ -18,7 +18,7 @@ export class Tank extends schema.Schema {
         this.speed = this.minSpeed;
         this.lastShootAt = 0;
         this.active = true;
-        this.hp = this.maxHp/3.5;
+        this.hp = this.maxHp;
         this.numBullet = this.maxBullets;
         this.timeToFullBullet = 0;
         this.timeRemainToFullBullet = 0;

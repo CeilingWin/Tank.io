@@ -1,7 +1,25 @@
 
 exports.requestJoinOptions = function (i) {
+    let tankType = "tank" + Math.trunc(Math.random()*3);
+    let numSkin;
+    switch(tankType){
+        case "tank0":
+            numSkin = 3;
+            break
+        case "tank1":
+            numSkin = 2;
+            break;
+        case "tank2":
+            numSkin = 5;
+            break;
+        default:
+            numSkin = 2;
+    }
+    let skin = Math.trunc(Math.random()*numSkin);
     return { 
-        username: "user" + i 
+        username: "user" + i,
+        tankType: tankType,
+        skin: skin
     };
 }
 
